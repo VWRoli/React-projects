@@ -5,17 +5,15 @@ import { guitars } from './guitars';
 //CSS
 import './css/index.css';
 
-const ListItem = () => {
+const ListItem = (props) => {
+  const { id, img, title } = props;
   return (
     <article className="list-item">
       <div className="img-container">
-        <img
-          src="https://muzikercdn.com/uploads/product_gallery/1841/184130/main_2e41710a.jpg"
-          alt=""
-        />
+        <img src={img} alt={title} />
       </div>
       <div className="list-content">
-        <h2 className="title">Fender Player Series Stratocaster HSS</h2>
+        <h2 className="title">{title}</h2>
         <div className="acquired-container">
           <input type="checkbox" id="acquired" name="acquired" value=""></input>
           <label htmlFor="acquired">Acquired</label>
@@ -33,7 +31,9 @@ function GuitarList() {
     <>
       <h1>Guitar Wishlist</h1>
       <section className="container">
-        <ListItem />
+        {guitars.map((guitar) => {
+          return <ListItem key={guitar.id} {...guitar} />;
+        })}
       </section>
     </>
   );

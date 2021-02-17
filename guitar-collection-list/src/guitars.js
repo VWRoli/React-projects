@@ -5,7 +5,7 @@ export const guitars = [
     title: `Fender Player Series Stratocaster HSS`,
   },
 
-  /* {
+  {
     id: 2,
     img: `https://muzikercdn.com/uploads/product_gallery/2106/210632/main_032f2a75.jpg`,
     title: `Fender American Performer Telecaster`,
@@ -24,5 +24,5 @@ export const guitars = [
     id: 5,
     img: `https://muzikercdn.com/uploads/product_gallery/3903/390366/main_0bd1acd1.jpg`,
     title: `Epiphone SG Standard '61 Maestro Vibrola`,
-  }, */
+  },
 ];
