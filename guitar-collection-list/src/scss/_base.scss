@@ -3,16 +3,14 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
-  background: #eee;
+  background: $bg-color;
   display: grid;
   place-items: center;
   height: 100vh;
 }
-
 .container {
-  background: #fff;
+  background: $light-color;
   height: 680px;
   width: 680px;
   border-radius: 5px;
