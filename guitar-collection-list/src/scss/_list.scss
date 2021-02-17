@@ -1,0 +1,33 @@
+.list-item {
+  width: 80%;
+  padding: 5px;
+  background: $semi-light-color;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  grid-gap: 5px;
+  &:hover {
+    background: darken($semi-light-color, 5%);
+  }
+  .img-container {
+    max-width: 200px;
+  }
+}
+.list-content {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  h2 {
+    font-size: 20px;
+    font-weight: 300;
+    grid-column: span 2;
+  }
+  .acquired-container {
+    margin: 1rem 0;
+    text-align: center;
+  }
+  .btn-remove {
+    margin: 1rem auto;
+  }
+}
