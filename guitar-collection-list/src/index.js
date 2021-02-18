@@ -1,9 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { guitars } from './guitars';
+import Navbar from './navbar';
 
 //CSS
 import './css/index.css';
+
+Navbar();
+
+const UseStateArray = () => {
+  const [guitar, setGuitar] = React.useState(guitars);
+  return (
+    <>
+      {guitar.map((guitar) => {
+        const { id, img, title } = guitar;
+        return <ListItem key={id} {...guitar} />;
+      })}
+    </>
+  );
+};
 
 const ListItem = (props) => {
   const { id, img, title } = props;
@@ -29,11 +44,10 @@ const ListItem = (props) => {
 function GuitarList() {
   return (
     <>
-      <h1>Guitar Wishlist</h1>
+      <h1>My Guitar Collection</h1>
+      <Navbar />
       <section className="container">
-        {guitars.map((guitar) => {
-          return <ListItem key={guitar.id} {...guitar} />;
-        })}
+        <UseStateArray />
       </section>
     </>
   );

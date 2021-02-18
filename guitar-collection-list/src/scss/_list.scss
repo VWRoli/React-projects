@@ -29,6 +29,7 @@
     text-align: center;
   }
   .btn-remove {
+    @extend %btn;
     margin: 1rem auto;
   }
 }

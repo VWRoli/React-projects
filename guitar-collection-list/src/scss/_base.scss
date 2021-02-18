@@ -6,7 +6,7 @@
   font-size: 20px;
 }
 body {
-  background: $dark-color;
+  background: $green-color;
   display: grid;
   place-items: center;
   height: 100vh;
@@ -27,21 +27,18 @@ img {
 h1 {
   color: $light-color;
   font-weight: 400;
+  font-size: 1.5rem;
   text-align: center;
+  margin-bottom: 1rem;
 }
 label,
 input {
   cursor: pointer;
 }
-.btn {
-  width: fit-content;
-  padding: 0.35rem 0.65rem;
-  margin-top: 1rem;
-  border: none;
-  background: $green-color;
-  color: $light-color;
-  cursor: pointer;
-  &:hover {
-    background: lighten($green-color, 5%);
-  }
+
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
 }

@@ -1,0 +1,17 @@
+nav {
+  background: $dark-color;
+  color: $light-color;
+  ul {
+    display: flex;
+    justify-content: space-around;
+    li {
+      padding: 0.5rem 0;
+      width: 100%;
+      text-align: center;
+      cursor: pointer;
+      &:hover {
+        background: lighten($dark-color, 10%);
+      }
+    }
+  }
+}

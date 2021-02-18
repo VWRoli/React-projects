@@ -1,0 +1,18 @@
+$dark-color: #2c2d32;
+$light-color: #fff;
+$semi-light-color: #eee;
+$green-color: #119796;
+
+%btn {
+  width: fit-content;
+  padding: 0.35rem 0.65rem;
+  margin-top: 1rem;
+  border: none;
+  background: $green-color;
+  color: $light-color;
+  outline: none;
+  cursor: pointer;
+  &:hover {
+    background: lighten($green-color, 5%);
+  }
+}

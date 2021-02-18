@@ -1,4 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+.list-content .btn-remove {
+  width: fit-content;
+  padding: 0.35rem 0.65rem;
+  margin-top: 1rem;
+  border: none;
+  background: #119796;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+}
+
+.list-content .btn-remove:hover {
+  background: #14aead;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +23,7 @@
 }
 
 body {
-  background: #272727;
+  background: #119796;
   display: grid;
   place-items: center;
   height: 100vh;
@@ -16,7 +31,7 @@ body {
 
 .container {
   background: #fff;
-  color: #272727;
+  color: #2c2d32;
   min-height: 680px;
   width: 680px;
   display: flex;
@@ -32,7 +47,9 @@ img {
 h1 {
   color: #fff;
   font-weight: 400;
+  font-size: 1.5rem;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 label,
@@ -40,18 +57,12 @@ input {
   cursor: pointer;
 }
 
-.btn {
-  width: fit-content;
-  padding: 0.35rem 0.65rem;
-  margin-top: 1rem;
-  border: none;
-  background: #00c876;
-  color: #fff;
-  cursor: pointer;
+li {
+  list-style-type: none;
 }
 
-.btn:hover {
-  background: #00e285;
+a {
+  text-decoration: none;
 }
 
 .list-item {
@@ -93,4 +104,25 @@ input {
 
 .list-content .btn-remove {
   margin: 1rem auto;
+}
+
+nav {
+  background: #2c2d32;
+  color: #fff;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li {
+  padding: 0.5rem 0;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+
+nav ul li:hover {
+  background: #44454d;
 }
