@@ -73,3 +73,9 @@ export const collection = [
     wish: true,
   },
 ];
+
+//Filter out guitars
+const myGuitars = collection.filter((item) => item.guitar && !item.wish);
+const guitarWish = collection.filter((item) => item.guitar && item.wish);
+const myAmps = collection.filter((item) => item.amp && !item.wish);
+const ampWish = collection.filter((item) => item.amp && item.wish);

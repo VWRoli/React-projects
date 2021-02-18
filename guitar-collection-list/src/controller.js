@@ -1,23 +1,21 @@
 import React, { useState } from 'react';
 import { collection } from './collection';
 import { ListItem } from './list';
+import Navbar from './navbar';
 
 export const UseStateArray = () => {
   const [item, setItem] = React.useState(collection);
 
-  //Filter out guitars
-  const myGuitars = collection.filter((item) => item.guitar && !item.wish);
-  const guitarWish = collection.filter((item) => item.guitar && item.wish);
-  const myAmps = collection.filter((item) => item.amp && !item.wish);
-  const ampWish = collection.filter((item) => item.amp && item.wish);
-
-  //console.log(myGuitars);
+  /* const removeItem = (id) => {
+    let newCollection = item.filter((item) => item.id !== id);
+    setItem(newCollection);
+  }; */
 
   return (
     <>
-      {item.map((guitar) => {
-        const { id, img, title } = guitar;
-        return <ListItem key={id} {...guitar} />;
+      {item.map((item) => {
+        const { id, img, title } = item;
+        return <ListItem key={id} {...item} />;
       })}
       <button className="btn-remove" onClick={() => setItem([])}>
         clear items

@@ -11,7 +11,7 @@ export const ListItem = (props) => {
           <input type="checkbox" id="acquired" name="acquired" value=""></input>
           <label htmlFor="acquired">Acquired</label>
         </div>
-        <button type="button" className="btn btn-remove">
+        <button type="button" className="btn-remove">
           Remove
         </button>
       </div>
