@@ -4,10 +4,10 @@ const Navbar = () => {
   return (
     <nav>
       <ul>
-        <li>My Guitars</li>
-        <li>Guitar Wishlist</li>
-        <li>My Amps</li>
-        <li>Amp Wishlist</li>
+        <li data-tab="guitar">My Guitars</li>
+        <li data-tab="guitar-wish">Guitar Wishlist</li>
+        <li data-tab="amp">My Amps</li>
+        <li data-tab="amp-wish">Amp Wishlist</li>
       </ul>
     </nav>
   );

@@ -1,13 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, { useState } from 'react';
 import { collection } from './collection';
-import Navbar from './navbar';
-import { UseStateArray } from './controller';
+import { ListItem } from './list';
 
-//CSS
-import './css/index.css';
-
-/* const UseStateArray = () => {
+export const UseStateArray = () => {
   const [item, setItem] = React.useState(collection);
 
   //Filter out guitars
@@ -29,18 +24,4 @@ import './css/index.css';
       </button>
     </>
   );
-}; */
-
-function GuitarList() {
-  return (
-    <>
-      <h1>My Guitar Collection</h1>
-      <Navbar />
-      <section className="container">
-        <UseStateArray />
-      </section>
-    </>
-  );
-}
-
-ReactDOM.render(<GuitarList />, document.getElementById('root'));
+};
