@@ -1,12 +1,15 @@
 nav {
   background: $dark-color;
   color: $light-color;
+  min-height: 680px;
+  padding-top: 2rem;
+
   ul {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     li {
-      padding: 0.5rem 0;
+      padding: 0.5rem 4rem;
       width: 100%;
       text-align: center;
       cursor: pointer;

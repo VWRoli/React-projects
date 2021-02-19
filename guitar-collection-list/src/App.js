@@ -1,10 +1,11 @@
 import Navbar from './components/Navbar';
+import List from './components/List';
 
 function App() {
   return (
     <div className="container">
-      <h1>Guitar Collection</h1>
       <Navbar />
+      <List />
     </div>
   );
 }

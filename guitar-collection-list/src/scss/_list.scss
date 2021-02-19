@@ -1,3 +1,10 @@
+.list-wrapper {
+  min-height: 680px;
+  min-width: 480px;
+  background: $light-color;
+  margin-left: 1rem;
+}
+
 .list-item {
   width: 80%;
   padding: 5px;

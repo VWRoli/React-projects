@@ -54,6 +54,17 @@ a {
   text-decoration: none;
 }
 
+.container {
+  display: flex;
+}
+
+.list-wrapper {
+  min-height: 680px;
+  min-width: 480px;
+  background: #fff;
+  margin-left: 1rem;
+}
+
 .list-item {
   width: 80%;
   padding: 5px;
@@ -98,6 +109,8 @@ a {
 nav {
   background: #2c2d32;
   color: #fff;
+  min-height: 680px;
+  padding-top: 2rem;
 }
 
 nav ul {
@@ -107,7 +120,7 @@ nav ul {
 }
 
 nav ul li {
-  padding: 0.5rem 0;
+  padding: 0.5rem 4rem;
   width: 100%;
   text-align: center;
   cursor: pointer;
