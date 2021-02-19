@@ -11,16 +11,6 @@ body {
   place-items: center;
   height: 100vh;
 }
-.container {
-  background: $light-color;
-  color: $dark-color;
-  min-height: 680px;
-  width: 680px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem 0;
-}
 img {
   width: 100%;
 }

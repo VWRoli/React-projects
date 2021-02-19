@@ -3,6 +3,7 @@ nav {
   color: $light-color;
   ul {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     li {
       padding: 0.5rem 0;
