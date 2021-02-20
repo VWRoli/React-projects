@@ -4,12 +4,16 @@ import { collection } from './collection';
 import { useState } from 'react';
 
 function App() {
-  const [item, setItem] = useState(collection);
+  const [items, setItems] = useState(collection);
+
+  const deleteItem = (id) => {
+    setItems(items.filter((item) => item.id !== id));
+  };
 
   return (
     <div className="container">
       <Navbar />
-      <List collection={item} />
+      <List items={items} onDelete={deleteItem} />
     </div>
   );
 }

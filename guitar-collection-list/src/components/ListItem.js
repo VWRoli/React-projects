@@ -1,4 +1,4 @@
-const ListItem = ({ item }) => {
+const ListItem = ({ item, onDelete }) => {
   return (
     <article className="list-item">
       <div className="img-container">
@@ -17,7 +17,7 @@ const ListItem = ({ item }) => {
             {item.guitar ? `Guitar` : `Amp`}
           </span>
 
-          <button>Remove</button>
+          <button onClick={() => onDelete(item.id)}>Remove</button>
         </div>
       </div>
     </article>

@@ -70,11 +70,23 @@ a {
   width: 0;
 }
 
+.list-wrapper .fa-excl {
+  font-size: 2rem;
+  text-align: center;
+  margin: 2rem 0 1rem 2rem;
+  color: #c51837;
+}
+
+.list-wrapper .empty-list {
+  margin: 1rem;
+}
+
 .list-item {
   background: #eee;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding: 0.25rem;
+  margin-bottom: 1px;
 }
 
 .list-item .list-content {
