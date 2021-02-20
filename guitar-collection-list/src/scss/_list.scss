@@ -1,42 +1,49 @@
 .list-wrapper {
-  min-height: 680px;
+  height: 680px;
   min-width: 480px;
   background: $light-color;
-  margin-left: 1rem;
+  margin-left: 0.25rem;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
 }
 
 .list-item {
-  width: 80%;
-  padding: 5px;
-  margin: 1px;
   background: $semi-light-color;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-  grid-gap: 5px;
-  &:hover {
-    background: darken($semi-light-color, 5%);
+  padding: 0.25rem;
+
+  .list-content {
+    margin-left: 0.5rem;
+    grid-column: span 2;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+
+    h2 {
+      font-weight: 400;
+    }
+    div {
+      display: flex;
+      justify-content: space-between;
+      span {
+        @include button-paddings();
+        background: #ff9532;
+        color: $light-color;
+        line-height: 1.7rem;
+        pointer-events: none;
+      }
+      button {
+        @extend %btn;
+      }
+    }
   }
   .img-container {
     max-width: 200px;
   }
-}
-.list-content {
-  grid-column: span 2;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  h2 {
-    font-size: 20px;
-    font-weight: 300;
-    grid-column: span 2;
-  }
-  .acquired-container {
-    margin: 1rem 0;
-    text-align: center;
-  }
-  .btn-remove {
-    @extend %btn;
-    margin: 1rem auto;
+  &:hover {
+    background-color: darken($semi-light-color, 5%);
   }
 }
