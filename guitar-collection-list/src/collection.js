@@ -6,14 +6,14 @@ export const collection = [
     guitar: true,
     amp: false,
   },
-
   {
     id: 2,
-    img: `https://muzikercdn.com/uploads/product_gallery/2106/210632/main_032f2a75.jpg`,
-    title: `Fender American Performer Telecaster`,
-    guitar: true,
-    amp: false,
+    img: `https://muzikercdn.com/uploads/products/81/8127/main_9bf67f27.jpg`,
+    title: `Vox AC30VR Valve Reactor`,
+    guitar: false,
+    amp: true,
   },
+
   {
     id: 3,
     img: `https://static.keymusic.com/products/128050/XL/gibson-les-paul-studio-50s-tribute-worn-gold-top-4.jpg`,
@@ -21,12 +21,13 @@ export const collection = [
     guitar: true,
     amp: false,
   },
+
   {
     id: 4,
-    img: `https://cdn.mos.cms.futurecdn.net/ViYzG53dLD4fQsJLEbKKPd-970-80.jpg.webp`,
-    title: `PRS SE Custom 24`,
-    guitar: true,
-    amp: false,
+    img: `https://muzikercdn.com/uploads/product_gallery/988/98854/main_ab1f01c8.jpg`,
+    title: `Fender 65 Twin Reverb`,
+    guitar: false,
+    amp: true,
   },
   {
     id: 5,
@@ -51,16 +52,16 @@ export const collection = [
   },
   {
     id: 8,
-    img: `https://muzikercdn.com/uploads/product_gallery/988/98854/main_ab1f01c8.jpg`,
-    title: `Fender 65 Twin Reverb`,
-    guitar: false,
-    amp: true,
+    img: `https://cdn.mos.cms.futurecdn.net/ViYzG53dLD4fQsJLEbKKPd-970-80.jpg.webp`,
+    title: `PRS SE Custom 24`,
+    guitar: true,
+    amp: false,
   },
   {
     id: 9,
-    img: `https://muzikercdn.com/uploads/products/81/8127/main_9bf67f27.jpg`,
-    title: `Vox AC30VR Valve Reactor`,
-    guitar: false,
-    amp: true,
+    img: `https://muzikercdn.com/uploads/product_gallery/2106/210632/main_032f2a75.jpg`,
+    title: `Fender American Performer Telecaster`,
+    guitar: true,
+    amp: false,
   },
 ];
