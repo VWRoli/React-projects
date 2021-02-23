@@ -86,6 +86,13 @@ a:hover {
   margin: auto;
   width: 2rem;
 }
+.error-container {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+.error-sign {
+  font-size: 2rem;
+}
 .spinner {
   margin: 2.5rem auto;
   text-align: center;

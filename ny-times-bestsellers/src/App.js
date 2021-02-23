@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Loading from './components/Loading';
+import Error from './components/Error';
 
 import './App.css';
 import Books from './components/Books';
@@ -8,27 +9,37 @@ const url = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fictio
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
   const [books, setBooks] = useState([]);
 
   //Fetch booklist
   const getBookListData = async () => {
-    const response = await fetch(url);
-    const data = await response.json();
-    //Set data
-    setBooks(data.results.books);
-    //Disable loading screen
-    setIsLoading(false);
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+
+      //Set data
+      setBooks(data.results.books);
+      //Disable loading screen
+      setIsLoading(false);
+    } catch (err) {
+      setIsLoading(false);
+      setIsError(true);
+    }
   };
 
   useEffect(() => {
     getBookListData();
   }, []);
 
-  //console.log(books);
-
   //Loading screen
   if (isLoading) {
     return <Loading />;
+  }
+
+  //Error screen
+  if (isError) {
+    return <Error />;
   }
 
   //Default return
