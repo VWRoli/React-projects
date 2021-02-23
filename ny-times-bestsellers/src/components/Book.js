@@ -24,7 +24,7 @@ const Book = ({ book }) => {
         <p className="author">{author}</p>
 
         <p className="description">{description}</p>
-        <a href={link} target="_blank">
+        <a href={link} target="_blank" rel="noreferrer">
           View on Amazon
         </a>
       </article>
