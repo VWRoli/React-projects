@@ -1,9 +1,8 @@
 import Book from './Book';
 
 function Books({ books }) {
-  console.log(books);
   return (
-    <section>
+    <section className="booklist">
       {books.map((book) => (
         <Book key={book.rank} book={book} />
       ))}

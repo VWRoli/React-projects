@@ -8,44 +8,28 @@ const Book = ({ book }) => {
     description,
     amazon_product_url: link,
   } = book;
+
   return (
-    <div>
+    <div className="book">
       <article>
         <div className="img-container">
           <img src={img} alt={title} />
         </div>
-        <div className="info">
-          <h2>{title}</h2>
-          <p>{rank}</p>
-          <p>{author}</p>
-          <p>{weeks}</p>
+
+        <h2 className="title">{title}</h2>
+        <div className="rank">
+          <p># {rank}</p>
+          <p>{weeks} Weeks</p>
         </div>
+        <p className="author">{author}</p>
+
         <p className="description">{description}</p>
-        <a href={link}>View on Amazon</a>
+        <a href={link} target="_blank">
+          View on Amazon
+        </a>
       </article>
     </div>
   );
 };
 
 export default Book;
-
-/* 
-function Book({ book })=> {
-  
-  return (
-   
-    /* <article>
-      <div className="img-container">
-        <img src={img} alt={title} />
-      </div>
-      <div className="info">
-        <h2>{title}</h2>
-        <p>{rank}</p>
-        <p>{author}</p>
-        <p>{weeks}</p>
-      </div>
-      <p className="description">{description}</p>
-      <a href={link}>View on Amazon</a>
-    </article> 
-  );
-}*/
