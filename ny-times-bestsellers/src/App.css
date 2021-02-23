@@ -1,6 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&display=swap');
+:root {
+  --dark-color: #5c7c94;
+  --medium-color: #b2ccde;
+  --light-color: #e6f4ff;
+  --brown-color: #8f795a;
+  --light-brown-color: #d1a86b;
+}
+
+/*? UTILITIES */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Shippori Mincho', serif;
+  font-size: 20px;
+}
+body {
+  background: var(--light-color);
+  color: var(--dark-color);
+  height: 100vh;
+}
+h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+img {
+  width: 100%;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: var(--light-brown-color);
+}
+a:hover {
+  text-decoration: underline;
+  color: var(--brown-color);
+}
+
+/*? LIST */
+.img-container {
+  max-width: 250px;
 }
