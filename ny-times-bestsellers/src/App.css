@@ -129,3 +129,20 @@ header span {
     transform: rotate(360deg);
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .booklist {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .booklist {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 460px) {
+  * {
+    font-size: 16px;
+  }
+}
