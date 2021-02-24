@@ -20,7 +20,6 @@ body {
   height: 100vh;
 }
 h1 {
-  text-align: center;
   font-size: 2rem;
 }
 img {
@@ -38,6 +37,14 @@ a:hover {
   color: var(--brown-color);
 }
 
+/*? LIST */
+header {
+  text-align: center;
+}
+header span {
+  font-size: 0.5rem;
+  color: var(--light-brown-color);
+}
 /*? LIST */
 .booklist {
   width: 80vw;

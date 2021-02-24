@@ -4,6 +4,7 @@ import Error from './components/Error';
 
 import './App.css';
 import Books from './components/Books';
+import Header from './components/Header';
 
 const url = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=Z4cVZ0lcSFliXfeaCW4LBhfS2Wj5HCsa`;
 
@@ -11,6 +12,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
   const [books, setBooks] = useState([]);
+  const [data, setData] = useState({});
 
   //Fetch booklist
   const getBookListData = async () => {
@@ -20,6 +22,7 @@ function App() {
 
       //Set data
       setBooks(data.results.books);
+      setData(data);
       //Disable loading screen
       setIsLoading(false);
     } catch (err) {
@@ -45,7 +48,7 @@ function App() {
   //Default return
   return (
     <div className="App">
-      <h1>NY Times Bestseller List</h1>
+      <Header data={data} />
       <Books books={books} />
     </div>
   );
