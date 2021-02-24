@@ -80,6 +80,17 @@ a:hover {
 .description {
   font-size: 0.95rem;
 }
+.toggle-readmore {
+  text-decoration: none;
+  color: var(--light-brown-color);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.toggle-readmore:hover {
+  text-decoration: underline;
+  color: var(--brown-color);
+}
 
 /*? SPINNER */
 .spinner-container {

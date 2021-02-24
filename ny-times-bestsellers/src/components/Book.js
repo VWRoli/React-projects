@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 const Book = ({ book }) => {
   const {
     rank,
@@ -8,6 +10,7 @@ const Book = ({ book }) => {
     description,
     amazon_product_url: link,
   } = book;
+  const [readMore, setReadMore] = useState(false);
 
   return (
     <div className="book">
@@ -23,7 +26,15 @@ const Book = ({ book }) => {
         </div>
         <p className="author">{author}</p>
 
-        <p className="description">{description}</p>
+        <p className="description">
+          {readMore ? description : `${description.substring(0, 75)}... `}
+          <button
+            className="toggle-readmore"
+            onClick={() => setReadMore(!readMore)}
+          >
+            {readMore ? 'Show Less' : 'Read more'}
+          </button>
+        </p>
         <a href={link} target="_blank" rel="noreferrer">
           View on Amazon
         </a>
