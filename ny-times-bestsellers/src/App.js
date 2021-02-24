@@ -5,17 +5,24 @@ import Error from './components/Error';
 import './App.css';
 import Books from './components/Books';
 import Header from './components/Header';
+import List from './components/List';
 
 const url = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=Z4cVZ0lcSFliXfeaCW4LBhfS2Wj5HCsa`;
+
+const listUrl = `https://api.nytimes.com/svc/books/v3/lists/names.json?api-key=Z4cVZ0lcSFliXfeaCW4LBhfS2Wj5HCsa`;
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
+  //Bestseller booklist
   const [books, setBooks] = useState([]);
+  //Header data
   const [data, setData] = useState({});
+  //List of bestseller lists
+  const [list, setList] = useState([]);
 
   //Fetch booklist
-  const getBookListData = async () => {
+  const fetchBestsellerList = async () => {
     try {
       const response = await fetch(url);
       const data = await response.json();
@@ -30,9 +37,19 @@ function App() {
       setIsError(true);
     }
   };
+  const fetchListNames = async () => {
+    try {
+      const response = await fetch(listUrl);
+      const data = await response.json();
+      setList(data.results);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   useEffect(() => {
-    getBookListData();
+    fetchListNames();
+    fetchBestsellerList();
   }, []);
 
   //Loading screen
@@ -49,7 +66,10 @@ function App() {
   return (
     <div className="App">
       <Header data={data} />
-      <Books books={books} />
+      <main>
+        <List list={list} />
+        <Books books={books} />
+      </main>
     </div>
   );
 }

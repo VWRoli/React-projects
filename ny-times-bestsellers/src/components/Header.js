@@ -4,7 +4,7 @@ const Header = ({ data }) => {
 
   return (
     <header>
-      <h1>NY Times Bestseller List</h1>
+      <h1>NY Times Best Sellers</h1>
       <h2>{list}</h2>
       <p>{date}</p>
       <span>{copyright}</span>
