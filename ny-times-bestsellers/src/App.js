@@ -7,12 +7,13 @@ import Books from './components/Books';
 import Header from './components/Header';
 import List from './components/List';
 
-const url = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=Z4cVZ0lcSFliXfeaCW4LBhfS2Wj5HCsa`;
-
+//Urls
 const listUrl = `https://api.nytimes.com/svc/books/v3/lists/names.json?api-key=Z4cVZ0lcSFliXfeaCW4LBhfS2Wj5HCsa`;
 
 function App() {
+  //Loading state
   const [isLoading, setIsLoading] = useState(true);
+  //Error state
   const [isError, setIsError] = useState(false);
   //Bestseller booklist
   const [books, setBooks] = useState([]);
@@ -20,11 +21,15 @@ function App() {
   const [data, setData] = useState({});
   //List of bestseller lists
   const [list, setList] = useState([]);
+  //List ID
+  const [listId, setListId] = useState('hardcover-fiction');
 
   //Fetch booklist
   const fetchBestsellerList = async () => {
     try {
-      const response = await fetch(url);
+      const response = await fetch(
+        `https://api.nytimes.com/svc/books/v3/lists/current/${listId}.json?api-key=Z4cVZ0lcSFliXfeaCW4LBhfS2Wj5HCsa`
+      );
       const data = await response.json();
 
       //Set data
@@ -48,6 +53,13 @@ function App() {
   };
 
   useEffect(() => {
+    //todo Getting ID but not rerendering, rerenders after saving it with new id
+    window.addEventListener('click', function (e) {
+      const id = e.target.id;
+      console.log(id);
+      setListId(id);
+    });
+
     fetchListNames();
     fetchBestsellerList();
   }, []);
