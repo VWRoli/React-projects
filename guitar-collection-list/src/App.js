@@ -22,7 +22,7 @@ function App() {
     setItems(ampsOnly);
   };
 
-  //Filter out guitars
+  //Show all
   const showAll = () => {
     setItems(collection);
   };

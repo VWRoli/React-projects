@@ -6,15 +6,6 @@ const Review = () => {
   const [index, setIndex] = useState(0);
   const { img, fullName, jobTitle, review } = persons[index];
 
-  function counter(number) {
-    if (number >= persons.length) {
-      number = 0;
-    } else if (number < 0) {
-      number = persons.length - 1;
-    }
-    return number;
-  }
-
   const nextPerson = (number) => {
     number++;
     if (number === persons.length) number = 0;
@@ -23,6 +14,10 @@ const Review = () => {
   const prevPerson = (number) => {
     number--;
     if (number < 0) number = persons.length - 1;
+    setIndex(number);
+  };
+
+  const numberedPerson = (number) => {
     setIndex(number);
   };
 
@@ -68,6 +63,16 @@ const Review = () => {
                     className="mr-2"
                     onClick={() => prevPerson(index)}
                   />
+                  {persons.map((person, i) => {
+                    return (
+                      <Pagination.Item
+                        key={i}
+                        onClick={() => numberedPerson(i)}
+                      >
+                        {i + 1}
+                      </Pagination.Item>
+                    );
+                  })}
 
                   <Pagination.Next
                     className="ml-2"
