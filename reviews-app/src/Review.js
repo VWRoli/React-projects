@@ -6,8 +6,24 @@ const Review = () => {
   const [index, setIndex] = useState(0);
   const { img, fullName, jobTitle, review } = persons[index];
 
-  const nextPerson = () => {
-    setIndex(1);
+  function counter(number) {
+    if (number >= persons.length) {
+      number = 0;
+    } else if (number < 0) {
+      number = persons.length - 1;
+    }
+    return number;
+  }
+
+  const nextPerson = (number) => {
+    number++;
+    if (number === persons.length) number = 0;
+    setIndex(number);
+  };
+  const prevPerson = (number) => {
+    number--;
+    if (number < 0) number = persons.length - 1;
+    setIndex(number);
   };
 
   return (
@@ -39,18 +55,24 @@ const Review = () => {
               <Card.Subtitle className="mt-2 mb-2" style={{ color: '#00abed' }}>
                 {jobTitle}
               </Card.Subtitle>
-              <Card.Text style={{ backgroundColor: '#fff' }} className="p-2">
+              <Card.Text
+                style={{ backgroundColor: '#fff', borderRadius: '25px' }}
+                className="p-2"
+              >
                 {review}
               </Card.Text>
 
               <Row className="justify-content-center">
                 <Pagination>
-                  <Pagination.Prev className="mr-2" />
-                  {persons.map((person, i) => {
-                    return <Pagination.Item key={i}>{i + 1}</Pagination.Item>;
-                  })}
+                  <Pagination.Prev
+                    className="mr-2"
+                    onClick={() => prevPerson(index)}
+                  />
 
-                  <Pagination.Next className="ml-2" />
+                  <Pagination.Next
+                    className="ml-2"
+                    onClick={() => nextPerson(index)}
+                  />
                 </Pagination>
               </Row>
             </Card.Body>
