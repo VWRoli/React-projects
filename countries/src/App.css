@@ -56,7 +56,30 @@ article {
   min-width: 55vw;
   margin-bottom: 3px;
 }
+/*? SEARCH BAR */
+.search-bar {
+  width: fit-content;
+  margin: 1rem auto;
+  color: #aaa;
+}
+#search {
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  margin-right: 0.5rem;
+  padding: 0.25rem;
+  outline: none;
+}
 
+#search-btn {
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  color: rgb(131, 128, 128);
+  padding: 0.25rem 0.5rem;
+  background-color: transparent;
+}
+#search-btn:hover {
+  color: rgb(97, 96, 96);
+}
 /*? COUNTRIES HEADER */
 header {
   background-color: var(--secondary-bg-color);
