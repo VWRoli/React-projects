@@ -28,6 +28,15 @@ const CountryContent = ({ country }) => {
     const percentage = (pop / worldPop) * 100;
     return percentage.toFixed(1);
   }
+
+  const numberFormatter = (number) => {
+    const formattedNmber = new Intl.NumberFormat('locale', {
+      notation: 'compact',
+      compactDisplay: 'long',
+    }).format(number);
+    return formattedNmber;
+  };
+
   return (
     <section className="country-content">
       <div className="left-content">
@@ -39,19 +48,21 @@ const CountryContent = ({ country }) => {
             <h4 className="title population-title">
               <FaUsers className="title-icon" /> Population:
             </h4>
-            <p className="country-data">{population}</p>
+            <p className="country-data">{numberFormatter(population)}</p>
           </div>
 
           <div className="bar-container">
-            <CircularProgressbar
-              value={popPercentage(population)}
-              text={`${popPercentage(population)}%`}
-              styles={buildStyles({
-                textColor: '#1489f3',
-                pathColor: '#1489f3',
-                trailColor: '#fa5715',
-              })}
-            />
+            <div className="bar-wrapper">
+              <CircularProgressbar
+                value={popPercentage(population)}
+                text={`${popPercentage(population)}%`}
+                styles={buildStyles({
+                  textColor: '#1489f3',
+                  pathColor: '#1489f3',
+                  trailColor: '#fa5715',
+                })}
+              />
+            </div>
           </div>
         </div>
       </div>
