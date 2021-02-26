@@ -9,7 +9,10 @@ const Country = ({ country }) => {
 
   return (
     <article>
-      <header onClick={() => setShowContent(!showContent)}>
+      <header
+        onClick={() => setShowContent(!showContent)}
+        className={showContent ? 'active' : ''}
+      >
         <h2>{name}</h2>
         <button type="button" className="btn-toggle">
           {showContent ? <FaChevronUp /> : <FaChevronDown />}

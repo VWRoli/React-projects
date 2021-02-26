@@ -1,4 +1,14 @@
 import React from 'react';
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
+
+import {
+  FaUniversity,
+  FaGlobeAmericas,
+  FaLanguage,
+  FaMoneyBillAlt,
+  FaUsers,
+} from 'react-icons/fa';
 
 const CountryContent = ({ country }) => {
   const {
@@ -11,37 +21,79 @@ const CountryContent = ({ country }) => {
     currencies,
     capital,
   } = country;
+
+  const worldPop = 7848498912;
+
+  function popPercentage(pop) {
+    const percentage = (pop / worldPop) * 100;
+    return percentage.toFixed(1);
+  }
   return (
     <section className="country-content">
       <div className="left-content">
         <div className="img-container">
           <img src={flag} alt={`${name} Flag`} />
         </div>
-        <div className="population-bar">{population}</div>
+        <div className="population-bar">
+          <div className="pop-content">
+            <h4 className="title population-title">
+              <FaUsers className="title-icon" /> Population:
+            </h4>
+            <p className="country-data">{population}</p>
+          </div>
+
+          <div className="bar-container">
+            <CircularProgressbar
+              value={popPercentage(population)}
+              text={`${popPercentage(population)}%`}
+              styles={buildStyles({
+                textColor: '#1489f3',
+                pathColor: '#1489f3',
+                trailColor: '#fa5715',
+              })}
+            />
+          </div>
+        </div>
       </div>
       <div className="right-content">
-        <h4>Capital:</h4>
-        <p>{capital}</p>
-        <h4>Region:</h4>
-        <p>
-          {region}, {subregion}
-        </p>
-        <div className="languages">
-          <h4>Languages:</h4>
-          {languages.map((language, i) => {
-            const { name } = language;
-
-            return <span key={i}>{name}</span>;
-          })}
+        <div className="group capital-group">
+          <h4 className="title capital-title">
+            <FaUniversity className="title-icon" /> Capital:
+          </h4>
+          <p className="country-data">{capital}</p>
         </div>
-        <div className="country-currencies">
-          <h4>Currency:</h4>
-          <ul>
+        <div className="group region-group">
+          <h4 className="title region-title">
+            <FaGlobeAmericas className="title-icon" /> Region:
+          </h4>
+          <p className="country-data">
+            {region}, {subregion}
+          </p>
+        </div>
+
+        <div className="group languages-group">
+          <h4 className="title languages-title">
+            <FaLanguage className="title-icon" /> Language(s):
+          </h4>
+          <ul className="country-data">
+            {languages.map((language, i) => {
+              const { name } = language;
+
+              return <li key={i}>{name}</li>;
+            })}
+          </ul>
+        </div>
+
+        <div className="group currencies-group">
+          <h4 className="title currencies-title">
+            <FaMoneyBillAlt className="title-icon" /> Currency:
+          </h4>
+          <ul className="country-data">
             {currencies.map((currency, i) => {
-              const { code, name, symbol } = currency;
+              const { name, symbol } = currency;
               return (
                 <li key={i}>
-                  Code: {code}, Name: {name}, Symbol: {symbol}
+                  {name} {symbol}
                 </li>
               );
             })}
