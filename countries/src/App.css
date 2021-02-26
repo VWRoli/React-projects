@@ -28,6 +28,9 @@ h1 {
   text-align: center;
   margin: 1rem;
 }
+.img-container {
+  max-width: 10rem;
+}
 img {
   width: 100%;
 }
@@ -42,12 +45,15 @@ button {
   text-decoration: underline;
   cursor: pointer;
 }
-
+article {
+  width: 55vw;
+  margin-bottom: 3px;
+}
 /*? COUNTRIES HEADER */
 header {
   background-color: var(--secondary-bg-color);
-  margin-bottom: 3px;
-  width: 55vw;
+  border-bottom: 1px solid #eee;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -64,4 +70,26 @@ header h2 {
   padding: 0.25rem 0.75rem;
   background: transparent;
   color: var(--blue-color);
+}
+/*? COUNTRIES CONTENT */
+.country-content {
+  height: 400px;
+  background-color: var(--secondary-bg-color);
+  display: flex;
+  padding: 1rem;
+}
+.left-content {
+  flex: 1;
+}
+.right-content {
+  flex: 1;
+}
+.population-bar {
+  width: 10rem;
+  height: 10rem;
+  background-color: #00e4ac;
+}
+.languages {
+  display: flex;
+  flex-direction: column;
 }
