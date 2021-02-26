@@ -1,0 +1,67 @@
+:root {
+  --primary-bg-color: #f0f0f0;
+  --secondary-bg-color: #fff;
+  --blue-gradient: linear-gradient(#1489f3, #2cadfb);
+  --orange-gradient: linear-gradient(#fa5715, #f6d022);
+  --green-gradient: linear-gradient(#00b6e3, #00e4ac);
+  --blue-color: #1489f3;
+}
+
+/*? UTILITIES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: var(--primary-bg-color);
+}
+h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--blue-color);
+  text-align: center;
+  margin: 1rem;
+}
+img {
+  width: 100%;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover,
+button {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/*? COUNTRIES HEADER */
+header {
+  background-color: var(--secondary-bg-color);
+  margin-bottom: 3px;
+  width: 55vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  cursor: pointer;
+  color: var(--blue-color);
+}
+header h2 {
+  font-weight: 400;
+}
+.btn-toggle {
+  border: 1px solid var(--blue-color);
+  border-radius: 5px;
+  padding: 0.25rem 0.75rem;
+  background: transparent;
+  color: var(--blue-color);
+}
