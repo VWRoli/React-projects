@@ -47,10 +47,13 @@ li {
 a {
   text-decoration: none;
 }
-a:hover,
-button {
+a:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+button {
+  cursor: pointer;
+  outline: none;
 }
 article {
   min-width: 65vw;
@@ -143,8 +146,6 @@ header h2 {
   padding: 0.25rem 0.75rem;
   background: transparent;
   color: var(--blue-color);
-  text-decoration: none;
-  outline: none;
 }
 .map-placeholder button:hover {
   text-decoration: underline;
@@ -223,7 +224,24 @@ header h2 {
     transform: rotate(360deg);
   }
 }
-
+/*? PAGINATION */
+.pagination-container {
+  width: fit-content;
+  margin: 1rem auto;
+}
+.pagination-btn {
+  border: 1px solid var(--blue-color);
+  border-radius: 3px;
+  color: var(--blue-color);
+  padding: 0.25rem 0.5rem;
+  background-color: transparent;
+  margin: 0.25rem;
+  font-size: 1.25rem;
+}
+.pagination-btn:hover {
+  text-decoration: underline;
+  background-color: var(--secondary-bg-color);
+}
 /*? MEDIA */
 @media screen and (max-width: 1500px) {
   article {

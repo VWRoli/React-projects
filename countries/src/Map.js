@@ -10,7 +10,7 @@ const Map = ({ latlng, name }) => {
         <MapContainer
           center={latlng}
           zoom={3}
-          scrollWheelZoom={false}
+          scrollWheelZoom={true}
           className="map-container"
         >
           <TileLayer
@@ -30,26 +30,6 @@ const Map = ({ latlng, name }) => {
       )}
     </div>
   );
-
-  /* return (
-    <>
-      <MapContainer
-        center={latlng}
-        zoom={3}
-        scrollWheelZoom={false}
-        className="map-container"
-        placeholder={<MapPlaceholder />}
-      >
-        <TileLayer
-          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        <Marker position={latlng}>
-          <Popup>{name}</Popup>
-        </Marker>
-      </MapContainer>
-    </>
-  ); */
 };
 
 export default Map;
