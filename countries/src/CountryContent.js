@@ -9,6 +9,7 @@ import {
   FaMoneyBillAlt,
   FaUsers,
 } from 'react-icons/fa';
+import Map from './Map';
 
 const CountryContent = ({ country }) => {
   const {
@@ -20,6 +21,7 @@ const CountryContent = ({ country }) => {
     subregion,
     currencies,
     capital,
+    latlng,
   } = country;
 
   const worldPop = 7848498912;
@@ -111,6 +113,8 @@ const CountryContent = ({ country }) => {
           </ul>
         </div>
       </div>
+
+      <Map />
     </section>
   );
 };

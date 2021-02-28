@@ -53,7 +53,7 @@ button {
   cursor: pointer;
 }
 article {
-  min-width: 55vw;
+  min-width: 65vw;
   margin-bottom: 3px;
 }
 /*? SEARCH BAR */
@@ -82,34 +82,33 @@ article {
 }
 /*? COUNTRIES HEADER */
 header {
-  background-color: var(--secondary-bg-color);
-  border-bottom: 1px solid #eee;
-
+  background: var(--blue-gradient);
+  border-radius: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
   cursor: pointer;
-  color: var(--blue-color);
+  color: var(--secondary-bg-color);
 }
 .active,
 header:hover {
-  background-color: #eeeeee;
+  background: var(--orange-gradient);
+  color: var(--secondary-bg-color);
   border: 1px solid#ddd;
 }
 header h2 {
   font-weight: 400;
 }
 .btn-toggle {
-  border: 1px solid var(--blue-color);
+  border: 1px solid var(--secondary-bg-color);
   border-radius: 5px;
   padding: 0.25rem 0.75rem;
   background: transparent;
-  color: var(--blue-color);
+  color: var(--secondary-bg-color);
 }
 /*? COUNTRIES CONTENT */
 .country-content {
-  height: 400px;
   background-color: var(--secondary-bg-color);
   display: flex;
   padding: 1rem;
@@ -124,9 +123,14 @@ header h2 {
 .right-content {
   flex: 1;
 }
+.map-container {
+  flex: 1;
+  margin-left: 0.5rem;
+  border-radius: 5px;
+}
 
 .title {
-  background: var(--blue-gradient);
+  background: var(--green-gradient);
   color: var(--secondary-bg-color);
   padding: 0.25rem;
   border-radius: 3px;
@@ -163,7 +167,7 @@ header h2 {
   max-width: 7rem;
 }
 .population-title {
-  background: var(--orange-gradient);
+  background: var(--green-gradient);
 }
 
 /*? SPINNER */

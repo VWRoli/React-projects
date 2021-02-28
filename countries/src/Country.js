@@ -4,7 +4,7 @@ import CountryContent from './CountryContent';
 
 const Country = ({ country }) => {
   const [showContent, setShowContent] = useState(false);
-  //console.log(country);
+
   const { name } = country;
 
   return (
