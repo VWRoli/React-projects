@@ -123,10 +123,32 @@ header h2 {
 .right-content {
   flex: 1;
 }
+/*? MAP CONTENT */
 .map-container {
   flex: 1;
   margin-left: 0.5rem;
   border-radius: 5px;
+  height: 300px;
+}
+.map-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: var(--primary-bg-color);
+}
+.map-placeholder button {
+  border: 1px solid var(--blue-color);
+  border-radius: 5px;
+  padding: 0.25rem 0.75rem;
+  background: transparent;
+  color: var(--blue-color);
+  text-decoration: none;
+  outline: none;
+}
+.map-placeholder button:hover {
+  text-decoration: underline;
+  background-color: var(--primary-bg-color);
 }
 
 .title {

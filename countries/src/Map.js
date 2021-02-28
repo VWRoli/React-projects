@@ -1,27 +1,55 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 
-const Map = () => {
+const Map = ({ latlng, name }) => {
+  const [showMap, setShowMap] = useState(false);
+
   return (
+    <div className="map-container">
+      {showMap ? (
+        <MapContainer
+          center={latlng}
+          zoom={3}
+          scrollWheelZoom={false}
+          className="map-container"
+        >
+          <TileLayer
+            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          <Marker position={latlng}>
+            <Popup>{name}</Popup>
+          </Marker>
+        </MapContainer>
+      ) : (
+        <div className="map-placeholder">
+          <button className="show-map-btn" onClick={() => setShowMap(!showMap)}>
+            Show map
+          </button>
+        </div>
+      )}
+    </div>
+  );
+
+  /* return (
     <>
       <MapContainer
-        center={[51.505, -0.09]}
-        zoom={13}
+        center={latlng}
+        zoom={3}
         scrollWheelZoom={false}
         className="map-container"
+        placeholder={<MapPlaceholder />}
       >
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={[51.505, -0.09]}>
-          <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
-          </Popup>
+        <Marker position={latlng}>
+          <Popup>{name}</Popup>
         </Marker>
       </MapContainer>
     </>
-  );
+  ); */
 };
 
 export default Map;

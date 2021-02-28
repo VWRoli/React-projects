@@ -114,7 +114,7 @@ const CountryContent = ({ country }) => {
         </div>
       </div>
 
-      <Map />
+      <Map latlng={latlng} name={name} />
     </section>
   );
 };
