@@ -1,21 +1,34 @@
 import React from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-const Pagination = ({ countries }) => {
-  const itemsPerPage = 15;
-  const totalItems = countries.length;
-  const totalPages = Math.ceil(totalItems / itemsPerPage);
-  console.log(totalPages);
+const Pagination = ({ numPages, curPage, setCurPage }) => {
+  //Adjusting the pages
+  const adjustPage = (amount) => {
+    setCurPage((prevCurPage) => prevCurPage + amount);
+  };
   return (
     <div className="pagination-container">
-      <button className="pagination-btn">1</button>
-      <button className="pagination-btn">
-        <FaChevronLeft />
-      </button>
-      <button className="pagination-btn">4</button>
-      <button className="pagination-btn">
-        <FaChevronRight />
-      </button>
-      <button className="pagination-btn">{totalPages}</button>
+      {curPage !== 1 && (
+        <button className="pagination-btn" onClick={() => setCurPage(1)}>
+          1
+        </button>
+      )}
+      {curPage !== 1 && (
+        <button className="pagination-btn" onClick={() => adjustPage(-1)}>
+          <FaChevronLeft />
+        </button>
+      )}
+
+      <button className="pagination-btn active-page">{curPage}</button>
+      {numPages !== curPage && (
+        <button className="pagination-btn" onClick={() => adjustPage(1)}>
+          <FaChevronRight />
+        </button>
+      )}
+      {numPages !== curPage && (
+        <button className="pagination-btn" onClick={() => setCurPage(numPages)}>
+          {numPages}
+        </button>
+      )}
     </div>
   );
 };

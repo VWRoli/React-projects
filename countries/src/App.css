@@ -242,19 +242,24 @@ header h2 {
   text-decoration: underline;
   background-color: var(--secondary-bg-color);
 }
+.active-page {
+  background-color: var(--blue-color);
+  color: var(--secondary-bg-color);
+  pointer-events: none;
+}
 /*? MEDIA */
 @media screen and (max-width: 1500px) {
-  article {
-    min-width: 65vw;
-  }
-}
-@media screen and (max-width: 1300px) {
   article {
     min-width: 75vw;
   }
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1300px) {
   article {
     min-width: 85vw;
+  }
+}
+@media screen and (max-width: 1100px) {
+  article {
+    min-width: 95vw;
   }
 }
