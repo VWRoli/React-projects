@@ -24,10 +24,10 @@ const CountryContent = ({ country }) => {
     latlng,
   } = country;
 
-  const worldPop = 7848498912;
+  const WORLD_POP = 7848498912;
 
   function popPercentage(pop) {
-    const percentage = (pop / worldPop) * 100;
+    const percentage = (pop / WORLD_POP) * 100;
     return percentage.toFixed(1);
   }
 

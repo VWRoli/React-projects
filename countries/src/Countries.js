@@ -13,11 +13,12 @@ const Countries = ({ countries }) => {
   const totalItems = countries.length;
   const numPages = Math.ceil(totalItems / itemsPerPage);
 
-  const countriesPerPage = (page) => {
+  const countriesPerPage = (page, countries) => {
     const startPageItem = (page - 1) * 10;
     const endPageItem = page * 10;
 
-    return countries.slice(startPageItem, endPageItem);
+    const paginatedCountries = countries.slice(startPageItem, endPageItem);
+    return paginatedCountries;
   };
 
   //Search
@@ -62,7 +63,7 @@ const Countries = ({ countries }) => {
         ? filteredCountries.map((country, i) => {
             return <Country key={i} country={country} />;
           })
-        : countryItems.map((country, i) => {
+        : countriesPerPage(curPage, countryItems).map((country, i) => {
             return <Country key={i} country={country} />;
           })}
       <Pagination
