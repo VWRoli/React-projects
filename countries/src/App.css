@@ -59,6 +59,20 @@ article {
   min-width: 65vw;
   margin-bottom: 3px;
 }
+.btn {
+  border: 1px solid var(--blue-color);
+  border-radius: 3px;
+  color: var(--blue-color);
+  padding: 0.25rem 0.5rem;
+  background: transparent;
+  margin: 0.25rem;
+  font-size: 1.25rem;
+}
+.btn:hover {
+  text-decoration: underline;
+  color: var(--secondary-bg-color);
+  background: var(--orange-gradient);
+}
 /*? SEARCH BAR */
 .search-bar {
   width: fit-content;
@@ -229,23 +243,18 @@ header h2 {
   width: fit-content;
   margin: 1rem auto;
 }
-.pagination-btn {
-  border: 1px solid var(--blue-color);
-  border-radius: 3px;
-  color: var(--blue-color);
-  padding: 0.25rem 0.5rem;
-  background-color: transparent;
-  margin: 0.25rem;
-  font-size: 1.25rem;
-}
-.pagination-btn:hover {
-  text-decoration: underline;
-  background-color: var(--secondary-bg-color);
-}
+
 .active-page {
   background-color: var(--blue-color);
   color: var(--secondary-bg-color);
   pointer-events: none;
+}
+
+/*? MEDIA */
+.regions {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
 }
 /*? MEDIA */
 @media screen and (max-width: 1500px) {

@@ -8,24 +8,24 @@ const Pagination = ({ numPages, curPage, setCurPage }) => {
   return (
     <div className="pagination-container">
       {curPage !== 1 && (
-        <button className="pagination-btn" onClick={() => setCurPage(1)}>
+        <button className="btn" onClick={() => setCurPage(1)}>
           1
         </button>
       )}
       {curPage !== 1 && (
-        <button className="pagination-btn" onClick={() => adjustPage(-1)}>
+        <button className="btn" onClick={() => adjustPage(-1)}>
           <FaChevronLeft />
         </button>
       )}
 
-      <button className="pagination-btn active-page">{curPage}</button>
+      <button className="btn active-page">{curPage}</button>
       {numPages !== curPage && (
-        <button className="pagination-btn" onClick={() => adjustPage(1)}>
+        <button className="btn" onClick={() => adjustPage(1)}>
           <FaChevronRight />
         </button>
       )}
       {numPages !== curPage && (
-        <button className="pagination-btn" onClick={() => setCurPage(numPages)}>
+        <button className="btn" onClick={() => setCurPage(numPages)}>
           {numPages}
         </button>
       )}
