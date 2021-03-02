@@ -70,9 +70,18 @@ header span {
   color: var(--light-brown-color);
 }
 /*? LIST */
-.booklist {
-  margin: auto;
+.booklist-container {
   grid-column: span 9;
+}
+.list-header {
+  background: var(--dark-color);
+  color: var(--light-color);
+  margin: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.66);
+}
+.book-list {
+  margin: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
