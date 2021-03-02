@@ -5,7 +5,7 @@ import Loading from './components/Loading';
 import Error from './components/Error';
 import { useFetch } from './useFetch';
 
-const BASE_URL = `https://restcountries.eu/rest/v2/all`;
+const BASE_URL = `https://restcountries.eu/rest/v2/all1`;
 
 function App() {
   const { isLoading, isError, data } = useFetch(BASE_URL);

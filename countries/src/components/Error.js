@@ -1,6 +1,6 @@
 import { FaExclamationTriangle } from 'react-icons/fa';
 
-const Loading = () => {
+const Error = () => {
   return (
     <div className="error-container">
       <FaExclamationTriangle className="error-sign" />
@@ -9,4 +9,4 @@ const Loading = () => {
   );
 };
 
-export default Loading;
+export default Error;
