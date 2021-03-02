@@ -250,7 +250,7 @@ header h2 {
   pointer-events: none;
 }
 
-/*? MEDIA */
+/*? REGIONS */
 .regions {
   display: flex;
   justify-content: center;
@@ -270,5 +270,56 @@ header h2 {
 @media screen and (max-width: 1100px) {
   article {
     min-width: 95vw;
+  }
+}
+@media screen and (max-width: 900px) {
+  .country-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5rem;
+  }
+  .map-container {
+    grid-column: span 2;
+  }
+}
+@media screen and (max-width: 750px) {
+  .country-content {
+    grid-template-columns: 1fr;
+    grid-gap: 0.5rem;
+  }
+  .map-container {
+    grid-column: span 1;
+  }
+  .population-title {
+    background: var(--blue-gradient);
+    width: 100%;
+  }
+  .population-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .regions {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 650px) {
+  #search-btn {
+    display: none;
+  }
+  .map-container {
+    margin-left: 0;
+  }
+  article {
+    max-width: 90vw;
+  }
+}
+@media screen and (max-width: 520px) {
+  .search-bar form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .search-bar form input {
+    width: 100%;
   }
 }
