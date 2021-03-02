@@ -10,7 +10,7 @@ const Countries = ({ countries }) => {
   //Pagintaion
   const [curPage, setCurPage] = useState(1);
   const itemsPerPage = 10;
-  const totalItems = countries.length;
+  const totalItems = countryItems.length;
   const numPages = Math.ceil(totalItems / itemsPerPage);
 
   const countriesPerPage = (page, countries) => {
@@ -52,6 +52,9 @@ const Countries = ({ countries }) => {
     const filteredRegions = countries.filter((country) => {
       return country.region === region;
     });
+    //Set current page to one after new filter
+    setCurPage(1);
+    //Set filtered countries
     setCountryItems(filteredRegions);
   };
   return (
