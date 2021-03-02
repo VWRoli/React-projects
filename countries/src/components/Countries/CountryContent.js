@@ -9,7 +9,7 @@ import {
   FaMoneyBillAlt,
   FaUsers,
 } from 'react-icons/fa';
-import Map from './Map';
+import Map from '../Map';
 
 const CountryContent = ({ country }) => {
   const {

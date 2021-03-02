@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Country from './Country';
-import Pagination from './Pagination';
-import Regions from './Regions';
-import Search from './Search';
+import Pagination from '../Pagination';
+import Regions from '../Regions';
+import Search from '../Search';
 
 const Countries = ({ countries }) => {
   //

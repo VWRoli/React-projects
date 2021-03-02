@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import Countries from './Countries';
-import Loading from './Loading';
-import Error from './Error';
+import Countries from './components/Countries/Countries';
+import Loading from './components/Loading';
+import Error from './components/Error';
 import { useFetch } from './useFetch';
 
 const BASE_URL = `https://restcountries.eu/rest/v2/all`;
