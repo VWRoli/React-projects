@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export const useFetch = (url) => {
+export const useFetchList = (url) => {
   //Loading state
   const [isLoading, setIsLoading] = useState(true);
   //Error state
@@ -20,6 +20,7 @@ export const useFetch = (url) => {
       setIsError(true);
     }
   };
+
   useEffect(() => {
     fetchData();
   }, [url]);

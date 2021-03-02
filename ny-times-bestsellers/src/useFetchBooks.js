@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export const useFetchBookList = (url) => {
+export const useFetchBooks = (url) => {
   //Loading state
   const [isListLoading, setIsListLoading] = useState(true);
   //Error state

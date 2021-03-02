@@ -1,7 +1,6 @@
 import { useState } from 'react';
 
 const Book = ({ book }) => {
-  console.log(book);
   const {
     rank,
     book_image: img,
