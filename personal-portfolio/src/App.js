@@ -1,8 +1,16 @@
+import About from './components/About';
+import HeroSection from './components/HeroSection';
+import Navbar from './components/Navbar';
+import Projects from './components/Projects';
+
 function App() {
   return (
-    <div className="App">
-      <h1>Portfolio</h1>
-    </div>
+    <main>
+      <Navbar />
+      <HeroSection />
+      <Projects />
+      <About />
+    </main>
   );
 }
 
