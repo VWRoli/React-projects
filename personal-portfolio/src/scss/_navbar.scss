@@ -1,0 +1,41 @@
+nav {
+  background: linear-gradient(
+    to bottom right,
+    $primary-color,
+    $secondary-color
+  );
+  color: $secondary-alternative-color;
+  font-weight: 400;
+  min-height: 7vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  ul {
+    display: flex;
+    li {
+      margin: 0 2rem;
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    .logo-icon {
+      margin-right: 0.5rem;
+    }
+  }
+}
+.active {
+  text-decoration: underline;
+}

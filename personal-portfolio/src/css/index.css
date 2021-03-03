@@ -1,15 +1,96 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+.btn {
+  width: fit-content;
+  padding: 0.35rem 0.65rem;
+  border: none;
+  border: 3px solid #e8b338;
+  border-radius: 5px;
+  outline: none;
+  color: #e8b338;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.btn:hover {
+  border-color: #9c6e06;
+  color: #9c6e06;
+}
+
+.btn a {
+  color: #e8b338;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
-  font-weight: 300;
 }
 
 #hero,
 #about,
 #projects {
   height: 100vh;
+}
+
+.container {
+  width: 85vw;
+  margin: auto;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  background: linear-gradient(to bottom right, #16409c, #3870e8);
+  color: #e8b338;
+  font-weight: 400;
+  min-height: 7vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 2rem;
+}
+
+nav ul li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+nav .navbar-logo {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+nav .navbar-logo .logo-icon {
+  margin-right: 0.5rem;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+#hero {
+  margin-top: 7vh;
+  background-color: antiquewhite;
 }

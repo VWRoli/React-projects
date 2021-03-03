@@ -4,26 +4,61 @@ import { FaCode } from 'react-icons/fa';
 const Navbar = () => {
   return (
     <nav>
-      <div className="container">
-        <Link to="/" className="navbar-logo">
-          <FaCode />
-          Roland Füst
-        </Link>
-        <ul>
-          <li>
-            <Link to="/" activeClass="active" smooth={true} duration={500}>
-              Home
-            </Link>
-            <Link to="projects" smooth={true}>
-              Projects
-            </Link>
-            <Link to="about" smooth={true}>
-              About
-            </Link>
-          </li>
-        </ul>
-        <button className="btn">Resume</button>
-      </div>
+      <Link
+        className="navbar-logo"
+        to="hero"
+        activeClass="active"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+      >
+        <FaCode className="logo-icon" />
+        Roland Füst
+      </Link>
+      <ul>
+        <li>
+          <Link
+            to="hero"
+            activeClass="active"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="projects"
+            activeClass="active"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            Projects
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="about"
+            activeClass="active"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            About
+          </Link>
+        </li>
+      </ul>
+      <button className="btn resume-btn">
+        <a href="cv_roland_fust.pdf" target="_blank">
+          Resume
+        </a>
+      </button>
     </nav>
   );
 };

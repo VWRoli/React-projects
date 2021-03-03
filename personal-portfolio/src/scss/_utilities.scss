@@ -1,5 +1,30 @@
-$dark-blue: #16409c;
-$mid-blue: #3870e8;
-$light-blue: #578cff;
-$dark-blue: #9c6e06;
-$dark-blue: #e8b338;
+$primary-color: #16409c;
+$secondary-color: #3870e8;
+$tertiary-color: #578cff;
+$primary-alternative-color: #9c6e06;
+$secondary-alternative-color: #e8b338;
+$light-color: #fff;
+$dark-color: #222;
+
+@mixin button() {
+  width: fit-content;
+  padding: 0.35rem 0.65rem;
+  border: none;
+  border: 3px solid $secondary-alternative-color;
+  border-radius: 5px;
+  outline: none;
+  color: $secondary-alternative-color;
+  cursor: pointer;
+}
+
+.btn {
+  @include button();
+  background-color: transparent;
+  &:hover {
+    border-color: $primary-alternative-color;
+    color: $primary-alternative-color;
+  }
+  a {
+    color: $secondary-alternative-color;
+  }
+}
