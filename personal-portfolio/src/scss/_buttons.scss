@@ -1,22 +1,9 @@
 .resume-btn {
-  @include button();
-  background-color: transparent;
-  &:hover {
-    border-color: darken($light-secondary-color, 30%);
-    & a {
-      color: darken($light-secondary-color, 30%);
-    }
-  }
-  a {
-    color: $light-secondary-color;
-  }
+  @include button($light-secondary-color);
 }
-.nav-toggle {
-  display: block;
-  @include button();
-  border: none;
-  background-color: transparent;
-  & > * {
-    font-size: 1.25rem;
-  }
+.live-btn {
+  @include button($dark-secondary-color);
+}
+.code-btn {
+  @include button($dark-secondary-color);
 }

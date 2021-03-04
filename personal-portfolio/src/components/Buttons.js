@@ -4,11 +4,9 @@ import { useState } from 'react';
 
 export const ResumeBtn = () => {
   return (
-    <button className="resume-btn">
-      <a href="cv_roland_fust.pdf" target="_blank">
-        Resume
-      </a>
-    </button>
+    <a href="cv_roland_fust.pdf" target="_blank" className="resume-btn">
+      Resume
+    </a>
   );
 };
 export const MobileToggleBtn = ({ closeMobileMenu, setcloseMobileMenu }) => {

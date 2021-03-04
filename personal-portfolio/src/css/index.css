@@ -45,45 +45,45 @@ img {
 }
 
 .resume-btn {
-  width: fit-content;
-  padding: 0.35rem 0.65rem;
-  border: none;
   border: 3px solid #e4cdaa;
+  padding: 0.35rem 0.65rem;
   border-radius: 5px;
-  outline: none;
   color: #e4cdaa;
+  outline: none;
   cursor: pointer;
-  background-color: transparent;
 }
 
 .resume-btn:hover {
   border-color: #ba883b;
-}
-
-.resume-btn:hover a {
   color: #ba883b;
 }
 
-.resume-btn a {
-  color: #e4cdaa;
-}
-
-.nav-toggle {
-  display: block;
-  width: fit-content;
+.live-btn {
+  border: 3px solid #4e4231;
   padding: 0.35rem 0.65rem;
-  border: none;
-  border: 3px solid #e4cdaa;
   border-radius: 5px;
+  color: #4e4231;
   outline: none;
-  color: #e4cdaa;
   cursor: pointer;
-  border: none;
-  background-color: transparent;
 }
 
-.nav-toggle > * {
-  font-size: 1.25rem;
+.live-btn:hover {
+  border-color: black;
+  color: black;
+}
+
+.code-btn {
+  border: 3px solid #4e4231;
+  padding: 0.35rem 0.65rem;
+  border-radius: 5px;
+  color: #4e4231;
+  outline: none;
+  cursor: pointer;
+}
+
+.code-btn:hover {
+  border-color: black;
+  color: black;
 }
 
 nav {
@@ -171,8 +171,8 @@ nav .active {
 }
 
 .project {
-  background-color: #45596e;
-  color: #e4cdaa;
+  background-color: #b2ccde;
+  color: #4e4231;
   box-shadow: inset 0px 0px 50px -9px rgba(0, 0, 0, 0.72);
   border-radius: 5px;
   padding: 1rem;

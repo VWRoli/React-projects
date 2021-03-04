@@ -14,13 +14,21 @@ $light-primary-color: #b2ccde;
 $dark-secondary-color: #4e4231;
 $light-secondary-color: #e4cdaa;
 
-@mixin button() {
-  width: fit-content;
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin button($color) {
+  border: 3px solid $color;
   padding: 0.35rem 0.65rem;
-  border: none;
-  border: 3px solid $light-secondary-color;
   border-radius: 5px;
+  color: $color;
   outline: none;
-  color: $light-secondary-color;
   cursor: pointer;
+  &:hover {
+    border-color: darken($color, 30%);
+    color: darken($color, 30%);
+  }
 }
