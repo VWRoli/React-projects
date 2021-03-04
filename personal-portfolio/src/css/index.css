@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+/* $primary-color: #16409c;
+$secondary-color: #3870e8;
+$tertiary-color: #578cff;
+$primary-alternative-color: #9c6e06;
+$secondary-alternative-color: #e8b338;
+$light-color: #fff;
+$dark-color: #222; */
 * {
   margin: 0;
   padding: 0;
@@ -26,25 +33,39 @@ a {
   text-decoration: none;
 }
 
+img {
+  width: 100%;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+  margin: 1rem;
+}
+
 .resume-btn {
   width: fit-content;
   padding: 0.35rem 0.65rem;
   border: none;
-  border: 3px solid #e8b338;
+  border: 3px solid #e4cdaa;
   border-radius: 5px;
   outline: none;
-  color: #e8b338;
+  color: #e4cdaa;
   cursor: pointer;
   background-color: transparent;
 }
 
 .resume-btn:hover {
-  border-color: #9c6e06;
-  color: #9c6e06;
+  border-color: #ba883b;
+}
+
+.resume-btn:hover a {
+  color: #ba883b;
 }
 
 .resume-btn a {
-  color: #e8b338;
+  color: #e4cdaa;
 }
 
 .nav-toggle {
@@ -52,10 +73,10 @@ a {
   width: fit-content;
   padding: 0.35rem 0.65rem;
   border: none;
-  border: 3px solid #e8b338;
+  border: 3px solid #e4cdaa;
   border-radius: 5px;
   outline: none;
-  color: #e8b338;
+  color: #e4cdaa;
   cursor: pointer;
   border: none;
   background-color: transparent;
@@ -66,8 +87,8 @@ a {
 }
 
 nav {
-  background: linear-gradient(to bottom right, #16409c, #3870e8);
-  color: #e8b338;
+  background: #45596e;
+  color: #e4cdaa;
   font-weight: 400;
   position: fixed;
   padding: 0.5rem;
@@ -141,4 +162,43 @@ nav .active {
 
 #hero {
   background-color: antiquewhite;
+}
+
+.projects-wrapper {
+  display: grid;
+  row-gap: 1rem;
+  margin: 1rem;
+}
+
+.project {
+  background-color: #45596e;
+  color: #e4cdaa;
+  box-shadow: inset 0px 0px 50px -9px rgba(0, 0, 0, 0.72);
+  border-radius: 5px;
+  padding: 1rem;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+
+.project h3 {
+  margin-bottom: 1rem;
+}
+
+.img-wrapper {
+  max-width: 350px;
+  text-align: center;
+}
+
+.img-wrapper img {
+  width: 100%;
+}
+
+.img-wrapper h2 {
+  margin-bottom: 0.5rem;
+}
+
+.projects-list {
+  list-style-position: inside;
 }

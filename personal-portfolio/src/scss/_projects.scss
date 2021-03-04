@@ -1,0 +1,32 @@
+.projects-wrapper {
+  display: grid;
+  row-gap: 1rem;
+  margin: 1rem;
+}
+.project {
+  background-color: $dark-primary-color;
+  color: $light-secondary-color;
+  box-shadow: inset 0px 0px 50px -9px rgba(0, 0, 0, 0.72);
+  border-radius: 5px;
+  padding: 1rem;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+.project h3 {
+  margin-bottom: 1rem;
+}
+.img-wrapper {
+  max-width: 350px;
+  text-align: center;
+}
+.img-wrapper img {
+  width: 100%;
+}
+.img-wrapper h2 {
+  margin-bottom: 0.5rem;
+}
+.projects-list {
+  list-style-position: inside;
+}

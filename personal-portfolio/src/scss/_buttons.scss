@@ -2,11 +2,13 @@
   @include button();
   background-color: transparent;
   &:hover {
-    border-color: $primary-alternative-color;
-    color: $primary-alternative-color;
+    border-color: darken($light-secondary-color, 30%);
+    & a {
+      color: darken($light-secondary-color, 30%);
+    }
   }
   a {
-    color: $secondary-alternative-color;
+    color: $light-secondary-color;
   }
 }
 .nav-toggle {

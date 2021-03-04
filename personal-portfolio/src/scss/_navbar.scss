@@ -1,10 +1,6 @@
 nav {
-  background: linear-gradient(
-    to bottom right,
-    $primary-color,
-    $secondary-color
-  );
-  color: $secondary-alternative-color;
+  background: $dark-primary-color;
+  color: $light-secondary-color;
   font-weight: 400;
   position: fixed;
   padding: 0.5rem;
