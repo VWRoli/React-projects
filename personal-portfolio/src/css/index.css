@@ -26,13 +26,51 @@ a {
   text-decoration: none;
 }
 
+.resume-btn {
+  width: fit-content;
+  padding: 0.35rem 0.65rem;
+  border: none;
+  border: 3px solid #e8b338;
+  border-radius: 5px;
+  outline: none;
+  color: #e8b338;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.resume-btn:hover {
+  border-color: #9c6e06;
+  color: #9c6e06;
+}
+
+.resume-btn a {
+  color: #e8b338;
+}
+
+.nav-toggle {
+  display: block;
+  width: fit-content;
+  padding: 0.35rem 0.65rem;
+  border: none;
+  border: 3px solid #e8b338;
+  border-radius: 5px;
+  outline: none;
+  color: #e8b338;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.nav-toggle > * {
+  font-size: 1.25rem;
+}
+
 nav {
   background: linear-gradient(to bottom right, #16409c, #3870e8);
   color: #e8b338;
   font-weight: 400;
-  min-height: 7vh;
   position: fixed;
-  z-index: 1;
+  padding: 0.5rem;
   top: 0;
   right: 0;
   left: 0;
@@ -48,17 +86,17 @@ nav .nav-header {
   text-transform: uppercase;
 }
 
+nav .nav-header .nav-toggle {
+  display: none;
+}
+
 nav .nav-header .logo-icon {
   margin-right: 0.5rem;
   font-size: 1.25rem;
 }
 
-nav .nav-container {
-  height: auto;
-  transition: all 0.3s linear;
-}
-
 nav .links {
+  transition: all 0.3s linear;
   display: flex;
 }
 
@@ -72,53 +110,35 @@ nav .links .link-items:hover {
   text-decoration: underline;
 }
 
-nav .show-container {
-  height: 10rem;
-}
-
-nav .nav-resume .resume-btn {
-  width: fit-content;
-  padding: 0.35rem 0.65rem;
-  border: none;
-  border: 3px solid #e8b338;
-  border-radius: 5px;
-  outline: none;
-  color: #e8b338;
-  cursor: pointer;
-  background-color: transparent;
-}
-
-nav .nav-resume .resume-btn:hover {
-  border-color: #9c6e06;
-  color: #9c6e06;
-}
-
-nav .nav-resume .resume-btn a {
-  color: #e8b338;
-}
-
-nav .nav-resume .nav-toggle {
-  width: fit-content;
-  padding: 0.35rem 0.65rem;
-  border: none;
-  border: 3px solid #e8b338;
-  border-radius: 5px;
-  outline: none;
-  color: #e8b338;
-  cursor: pointer;
-  border: none;
-  background-color: transparent;
-}
-
-nav .nav-resume .nav-toggle > * {
-  font-size: 1.25rem;
-}
-
 nav .active {
   text-decoration: underline;
 }
 
+@media screen and (max-width: 800px) {
+  nav {
+    flex-direction: column;
+  }
+  nav .nav-header {
+    justify-content: space-between;
+    width: 100%;
+  }
+  nav .nav-header .nav-toggle {
+    display: block;
+  }
+  nav .links {
+    height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    text-align: center;
+  }
+  nav .show-container {
+    height: 7rem;
+  }
+  nav .nav-resume {
+    display: none;
+  }
+}
+
 #hero {
-  margin-top: 7vh;
   background-color: antiquewhite;
 }

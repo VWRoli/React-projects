@@ -5,7 +5,8 @@ import { FaCode } from 'react-icons/fa';
 import { MobileToggleBtn, ResumeBtn } from './Buttons';
 
 const Navbar = () => {
-  const [showResume, setShowResume] = useState(true);
+  const [showResume, setShowResume] = useState(false);
+  const [closeMobileMenu, setcloseMobileMenu] = useState(true);
 
   const showButton = () => {
     if (window.innerWidth <= 800) {
@@ -18,7 +19,7 @@ const Navbar = () => {
     window.addEventListener('resize', showButton);
     //Cleanup
     return () => {
-      window.addEventListener('resize', showButton);
+      window.removeEventListener('resize', showButton);
     };
   }, [showResume]);
 
@@ -27,31 +28,35 @@ const Navbar = () => {
       <div className="nav-header">
         <FaCode className="logo-icon" />
         Roland Füst
+        <MobileToggleBtn
+          closeMobileMenu={closeMobileMenu}
+          setcloseMobileMenu={setcloseMobileMenu}
+        />
       </div>
-      <div className="nav-container ">
-        <ul className="links">
-          {links.map((link) => {
-            const { id, url, text } = link;
-            return (
-              <li key={id}>
-                <Link
-                  className="link-items"
-                  to={url}
-                  activeClass="active"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                >
-                  {text}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
+      <ul className={closeMobileMenu ? `links` : `links show-container`}>
+        {links.map((link) => {
+          const { id, url, text } = link;
+          return (
+            <li key={id}>
+              <Link
+                className="link-items"
+                to={url}
+                activeClass="active"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                onClick={() => setcloseMobileMenu(true)}
+              >
+                {text}
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+
       <div className="nav-resume">
-        {showResume ? <ResumeBtn /> : <MobileToggleBtn />}
+        <ResumeBtn />
       </div>
     </nav>
   );

@@ -11,14 +11,14 @@ export const ResumeBtn = () => {
     </button>
   );
 };
-export const MobileToggleBtn = () => {
-  const [closeMobileMenu, setcloseMobileMenu] = useState(false);
+export const MobileToggleBtn = ({ closeMobileMenu, setcloseMobileMenu }) => {
+  //const [closeMobileMenu, setcloseMobileMenu] = useState(false);
   return (
     <button
       className="nav-toggle"
       onClick={() => setcloseMobileMenu(!closeMobileMenu)}
     >
-      {closeMobileMenu ? <FaTimes /> : <FaBars />}
+      {closeMobileMenu ? <FaBars /> : <FaTimes />}
     </button>
   );
 };

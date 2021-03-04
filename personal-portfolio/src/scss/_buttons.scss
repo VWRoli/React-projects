@@ -1,0 +1,20 @@
+.resume-btn {
+  @include button();
+  background-color: transparent;
+  &:hover {
+    border-color: $primary-alternative-color;
+    color: $primary-alternative-color;
+  }
+  a {
+    color: $secondary-alternative-color;
+  }
+}
+.nav-toggle {
+  display: block;
+  @include button();
+  border: none;
+  background-color: transparent;
+  & > * {
+    font-size: 1.25rem;
+  }
+}

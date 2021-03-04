@@ -6,9 +6,8 @@ nav {
   );
   color: $secondary-alternative-color;
   font-weight: 400;
-  min-height: 7vh;
   position: fixed;
-  z-index: 1;
+  padding: 0.5rem;
   top: 0;
   right: 0;
   left: 0;
@@ -19,6 +18,9 @@ nav {
   .nav-header {
     display: flex;
     align-items: center;
+    .nav-toggle {
+      display: none;
+    }
     font-size: 1rem;
     text-transform: uppercase;
     .logo-icon {
@@ -27,11 +29,8 @@ nav {
     }
   }
 
-  .nav-container {
-    height: auto;
-    transition: all 0.3s linear;
-  }
   .links {
+    transition: all 0.3s linear;
     display: flex;
     .link-items {
       display: block;
@@ -42,30 +41,7 @@ nav {
       }
     }
   }
-  .show-container {
-    height: 10rem;
-  }
-  .nav-resume {
-    .resume-btn {
-      @include button();
-      background-color: transparent;
-      &:hover {
-        border-color: $primary-alternative-color;
-        color: $primary-alternative-color;
-      }
-      a {
-        color: $secondary-alternative-color;
-      }
-    }
-    .nav-toggle {
-      @include button();
-      border: none;
-      background-color: transparent;
-      & > * {
-        font-size: 1.25rem;
-      }
-    }
-  }
+
   .active {
     text-decoration: underline;
   }
@@ -73,5 +49,28 @@ nav {
 
 @media screen and (max-width: 800px) {
   nav {
+    flex-direction: column;
+    .nav-header {
+      justify-content: space-between;
+      width: 100%;
+      .nav-toggle {
+        display: block;
+      }
+    }
+
+    .links {
+      height: 0;
+      overflow: hidden;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .show-container {
+      height: 7rem;
+    }
+
+    .nav-resume {
+      display: none;
+    }
   }
 }
