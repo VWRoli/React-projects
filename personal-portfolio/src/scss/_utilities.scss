@@ -16,15 +16,3 @@ $dark-color: #222;
   color: $secondary-alternative-color;
   cursor: pointer;
 }
-
-.btn {
-  @include button();
-  background-color: transparent;
-  &:hover {
-    border-color: $primary-alternative-color;
-    color: $primary-alternative-color;
-  }
-  a {
-    color: $secondary-alternative-color;
-  }
-}

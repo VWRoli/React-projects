@@ -14,28 +14,70 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  ul {
-    display: flex;
-    li {
-      margin: 0 2rem;
 
-      &:hover {
-        cursor: pointer;
-        text-decoration: underline;
-      }
-    }
-  }
-  .navbar-logo {
+  .nav-header {
     display: flex;
     align-items: center;
     font-size: 1rem;
     text-transform: uppercase;
-    cursor: pointer;
     .logo-icon {
       margin-right: 0.5rem;
+      font-size: 1.25rem;
     }
   }
+
+  .nav-container {
+    height: auto;
+    transition: all 0.3s linear;
+  }
+  .links {
+    display: flex;
+    .link-items {
+      display: block;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .nav-resume {
+    .resume-btn {
+      @include button();
+      background-color: transparent;
+      &:hover {
+        border-color: $primary-alternative-color;
+        color: $primary-alternative-color;
+      }
+      a {
+        color: $secondary-alternative-color;
+      }
+    }
+    .nav-toggle {
+      display: none;
+    }
+  }
+  .active {
+    text-decoration: underline;
+  }
 }
-.active {
-  text-decoration: underline;
+
+@media screen and (max-width: 800px) {
+  nav {
+    .nav-header {
+      justify-content: space-between;
+    }
+    .nav-container {
+      height: 0 !important;
+      overflow: hidden;
+    }
+    .nav-resume {
+      .resume-btn {
+        display: none;
+      }
+      .nav-toggle {
+        display: block;
+      }
+    }
+  }
 }

@@ -1,25 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
-.btn {
-  width: fit-content;
-  padding: 0.35rem 0.65rem;
-  border: none;
-  border: 3px solid #e8b338;
-  border-radius: 5px;
-  outline: none;
-  color: #e8b338;
-  cursor: pointer;
-  background-color: transparent;
-}
-
-.btn:hover {
-  border-color: #9c6e06;
-  color: #9c6e06;
-}
-
-.btn a {
-  color: #e8b338;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -61,33 +40,80 @@ nav {
   align-items: center;
 }
 
-nav ul {
-  display: flex;
-}
-
-nav ul li {
-  margin: 0 2rem;
-}
-
-nav ul li:hover {
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-nav .navbar-logo {
+nav .nav-header {
   display: flex;
   align-items: center;
   font-size: 1rem;
   text-transform: uppercase;
+}
+
+nav .nav-header .logo-icon {
+  margin-right: 0.5rem;
+  font-size: 1.25rem;
+}
+
+nav .nav-container {
+  height: auto;
+  transition: all 0.3s linear;
+}
+
+nav .links {
+  display: flex;
+}
+
+nav .links .link-items {
+  display: block;
+  padding: 0.5rem 1rem;
   cursor: pointer;
 }
 
-nav .navbar-logo .logo-icon {
-  margin-right: 0.5rem;
+nav .links .link-items:hover {
+  text-decoration: underline;
 }
 
-.active {
+nav .nav-resume .resume-btn {
+  width: fit-content;
+  padding: 0.35rem 0.65rem;
+  border: none;
+  border: 3px solid #e8b338;
+  border-radius: 5px;
+  outline: none;
+  color: #e8b338;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+nav .nav-resume .resume-btn:hover {
+  border-color: #9c6e06;
+  color: #9c6e06;
+}
+
+nav .nav-resume .resume-btn a {
+  color: #e8b338;
+}
+
+nav .nav-resume .nav-toggle {
+  display: none;
+}
+
+nav .active {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 800px) {
+  nav .nav-header {
+    justify-content: space-between;
+  }
+  nav .nav-container {
+    height: 0 !important;
+    overflow: hidden;
+  }
+  nav .nav-resume .resume-btn {
+    display: none;
+  }
+  nav .nav-resume .nav-toggle {
+    display: block;
+  }
 }
 
 #hero {
