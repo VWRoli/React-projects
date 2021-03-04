@@ -1,16 +1,34 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, animateScroll as scroll } from 'react-scroll';
 import { links } from './navbarData';
-import { FaCode, FaTimes, FaBars } from 'react-icons/fa';
+import { FaCode } from 'react-icons/fa';
+import { MobileToggleBtn, ResumeBtn } from './Buttons';
 
 const Navbar = () => {
+  const [showResume, setShowResume] = useState(true);
+
+  const showButton = () => {
+    if (window.innerWidth <= 800) {
+      setShowResume(false);
+    } else {
+      setShowResume(true);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener('resize', showButton);
+    //Cleanup
+    return () => {
+      window.addEventListener('resize', showButton);
+    };
+  }, [showResume]);
+
   return (
     <nav>
       <div className="nav-header">
         <FaCode className="logo-icon" />
         Roland Füst
       </div>
-      <div className="nav-container">
+      <div className="nav-container ">
         <ul className="links">
           {links.map((link) => {
             const { id, url, text } = link;
@@ -33,70 +51,8 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="nav-resume">
-        <button className="resume-btn">
-          <a href="cv_roland_fust.pdf" target="_blank">
-            Resume
-          </a>
-        </button>
-        <button className="nav-toggle">
-          <FaBars />
-        </button>
+        {showResume ? <ResumeBtn /> : <MobileToggleBtn />}
       </div>
-      {/*  <Link
-        className="navbar-logo"
-        to="hero"
-        activeClass="active"
-        spy={true}
-        smooth={true}
-        offset={-70}
-        duration={500}
-      >
-        <FaCode className="logo-icon" />
-        Roland Füst
-      </Link>
-      <ul>
-        <li>
-          <Link
-            to="hero"
-            activeClass="active"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-          >
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="projects"
-            activeClass="active"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-          >
-            Projects
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="about"
-            activeClass="active"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-          >
-            About
-          </Link>
-        </li>
-      </ul>
-      <button className="btn resume-btn">
-        <a href="cv_roland_fust.pdf" target="_blank">
-          Resume
-        </a>
-      </button> */}
     </nav>
   );
 };

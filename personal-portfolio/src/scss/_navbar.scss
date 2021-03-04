@@ -8,6 +8,7 @@ nav {
   font-weight: 400;
   min-height: 7vh;
   position: fixed;
+  z-index: 1;
   top: 0;
   right: 0;
   left: 0;
@@ -41,6 +42,9 @@ nav {
       }
     }
   }
+  .show-container {
+    height: 10rem;
+  }
   .nav-resume {
     .resume-btn {
       @include button();
@@ -54,7 +58,12 @@ nav {
       }
     }
     .nav-toggle {
-      display: none;
+      @include button();
+      border: none;
+      background-color: transparent;
+      & > * {
+        font-size: 1.25rem;
+      }
     }
   }
   .active {
@@ -64,20 +73,5 @@ nav {
 
 @media screen and (max-width: 800px) {
   nav {
-    .nav-header {
-      justify-content: space-between;
-    }
-    .nav-container {
-      height: 0 !important;
-      overflow: hidden;
-    }
-    .nav-resume {
-      .resume-btn {
-        display: none;
-      }
-      .nav-toggle {
-        display: block;
-      }
-    }
   }
 }

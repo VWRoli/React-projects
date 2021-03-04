@@ -32,6 +32,7 @@ nav {
   font-weight: 400;
   min-height: 7vh;
   position: fixed;
+  z-index: 1;
   top: 0;
   right: 0;
   left: 0;
@@ -71,6 +72,10 @@ nav .links .link-items:hover {
   text-decoration: underline;
 }
 
+nav .show-container {
+  height: 10rem;
+}
+
 nav .nav-resume .resume-btn {
   width: fit-content;
   padding: 0.35rem 0.65rem;
@@ -93,27 +98,24 @@ nav .nav-resume .resume-btn a {
 }
 
 nav .nav-resume .nav-toggle {
-  display: none;
+  width: fit-content;
+  padding: 0.35rem 0.65rem;
+  border: none;
+  border: 3px solid #e8b338;
+  border-radius: 5px;
+  outline: none;
+  color: #e8b338;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+nav .nav-resume .nav-toggle > * {
+  font-size: 1.25rem;
 }
 
 nav .active {
   text-decoration: underline;
-}
-
-@media screen and (max-width: 800px) {
-  nav .nav-header {
-    justify-content: space-between;
-  }
-  nav .nav-container {
-    height: 0 !important;
-    overflow: hidden;
-  }
-  nav .nav-resume .resume-btn {
-    display: none;
-  }
-  nav .nav-resume .nav-toggle {
-    display: block;
-  }
 }
 
 #hero {
