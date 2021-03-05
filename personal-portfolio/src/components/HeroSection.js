@@ -10,7 +10,7 @@ const HeroSection = () => {
           My main strengths are
           <span className="html-tag tag">HTML</span>
           <span className="css-tag tag">CSS</span>,
-          <span className="js-tag tag">JavaScript</span> and
+          <span className="js-tag tag">JavaScript</span> (ES6+, OOP), and
           <span className="react-tag tag">React</span>
         </p>
         <div className="links">

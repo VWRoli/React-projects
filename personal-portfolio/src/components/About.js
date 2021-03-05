@@ -14,13 +14,16 @@ const About = () => {
           <h3>Front-end:</h3>
           <span className="html-tag tag">HTML</span>
           <span className="css-tag tag">CSS</span>
+          <span class="sass-tag tag">Sass</span>
           <span className="js-tag tag">JavaScript</span>
           <h3>Libraries, Frameworks:</h3>
           <span className="bootstrap-tag tag">Bootstrap</span>
           <span className="react-tag tag">React</span>
           <h3>Other:</h3>
           <span className="git-tag tag">Git (Github)</span>
-          <span className="responsive-tag tag">Responsive Design</span>
+          <span class="npm-tag tag">npm</span>
+          <span class="parcel-tag tag">Parcel</span>
+          <span class="api-tag tag">API</span>
         </div>
         <div className="about-text">
           <h2>More About Me</h2>

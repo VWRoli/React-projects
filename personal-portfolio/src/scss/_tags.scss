@@ -1,0 +1,54 @@
+.tag {
+  padding: 2px 6px;
+  margin: 0 5px;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  opacity: 0.9;
+  cursor: default;
+}
+.html-tag {
+  @include tag-color(#fff, #f06529);
+}
+.css-tag {
+  @include tag-color(#fff, #2965f1);
+}
+.js-tag {
+  @include tag-color(#222, #f0db4f);
+  border: 1px solid #222;
+}
+.react-tag {
+  @include tag-color(#61dafb, #282c34);
+  border: 1px solid #61dafb;
+}
+.api-tag {
+  @include tag-color(#fff, #45c541);
+  border: 1px solid #fff;
+}
+.bootstrap-tag {
+  @include tag-color(#fff, #7952b3);
+}
+.git-tag {
+  @include tag-color(#fff, #24292e);
+  border: 1px solid #fff;
+}
+.seo-tag {
+  @include tag-color(#fff, #317bb4);
+  border: 1px solid #fff;
+}
+.oop-tag {
+  @include tag-color(#222, #f7ed5b);
+  border: 1px solid #222;
+}
+.npm-tag {
+  @include tag-color(#fff, #c12127);
+  border: 1px solid #fff;
+}
+.parcel-tag {
+  @include tag-color(#fff, #21374b);
+}
+.sass-tag {
+  @include tag-color(#fff, #bf4080);
+  border: 1px solid #fff;
+}

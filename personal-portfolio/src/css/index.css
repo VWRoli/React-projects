@@ -100,6 +100,133 @@ img {
   color: black;
 }
 
+.tag {
+  padding: 2px 6px;
+  margin: 0 5px;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  opacity: 0.9;
+  cursor: default;
+}
+
+.html-tag {
+  color: #fff;
+  background: linear-gradient(to bottom right, #f06529 0%, #f06529 35%, #f7aa88 50%, #f06529 65%, #f06529 100%);
+}
+
+.html-tag:hover {
+  background: linear-gradient(to bottom right, #f06529 0%, #f06529 35%, #f06529 50%, #f7aa88 65%, #f06529 100%);
+}
+
+.css-tag {
+  color: #fff;
+  background: linear-gradient(to bottom right, #2965f1 0%, #2965f1 35%, #89aaf7 50%, #2965f1 65%, #2965f1 100%);
+}
+
+.css-tag:hover {
+  background: linear-gradient(to bottom right, #2965f1 0%, #2965f1 35%, #2965f1 50%, #89aaf7 65%, #2965f1 100%);
+}
+
+.js-tag {
+  color: #222;
+  background: linear-gradient(to bottom right, #f0db4f 0%, #f0db4f 35%, #f8eead 50%, #f0db4f 65%, #f0db4f 100%);
+  border: 1px solid #222;
+}
+
+.js-tag:hover {
+  background: linear-gradient(to bottom right, #f0db4f 0%, #f0db4f 35%, #f0db4f 50%, #f8eead 65%, #f0db4f 100%);
+}
+
+.react-tag {
+  color: #61dafb;
+  background: linear-gradient(to bottom right, #282c34 0%, #282c34 35%, #545d6e 50%, #282c34 65%, #282c34 100%);
+  border: 1px solid #61dafb;
+}
+
+.react-tag:hover {
+  background: linear-gradient(to bottom right, #282c34 0%, #282c34 35%, #282c34 50%, #545d6e 65%, #282c34 100%);
+}
+
+.api-tag {
+  color: #fff;
+  background: linear-gradient(to bottom right, #45c541 0%, #45c541 35%, #92dd8f 50%, #45c541 65%, #45c541 100%);
+  border: 1px solid #fff;
+}
+
+.api-tag:hover {
+  background: linear-gradient(to bottom right, #45c541 0%, #45c541 35%, #45c541 50%, #92dd8f 65%, #45c541 100%);
+}
+
+.bootstrap-tag {
+  color: #fff;
+  background: linear-gradient(to bottom right, #7952b3 0%, #7952b3 35%, #b099d2 50%, #7952b3 65%, #7952b3 100%);
+}
+
+.bootstrap-tag:hover {
+  background: linear-gradient(to bottom right, #7952b3 0%, #7952b3 35%, #7952b3 50%, #b099d2 65%, #7952b3 100%);
+}
+
+.git-tag {
+  color: #fff;
+  background: linear-gradient(to bottom right, #24292e 0%, #24292e 35%, #515c67 50%, #24292e 65%, #24292e 100%);
+  border: 1px solid #fff;
+}
+
+.git-tag:hover {
+  background: linear-gradient(to bottom right, #24292e 0%, #24292e 35%, #24292e 50%, #515c67 65%, #24292e 100%);
+}
+
+.seo-tag {
+  color: #fff;
+  background: linear-gradient(to bottom right, #317bb4 0%, #317bb4 35%, #72acd9 50%, #317bb4 65%, #317bb4 100%);
+  border: 1px solid #fff;
+}
+
+.seo-tag:hover {
+  background: linear-gradient(to bottom right, #317bb4 0%, #317bb4 35%, #317bb4 50%, #72acd9 65%, #317bb4 100%);
+}
+
+.oop-tag {
+  color: #222;
+  background: linear-gradient(to bottom right, #f7ed5b 0%, #f7ed5b 35%, #fcf8bc 50%, #f7ed5b 65%, #f7ed5b 100%);
+  border: 1px solid #222;
+}
+
+.oop-tag:hover {
+  background: linear-gradient(to bottom right, #f7ed5b 0%, #f7ed5b 35%, #f7ed5b 50%, #fcf8bc 65%, #f7ed5b 100%);
+}
+
+.npm-tag {
+  color: #fff;
+  background: linear-gradient(to bottom right, #c12127 0%, #c12127 35%, #e46468 50%, #c12127 65%, #c12127 100%);
+  border: 1px solid #fff;
+}
+
+.npm-tag:hover {
+  background: linear-gradient(to bottom right, #c12127 0%, #c12127 35%, #c12127 50%, #e46468 65%, #c12127 100%);
+}
+
+.parcel-tag {
+  color: #fff;
+  background: linear-gradient(to bottom right, #21374b 0%, #21374b 35%, #406b92 50%, #21374b 65%, #21374b 100%);
+}
+
+.parcel-tag:hover {
+  background: linear-gradient(to bottom right, #21374b 0%, #21374b 35%, #21374b 50%, #406b92 65%, #21374b 100%);
+}
+
+.sass-tag {
+  color: #fff;
+  background: linear-gradient(to bottom right, #bf4080 0%, #bf4080 35%, #d98cb3 50%, #bf4080 65%, #bf4080 100%);
+  border: 1px solid #fff;
+}
+
+.sass-tag:hover {
+  background: linear-gradient(to bottom right, #bf4080 0%, #bf4080 35%, #bf4080 50%, #d98cb3 65%, #bf4080 100%);
+}
+
 nav {
   background: #45596e;
   color: #e4cdaa;
@@ -272,8 +399,11 @@ nav .active {
   margin: 0.5rem;
 }
 
+#about h3 {
+  font-size: 0.8rem;
+}
+
 #about p,
-#about span,
 #about b {
   font-size: 0.85rem;
   line-height: 1.5;

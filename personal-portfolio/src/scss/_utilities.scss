@@ -49,3 +49,25 @@ $bg-gradient: linear-gradient(217deg, #b2ccde, rgba(255, 0, 0, 0) 70.71%),
     color: lighten($color, 30%);
   }
 }
+
+@mixin tag-color($color, $bg-color) {
+  color: $color;
+  background: linear-gradient(
+    to bottom right,
+    $bg-color 0%,
+    $bg-color 35%,
+    lighten($bg-color, 20%) 50%,
+    $bg-color 65%,
+    $bg-color 100%
+  );
+  &:hover {
+    background: linear-gradient(
+      to bottom right,
+      $bg-color 0%,
+      $bg-color 35%,
+      $bg-color 50%,
+      lighten($bg-color, 20%) 65%,
+      $bg-color 100%
+    );
+  }
+}
