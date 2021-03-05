@@ -11,7 +11,7 @@ const HeroSection = () => {
           <span className="html-tag tag">HTML</span>
           <span className="css-tag tag">CSS</span>,
           <span className="js-tag tag">JavaScript</span> and
-          <span class="react-tag tag">React</span>
+          <span className="react-tag tag">React</span>
         </p>
         <div className="links">
           <a href="https://github.com/VWRoli" target="_blank">

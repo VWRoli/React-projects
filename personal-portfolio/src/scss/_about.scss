@@ -1,0 +1,38 @@
+#about {
+  @include flex-center(row);
+  background: $bg-gradient;
+  color: $dark-secondary-color;
+  h2,
+  h3 {
+    font-weight: 500;
+    margin: 0.5rem;
+  }
+  p,
+  span,
+  b {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: $dark-primary-color;
+  }
+
+  .left-container,
+  .right-container {
+    @include glass();
+    flex: 1;
+
+    @include flex-center(column);
+    text-align: center;
+    max-width: 25rem;
+    margin: 2rem;
+    & > * {
+      margin: 0.5rem;
+    }
+  }
+  .code-group a {
+    margin: 1rem;
+  }
+
+  a {
+    @include link-color($dark-primary-color);
+  }
+}

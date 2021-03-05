@@ -1,14 +1,3 @@
-/* $primary-color: #16409c;
-$secondary-color: #3870e8;
-$tertiary-color: #578cff;
-$primary-alternative-color: #9c6e06;
-$secondary-alternative-color: #e8b338;
-$light-color: #fff;
-$dark-color: #222;
-$dark-color: #5c7c94;
-$light-color: #e6f4ff;
-$light-brown-color: #d1a86b; */
-
 $dark-primary-color: #45596e;
 $light-primary-color: #b2ccde;
 $dark-secondary-color: #4e4231;
@@ -45,5 +34,18 @@ $bg-gradient: linear-gradient(217deg, #b2ccde, rgba(255, 0, 0, 0) 70.71%),
   border-right: 1px solid rgba(255, 255, 255, 0.2);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(2rem);
+}
+@mixin flex-center($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+@mixin link-color($color) {
+  text-align: center;
+  color: $color;
+  &:hover {
+    color: lighten($color, 30%);
+  }
 }

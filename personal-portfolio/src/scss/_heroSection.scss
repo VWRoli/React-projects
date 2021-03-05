@@ -6,11 +6,10 @@
 
   .intro {
     @include glass();
-    height: 20rem;
-    width: 30rem;
     display: grid;
     place-content: center;
     color: $dark-secondary-color;
+    margin: 1rem;
 
     h1 {
       font-size: 2rem;
@@ -27,16 +26,9 @@
       & > * {
         margin: 1rem;
       }
-      .icons {
-        font-size: 2rem;
-      }
     }
     a {
-      text-align: center;
-      color: $dark-secondary-color;
-      &:hover {
-        color: lighten($dark-secondary-color, 30%);
-      }
+      @include link-color($dark-secondary-color);
     }
   }
 }

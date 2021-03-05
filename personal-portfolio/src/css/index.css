@@ -1,14 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
-/* $primary-color: #16409c;
-$secondary-color: #3870e8;
-$tertiary-color: #578cff;
-$primary-alternative-color: #9c6e06;
-$secondary-alternative-color: #e8b338;
-$light-color: #fff;
-$dark-color: #222;
-$dark-color: #5c7c94;
-$light-color: #e6f4ff;
-$light-brown-color: #d1a86b; */
 * {
   margin: 0;
   padding: 0;
@@ -45,6 +35,10 @@ img {
   font-weight: 400;
   text-align: center;
   margin: 1rem;
+}
+
+.icons {
+  font-size: 2rem;
 }
 
 .resume-btn {
@@ -195,12 +189,11 @@ nav .active {
   border-right: 1px solid rgba(255, 255, 255, 0.2);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(2px);
-  height: 20rem;
-  width: 30rem;
+  backdrop-filter: blur(2rem);
   display: grid;
   place-content: center;
   color: #4e4231;
+  margin: 1rem;
 }
 
 #hero .intro h1 {
@@ -223,10 +216,6 @@ nav .active {
   margin: 1rem;
 }
 
-#hero .intro .links .icons {
-  font-size: 2rem;
-}
-
 #hero .intro a {
   text-align: center;
   color: #4e4231;
@@ -237,7 +226,7 @@ nav .active {
 }
 
 .project {
-  background-color: #b2ccde;
+  background-color: #eee;
   color: #4e4231;
   box-shadow: inset 0px 0px 50px -9px rgba(0, 0, 0, 0.72);
   border-radius: 5px;
@@ -266,4 +255,64 @@ nav .active {
 
 .project .description p {
   font-size: 17px;
+}
+
+#about {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(217deg, #b2ccde, rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, #e4cdaa, rgba(0, 255, 0, 0) 70.71%), linear-gradient(198deg, #d1a86b, rgba(0, 0, 255, 0) 70.71%), linear-gradient(336deg, #45596e, rgba(0, 0, 255, 0) 70.71%);
+  color: #4e4231;
+}
+
+#about h2,
+#about h3 {
+  font-weight: 500;
+  margin: 0.5rem;
+}
+
+#about p,
+#about span,
+#about b {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #45596e;
+}
+
+#about .left-container,
+#about .right-container {
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2rem);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 25rem;
+  margin: 2rem;
+}
+
+#about .left-container > *,
+#about .right-container > * {
+  margin: 0.5rem;
+}
+
+#about .code-group a {
+  margin: 1rem;
+}
+
+#about a {
+  text-align: center;
+  color: #45596e;
+}
+
+#about a:hover {
+  color: #92a6ba;
 }
