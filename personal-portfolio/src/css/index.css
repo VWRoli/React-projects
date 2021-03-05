@@ -10,7 +10,7 @@
 #hero,
 #about,
 #projects {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .container {
@@ -315,4 +315,13 @@ nav .active {
 
 #about a:hover {
   color: #92a6ba;
+}
+
+@media screen and (max-width: 960px) {
+  #about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
