@@ -10,14 +10,19 @@ const HeroSection = () => {
           My main strengths are
           <span className="html-tag tag">HTML</span>
           <span className="css-tag tag">CSS</span>,
-          <span className="js-tag tag">JavaScript</span> (ES6+, OOP), and
+          <span className="javascript-tag tag">JavaScript</span> (ES6+, OOP),
+          and
           <span className="react-tag tag">React</span>
         </p>
         <div className="links">
-          <a href="https://github.com/VWRoli" target="_blank">
+          <a href="https://github.com/VWRoli" target="_blank" rel="noreferrer">
             <FaGithub className="icons" />
           </a>
-          <a href="https://www.linkedin.com/in/roland-fuest/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/roland-fuest/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaLinkedin className="icons" />
           </a>
         </div>

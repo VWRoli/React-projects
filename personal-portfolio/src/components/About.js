@@ -14,16 +14,16 @@ const About = () => {
           <h3>Front-end:</h3>
           <span className="html-tag tag">HTML</span>
           <span className="css-tag tag">CSS</span>
-          <span class="sass-tag tag">Sass</span>
-          <span className="js-tag tag">JavaScript</span>
+          <span className="sass-tag tag">Sass</span>
+          <span className="javascript-tag tag">JavaScript</span>
           <h3>Libraries, Frameworks:</h3>
           <span className="bootstrap-tag tag">Bootstrap</span>
           <span className="react-tag tag">React</span>
           <h3>Other:</h3>
           <span className="git-tag tag">Git (Github)</span>
-          <span class="npm-tag tag">npm</span>
-          <span class="parcel-tag tag">Parcel</span>
-          <span class="api-tag tag">API</span>
+          <span className="npm-tag tag">npm</span>
+          <span className="parcel-tag tag">Parcel</span>
+          <span className="api-tag tag">API</span>
         </div>
         <div className="about-text">
           <h2>More About Me</h2>
@@ -43,16 +43,20 @@ const About = () => {
       <article className="right-container">
         <h3>View my codes:</h3>
         <div className="code-group">
-          <a href="https://github.com/VWRoli" target="_blank">
+          <a href="https://github.com/VWRoli" target="_blank" rel="noreferrer">
             <FaGithub className="icons" />
           </a>
-          <a href="https://codepen.io/VWRoli" target="_blank">
+          <a href="https://codepen.io/VWRoli" target="_blank" rel="noreferrer">
             <FaCodepen className="icons" />
           </a>
         </div>
 
         <h3>More info on LinkedIn:</h3>
-        <a href="https://www.linkedin.com/in/roland-fuest/" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/roland-fuest/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <FaLinkedin className="icons" />
         </a>
         <h3>Send me an Email:</h3>

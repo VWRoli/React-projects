@@ -14,7 +14,7 @@
 .css-tag {
   @include tag-color(#fff, #2965f1);
 }
-.js-tag {
+.javascript-tag {
   @include tag-color(#222, #f0db4f);
   border: 1px solid #222;
 }

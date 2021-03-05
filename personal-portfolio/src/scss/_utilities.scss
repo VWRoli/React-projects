@@ -26,6 +26,18 @@ $bg-gradient: linear-gradient(217deg, #b2ccde, rgba(255, 0, 0, 0) 70.71%),
     color: darken($color, 30%);
   }
 }
+@mixin button-lighten($color) {
+  border: 3px solid $color;
+  padding: 0.35rem 0.65rem;
+  border-radius: 5px;
+  color: $color;
+  outline: none;
+  cursor: pointer;
+  &:hover {
+    border-color: lighten($color, 30%);
+    color: lighten($color, 30%);
+  }
+}
 
 @mixin glass() {
   padding: 2rem;

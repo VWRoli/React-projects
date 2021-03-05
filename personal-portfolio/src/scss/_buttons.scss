@@ -7,9 +7,9 @@
   border: none;
 }
 .live-btn {
-  @include button($dark-secondary-color);
+  @include button-lighten($dark-primary-color);
 }
 .code-btn {
-  @include button($dark-secondary-color);
+  @include button-lighten($dark-primary-color);
   margin-left: 0.5rem;
 }
