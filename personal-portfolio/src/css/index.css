@@ -111,6 +111,7 @@ nav {
   color: #e4cdaa;
   font-weight: 400;
   position: fixed;
+  z-index: 1;
   padding: 0.5rem;
   top: 0;
   right: 0;
@@ -182,6 +183,57 @@ nav .active {
 
 #hero {
   background: linear-gradient(217deg, #b2ccde, rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, #e4cdaa, rgba(0, 255, 0, 0) 70.71%), linear-gradient(198deg, #d1a86b, rgba(0, 0, 255, 0) 70.71%), linear-gradient(336deg, #45596e, rgba(0, 0, 255, 0) 70.71%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#hero .intro {
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+  height: 20rem;
+  width: 30rem;
+  display: grid;
+  place-content: center;
+  color: #4e4231;
+}
+
+#hero .intro h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+#hero .intro p {
+  color: #45596e;
+  line-height: 1.5;
+}
+
+#hero .intro .links {
+  text-align: center;
+  margin: 1.5rem;
+}
+
+#hero .intro .links > * {
+  margin: 1rem;
+}
+
+#hero .intro .links .icons {
+  font-size: 2rem;
+}
+
+#hero .intro a {
+  text-align: center;
+  color: #4e4231;
+}
+
+#hero .intro a:hover {
+  color: #a69172;
 }
 
 .project {
