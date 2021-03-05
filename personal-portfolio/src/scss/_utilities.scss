@@ -4,15 +4,20 @@ $tertiary-color: #578cff;
 $primary-alternative-color: #9c6e06;
 $secondary-alternative-color: #e8b338;
 $light-color: #fff;
-$dark-color: #222; */
-//$dark-color: #5c7c94;
+$dark-color: #222;
+$dark-color: #5c7c94;
 $light-color: #e6f4ff;
-//$light-brown-color: #d1a86b;
+$light-brown-color: #d1a86b; */
 
 $dark-primary-color: #45596e;
 $light-primary-color: #b2ccde;
 $dark-secondary-color: #4e4231;
 $light-secondary-color: #e4cdaa;
+
+$bg-gradient: linear-gradient(217deg, #b2ccde, rgba(255, 0, 0, 0) 70.71%),
+  linear-gradient(127deg, #e4cdaa, rgba(0, 255, 0, 0) 70.71%),
+  linear-gradient(198deg, #d1a86b, rgba(0, 0, 255, 0) 70.71%),
+  linear-gradient(336deg, #45596e, rgba(0, 0, 255, 0) 70.71%);
 
 @mixin reset-list {
   margin: 0;

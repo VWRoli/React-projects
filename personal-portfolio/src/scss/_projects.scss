@@ -1,8 +1,3 @@
-.projects-wrapper {
-  display: grid;
-  row-gap: 1rem;
-  margin: 1rem;
-}
 .project {
   background-color: $light-primary-color;
   color: $dark-secondary-color;
@@ -13,20 +8,20 @@
   grid-gap: 1rem;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
-}
-.project h3 {
-  margin-bottom: 1rem;
-}
-.img-wrapper {
-  max-width: 350px;
-  text-align: center;
-}
-.img-wrapper img {
-  width: 100%;
-}
-.img-wrapper h2 {
-  margin-bottom: 0.5rem;
-}
-.projects-list {
-  list-style-position: inside;
+  font-weight: 300;
+  & h3 {
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  .img-wrapper {
+    max-width: 350px;
+    text-align: center;
+    & img {
+      width: 100%;
+      margin-bottom: 0.75rem;
+    }
+  }
+  .description p {
+    font-size: 17px;
+  }
 }

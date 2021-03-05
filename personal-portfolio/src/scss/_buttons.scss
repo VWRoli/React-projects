@@ -1,9 +1,15 @@
 .resume-btn {
   @include button($light-secondary-color);
 }
+.nav-toggle {
+  @include button($light-secondary-color);
+  background: transparent;
+  border: none;
+}
 .live-btn {
   @include button($dark-secondary-color);
 }
 .code-btn {
   @include button($dark-secondary-color);
+  margin-left: 0.5rem;
 }

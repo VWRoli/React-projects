@@ -2,25 +2,25 @@ import crypto from '../img/crypto.png';
 
 const Project = () => {
   return (
-    <div class="project">
-      <div class="img-wrapper">
-        <h2>Guitar Practice Assistant</h2>
+    <div className="project">
+      <div className="img-wrapper">
+        <h3>Guitar Practice Assistant</h3>
         <img src={crypto} alt="Guitar Practice Assistant" />
-        <a href="" target="_blank" class="live-btn">
+        <a href="" target="_blank" className="live-btn">
           Live Demo
         </a>
-        <a href="" target="_blank" class="code-btn">
+        <a href="" target="_blank" className="code-btn">
           View Code
         </a>
       </div>
-      <div class="tags">
+      <div className="tags">
         <h3>Technologies:</h3>
-        <span class="html-tag tag">HTML</span>
-        <span class="css-tag tag">CSS</span>
-        <span class="js-tag tag">JavaScript</span>
-        <span class="oop-tag tag">OOP</span>
+        <span className="html-tag tag">HTML</span>
+        <span className="css-tag tag">CSS</span>
+        <span className="js-tag tag">JavaScript</span>
+        <span className="oop-tag tag">OOP</span>
       </div>
-      <div class="description">
+      <div className="description">
         <h3>Description:</h3>
         <p>
           Guitar practice assistant app, with a built in metronome, and
