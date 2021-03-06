@@ -18,17 +18,26 @@ h1 {
   margin: 1rem;
 }
 img {
+  height: 100%;
   width: 100%;
+  object-fit: cover;
 }
 
 /*? IMAGES */
 .images {
-  background-color: aqua;
-  height: 100px;
+  margin: auto;
+  width: 85%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  justify-content: center;
+  padding-bottom: 2rem;
 }
 .image-wrapper {
-  max-width: 300px;
-  background-color: greenyellow;
+  width: 30rem;
+  height: 20rem;
+  justify-self: center;
+  align-self: center;
 }
 /*? SPINNER */
 .spinner-container {
