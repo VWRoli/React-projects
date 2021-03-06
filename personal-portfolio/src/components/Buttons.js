@@ -3,7 +3,7 @@ import { FaTimes, FaBars } from 'react-icons/fa';
 
 export const ResumeBtn = () => {
   return (
-    <a href="cv_roland_fust.pdf" target="_blank" className="resume-btn">
+    <a href="cv_roland_füst.pdf" target="_blank" className="resume-btn">
       Resume
     </a>
   );

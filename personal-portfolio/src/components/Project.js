@@ -6,10 +6,10 @@ const Project = ({ project }) => {
       <div className="img-wrapper">
         <h3>{title}</h3>
         <img src={img} alt={title} />
-        <a href={codeUrl} target="_blank" className="live-btn" rel="noreferrer">
+        <a href={liveUrl} target="_blank" className="live-btn" rel="noreferrer">
           Live Demo
         </a>
-        <a href={liveUrl} target="_blank" className="code-btn" rel="noreferrer">
+        <a href={codeUrl} target="_blank" className="code-btn" rel="noreferrer">
           View Code
         </a>
       </div>
