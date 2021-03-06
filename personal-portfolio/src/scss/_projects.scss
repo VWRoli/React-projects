@@ -41,3 +41,28 @@
     }
   }
 }
+@media screen and (max-width: 1200px) {
+  #projects {
+    .project {
+      grid-template-columns: repeat(2, 1fr);
+
+      .description {
+        grid-column: span 2;
+        text-align: center;
+        ul {
+          li {
+            list-style-position: inside;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 850px) {
+  #projects {
+    .project {
+      text-align: center;
+      @include flex-center(column);
+    }
+  }
+}

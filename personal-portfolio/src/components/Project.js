@@ -1,6 +1,6 @@
 const Project = ({ project }) => {
   const { title, img, tags, codeUrl, liveUrl, desc } = project;
-  console.log(project.img);
+
   return (
     <div className="project">
       <div className="img-wrapper">

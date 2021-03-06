@@ -29,6 +29,7 @@ nav {
   .links {
     transition: all 0.3s linear;
     display: flex;
+    list-style-type: none;
     .link-items {
       display: block;
       padding: 0.5rem 1rem;

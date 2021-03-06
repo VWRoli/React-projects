@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { Link } from 'react-scroll';
 import { links } from './navbarData';
 import { FaCode } from 'react-icons/fa';
 import { MobileToggleBtn, ResumeBtn } from './Buttons';
@@ -44,7 +44,7 @@ const Navbar = () => {
                 activeClass="active"
                 spy={true}
                 smooth={true}
-                offset={-70}
+                offset={-60}
                 duration={500}
                 onClick={() => setcloseMobileMenu(true)}
               >

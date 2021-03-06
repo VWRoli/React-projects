@@ -89,6 +89,13 @@ img {
   color: #92a6ba;
 }
 
+@media screen and (max-width: 600px) {
+  .code-btn,
+  .live-btn {
+    font-size: 0.7rem;
+  }
+}
+
 .tag {
   padding: 2px 6px;
   margin: 0 5px;
@@ -250,6 +257,7 @@ nav .nav-header .logo-icon {
 nav .links {
   transition: all 0.3s linear;
   display: flex;
+  list-style-type: none;
 }
 
 nav .links .link-items {
@@ -385,6 +393,29 @@ nav .active {
 #projects .project .description ul li {
   font-size: 0.85rem;
   line-height: 1.5;
+}
+
+@media screen and (max-width: 1200px) {
+  #projects .project {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #projects .project .description {
+    grid-column: span 2;
+    text-align: center;
+  }
+  #projects .project .description ul li {
+    list-style-position: inside;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  #projects .project {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 #about {
