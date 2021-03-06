@@ -1,15 +1,27 @@
-import './App.css';
-import { useFetch } from './useFetch';
+import Loading from './components/Loading';
+import Error from './components/Error';
+import Images from './components/Images';
 
-const BASE_URL = `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`;
-//const BASE_URL = `https://api.nasa.gov/insight_weather/?api_key=DEMO_KEY&feedtype=json&ver=1.0`;
+import { useGlobalContext } from './context';
+
+import './App.css';
 
 function App() {
-  const { data, isLoading, isError } = useFetch(BASE_URL);
-  console.log(data);
+  const { isLoading, isError } = useGlobalContext();
+
+  //Loading screen
+  if (isLoading) {
+    return <Loading />;
+  }
+
+  //Error screen
+  if (isError) {
+    return <Error />;
+  }
   return (
     <main>
-      <h1>Martian Weather</h1>
+      <h1>Astronomy Picture of the Day</h1>
+      <Images />
     </main>
   );
 }
