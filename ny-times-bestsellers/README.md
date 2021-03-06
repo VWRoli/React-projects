@@ -1,4 +1,9 @@
-# Getting Started with Create React App
+# Best Sellers List
+
+NY Times Best Sellers list. I used the [NY Times API](https://developer.nytimes.com/) to get the list. Practicing UseState, UseEffect, Fetching from an API.
+You can find the site live [Here](https://ny-times-bestsellers-react.netlify.app/).
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
