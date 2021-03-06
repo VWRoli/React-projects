@@ -64,10 +64,10 @@ const Countries = ({ countries }) => {
       <Regions regions={regions} filterByRegions={filterByRegions} />
       {searchQuery
         ? filteredCountries.map((country, i) => {
-            return <Country key={i} country={country} />;
+            return <Country key={country.alpha3Code} country={country} />;
           })
         : countriesPerPage(curPage, countryItems).map((country, i) => {
-            return <Country key={i} country={country} />;
+            return <Country key={country.alpha3Code} country={country} />;
           })}
       <Pagination
         curPage={curPage}
