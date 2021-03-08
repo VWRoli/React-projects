@@ -17,7 +17,8 @@ h1 {
   text-align: center;
   margin: 1rem;
 }
-img {
+img,
+.video {
   height: 100%;
   width: 100%;
   object-fit: cover;
