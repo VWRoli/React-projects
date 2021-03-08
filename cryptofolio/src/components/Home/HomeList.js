@@ -1,11 +1,12 @@
 import HomeListItem from './HomeListItem';
 
-const HomeList = () => {
+const HomeList = ({ coins }) => {
   return (
-    <div>
-      HomeList
-      <HomeListItem />
-    </div>
+    <>
+      {coins.map((coin) => {
+        return <HomeListItem key={coin.id} coin={coin} />;
+      })}
+    </>
   );
 };
 

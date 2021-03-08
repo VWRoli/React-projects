@@ -1,0 +1,36 @@
+#home {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  height: 100vh;
+  width: 90vw;
+}
+.home-left {
+  flex: 1;
+}
+.home-right {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  article {
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 20px;
+    h2 {
+      font-size: 1.5rem;
+      margin-left: 0.5rem;
+      span {
+        font-size: 1rem;
+        text-transform: uppercase;
+        font-style: italic;
+      }
+    }
+  }
+}
+
+.img-wrapper {
+  max-width: 45px;
+}

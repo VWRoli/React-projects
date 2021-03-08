@@ -1,8 +1,24 @@
 import HomeList from './HomeList';
+import Loading from '../Loading';
+import Error from '../Error';
+import { useFetch } from '../../useFetch';
+import { BASE_URL } from '../../constant';
 
 const Home = () => {
+  const { isLoading, isError, data } = useFetch(BASE_URL);
+
+  /*   //Loading screen
+  if (isLoading) {
+    return <Loading />;
+  }
+  //Error screen
+  if (isError) {
+    return <Error />;
+  } */
+
+  //Default
   return (
-    <section className="home">
+    <section id="home">
       <div className="home-left">
         <h1>Crypto Portfolio Tracker</h1>
         <h2>
@@ -12,7 +28,7 @@ const Home = () => {
         <button>Create your Portfolio</button>
       </div>
       <div className="home-right">
-        <HomeList />
+        <HomeList coins={data} />
       </div>
     </section>
   );
