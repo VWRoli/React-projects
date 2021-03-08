@@ -3,7 +3,7 @@ const Image = ({ imageData }) => {
 
   return (
     <article className="video-wrapper">
-      <h2 className="title">{date}</h2>
+      <h2 className="date">{date}</h2>
       <iframe
         className="video"
         src={url}
