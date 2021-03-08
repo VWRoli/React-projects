@@ -1,8 +1,9 @@
 const Image = ({ imageData }) => {
-  const { url, title } = imageData;
+  const { date, url, title } = imageData;
 
   return (
-    <article className="image-wrapper">
+    <article className="video-wrapper">
+      <h2 className="title">{date}</h2>
       <iframe
         className="video"
         src={url}
