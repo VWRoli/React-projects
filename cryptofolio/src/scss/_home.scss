@@ -4,9 +4,19 @@
   margin: auto;
   height: 100vh;
   width: 90vw;
+  //background-image: url('/images/bg.jpg');
 }
 .home-left {
   flex: 1;
+  h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: $blue-color;
+  }
+  button {
+    @include primary-btn($green-gradient, $green-inverse-gradient);
+  }
 }
 .home-right {
   flex: 1;

@@ -55,6 +55,30 @@ img {
   flex: 1;
 }
 
+.home-left h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: #1489f3;
+}
+
+.home-left button {
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 20px;
+  background: linear-gradient(to bottom right, #00b6e3, #00e4ac);
+  font-size: 1.1rem;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 400;
+  outline: none;
+}
+
+.home-left button:hover {
+  background: linear-gradient(to top left, #00b6e3, #00e4ac);
+}
+
 .home-right {
   flex: 1;
   display: grid;
