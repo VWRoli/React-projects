@@ -10,6 +10,12 @@ img {
   width: 100%;
 }
 
+.App {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
 .App::before {
   content: '';
   position: absolute;
@@ -67,7 +73,6 @@ img {
 }
 
 #home .container {
-  height: 100vh;
   display: flex;
   align-items: center;
 }
@@ -167,4 +172,35 @@ img {
   .home-right {
     grid-template-columns: 1fr 1fr;
   }
+}
+
+#portfolio {
+  position: relative;
+  z-index: 1;
+  background-color: aqua;
+  width: 90vw;
+  margin: auto;
+}
+
+#portfolio h1 {
+  font-size: 2rem;
+}
+
+#portfolio h2 {
+  font-size: 1.25rem;
+}
+
+#portfolio .container {
+  display: flex;
+}
+
+#stats {
+  height: 400px;
+  flex: 1;
+  background-color: red;
+}
+
+#assets {
+  flex: 2;
+  background-color: greenyellow;
 }

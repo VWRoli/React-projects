@@ -1,6 +1,6 @@
 const Stats = () => {
   return (
-    <section className="stats">
+    <section id="stats">
       <h2>Current Balance:</h2>
     </section>
   );

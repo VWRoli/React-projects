@@ -3,11 +3,14 @@ import Stats from './Stats';
 
 const Portfolio = () => {
   return (
-    <>
+    <section id="portfolio">
       <h1>Your portfolio</h1>
-      <Stats />
-      <Assets />
-    </>
+      <h2>Keep track of your Crypto Investments</h2>
+      <div className="container">
+        <Stats />
+        <Assets />
+      </div>
+    </section>
   );
 };
 

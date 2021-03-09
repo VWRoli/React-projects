@@ -1,0 +1,27 @@
+#portfolio {
+  position: relative;
+  z-index: 1;
+  background-color: aqua;
+  width: 90vw;
+  margin: auto;
+
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.25rem;
+  }
+  .container {
+    display: flex;
+  }
+}
+#stats {
+  //todo temp
+  height: 400px;
+  flex: 1;
+  background-color: red;
+}
+#assets {
+  flex: 2;
+  background-color: greenyellow;
+}

@@ -9,6 +9,9 @@ img {
   width: 100%;
 }
 .App {
+  height: 100vh;
+  display: grid;
+  place-content: center;
   &::before {
     content: '';
     position: absolute;

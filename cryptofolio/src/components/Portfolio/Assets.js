@@ -1,7 +1,18 @@
+import AssetRow from './AssetRow';
+import AssetsHeader from './AssetsHeader';
+
 const Assets = () => {
   return (
-    <section className="assets">
+    <section id="assets">
       <h2>Your Assets</h2>
+      <table>
+        <thead>
+          <AssetsHeader />
+        </thead>
+        <tbody>
+          <AssetRow />
+        </tbody>
+      </table>
     </section>
   );
 };
