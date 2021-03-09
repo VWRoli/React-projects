@@ -206,11 +206,19 @@ img {
 }
 
 #portfolio h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #1489f3;
 }
 
 #portfolio h2 {
   font-size: 1.25rem;
+  padding: 1rem 0;
+  color: #1489f3;
+  font-weight: 400;
+}
+
+#portfolio h3 {
   padding: 1rem 0;
 }
 

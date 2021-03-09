@@ -1,8 +1,7 @@
 import { useGlobalContext } from '../../context';
-import { priceChangeFormatter, priceFormatter } from '../../helpers';
+import Chart from './Chart';
 
 const Stats = () => {
-  const graph_url = `https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=7`;
   const { coins } = useGlobalContext();
   const btc = coins[0];
   console.log(btc);
@@ -10,7 +9,7 @@ const Stats = () => {
   return (
     <section id="stats">
       <h2>Overview</h2>
-      <div className="main-asset-value">
+      {/* <div className="main-asset-value">
         {priceFormatter(btc.current_price)}{' '}
         <span
           className={
@@ -19,7 +18,8 @@ const Stats = () => {
         >
           {priceChangeFormatter(btc.price_change_percentage_24h)}
         </span>
-      </div>
+        </div> */}
+      <Chart />
       <div className="graph-btn-container">
         <button type="button">1d</button>
         <button type="button">7d</button>
