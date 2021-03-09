@@ -1,9 +1,9 @@
 #portfolio {
   position: relative;
   z-index: 1;
-  background-color: aqua;
   width: 90vw;
   margin: auto;
+  background-color: #fff;
 
   h1 {
     font-size: 2rem;
@@ -23,5 +23,17 @@
 }
 #assets {
   flex: 2;
-  background-color: greenyellow;
+  h2 {
+    padding: 1rem 0;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    th {
+      font-weight: 400;
+      padding: 1rem 0;
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+    }
+  }
 }
