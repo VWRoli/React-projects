@@ -14,7 +14,7 @@ const Assets = () => {
         </thead>
         <tbody>
           {coins.map((coin) => {
-            return <AssetRow coin={coin} />;
+            return <AssetRow key={coin.id} coin={coin} />;
           })}
         </tbody>
       </table>

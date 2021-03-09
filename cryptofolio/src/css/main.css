@@ -32,6 +32,26 @@ img {
   margin: auto;
 }
 
+.positive {
+  color: green;
+}
+
+.negative {
+  color: red;
+}
+
+.icons {
+  color: #1489f3;
+  font-size: 1.25rem;
+  margin: 0.25rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.icons:hover {
+  color: #fa5715;
+}
+
 .error-container {
   grid-column: span 3;
   color: #b83603;
@@ -180,6 +200,9 @@ img {
   width: 90vw;
   margin: auto;
   background-color: #fff;
+  border-radius: 25px;
+  padding: 1rem;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
 }
 
 #portfolio h1 {
@@ -192,16 +215,19 @@ img {
 
 #portfolio .container {
   display: flex;
+  padding: 0 2rem 0 0;
 }
 
 #stats {
   height: 400px;
   flex: 1;
   background-color: red;
+  margin-right: 0.5rem;
 }
 
 #assets {
   flex: 2;
+  margin-left: 0.5rem;
 }
 
 #assets h2 {
@@ -218,4 +244,43 @@ img {
   padding: 1rem 0;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
+}
+
+#assets table tbody .table-name {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+#assets table tbody .table-name img {
+  width: 30px;
+  height: 30px;
+  justify-self: end;
+  margin-right: 1.5rem;
+}
+
+#assets table tbody .table-name p {
+  text-align: left;
+  width: fit-content;
+  font-weight: 400;
+}
+
+#assets table tbody .table-name p span {
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: gray;
+}
+
+#assets table tbody tr {
+  text-align: center;
+}
+
+#assets table tbody tr td {
+  font-weight: 400;
+  padding: 0.25rem;
+}
+
+#assets table tbody tr:nth-child(even) {
+  background-color: #eee;
 }

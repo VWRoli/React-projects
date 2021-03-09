@@ -7,6 +7,7 @@ const AssetsHeader = () => {
         <th>24H</th>
         <th>Holdings</th>
         <th>Profit/Loss</th>
+        <th>Actions</th>
       </tr>
     </>
   );
