@@ -13,6 +13,8 @@
   }
   h2 {
     font-size: 1.25rem;
+
+    padding: 1rem 0;
   }
   .container {
     display: flex;
@@ -20,26 +22,38 @@
   }
 }
 #stats {
-  //todo temp
-  height: 400px;
   flex: 1;
-  background-color: red;
   margin-right: 0.5rem;
+  .main-asset-value {
+    font-size: 2rem;
+    font-weight: 400;
+    @include top-bottom-border();
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    span {
+      font-weight: 400;
+    }
+  }
+  .graph-btn-container {
+    display: flex;
+    justify-content: space-between;
+    button {
+      @include secondary-btn();
+    }
+  }
 }
 #assets {
   flex: 2;
   margin-left: 0.5rem;
-  h2 {
-    padding: 1rem 0;
-  }
+
   table {
     border-collapse: collapse;
     width: 100%;
     th {
       font-weight: 400;
       padding: 1rem 0;
-      border-top: 1px solid #eee;
-      border-bottom: 1px solid #eee;
+      @include top-bottom-border();
     }
     tbody {
       .table-name {

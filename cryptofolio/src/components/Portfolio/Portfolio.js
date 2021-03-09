@@ -4,7 +4,7 @@ import Stats from './Stats';
 const Portfolio = () => {
   return (
     <section id="portfolio">
-      <h1>Your portfolio</h1>
+      <h1>My portfolio</h1>
       <h2>Keep track of your Crypto Investments</h2>
       <div className="container">
         <Stats />

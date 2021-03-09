@@ -7,7 +7,7 @@ const Assets = () => {
 
   return (
     <section id="assets">
-      <h2>Your Assets</h2>
+      <h2>My Assets</h2>
       <table>
         <thead>
           <AssetsHeader />
