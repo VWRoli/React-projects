@@ -2,19 +2,15 @@
 .spinner-container {
   margin: auto;
   width: 2rem;
+  grid-column: span 3;
 }
-.error-container {
-  text-align: center;
-  margin-top: 2.5rem;
-}
-.error-sign {
-  font-size: 2rem;
-}
+
 .spinner {
   margin: 2.5rem auto;
   text-align: center;
   height: 2rem;
   width: 2rem;
+  color: $blue-color;
   transform-origin: center center;
   animation: rotate 2s infinite linear;
 }

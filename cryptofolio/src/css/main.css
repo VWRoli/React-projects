@@ -15,19 +15,21 @@ img {
   margin: auto;
 }
 
+.error-container {
+  grid-column: span 3;
+  color: #b83603;
+  text-align: center;
+}
+
+.error-container .error-sign {
+  font-size: 2.5rem;
+}
+
 /*? SPINNER */
 .spinner-container {
   margin: auto;
   width: 2rem;
-}
-
-.error-container {
-  text-align: center;
-  margin-top: 2.5rem;
-}
-
-.error-sign {
-  font-size: 2rem;
+  grid-column: span 3;
 }
 
 .spinner {
@@ -35,6 +37,7 @@ img {
   text-align: center;
   height: 2rem;
   width: 2rem;
+  color: #1489f3;
   transform-origin: center center;
   animation: rotate 2s infinite linear;
 }

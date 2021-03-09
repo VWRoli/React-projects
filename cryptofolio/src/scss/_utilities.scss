@@ -6,6 +6,7 @@ $green-gradient: linear-gradient(to bottom right, #00b6e3, #00e4ac);
 $green-inverse-gradient: linear-gradient(to top left, #00b6e3, #00e4ac);
 $gray-gradient: linear-gradient(#dce2e2, #ebf3f1);
 $blue-color: #1489f3;
+$error-color: #b83603;
 
 @mixin primary-btn($color, $hover) {
   margin: 2rem;
