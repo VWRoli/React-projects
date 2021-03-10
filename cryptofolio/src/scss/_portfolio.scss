@@ -6,6 +6,14 @@
   h3 {
     padding: 1rem 0;
   }
+  .portfolio-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .add-transaction {
+      @include primary-btn($green-gradient, $green-inverse-gradient);
+    }
+  }
   .container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -119,6 +127,10 @@
 
 @media screen and (max-width: 650px) {
   #portfolio {
+    .portfolio-header {
+      flex-direction: column;
+      text-align: center;
+    }
     #assets {
       grid-column: span 12;
     }

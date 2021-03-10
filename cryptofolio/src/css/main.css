@@ -264,6 +264,29 @@ img {
   padding: 1rem 0;
 }
 
+#portfolio .portfolio-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#portfolio .portfolio-header .add-transaction {
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 20px;
+  background: linear-gradient(to bottom right, #00b6e3, #00e4ac);
+  font-size: 1.1rem;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 400;
+  outline: none;
+}
+
+#portfolio .portfolio-header .add-transaction:hover {
+  background: linear-gradient(to top left, #00b6e3, #00e4ac);
+}
+
 #portfolio .container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -396,6 +419,10 @@ img {
 }
 
 @media screen and (max-width: 650px) {
+  #portfolio .portfolio-header {
+    flex-direction: column;
+    text-align: center;
+  }
   #portfolio #assets {
     grid-column: span 12;
   }

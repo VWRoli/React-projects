@@ -15,7 +15,11 @@ const Assets = () => {
         </thead>
         <tbody>
           {isLoading ? (
-            <Loading />
+            <tr>
+              <td colSpan="6">
+                <Loading />
+              </td>
+            </tr>
           ) : (
             coins.map((coin) => {
               return <AssetRow key={coin.id} coin={coin} />;
