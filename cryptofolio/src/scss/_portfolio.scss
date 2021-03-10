@@ -1,15 +1,19 @@
 #portfolio {
   @include main-page-setup();
+  h2 {
+    padding: 1rem 0;
+  }
   h3 {
     padding: 1rem 0;
   }
   .container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
     padding: 0 2rem 0 0;
   }
 }
 #stats {
-  flex: 1;
+  grid-column: span 4;
   margin-right: 0.5rem;
   .main-asset-value {
     font-size: 2rem;
@@ -24,14 +28,15 @@
   }
   .graph-btn-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     button {
       @include primary-btn($green-gradient, $green-inverse-gradient);
+      margin: 0;
     }
   }
 }
 #assets {
-  flex: 2;
+  grid-column: span 8;
   margin-left: 0.5rem;
 
   table {
@@ -77,5 +82,48 @@
         background-color: #eee;
       }
     }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #portfolio {
+    #stats {
+      grid-column: span 12;
+    }
+    #assets {
+      grid-column: span 12;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  #portfolio {
+    #assets {
+      grid-column: span 12;
+    }
+  }
+  .percentage-change-row {
+    display: none;
+  }
+}
+@media screen and (max-width: 750px) {
+  #portfolio {
+    #assets {
+      grid-column: span 12;
+    }
+  }
+  .profit-row {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #portfolio {
+    #assets {
+      grid-column: span 12;
+    }
+  }
+  .actions-row {
+    display: none;
   }
 }

@@ -2,7 +2,7 @@
   @include main-page-setup();
 
   #search-section {
-    margin: 1rem;
+    margin: 2rem 0;
     #search {
       border-radius: 15px;
       border: 1px solid #222;
@@ -13,6 +13,31 @@
 }
 #asset-list {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-gap: 2rem;
+}
+@media screen and(max-width: 1650px) {
+  #asset-list {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media screen and(max-width: 1200px) {
+  #asset-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media screen and(max-width: 900px) {
+  #asset-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and(max-width: 675px) {
+  #asset-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and(max-width: 500px) {
+  #asset-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

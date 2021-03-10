@@ -10,7 +10,6 @@ const numberFormatter = (supply) => {
 
 //Locale
 const locale = navigator.language;
-console.log(locale);
 
 //Format Price Change
 export const priceChangeFormatter = (priceChange) => {

@@ -20,16 +20,26 @@ const AssetRow = ({ coin }) => {
         </p>
       </td>
       <td>{priceFormatter(price)}</td>
-      <td className={changePercentage > 0 ? 'positive' : 'negative'}>
+      <td
+        className={
+          changePercentage > 0
+            ? 'positive percentage-change-row'
+            : 'negative percentage-change-row'
+        }
+      >
         {priceChangeFormatter(changePercentage)}
       </td>
       <td>{priceFormatter(price)}</td>
-      <td className={changeValue > 0 ? 'positive' : 'negative'}>
+      <td
+        className={
+          changeValue > 0 ? 'profit-row positive' : 'profit-row negative'
+        }
+      >
         {priceFormatter(changeValue)}
       </td>
-      <td>
-        <FaEdit className="icons" />
-        <FaRegMinusSquare className="icons" />
+      <td className="actions-row">
+        <FaEdit className="icons" title="Edit transaction" />
+        <FaRegMinusSquare className="icons" title="Remove transaction" />
       </td>
     </tr>
   );

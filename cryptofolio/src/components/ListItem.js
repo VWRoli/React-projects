@@ -1,3 +1,5 @@
+import { FaPlus } from 'react-icons/fa';
+
 const HomeListItem = ({ coin }) => {
   const { name, symbol, image } = coin;
   return (
@@ -9,6 +11,9 @@ const HomeListItem = ({ coin }) => {
         {name} <br />
         <span>{symbol}</span>
       </h2>
+      <button type="button" className="add-btn">
+        <FaPlus />
+      </button>
     </article>
   );
 };

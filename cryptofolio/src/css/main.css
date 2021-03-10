@@ -11,7 +11,7 @@ img {
 }
 
 .App {
-  height: 100vh;
+  margin-top: 7.5rem;
   display: grid;
   place-content: center;
 }
@@ -54,22 +54,50 @@ img {
 
 .list-item {
   background-color: #eee;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
   align-items: center;
   padding: 0.5rem;
   border-radius: 20px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+  height: fit-content;
+  transition: all 0.25s;
 }
 
 .list-item h2 {
   font-size: 1.5rem;
   margin-left: 0.5rem;
+  grid-column: span 4;
 }
 
 .list-item h2 span {
   font-size: 1rem;
   text-transform: uppercase;
   font-style: italic;
+}
+
+.list-item .add-btn {
+  background: linear-gradient(to bottom right, #00b6e3, #00e4ac);
+  border: none;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  color: #eee;
+  justify-self: end;
+  align-self: flex-end;
+  cursor: pointer;
+  outline: none;
+}
+
+.list-item .add-btn:hover {
+  background: linear-gradient(to top left, #00b6e3, #00e4ac);
+}
+
+.list-item:hover {
+  background: #e1e1e1;
+  box-shadow: none;
 }
 
 .error-container {
@@ -110,6 +138,10 @@ img {
 
 #home {
   position: relative;
+  margin-top: -7.5rem;
+  height: 100vh;
+  display: grid;
+  place-content: center;
 }
 
 #home .container {
@@ -177,20 +209,27 @@ img {
 }
 
 @media screen and (max-width: 950px) {
-  * {
+  #home {
     font-size: 0.9rem;
   }
 }
 
 @media screen and (max-width: 750px) {
-  .home-right article h2 {
-    font-size: 1rem;
+  .home-right {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (max-width: 550px) {
+  .home-left {
+    justify-content: center;
+  }
+  .home-left button {
+    width: 100%;
+    margin: 2rem 0;
+  }
   .home-right {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -213,9 +252,12 @@ img {
 
 #portfolio h2 {
   font-size: 1.25rem;
-  padding: 1rem 0;
   color: #1489f3;
   font-weight: 400;
+}
+
+#portfolio h2 {
+  padding: 1rem 0;
 }
 
 #portfolio h3 {
@@ -223,12 +265,13 @@ img {
 }
 
 #portfolio .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
   padding: 0 2rem 0 0;
 }
 
 #stats {
-  flex: 1;
+  grid-column: span 4;
   margin-right: 0.5rem;
 }
 
@@ -248,7 +291,7 @@ img {
 
 #stats .graph-btn-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 #stats .graph-btn-container button {
@@ -262,6 +305,7 @@ img {
   cursor: pointer;
   font-weight: 400;
   outline: none;
+  margin: 0;
 }
 
 #stats .graph-btn-container button:hover {
@@ -269,7 +313,7 @@ img {
 }
 
 #assets {
-  flex: 2;
+  grid-column: span 8;
   margin-left: 0.5rem;
 }
 
@@ -324,6 +368,42 @@ img {
   background-color: #eee;
 }
 
+@media screen and (max-width: 1200px) {
+  #portfolio #stats {
+    grid-column: span 12;
+  }
+  #portfolio #assets {
+    grid-column: span 12;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  #portfolio #assets {
+    grid-column: span 12;
+  }
+  .percentage-change-row {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #portfolio #assets {
+    grid-column: span 12;
+  }
+  .profit-row {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #portfolio #assets {
+    grid-column: span 12;
+  }
+  .actions-row {
+    display: none;
+  }
+}
+
 #add-new-asset {
   position: relative;
   z-index: 1;
@@ -343,13 +423,12 @@ img {
 
 #add-new-asset h2 {
   font-size: 1.25rem;
-  padding: 1rem 0;
   color: #1489f3;
   font-weight: 400;
 }
 
 #add-new-asset #search-section {
-  margin: 1rem;
+  margin: 2rem 0;
 }
 
 #add-new-asset #search-section #search {
@@ -361,6 +440,36 @@ img {
 
 #asset-list {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-gap: 2rem;
+}
+
+@media screen and (max-width: 1650px) {
+  #asset-list {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #asset-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #asset-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 675px) {
+  #asset-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #asset-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

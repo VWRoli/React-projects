@@ -1,5 +1,9 @@
 #home {
   position: relative;
+  margin-top: -7.5rem;
+  height: 100vh;
+  display: grid;
+  place-content: center;
 
   .container {
     display: flex;
@@ -50,21 +54,24 @@
   }
 }
 @media screen and(max-width: 950px) {
-  * {
+  #home {
     font-size: 0.9rem;
   }
 }
 @media screen and(max-width: 750px) {
   .home-right {
-    article {
-      h2 {
-        font-size: 1rem;
-      }
-    }
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media screen and(max-width: 550px) {
+  .home-left {
+    justify-content: center;
+    button {
+      width: 100%;
+      margin: 2rem 0;
+    }
+  }
   .home-right {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 }
