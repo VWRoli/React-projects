@@ -1,9 +1,11 @@
 import AssetRow from './AssetRow';
 import AssetsHeader from './AssetsHeader';
 import { useGlobalContext } from '../../context';
+import Loading from '../Loading';
+import Error from '../Error';
 
 const Assets = () => {
-  const { coins } = useGlobalContext();
+  const { coins, isLoading } = useGlobalContext();
 
   return (
     <section id="assets">
@@ -13,9 +15,13 @@ const Assets = () => {
           <AssetsHeader />
         </thead>
         <tbody>
-          {coins.map((coin) => {
-            return <AssetRow key={coin.id} coin={coin} />;
-          })}
+          {isLoading ? (
+            <Loading />
+          ) : (
+            coins.map((coin) => {
+              return <AssetRow key={coin.id} coin={coin} />;
+            })
+          )}
         </tbody>
       </table>
     </section>
