@@ -1,0 +1,18 @@
+#add-new-asset {
+  @include main-page-setup();
+
+  #search-section {
+    margin: 1rem;
+    #search {
+      border-radius: 15px;
+      border: 1px solid #222;
+      padding: 0.5rem;
+      outline: none;
+    }
+  }
+}
+#asset-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 2rem;
+}

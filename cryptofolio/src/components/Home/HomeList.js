@@ -1,4 +1,4 @@
-import HomeListItem from './HomeListItem';
+import HomeListItem from '../ListItem';
 import Loading from '../Loading';
 import Error from '../Error';
 import { useGlobalContext } from '../../context';

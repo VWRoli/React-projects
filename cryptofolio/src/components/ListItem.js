@@ -1,7 +1,7 @@
 const HomeListItem = ({ coin }) => {
   const { name, symbol, image } = coin;
   return (
-    <article>
+    <article className="list-item">
       <div className="img-wrapper">
         <img src={image} alt={name} />
       </div>
