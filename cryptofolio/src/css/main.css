@@ -271,6 +271,8 @@ img {
 }
 
 #portfolio .portfolio-header .add-transaction {
+  display: flex;
+  align-items: center;
   margin: 2rem;
   padding: 1rem;
   border-radius: 20px;
@@ -285,6 +287,10 @@ img {
 
 #portfolio .portfolio-header .add-transaction:hover {
   background: linear-gradient(to top left, #00b6e3, #00e4ac);
+}
+
+#portfolio .portfolio-header .add-transaction svg {
+  margin-right: 5px;
 }
 
 #portfolio .container {
@@ -371,13 +377,6 @@ img {
   font-weight: 400;
 }
 
-#assets table tbody .table-name p span {
-  font-style: italic;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  color: gray;
-}
-
 #assets table tbody tr {
   text-align: center;
 }
@@ -389,6 +388,19 @@ img {
 
 #assets table tbody tr:nth-child(even) {
   background-color: #eee;
+}
+
+#assets table tbody .holdings {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #999;
+}
+
+#assets .symbol {
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: gray;
 }
 
 @media screen and (max-width: 1200px) {

@@ -5,9 +5,9 @@ import Portfolio from './components/Portfolio/Portfolio';
 function App() {
   return (
     <div className="App">
-      <Home />
+      {/* <Home /> */}
       {/*    <AddAsset /> */}
-      {/* <Portfolio /> */}
+      <Portfolio />
     </div>
   );
 }

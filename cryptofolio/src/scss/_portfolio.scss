@@ -11,7 +11,12 @@
     align-items: center;
     justify-content: space-between;
     .add-transaction {
+      display: flex;
+      align-items: center;
       @include primary-btn($green-gradient, $green-inverse-gradient);
+      svg {
+        margin-right: 5px;
+      }
     }
   }
   .container {
@@ -71,12 +76,6 @@
           text-align: left;
           width: fit-content;
           font-weight: 400;
-          span {
-            font-style: italic;
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            color: lighten(#000000, 50%);
-          }
         }
       }
       tr {
@@ -89,7 +88,18 @@
       tr:nth-child(even) {
         background-color: #eee;
       }
+      .holdings {
+        font-size: 0.85rem;
+        font-weight: 400;
+        color: #999;
+      }
     }
+  }
+  .symbol {
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: lighten(#000000, 50%);
   }
 }
 

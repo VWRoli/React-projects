@@ -4,7 +4,7 @@ import { useGlobalContext } from '../../context';
 import Loading from '../Loading';
 
 const Assets = () => {
-  const { coins, isLoading } = useGlobalContext();
+  const { assets, isLoading } = useGlobalContext();
 
   return (
     <section id="assets">
@@ -21,7 +21,7 @@ const Assets = () => {
               </td>
             </tr>
           ) : (
-            coins.map((coin) => {
+            assets.map((coin) => {
               return <AssetRow key={coin.id} coin={coin} />;
             })
           )}

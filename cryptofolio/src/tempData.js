@@ -27,6 +27,7 @@ export const tempData = [
     atl_date: '2013-07-06T00:00:00.000Z',
     roi: null,
     last_updated: '2021-03-10T15:26:56.978Z',
+    holdings: 1,
   },
   {
     id: 'ethereum',
@@ -60,6 +61,7 @@ export const tempData = [
       percentage: 4264.090295697622,
     },
     last_updated: '2021-03-10T15:36:33.037Z',
+    holdings: 5.4568789,
   },
   {
     id: 'litecoin',
@@ -89,5 +91,6 @@ export const tempData = [
     atl_date: '2015-01-14T00:00:00.000Z',
     roi: null,
     last_updated: '2021-03-10T15:39:06.635Z',
+    holdings: 7.86,
   },
 ];

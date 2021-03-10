@@ -1,5 +1,6 @@
 import Assets from './Assets';
 import Stats from './Stats';
+import { FaPlus } from 'react-icons/fa';
 
 const Portfolio = () => {
   return (
@@ -10,11 +11,11 @@ const Portfolio = () => {
           <h3>Keep track of your Crypto Investments</h3>
         </div>
         <button type="button" className="add-transaction">
-          Add transaction
+          <FaPlus /> Add transaction
         </button>
       </header>
       <div className="container">
-        <Stats />
+        {/*   <Stats /> */}
         <Assets />
       </div>
     </section>

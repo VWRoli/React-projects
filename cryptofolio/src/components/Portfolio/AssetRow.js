@@ -9,6 +9,7 @@ const AssetRow = ({ coin }) => {
     current_price: price,
     price_change_percentage_24h: changePercentage,
     price_change_24h: changeValue,
+    holdings,
   } = coin;
 
   return (
@@ -16,10 +17,12 @@ const AssetRow = ({ coin }) => {
       <td className="table-name">
         <img src={image} alt={name} />
         <p>
-          {name} <br /> <span>{symbol}</span>
+          {name} <br /> <span className="symbol">{symbol}</span>
         </p>
       </td>
+      {/**PRICE */}
       <td>{priceFormatter(price)}</td>
+      {/**PRICE CHANGE % */}
       <td
         className={
           changePercentage > 0
@@ -29,14 +32,23 @@ const AssetRow = ({ coin }) => {
       >
         {priceChangeFormatter(changePercentage)}
       </td>
-      <td>{priceFormatter(price)}</td>
+      {/**HOLDINGS */}
+      <td className="holdings-row">
+        {priceFormatter(price * holdings)} <br />
+        <span className="holdings">
+          {holdings.toFixed(4)}
+          <span className="symbol">&nbsp;{symbol}</span>
+        </span>
+      </td>
+      {/**PROFIT/LOSS */}
       <td
         className={
           changeValue > 0 ? 'profit-row positive' : 'profit-row negative'
         }
       >
-        {priceFormatter(changeValue)}
+        {priceFormatter(changeValue * holdings)}
       </td>
+      {/**ACTIONS */}
       <td className="actions-row">
         <FaEdit className="icons" title="Edit transaction" />
         <FaRegMinusSquare className="icons" title="Remove transaction" />
