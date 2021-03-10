@@ -1,10 +1,12 @@
 import HomeListItem from '../ListItem';
 import Loading from '../Loading';
 import Error from '../Error';
-import { useGlobalContext } from '../../context';
+import { BASE_URL } from '../../constant';
+import { useFetch } from '../../useFetch';
 
 const HomeList = () => {
-  const { coins, isError, isLoading } = useGlobalContext();
+  const { data: coins, isLoading, isError } = useFetch(BASE_URL);
+
   //Loading screen
   if (isLoading) {
     return <Loading />;
