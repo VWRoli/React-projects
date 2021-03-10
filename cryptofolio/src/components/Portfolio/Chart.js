@@ -1,14 +1,10 @@
-import { priceChangeFormatter, priceFormatter } from '../../helpers';
+import { priceFormatter } from '../../helpers';
 import {
-  LineChart,
-  Line,
-  CartesianGrid,
   XAxis,
   YAxis,
   ResponsiveContainer,
   AreaChart,
   Tooltip,
-  ReferenceLine,
   Area,
 } from 'recharts';
 import { useFetch } from '../../useFetch';
@@ -33,29 +29,47 @@ const Chart = () => {
   const tempGrapghArray = data.prices;
 
   const graphObj = tempGrapghArray.map((el) => {
-    const d = new Date(el[0]);
-    return { day: d, price: el[1] };
+    //Configuration
+    const options = {
+      hour: 'numeric',
+      minute: 'numeric',
+      day: 'numeric',
+      month: 'short',
+      year: 'numeric',
+      weekday: 'long',
+    };
+
+    //Locale
+    const locale = navigator.language;
+    //Formatting the date
+    const formattedDate = new Intl.DateTimeFormat(locale, options).format(
+      new Date(el[0])
+    );
+
+    return { day: formattedDate, price: el[1] };
   });
-  console.log(graphObj);
+
   return (
     <>
-      <ResponsiveContainer width={450} height="80%">
-        <AreaChart
-          data={graphObj}
-          margin={{ top: 20, right: 30, left: 0, bottom: 0 }}
-        >
-          <XAxis dataKey="day" />
-          <YAxis />
-          <CartesianGrid strokeDasharray="3 3" />
-          <Tooltip />
-          <ReferenceLine x="Page C" stroke="green" label="Min PAGE" />
-          <ReferenceLine
-            y={4000}
-            label="Max"
-            stroke="red"
-            strokeDasharray="3 3"
+      <ResponsiveContainer width="100%" height={300}>
+        <AreaChart data={graphObj}>
+          <defs>
+            <linearGradient id="priceGradient" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
+              <stop offset="95%" stopColor="#82ca9d" stopOpacity={0.2} />
+            </linearGradient>
+          </defs>
+          <XAxis dataKey="day" tick={false} />
+          <YAxis dataKey="price" unit="$" />
+
+          <Tooltip formatter={(value) => priceFormatter(value)} />
+          <Area
+            type="monotone"
+            dataKey="price"
+            stroke="green"
+            fillOpacity={1}
+            fill="url(#priceGradient)"
           />
-          <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
         </AreaChart>
       </ResponsiveContainer>
     </>

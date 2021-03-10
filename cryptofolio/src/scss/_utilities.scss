@@ -1,5 +1,6 @@
 $blue-gradient: linear-gradient(#1489f3, #2cadfb);
 $orange-gradient: linear-gradient(#fa5715, #f6d022);
+
 $green-gradient: linear-gradient(to bottom right, #00b6e3, #00e4ac);
 $green-inverse-gradient: linear-gradient(to top left, #00b6e3, #00e4ac);
 $gray-gradient: linear-gradient(to bottom, #dce2e2, #fff, #dce2e2);
@@ -27,19 +28,5 @@ $hover: #fa5715;
 
   &:hover {
     background: $hover;
-  }
-}
-@mixin secondary-btn() {
-  background: $gray-gradient;
-  padding: 1rem;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: 400;
-  border-left: 1px solid #fff;
-  border-right: 1px solid #fff;
-  width: 100%;
-  @include top-bottom-border();
-  &:hover {
-    background: $gray-hover-gradient;
   }
 }

@@ -8,9 +8,13 @@ const numberFormatter = (supply) => {
   return formattedSupply;
 };
 
+//Locale
+const locale = navigator.language;
+console.log(locale);
+
 //Format Price Change
 export const priceChangeFormatter = (priceChange) => {
-  const formattedPriceChange = new Intl.NumberFormat('en-US', {
+  const formattedPriceChange = new Intl.NumberFormat(locale, {
     style: 'percent',
     signDisplay: 'exceptZero',
     minimumFractionDigits: 2,
@@ -22,7 +26,7 @@ export const priceChangeFormatter = (priceChange) => {
 
 //Format price
 export const priceFormatter = (price) => {
-  const formattedPrice = new Intl.NumberFormat('locale', {
+  const formattedPrice = new Intl.NumberFormat(locale, {
     style: 'currency',
     currency: 'USD',
     minimumFractionDigits: 2,

@@ -45,7 +45,7 @@
     display: flex;
     justify-content: space-between;
     button {
-      @include secondary-btn();
+      @include primary-btn($green-gradient, $green-inverse-gradient);
     }
   }
 }
