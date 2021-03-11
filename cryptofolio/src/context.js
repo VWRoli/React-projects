@@ -17,8 +17,14 @@ const initialState = {
 export const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
+  const clearAssets = () => {
+    dispatch({ type: 'CLEAR_ASSETS' });
+  };
+
   return (
-    <AppContext.Provider value={{ ...state }}>{children}</AppContext.Provider>
+    <AppContext.Provider value={{ ...state, clearAssets }}>
+      {children}
+    </AppContext.Provider>
   );
 };
 

@@ -344,6 +344,9 @@ img {
 #assets {
   grid-column: span 8;
   margin-left: 0.5rem;
+  min-height: 460px;
+  display: flex;
+  flex-direction: column;
 }
 
 #assets table {
@@ -401,6 +404,31 @@ img {
   text-transform: uppercase;
   font-size: 0.8rem;
   color: gray;
+}
+
+#assets .clear-btn {
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 20px;
+  background: linear-gradient(to bottom right, #dce2e2, #f3f0f0);
+  font-size: 1.1rem;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 400;
+  outline: none;
+  width: fit-content;
+  margin: auto;
+  color: #222;
+}
+
+#assets .clear-btn:hover {
+  background: linear-gradient(to top left, #dce2e2, #f3f0f0);
+}
+
+#assets .empty-table {
+  padding: 1rem;
+  color: #1489f3;
 }
 
 @media screen and (max-width: 1200px) {

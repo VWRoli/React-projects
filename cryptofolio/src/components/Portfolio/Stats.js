@@ -1,4 +1,3 @@
-import { FaPercentage } from 'react-icons/fa';
 import { useGlobalContext } from '../../context';
 import { priceFormatter, priceChangeFormatter } from '../../helpers';
 import Loading from '../Loading';
@@ -38,12 +37,16 @@ const Stats = () => {
         <Loading />
       ) : (
         <div className="main-asset-value">
-          {priceFormatter(currentAssetValue)}{' '}
-          <span className={assetValueChange > 0 ? 'positive' : 'negative'}>
-            {priceChangeFormatter(
-              calcChangePercentage(currentAssetValue, assetValueChange)
-            )}
-          </span>
+          {priceFormatter(currentAssetValue)}
+          {assets.length === 0 ? (
+            <span>0%</span>
+          ) : (
+            <span className={assetValueChange > 0 ? 'positive' : 'negative'}>
+              {priceChangeFormatter(
+                calcChangePercentage(currentAssetValue, assetValueChange)
+              )}
+            </span>
+          )}
         </div>
       )}
 
