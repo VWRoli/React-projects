@@ -52,3 +52,9 @@ $hover: #fa5715;
     font-weight: 400;
   }
 }
+
+@mixin reset-btn() {
+  border: none;
+  background: transparent;
+  outline: none;
+}

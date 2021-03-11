@@ -1,0 +1,20 @@
+.edit-btn {
+  @include reset-btn();
+}
+.remove-btn {
+  @include reset-btn();
+}
+.clear-btn {
+  @include primary-btn($gray-gradient, $gray-inverse-gradient);
+  width: fit-content;
+  margin: auto;
+  color: #222;
+}
+.add-transaction {
+  display: flex;
+  align-items: center;
+  @include primary-btn($green-gradient, $green-inverse-gradient);
+  svg {
+    margin-right: 5px;
+  }
+}

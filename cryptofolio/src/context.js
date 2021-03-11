@@ -2,6 +2,7 @@ import React, { useContext, useState, useReducer } from 'react';
 import { BASE_URL } from './constant';
 import { useFetch } from './useFetch';
 import reducer from './reducer';
+import { CLEAR_ASSETS, REMOVE_ASSET } from './constant';
 
 import { tempData } from './tempData';
 
@@ -18,11 +19,15 @@ export const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const clearAssets = () => {
-    dispatch({ type: 'CLEAR_ASSETS' });
+    dispatch({ type: CLEAR_ASSETS });
+  };
+
+  const removeAsset = (id) => {
+    dispatch({ type: REMOVE_ASSET, payload: id });
   };
 
   return (
-    <AppContext.Provider value={{ ...state, clearAssets }}>
+    <AppContext.Provider value={{ ...state, clearAssets, removeAsset }}>
       {children}
     </AppContext.Provider>
   );

@@ -1,13 +1,3 @@
-//Formatter functions
-//Format supply and marketcap
-const numberFormatter = (supply) => {
-  const formattedSupply = new Intl.NumberFormat('hu-HU', {
-    notation: 'compact',
-    compactDisplay: 'long',
-  }).format(supply);
-  return formattedSupply;
-};
-
 //Locale
 const locale = navigator.language;
 

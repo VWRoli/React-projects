@@ -10,14 +10,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    .add-transaction {
-      display: flex;
-      align-items: center;
-      @include primary-btn($green-gradient, $green-inverse-gradient);
-      svg {
-        margin-right: 5px;
-      }
-    }
   }
   .container {
     display: grid;
@@ -104,12 +96,7 @@
     font-size: 0.8rem;
     color: lighten(#000000, 50%);
   }
-  .clear-btn {
-    @include primary-btn($gray-gradient, $gray-inverse-gradient);
-    width: fit-content;
-    margin: auto;
-    color: #222;
-  }
+
   .empty-table {
     padding: 1rem;
     color: $blue-color;

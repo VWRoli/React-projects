@@ -1,7 +1,10 @@
 import { priceChangeFormatter, priceFormatter } from '../../helpers';
 import { FaEdit, FaRegMinusSquare } from 'react-icons/fa';
+import { useGlobalContext } from '../../context';
 
 const AssetRow = ({ coin }) => {
+  const { removeAsset } = useGlobalContext();
+
   const {
     name,
     image,
@@ -10,6 +13,7 @@ const AssetRow = ({ coin }) => {
     price_change_percentage_24h: changePercentage,
     price_change_24h: changeValue,
     holdings,
+    id,
   } = coin;
 
   return (
@@ -50,8 +54,16 @@ const AssetRow = ({ coin }) => {
       </td>
       {/**ACTIONS */}
       <td className="actions-row">
-        <FaEdit className="icons" title="Edit transaction" />
-        <FaRegMinusSquare className="icons" title="Remove transaction" />
+        <button type="button" className="edit-btn">
+          <FaEdit className="icons" title="Edit transaction" />
+        </button>
+        <button
+          type="button"
+          className="remove-btn"
+          onClick={() => removeAsset(id)}
+        >
+          <FaRegMinusSquare className="icons" title="Remove transaction" />
+        </button>
       </td>
     </tr>
   );

@@ -52,6 +52,61 @@ img {
   color: #fa5715;
 }
 
+.edit-btn {
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+.remove-btn {
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+.clear-btn {
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 20px;
+  background: linear-gradient(to bottom right, #dce2e2, #f3f0f0);
+  font-size: 1.1rem;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 400;
+  outline: none;
+  width: fit-content;
+  margin: auto;
+  color: #222;
+}
+
+.clear-btn:hover {
+  background: linear-gradient(to top left, #dce2e2, #f3f0f0);
+}
+
+.add-transaction {
+  display: flex;
+  align-items: center;
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 20px;
+  background: linear-gradient(to bottom right, #00b6e3, #00e4ac);
+  font-size: 1.1rem;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 400;
+  outline: none;
+}
+
+.add-transaction:hover {
+  background: linear-gradient(to top left, #00b6e3, #00e4ac);
+}
+
+.add-transaction svg {
+  margin-right: 5px;
+}
+
 .list-item {
   background-color: #eee;
   display: grid;
@@ -270,29 +325,6 @@ img {
   justify-content: space-between;
 }
 
-#portfolio .portfolio-header .add-transaction {
-  display: flex;
-  align-items: center;
-  margin: 2rem;
-  padding: 1rem;
-  border-radius: 20px;
-  background: linear-gradient(to bottom right, #00b6e3, #00e4ac);
-  font-size: 1.1rem;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-weight: 400;
-  outline: none;
-}
-
-#portfolio .portfolio-header .add-transaction:hover {
-  background: linear-gradient(to top left, #00b6e3, #00e4ac);
-}
-
-#portfolio .portfolio-header .add-transaction svg {
-  margin-right: 5px;
-}
-
 #portfolio .container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -404,26 +436,6 @@ img {
   text-transform: uppercase;
   font-size: 0.8rem;
   color: gray;
-}
-
-#assets .clear-btn {
-  margin: 2rem;
-  padding: 1rem;
-  border-radius: 20px;
-  background: linear-gradient(to bottom right, #dce2e2, #f3f0f0);
-  font-size: 1.1rem;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-weight: 400;
-  outline: none;
-  width: fit-content;
-  margin: auto;
-  color: #222;
-}
-
-#assets .clear-btn:hover {
-  background: linear-gradient(to top left, #dce2e2, #f3f0f0);
 }
 
 #assets .empty-table {
