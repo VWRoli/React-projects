@@ -15,7 +15,7 @@ const Portfolio = () => {
         </button>
       </header>
       <div className="container">
-        {/*   <Stats /> */}
+        <Stats />
         <Assets />
       </div>
     </section>
