@@ -107,6 +107,63 @@ img {
   margin-right: 5px;
 }
 
+.modal-overlay {
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(3px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 8;
+  display: grid;
+  place-content: center;
+  transition: all 0.3s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal-container {
+  position: relative;
+  position: relative;
+  z-index: 1;
+  width: 90vw;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 1rem;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  max-width: 35vw;
+  padding: 3rem;
+}
+
+.modal-container h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #1489f3;
+}
+
+.modal-container h2 {
+  font-size: 1.25rem;
+  color: #1489f3;
+  font-weight: 400;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+}
+
 .list-item {
   background-color: #eee;
   display: grid;
