@@ -18,3 +18,7 @@
     margin-right: 5px;
   }
 }
+.save-changes-btn {
+  @include primary-btn($green-gradient, $green-inverse-gradient);
+  margin: auto;
+}

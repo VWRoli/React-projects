@@ -3,7 +3,7 @@ import { useGlobalContext } from '../../context';
 import AssetsTable from './AssetsTable';
 
 const Assets = () => {
-  const { assets, isLoading, clearAssets } = useGlobalContext();
+  const { assets, clearAssets } = useGlobalContext();
 
   return (
     <section id="assets">

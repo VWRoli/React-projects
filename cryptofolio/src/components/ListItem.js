@@ -1,6 +1,6 @@
 import { FaPlus } from 'react-icons/fa';
 
-const HomeListItem = ({ coin }) => {
+const ListItem = ({ coin }) => {
   const { name, symbol, image } = coin;
   return (
     <article className="list-item">
@@ -18,4 +18,4 @@ const HomeListItem = ({ coin }) => {
   );
 };
 
-export default HomeListItem;
+export default ListItem;

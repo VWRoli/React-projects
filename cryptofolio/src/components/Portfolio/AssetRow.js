@@ -4,7 +4,7 @@ import { useGlobalContext, useModalContext } from '../../context';
 
 const AssetRow = ({ coin }) => {
   const { removeAsset } = useGlobalContext();
-  const { openModal, isModalOpen } = useModalContext();
+  const { openModal } = useModalContext();
 
   const {
     name,

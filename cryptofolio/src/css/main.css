@@ -107,6 +107,24 @@ img {
   margin-right: 5px;
 }
 
+.save-changes-btn {
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 20px;
+  background: linear-gradient(to bottom right, #00b6e3, #00e4ac);
+  font-size: 1.1rem;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 400;
+  outline: none;
+  margin: auto;
+}
+
+.save-changes-btn:hover {
+  background: linear-gradient(to top left, #00b6e3, #00e4ac);
+}
+
 .modal-overlay {
   background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(3px);
@@ -608,4 +626,61 @@ img {
   #asset-list {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+
+#edit-asset header {
+  background-color: #eee;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+  height: fit-content;
+  margin: 1rem 0;
+}
+
+#edit-asset header h2 {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+  grid-column: span 4;
+}
+
+#edit-asset header h2 span {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+#edit-asset header img {
+  width: 30px;
+  height: 30px;
+}
+
+#edit-asset header p {
+  font-weight: 400;
+}
+
+#edit-asset h3 {
+  font-weight: 400;
+  margin: 2rem 0;
+}
+
+#edit-asset h3 span {
+  color: #1489f3;
+  font-weight: 400;
+}
+
+#edit-asset form {
+  display: flex;
+  flex-direction: column;
+}
+
+#edit-asset form input {
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 20px;
+  border: 1px solid #222;
+  font-size: 1.5rem;
+  outline: none;
 }
