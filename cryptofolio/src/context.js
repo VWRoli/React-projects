@@ -40,6 +40,8 @@ export const AppProvider = ({ children }) => {
     fetchCoinInfo();
   }, []);
 
+  console.log(state.coinInfo);
+
   //Modal
   const [isModalOpen, setIsModalOpen] = useState(true);
 

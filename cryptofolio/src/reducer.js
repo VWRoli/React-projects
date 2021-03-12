@@ -1,4 +1,4 @@
-import { ADD_ASSET, CLEAR_ASSETS, REMOVE_ASSET } from './constant';
+import { CLEAR_ASSETS, DISPLAY_INFO, LOADING, REMOVE_ASSET } from './constant';
 
 const reducer = (state, action) => {
   if (action.type === CLEAR_ASSETS) {
@@ -9,6 +9,12 @@ const reducer = (state, action) => {
       ...state,
       assets: state.assets.filter((asset) => asset.id !== action.payload),
     };
+  }
+  if (action.type === LOADING) {
+    return { ...state, isLoading: true };
+  }
+  if (action.type === DISPLAY_INFO) {
+    return { ...state, coinInfo: action.payload };
   }
 
   return state;
