@@ -125,6 +125,23 @@ img {
   background: linear-gradient(to top left, #00b6e3, #00e4ac);
 }
 
+.btn {
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 20px;
+  background: linear-gradient(to bottom right, #00b6e3, #00e4ac);
+  font-size: 1.1rem;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 400;
+  outline: none;
+}
+
+.btn:hover {
+  background: linear-gradient(to top left, #00b6e3, #00e4ac);
+}
+
 .modal-overlay {
   background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(3px);
@@ -683,4 +700,35 @@ img {
   border: 1px solid #222;
   font-size: 1.5rem;
   outline: none;
+}
+
+#error-page {
+  position: relative;
+  z-index: 1;
+  width: 90vw;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 1rem;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+}
+
+#error-page h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #1489f3;
+}
+
+#error-page h2 {
+  font-size: 1.25rem;
+  color: #1489f3;
+  font-weight: 400;
+}
+
+#error-page h2 {
+  padding: 1rem 0;
+}
+
+#error-page .error-icon {
+  font-size: 3rem;
 }

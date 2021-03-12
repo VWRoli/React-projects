@@ -9,7 +9,7 @@ const ModalContext = React.createContext();
 
 const initialState = {
   isLoading: false,
-  assets: tempData,
+  assets: [],
   holdings: 0,
   totalValue: 0,
 };

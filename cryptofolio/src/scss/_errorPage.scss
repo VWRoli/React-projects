@@ -1,0 +1,10 @@
+#error-page {
+  @include main-page-setup();
+
+  h2 {
+    padding: 1rem 0;
+  }
+  .error-icon {
+    font-size: 3rem;
+  }
+}

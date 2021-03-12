@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import HomeList from './HomeList';
 
 const Home = () => {
@@ -10,7 +11,9 @@ const Home = () => {
             Keep track of your profits, losses and portfolio valuation with our
             easy to use platform.
           </h2>
-          <button type="button">Create your Portfolio</button>
+          <button type="button">
+            <Link to="/portfolio">Create your Portfolio</Link>
+          </button>
         </div>
         <div className="home-right">
           <HomeList />
