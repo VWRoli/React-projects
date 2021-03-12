@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 export const useFetch = (url) => {
   //Loading state
@@ -8,18 +8,21 @@ export const useFetch = (url) => {
 
   const [data, setData] = useState([]);
 
-  const fetchData = async () => {
+  const fetchData = useCallback(async () => {
+    setIsLoading(true);
     try {
       const response = await fetch(url);
       const data = await response.json();
+
       setData(data);
+
       //Disable loading screen
       setIsLoading(false);
     } catch (error) {
       setIsLoading(false);
       setIsError(true);
     }
-  };
+  });
   useEffect(() => {
     fetchData();
   }, [url]);

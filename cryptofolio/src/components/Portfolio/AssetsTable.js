@@ -1,9 +1,15 @@
 import { useGlobalContext } from '../../context';
+import { useFetch } from '../../useFetch';
 import Loading from '../Loading';
 import AssetRow from './AssetRow';
 
 const AssetsTable = () => {
-  const { assets, isLoading } = useGlobalContext();
+  const { assets } = useGlobalContext();
+  console.log(assets[0].id);
+  const { data: coins, isLoading } = useFetch(
+    `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${assets[0].id}%2C%20${assets[1].id}%2C%20${assets[2].id}`
+  );
+
   return (
     <tbody>
       {isLoading ? (
@@ -13,7 +19,7 @@ const AssetsTable = () => {
           </td>
         </tr>
       ) : (
-        assets.map((coin) => {
+        coins.map((coin) => {
           return <AssetRow key={coin.id} coin={coin} />;
         })
       )}

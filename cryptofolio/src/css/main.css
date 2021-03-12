@@ -52,6 +52,12 @@ img {
   color: #fa5715;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+}
+
 .edit-btn {
   border: none;
   background: transparent;
@@ -122,23 +128,6 @@ img {
 }
 
 .save-changes-btn:hover {
-  background: linear-gradient(to top left, #00b6e3, #00e4ac);
-}
-
-.btn {
-  margin: 2rem;
-  padding: 1rem;
-  border-radius: 20px;
-  background: linear-gradient(to bottom right, #00b6e3, #00e4ac);
-  font-size: 1.1rem;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-weight: 400;
-  outline: none;
-}
-
-.btn:hover {
   background: linear-gradient(to top left, #00b6e3, #00e4ac);
 }
 
@@ -584,6 +573,7 @@ img {
   border-radius: 25px;
   padding: 1rem;
   box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+  width: fit-content;
 }
 
 #add-new-asset h1 {
@@ -611,8 +601,13 @@ img {
 
 #asset-list {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-gap: 2rem;
+  width: fit-content;
+}
+
+#asset-list .list-item {
+  max-width: 225px;
 }
 
 @media screen and (max-width: 1650px) {
@@ -642,6 +637,7 @@ img {
 @media screen and (max-width: 500px) {
   #asset-list {
     grid-template-columns: repeat(1, 1fr);
+    margin: auto;
   }
 }
 
@@ -711,6 +707,9 @@ img {
   border-radius: 25px;
   padding: 1rem;
   box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #error-page h1 {
@@ -731,4 +730,22 @@ img {
 
 #error-page .error-icon {
   font-size: 3rem;
+}
+
+#error-page .btn {
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 20px;
+  background: linear-gradient(to bottom right, #00b6e3, #00e4ac);
+  font-size: 1.1rem;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 400;
+  outline: none;
+  width: fit-content;
+}
+
+#error-page .btn:hover {
+  background: linear-gradient(to top left, #00b6e3, #00e4ac);
 }

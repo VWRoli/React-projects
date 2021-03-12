@@ -1,5 +1,6 @@
 #add-new-asset {
   @include main-page-setup();
+  width: fit-content;
 
   #search-section {
     margin: 2rem 0;
@@ -13,9 +14,15 @@
 }
 #asset-list {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-gap: 2rem;
+
+  width: fit-content;
+  .list-item {
+    max-width: 225px;
+  }
 }
+
 @media screen and(max-width: 1650px) {
   #asset-list {
     grid-template-columns: repeat(5, 1fr);
@@ -39,5 +46,6 @@
 @media screen and(max-width: 500px) {
   #asset-list {
     grid-template-columns: repeat(1, 1fr);
+    margin: auto;
   }
 }

@@ -1,4 +1,4 @@
-import { CLEAR_ASSETS, REMOVE_ASSET } from './constant';
+import { ADD_ASSET, CLEAR_ASSETS, REMOVE_ASSET } from './constant';
 
 const reducer = (state, action) => {
   if (action.type === CLEAR_ASSETS) {
@@ -10,6 +10,7 @@ const reducer = (state, action) => {
       assets: state.assets.filter((asset) => asset.id !== action.payload),
     };
   }
+
   return state;
 };
 export default reducer;

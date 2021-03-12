@@ -13,7 +13,6 @@ const AssetRow = ({ coin }) => {
     current_price: price,
     price_change_percentage_24h: changePercentage,
     price_change_24h: changeValue,
-    holdings,
     id,
   } = coin;
 
@@ -39,9 +38,9 @@ const AssetRow = ({ coin }) => {
       </td>
       {/**HOLDINGS */}
       <td className="holdings-row">
-        {priceFormatter(price * holdings)} <br />
+        {priceFormatter(price)} <br />
         <span className="holdings">
-          {holdings.toFixed(4)}
+          {1.0}
           <span className="symbol">&nbsp;{symbol}</span>
         </span>
       </td>
@@ -51,7 +50,7 @@ const AssetRow = ({ coin }) => {
           changeValue > 0 ? 'profit-row positive' : 'profit-row negative'
         }
       >
-        {priceFormatter(changeValue * holdings)}
+        {priceFormatter(changeValue)}
       </td>
       {/**ACTIONS */}
       <td className="actions-row">
