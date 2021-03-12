@@ -22,10 +22,10 @@ export const useFetch = (url) => {
       setIsLoading(false);
       setIsError(true);
     }
-  });
+  }, [url]);
   useEffect(() => {
     fetchData();
-  }, [url]);
+  }, [url, fetchData]);
 
   return { data, isLoading, isError };
 };

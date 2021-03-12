@@ -1,20 +1,25 @@
-import React, { useContext, useState, useReducer, useEffect } from 'react';
+import React, {
+  useContext,
+  useState,
+  useReducer,
+  useEffect,
+  useCallback,
+} from 'react';
 import reducer from './reducer';
 import { CLEAR_ASSETS, REMOVE_ASSET, LOADING, DISPLAY_INFO } from './constant';
+import { urlFormatter } from './helpers';
 
 import { tempData } from './tempData';
-import { useFetch } from './useFetch';
 
 const AppContext = React.createContext();
 const ModalContext = React.createContext();
 
-export const INFO_URL = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin%2C%20`;
+export const INFO_URL = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=`;
 
 const initialState = {
   isLoading: false,
   assets: tempData,
   coinInfo: [],
-  //holdings: 0,
   //totalValue: 0,
 };
 
@@ -29,18 +34,18 @@ export const AppProvider = ({ children }) => {
     dispatch({ type: REMOVE_ASSET, payload: id });
   };
 
-  //Coin Info
-  const fetchCoinInfo = async () => {
+  //Get Coin Info
+  const fetchCoinInfo = useCallback(async () => {
+    const formattedUrl = urlFormatter(INFO_URL, state.assets);
+
     dispatch({ type: LOADING });
-    const response = await fetch(INFO_URL);
+    const response = await fetch(`${formattedUrl}`);
     const coinInfo = await response.json();
     dispatch({ type: DISPLAY_INFO, payload: coinInfo });
-  };
+  }, [state.assets]);
   useEffect(() => {
     fetchCoinInfo();
-  }, []);
-
-  console.log(state.coinInfo);
+  }, [fetchCoinInfo]);
 
   //Modal
   const [isModalOpen, setIsModalOpen] = useState(true);
