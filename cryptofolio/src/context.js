@@ -5,14 +5,18 @@ import React, {
   useEffect,
   useCallback,
 } from 'react';
+
 import reducer from './reducer';
+
 import {
   CLEAR_ASSETS,
   REMOVE_ASSET,
   LOADING,
   DISPLAY_INFO,
   GET_TOTALS,
+  GET_TOTAL_CHANGE,
 } from './constant';
+
 import { urlFormatter } from './helpers';
 
 import { tempData } from './tempData';
@@ -27,6 +31,7 @@ const initialState = {
   assets: tempData,
   coinInfo: [],
   totalValue: 0,
+  totalValueChange: 0,
 };
 
 export const AppProvider = ({ children }) => {
@@ -50,6 +55,8 @@ export const AppProvider = ({ children }) => {
     dispatch({ type: DISPLAY_INFO, payload: coinInfo });
     //Get total asset values
     dispatch({ type: GET_TOTALS });
+    //Get total value change
+    dispatch({ type: GET_TOTAL_CHANGE });
   }, [state.assets]);
   useEffect(() => {
     fetchCoinInfo();

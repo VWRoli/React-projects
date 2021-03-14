@@ -4,26 +4,23 @@ import Loading from '../Loading';
 import Chart from './Chart';
 
 const Stats = () => {
-  const { totalValue, isLoading, coinInfo, assets } = useGlobalContext();
-  console.log(totalValue);
-
-  //Get the 24h price change for the whole portfolio
-  // const assetValueChange = coinInfo
-  //   .map((coin, i) => coin.price_change_24h * assets.holdings[i])
-  //   .reduce((acc, cur) => acc + cur, 0);
-
-  //console.log(assetValueChange);
+  const {
+    totalValue,
+    isLoading,
+    totalValueChange,
+    assets,
+  } = useGlobalContext();
 
   //Calculate percentage change
-  const calcChangePercentage = (value, change) => {
+  const calcChangePercentage = (curValue, change) => {
     let percentage;
-    const newPrice = value;
+    const newPrice = curValue;
 
     if (change > 0) {
-      const oldPrice = value - change;
+      const oldPrice = curValue - change;
       return (percentage = [(newPrice - oldPrice) / oldPrice] * 100);
     } else {
-      const oldPrice = value + Math.abs(change);
+      const oldPrice = curValue + Math.abs(change);
       return (percentage = [(oldPrice - newPrice) / oldPrice] * 100);
     }
   };
@@ -37,15 +34,15 @@ const Stats = () => {
       ) : (
         <div className="main-asset-value">
           {priceFormatter(totalValue)}
-          {/*   {assets.length === 0 ? (
+          {assets.length === 0 ? (
             <span>0%</span>
           ) : (
-            <span className={assetValueChange > 0 ? 'positive' : 'negative'}>
+            <span className={totalValueChange > 0 ? 'positive' : 'negative'}>
               {priceChangeFormatter(
-                calcChangePercentage(totalValue, assetValueChange)
+                calcChangePercentage(totalValue, totalValueChange)
               )}
             </span>
-          )} */}
+          )}
         </div>
       )}
 

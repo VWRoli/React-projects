@@ -5,5 +5,6 @@ export const REMOVE_ASSET = 'REMOVE_ASSET';
 export const LOADING = 'LOADING';
 export const DISPLAY_INFO = 'DISPLAY_INFO';
 export const GET_TOTALS = 'GET_TOTALS';
+export const GET_TOTAL_CHANGE = 'GET_TOTAL_CHANGE';
 
 export const ADD_ASSET = ' ADD_ASSET';
