@@ -14,7 +14,7 @@ const reducer = (state, action) => {
     return { ...state, isLoading: true };
   }
   if (action.type === DISPLAY_INFO) {
-    return { ...state, coinInfo: action.payload };
+    return { ...state, coinInfo: action.payload, isLoading: false };
   }
 
   return state;

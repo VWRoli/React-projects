@@ -36,6 +36,7 @@ export const AppProvider = ({ children }) => {
 
   //Get Coin Info
   const fetchCoinInfo = useCallback(async () => {
+    dispatch({ type: LOADING });
     const formattedUrl = urlFormatter(INFO_URL, state.assets);
 
     dispatch({ type: LOADING });
