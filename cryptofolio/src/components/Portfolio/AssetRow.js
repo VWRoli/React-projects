@@ -2,7 +2,7 @@ import { priceChangeFormatter, priceFormatter } from '../../helpers';
 import { FaEdit, FaRegMinusSquare } from 'react-icons/fa';
 import { useGlobalContext, useModalContext } from '../../context';
 
-const AssetRow = ({ coin }) => {
+const AssetRow = ({ coin, assets }) => {
   const { removeAsset } = useGlobalContext();
   const { openModal } = useModalContext();
 
@@ -38,9 +38,9 @@ const AssetRow = ({ coin }) => {
       </td>
       {/**HOLDINGS */}
       <td className="holdings-row">
-        {priceFormatter(price)} <br />
+        {priceFormatter(price * assets.holdings)} <br />
         <span className="holdings">
-          {1.0}
+          {assets.holdings.toFixed(4)}
           <span className="symbol">&nbsp;{symbol}</span>
         </span>
       </td>
@@ -50,7 +50,7 @@ const AssetRow = ({ coin }) => {
           changeValue > 0 ? 'profit-row positive' : 'profit-row negative'
         }
       >
-        {priceFormatter(changeValue)}
+        {priceFormatter(changeValue * assets.holdings)}
       </td>
       {/**ACTIONS */}
       <td className="actions-row">
