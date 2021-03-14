@@ -1,4 +1,10 @@
-import { CLEAR_ASSETS, DISPLAY_INFO, LOADING, REMOVE_ASSET } from './constant';
+import {
+  CLEAR_ASSETS,
+  DISPLAY_INFO,
+  GET_TOTALS,
+  LOADING,
+  REMOVE_ASSET,
+} from './constant';
 
 const reducer = (state, action) => {
   if (action.type === CLEAR_ASSETS) {
@@ -14,7 +20,17 @@ const reducer = (state, action) => {
     return { ...state, isLoading: true };
   }
   if (action.type === DISPLAY_INFO) {
-    return { ...state, coinInfo: action.payload, isLoading: false };
+    return { ...state, coinInfo: action.payload };
+  }
+
+  if (action.type === GET_TOTALS) {
+    //Get the current value for the whole portfolio
+
+    const currentAssetValue = state.assets
+      .map((asset, i) => asset.holdings * state.coinInfo[i].current_price)
+      .reduce((acc, cur) => acc + cur, 0);
+
+    return { ...state, totalValue: currentAssetValue, isLoading: false };
   }
 
   return state;

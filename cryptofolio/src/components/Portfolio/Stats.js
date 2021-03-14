@@ -4,17 +4,15 @@ import Loading from '../Loading';
 import Chart from './Chart';
 
 const Stats = () => {
-  const { assets, isLoading } = useGlobalContext();
-
-  //Get the current value for the whole portfolio
-  const currentAssetValue = assets
-    .map((asset) => asset.holdings * asset.current_price)
-    .reduce((acc, cur) => acc + cur, 0);
+  const { totalValue, isLoading, coinInfo, assets } = useGlobalContext();
+  console.log(totalValue);
 
   //Get the 24h price change for the whole portfolio
-  const assetValueChange = assets
-    .map((asset) => asset.price_change_24h * asset.holdings)
-    .reduce((acc, cur) => acc + cur, 0);
+  // const assetValueChange = coinInfo
+  //   .map((coin, i) => coin.price_change_24h * assets.holdings[i])
+  //   .reduce((acc, cur) => acc + cur, 0);
+
+  //console.log(assetValueChange);
 
   //Calculate percentage change
   const calcChangePercentage = (value, change) => {
@@ -33,20 +31,21 @@ const Stats = () => {
   return (
     <section id="stats">
       <h2>Overview</h2>
+
       {isLoading ? (
         <Loading />
       ) : (
         <div className="main-asset-value">
-          {priceFormatter(currentAssetValue)}
-          {assets.length === 0 ? (
+          {priceFormatter(totalValue)}
+          {/*   {assets.length === 0 ? (
             <span>0%</span>
           ) : (
             <span className={assetValueChange > 0 ? 'positive' : 'negative'}>
               {priceChangeFormatter(
-                calcChangePercentage(currentAssetValue, assetValueChange)
+                calcChangePercentage(totalValue, assetValueChange)
               )}
             </span>
-          )}
+          )} */}
         </div>
       )}
 

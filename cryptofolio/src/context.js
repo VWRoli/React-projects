@@ -6,7 +6,13 @@ import React, {
   useCallback,
 } from 'react';
 import reducer from './reducer';
-import { CLEAR_ASSETS, REMOVE_ASSET, LOADING, DISPLAY_INFO } from './constant';
+import {
+  CLEAR_ASSETS,
+  REMOVE_ASSET,
+  LOADING,
+  DISPLAY_INFO,
+  GET_TOTALS,
+} from './constant';
 import { urlFormatter } from './helpers';
 
 import { tempData } from './tempData';
@@ -20,7 +26,7 @@ const initialState = {
   isLoading: false,
   assets: tempData,
   coinInfo: [],
-  //totalValue: 0,
+  totalValue: 0,
 };
 
 export const AppProvider = ({ children }) => {
@@ -39,10 +45,11 @@ export const AppProvider = ({ children }) => {
     dispatch({ type: LOADING });
     const formattedUrl = urlFormatter(INFO_URL, state.assets);
 
-    dispatch({ type: LOADING });
     const response = await fetch(`${formattedUrl}`);
     const coinInfo = await response.json();
     dispatch({ type: DISPLAY_INFO, payload: coinInfo });
+    //Get total asset values
+    dispatch({ type: GET_TOTALS });
   }, [state.assets]);
   useEffect(() => {
     fetchCoinInfo();
