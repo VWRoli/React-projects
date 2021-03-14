@@ -1,6 +1,7 @@
 import {
   CLEAR_ASSETS,
   DISPLAY_INFO,
+  SET_CHART_DATA,
   GET_TOTALS,
   GET_TOTAL_CHANGE,
   LOADING,
@@ -41,6 +42,10 @@ const reducer = (state, action) => {
       .reduce((acc, cur) => acc + cur, 0);
 
     return { ...state, totalValueChange: assetValueChange, isLoading: false };
+  }
+
+  if (action.type === SET_CHART_DATA) {
+    return { ...state, chartData: action.payload };
   }
 
   return state;

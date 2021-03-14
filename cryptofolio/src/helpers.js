@@ -35,3 +35,42 @@ export const urlFormatter = (url, array) => {
 
   return `${url}${urlPart}`;
 };
+
+//Format chart data
+export const chartDataFormatter = (data) => {
+  //Get prices from chart data array, because it has market and voluma data too
+  const priceData = data.map((item) => {
+    return item.prices.slice(0, 169);
+  });
+
+  //Get timestamps for chart
+  const timeStamps = priceData[0].map((stamp) => stamp[0]);
+
+  //Get and add the total price values
+  const totalPrices = priceData
+    .map((array) => array.map((el) => el[1]))
+    .reduce((acc, curr) => acc.map((el, i) => el + curr[i]));
+
+  //Createing a data Object for the chart
+  const chartDataObj = timeStamps.map((el, i) => {
+    //Configuration
+    const options = {
+      hour: 'numeric',
+      minute: 'numeric',
+      day: 'numeric',
+      month: 'short',
+      year: 'numeric',
+      weekday: 'long',
+    };
+
+    //Locale
+    const locale = navigator.language;
+    //Formatting the date
+    const formattedDate = new Intl.DateTimeFormat(locale, options).format(
+      new Date(el)
+    );
+
+    return { day: formattedDate, price: totalPrices[i] };
+  });
+  return chartDataObj;
+};
