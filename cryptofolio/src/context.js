@@ -1,10 +1,4 @@
-import React, {
-  useContext,
-  useState,
-  useReducer,
-  useEffect,
-  useCallback,
-} from 'react';
+import React, { useContext, useReducer, useEffect, useCallback } from 'react';
 
 import reducer from './reducer';
 
@@ -17,6 +11,8 @@ import {
   GET_TOTAL_CHANGE,
   SET_CHART_DATA,
   INFO_URL,
+  OPEN_MODAL,
+  CLOSE_MODAL,
 } from './constant';
 
 import { urlFormatter, chartDataFormatter } from './helpers';
@@ -24,10 +20,10 @@ import { urlFormatter, chartDataFormatter } from './helpers';
 import { tempData } from './tempData';
 
 const AppContext = React.createContext();
-const ModalContext = React.createContext();
 
 const initialState = {
   isLoading: false,
+  isModalOpen: false,
   assets: tempData,
   coinInfo: [],
   totalValue: 0,
@@ -44,6 +40,15 @@ export const AppProvider = ({ children }) => {
 
   const removeAsset = (id) => {
     dispatch({ type: REMOVE_ASSET, payload: id });
+  };
+
+  //Open and close modal
+  const openModal = () => {
+    dispatch({ type: OPEN_MODAL });
+  };
+
+  const closeModal = () => {
+    dispatch({ type: CLOSE_MODAL });
   };
 
   //Get Coin Info
@@ -73,12 +78,11 @@ export const AppProvider = ({ children }) => {
     );
 
     // Set chart data
-    const newChartData = chartDataFormatter(chartData);
-
-    dispatch({ type: SET_CHART_DATA, payload: newChartData });
+    dispatch({ type: SET_CHART_DATA, payload: chartDataFormatter(chartData) });
 
     //Get total asset values
     dispatch({ type: GET_TOTALS });
+
     //Get total value change
     dispatch({ type: GET_TOTAL_CHANGE });
   }, [state.assets]);
@@ -86,31 +90,15 @@ export const AppProvider = ({ children }) => {
     fetchCoinInfo();
   }, [fetchCoinInfo]);
 
-  //Modal
-  const [isModalOpen, setIsModalOpen] = useState(true);
-
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
-
   return (
-    <AppContext.Provider value={{ ...state, clearAssets, removeAsset }}>
-      <ModalContext.Provider
-        value={{ isModalOpen, setIsModalOpen, openModal, closeModal }}
-      >
-        {children}
-      </ModalContext.Provider>
+    <AppContext.Provider
+      value={{ ...state, clearAssets, removeAsset, openModal, closeModal }}
+    >
+      {children}
     </AppContext.Provider>
   );
 };
 
 export const useGlobalContext = () => {
   return useContext(AppContext);
-};
-
-export const useModalContext = () => {
-  return useContext(ModalContext);
 };

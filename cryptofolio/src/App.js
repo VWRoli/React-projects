@@ -26,7 +26,6 @@ function App() {
           <Route path="*">
             <ErrorPage />
           </Route>
-          {/*  <Modal /> */}
         </Switch>
       </div>
     </Router>

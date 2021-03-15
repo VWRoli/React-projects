@@ -1,10 +1,11 @@
 import { useEffect } from 'react';
 import { FaTimes } from 'react-icons/fa';
-import { useModalContext } from '../context';
+import { useGlobalContext } from '../context';
+import AddNewAsset from './AddAsset/AddNewAsset';
 import EditAsset from './Portfolio/EditAsset';
 
 const Modal = () => {
-  const { isModalOpen, closeModal } = useModalContext();
+  const { isModalOpen, closeModal } = useGlobalContext();
 
   //Close Modal with clicking on overlay
   const handleClick = (e) => {
@@ -33,7 +34,7 @@ const Modal = () => {
         <button type="button" className="close-modal" onClick={closeModal}>
           <FaTimes className="icons" />
         </button>
-        <EditAsset />
+        <AddNewAsset />
       </div>
     </div>
   );

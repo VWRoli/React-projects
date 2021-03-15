@@ -6,6 +6,8 @@ import {
   GET_TOTAL_CHANGE,
   LOADING,
   REMOVE_ASSET,
+  OPEN_MODAL,
+  CLOSE_MODAL,
 } from './constant';
 
 const reducer = (state, action) => {
@@ -47,7 +49,12 @@ const reducer = (state, action) => {
   if (action.type === SET_CHART_DATA) {
     return { ...state, chartData: action.payload };
   }
-
+  if (action.type === OPEN_MODAL) {
+    return { ...state, isModalOpen: true };
+  }
+  if (action.type === CLOSE_MODAL) {
+    return { ...state, isModalOpen: false };
+  }
   return state;
 };
 export default reducer;

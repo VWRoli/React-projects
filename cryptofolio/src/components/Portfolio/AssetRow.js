@@ -1,10 +1,9 @@
 import { priceChangeFormatter, priceFormatter } from '../../helpers';
 import { FaEdit, FaRegMinusSquare } from 'react-icons/fa';
-import { useGlobalContext, useModalContext } from '../../context';
+import { useGlobalContext } from '../../context';
 
 const AssetRow = ({ coin, assets }) => {
   const { removeAsset } = useGlobalContext();
-  const { openModal } = useModalContext();
 
   const {
     name,
@@ -56,7 +55,7 @@ const AssetRow = ({ coin, assets }) => {
       </td>
       {/**ACTIONS */}
       <td className="actions-row">
-        <button type="button" className="edit-btn" onClick={openModal}>
+        <button type="button" className="edit-btn">
           <FaEdit className="icons" title="Edit transaction" />
         </button>
         <button
