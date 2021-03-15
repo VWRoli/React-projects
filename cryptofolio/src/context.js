@@ -14,6 +14,7 @@ import {
   OPEN_MODAL,
   CLOSE_MODAL,
   SET_ACTIVE_COIN,
+  ADD_ASSET,
 } from './constant';
 
 import { urlFormatter, chartDataFormatter } from './helpers';
@@ -56,6 +57,10 @@ export const AppProvider = ({ children }) => {
   //Set active coin
   const setActiveCoin = (id) => {
     dispatch({ type: SET_ACTIVE_COIN, payload: id });
+  };
+  //Add asset
+  const addAsset = (asset) => {
+    dispatch({ type: ADD_ASSET, payload: asset });
   };
 
   //Get Coin Info
@@ -106,6 +111,7 @@ export const AppProvider = ({ children }) => {
         openModal,
         closeModal,
         setActiveCoin,
+        addAsset,
       }}
     >
       {children}

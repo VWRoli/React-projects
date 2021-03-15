@@ -9,6 +9,7 @@ import {
   OPEN_MODAL,
   CLOSE_MODAL,
   SET_ACTIVE_COIN,
+  ADD_ASSET,
 } from './constant';
 
 const reducer = (state, action) => {
@@ -58,6 +59,10 @@ const reducer = (state, action) => {
   }
   if (action.type === SET_ACTIVE_COIN) {
     return { ...state, activeCoin: action.payload };
+  }
+  if (action.type === ADD_ASSET) {
+    console.log(action.payload);
+    return { ...state, assets: [...state.assets, action.payload] };
   }
   return state;
 };
