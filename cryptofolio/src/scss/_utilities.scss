@@ -16,7 +16,6 @@ $hover: #fa5715;
 
 @mixin primary-btn($color, $hover) {
   margin: 2rem;
-  padding: 1rem;
   border-radius: 20px;
   background: $color;
   font-size: 1.1rem;
@@ -25,6 +24,10 @@ $hover: #fa5715;
   cursor: pointer;
   font-weight: 400;
   outline: none;
+  a {
+    padding: 1rem;
+    display: inline-block;
+  }
 
   &:hover {
     background: $hover;
@@ -79,4 +82,10 @@ $hover: #fa5715;
       font-style: italic;
     }
   }
+}
+
+@mixin header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

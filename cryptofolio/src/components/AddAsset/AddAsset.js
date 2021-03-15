@@ -5,13 +5,16 @@ import SearchBar from './SearchBar';
 const AddAsset = () => {
   return (
     <section id="add-asset">
-      <h1>Add New Asset</h1>
-      <p>Please Select or Search your Coin</p>
-      <Link to="/portfolio">
-        <button type="button" className="btn back-to-portfolio">
-          My Portfolio
+      <header className="header">
+        <div className="header-text">
+          <h1>Add New Asset</h1>
+          <h3>Please Select or Search your Coin</h3>
+        </div>
+        <button type="button" className="primary-btn">
+          <Link to="/portfolio">My Portfolio</Link>
         </button>
-      </Link>
+      </header>
+
       <SearchBar />
       <AssetsList />
     </section>

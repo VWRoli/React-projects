@@ -11,7 +11,7 @@ const Home = () => {
             Keep track of your profits, losses and portfolio valuation with our
             easy to use platform.
           </h2>
-          <button type="button">
+          <button type="button" className="primary-btn">
             <Link to="/portfolio">Create your Portfolio</Link>
           </button>
         </div>

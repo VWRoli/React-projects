@@ -6,10 +6,17 @@
   h3 {
     padding: 1rem 0;
   }
-  .portfolio-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  .header {
+    @include header-flex();
+    .primary-btn {
+      a {
+        display: flex;
+        align-items: center;
+        svg {
+          margin-right: 5px;
+        }
+      }
+    }
   }
   .container {
     display: grid;
@@ -101,6 +108,23 @@
     padding: 1rem;
     color: $blue-color;
   }
+}
+.edit-btn {
+  @include reset-btn();
+  cursor: not-allowed;
+  svg {
+    cursor: not-allowed;
+  }
+}
+.remove-btn {
+  @include reset-btn();
+}
+.clear-btn {
+  @include primary-btn($gray-gradient, $gray-inverse-gradient);
+  padding: 1rem;
+  width: fit-content;
+  margin: auto;
+  color: #222;
 }
 
 @media screen and (max-width: 1200px) {

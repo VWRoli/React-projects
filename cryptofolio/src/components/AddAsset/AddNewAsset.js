@@ -10,7 +10,7 @@ const AddNewAsset = ({ id }) => {
     `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${id}`
   );
 
-  const { addAsset, closeModal, assets } = useGlobalContext();
+  const { addAsset, closeModal } = useGlobalContext();
   const [holdings, setHoldings] = useState('');
 
   if (!data[0]) return null;
@@ -78,7 +78,7 @@ const AddNewAsset = ({ id }) => {
               onChange={(e) => setHoldings(e.target.value)}
             />
 
-            <button type="submit" className="btn">
+            <button type="submit" className="primary-btn">
               Add Asset
             </button>
           </form>

@@ -6,12 +6,12 @@ import { Link } from 'react-router-dom';
 const Portfolio = () => {
   return (
     <section id="portfolio">
-      <header className="portfolio-header">
+      <header className="header">
         <div className="header-text">
           <h1>My portfolio</h1>
           <h3>Keep track of your Crypto Investments</h3>
         </div>
-        <button type="button" className="add-transaction">
+        <button type="button" className="primary-btn">
           <Link to="/addasset">
             <FaPlus /> Add Asset
           </Link>

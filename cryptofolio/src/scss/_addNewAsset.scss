@@ -41,8 +41,8 @@
       font-size: 1.25rem;
       outline: none;
     }
-  }
-  .btn {
-    @include primary-btn($green-gradient, $green-inverse-gradient);
+    .primary-btn {
+      padding: 1rem;
+    }
   }
 }

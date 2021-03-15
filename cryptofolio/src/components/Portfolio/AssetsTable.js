@@ -3,10 +3,7 @@ import Loading from '../Loading';
 import AssetRow from './AssetRow';
 
 const AssetsTable = () => {
-  const { isLoading, coinInfo, assets } = useGlobalContext();
-
-  //console.log(coinInfo);
-  //console.log(assets);
+  const { isLoading, assets } = useGlobalContext();
 
   return (
     <tbody>

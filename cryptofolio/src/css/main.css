@@ -68,43 +68,8 @@ a {
   color: #fff;
 }
 
-.edit-btn {
-  border: none;
-  background: transparent;
-  outline: none;
-}
-
-.remove-btn {
-  border: none;
-  background: transparent;
-  outline: none;
-}
-
-.clear-btn {
+.primary-btn {
   margin: 2rem;
-  padding: 1rem;
-  border-radius: 20px;
-  background: linear-gradient(to bottom right, #dce2e2, #f3f0f0);
-  font-size: 1.1rem;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-weight: 400;
-  outline: none;
-  width: fit-content;
-  margin: auto;
-  color: #222;
-}
-
-.clear-btn:hover {
-  background: linear-gradient(to top left, #dce2e2, #f3f0f0);
-}
-
-.add-transaction {
-  display: flex;
-  align-items: center;
-  margin: 2rem;
-  padding: 1rem;
   border-radius: 20px;
   background: linear-gradient(to bottom right, #00b6e3, #00e4ac);
   font-size: 1.1rem;
@@ -115,17 +80,17 @@ a {
   outline: none;
 }
 
-.add-transaction:hover {
-  background: linear-gradient(to top left, #00b6e3, #00e4ac);
+.primary-btn a {
+  padding: 1rem;
+  display: inline-block;
 }
 
-.add-transaction svg {
-  margin-right: 5px;
+.primary-btn:hover {
+  background: linear-gradient(to top left, #00b6e3, #00e4ac);
 }
 
 .save-changes-btn {
   margin: 2rem;
-  padding: 1rem;
   border-radius: 20px;
   background: linear-gradient(to bottom right, #00b6e3, #00e4ac);
   font-size: 1.1rem;
@@ -137,24 +102,12 @@ a {
   margin: auto;
 }
 
-.save-changes-btn:hover {
-  background: linear-gradient(to top left, #00b6e3, #00e4ac);
-}
-
-.btn {
-  margin: 2rem;
+.save-changes-btn a {
   padding: 1rem;
-  border-radius: 20px;
-  background: linear-gradient(to bottom right, #00b6e3, #00e4ac);
-  font-size: 1.1rem;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-weight: 400;
-  outline: none;
+  display: inline-block;
 }
 
-.btn:hover {
+.save-changes-btn:hover {
   background: linear-gradient(to top left, #00b6e3, #00e4ac);
 }
 
@@ -326,7 +279,6 @@ a {
 
 .home-left button {
   margin: 2rem;
-  padding: 1rem;
   border-radius: 20px;
   background: linear-gradient(to bottom right, #00b6e3, #00e4ac);
   font-size: 1.1rem;
@@ -336,6 +288,11 @@ a {
   font-weight: 400;
   outline: none;
   width: fit-content;
+}
+
+.home-left button a {
+  padding: 1rem;
+  display: inline-block;
 }
 
 .home-left button:hover {
@@ -427,10 +384,19 @@ a {
   padding: 1rem 0;
 }
 
-#portfolio .portfolio-header {
+#portfolio .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+#portfolio .header .primary-btn a {
+  display: flex;
+  align-items: center;
+}
+
+#portfolio .header .primary-btn a svg {
+  margin-right: 5px;
 }
 
 #portfolio .container {
@@ -465,7 +431,6 @@ a {
 
 #stats .graph-btn-container button {
   margin: 2rem;
-  padding: 1rem;
   border-radius: 20px;
   background: linear-gradient(to bottom right, #00b6e3, #00e4ac);
   font-size: 1.1rem;
@@ -475,6 +440,11 @@ a {
   font-weight: 400;
   outline: none;
   margin: 0;
+}
+
+#stats .graph-btn-container button a {
+  padding: 1rem;
+  display: inline-block;
 }
 
 #stats .graph-btn-container button:hover {
@@ -549,6 +519,48 @@ a {
 #assets .empty-table {
   padding: 1rem;
   color: #1489f3;
+}
+
+.edit-btn {
+  border: none;
+  background: transparent;
+  outline: none;
+  cursor: not-allowed;
+}
+
+.edit-btn svg {
+  cursor: not-allowed;
+}
+
+.remove-btn {
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+.clear-btn {
+  margin: 2rem;
+  border-radius: 20px;
+  background: linear-gradient(to bottom right, #dce2e2, #f3f0f0);
+  font-size: 1.1rem;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 400;
+  outline: none;
+  padding: 1rem;
+  width: fit-content;
+  margin: auto;
+  color: #222;
+}
+
+.clear-btn a {
+  padding: 1rem;
+  display: inline-block;
+}
+
+.clear-btn:hover {
+  background: linear-gradient(to top left, #dce2e2, #f3f0f0);
 }
 
 @media screen and (max-width: 1200px) {
@@ -626,9 +638,19 @@ a {
   outline: none;
 }
 
-#add-asset .back-to-portfolio {
-  float: right;
-  margin: 0;
+#add-asset .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#add-asset .header .primary-btn {
+  display: flex;
+  align-items: center;
+}
+
+#add-asset .header .primary-btn svg {
+  margin-right: 5px;
 }
 
 #asset-list {
@@ -766,7 +788,6 @@ a {
 
 #error-page .btn {
   margin: 2rem;
-  padding: 1rem;
   border-radius: 20px;
   background: linear-gradient(to bottom right, #00b6e3, #00e4ac);
   font-size: 1.1rem;
@@ -776,6 +797,11 @@ a {
   font-weight: 400;
   outline: none;
   width: fit-content;
+}
+
+#error-page .btn a {
+  padding: 1rem;
+  display: inline-block;
 }
 
 #error-page .btn:hover {
@@ -853,19 +879,6 @@ a {
   outline: none;
 }
 
-#add-new-asset .btn {
-  margin: 2rem;
+#add-new-asset form .primary-btn {
   padding: 1rem;
-  border-radius: 20px;
-  background: linear-gradient(to bottom right, #00b6e3, #00e4ac);
-  font-size: 1.1rem;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-weight: 400;
-  outline: none;
-}
-
-#add-new-asset .btn:hover {
-  background: linear-gradient(to top left, #00b6e3, #00e4ac);
 }

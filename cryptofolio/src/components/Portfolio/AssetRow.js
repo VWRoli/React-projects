@@ -1,5 +1,5 @@
 import { priceChangeFormatter, priceFormatter } from '../../helpers';
-import { FaEdit, FaRegMinusSquare, FaRulerCombined } from 'react-icons/fa';
+import { FaEdit, FaRegMinusSquare } from 'react-icons/fa';
 import { useGlobalContext } from '../../context';
 
 const AssetRow = ({ asset }) => {

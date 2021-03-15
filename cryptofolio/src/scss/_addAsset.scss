@@ -11,9 +11,15 @@
       outline: none;
     }
   }
-  .back-to-portfolio {
-    float: right;
-    margin: 0;
+  .header {
+    @include header-flex();
+    .primary-btn {
+      display: flex;
+      align-items: center;
+      svg {
+        margin-right: 5px;
+      }
+    }
   }
 }
 #asset-list {

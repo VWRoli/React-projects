@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { FaTimes } from 'react-icons/fa';
 import { useGlobalContext } from '../context';
 import AddNewAsset from './AddAsset/AddNewAsset';
-import EditAsset from './Portfolio/EditAsset';
 
 const Modal = () => {
   const { isModalOpen, closeModal, activeCoin } = useGlobalContext();

@@ -2,7 +2,7 @@ import { FaPlus } from 'react-icons/fa';
 import { useGlobalContext } from '../context';
 
 const ListItem = ({ coin }) => {
-  const { openModal, setActiveCoin, activeCoin } = useGlobalContext();
+  const { openModal, setActiveCoin } = useGlobalContext();
 
   const { name, symbol, image, id } = coin;
   return (
