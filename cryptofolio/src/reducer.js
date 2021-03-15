@@ -32,7 +32,7 @@ const reducer = (state, action) => {
   if (action.type === GET_TOTALS) {
     //Get the current value for the whole portfolio
     const currentAssetValue = state.assets
-      .map((asset, i) => {
+      .map((asset) => {
         const [correctCoin] = state.coinInfo.filter(
           (coin) => coin.id === asset.id
         );
@@ -46,7 +46,12 @@ const reducer = (state, action) => {
   if (action.type === GET_TOTAL_CHANGE) {
     //Get the 24h price change for the whole portfolio
     const assetValueChange = state.assets
-      .map((asset, i) => asset.holdings * state.coinInfo[i].price_change_24h)
+      .map((asset, i) => {
+        const [correctCoin] = state.coinInfo.filter(
+          (coin) => coin.id === asset.id
+        );
+        return asset.holdings * correctCoin.price_change_24h;
+      })
       .reduce((acc, cur) => acc + cur, 0);
 
     return { ...state, totalValueChange: assetValueChange, isLoading: false };

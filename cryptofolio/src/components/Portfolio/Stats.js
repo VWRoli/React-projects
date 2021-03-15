@@ -49,7 +49,7 @@ const Stats = () => {
       <Chart />
       <div className="graph-btn-container">
         <h3 style={{ color: '#1489f3', fontWeight: '400' }}>
-          Portfolio chart for 7 days data
+          Chart data for the last 7 days
         </h3>
         {/* <button type="button">1d</button>
         <button type="button">7d</button>

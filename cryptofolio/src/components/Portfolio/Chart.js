@@ -1,4 +1,3 @@
-import { useState, useEffect, useCallback } from 'react';
 import { priceFormatter } from '../../helpers';
 import {
   XAxis,
@@ -10,7 +9,6 @@ import {
 } from 'recharts';
 
 import Loading from '../Loading';
-import Error from '../Error';
 import { useGlobalContext } from '../../context';
 
 const Chart = () => {
