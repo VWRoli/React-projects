@@ -16,6 +16,8 @@ const AssetRow = ({ coin, assets }) => {
     id,
   } = coin;
 
+  if (!assets) return null;
+
   return (
     <tr>
       <td className="table-name">

@@ -25,7 +25,6 @@ export const priceFormatter = (price) => {
 };
 
 //URL formatter
-//`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${assets[0].id}%2C%20${assets[1].id}%2C%20${assets[2].id}`
 export const urlFormatter = (url, array) => {
   const urlPart = array
     .map((item) => {
@@ -44,6 +43,9 @@ export const chartDataFormatter = (data) => {
   });
 
   //Get timestamps for chart
+
+  if (!priceData[0]) return;
+
   const timeStamps = priceData[0].map((stamp) => stamp[0]);
 
   //Get and add the total price values

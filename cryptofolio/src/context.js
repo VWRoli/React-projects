@@ -57,6 +57,7 @@ export const AppProvider = ({ children }) => {
     dispatch({ type: DISPLAY_INFO, payload: coinInfo });
 
     //Get API urls for chart
+
     const chartUrls = state.assets.map(
       (item) =>
         `https://api.coingecko.com/api/v3/coins/${item.id}/market_chart?vs_currency=usd&days=7`
@@ -70,8 +71,11 @@ export const AppProvider = ({ children }) => {
         response.json ? response.json().catch((error) => error) : response
       )
     );
+
     // Set chart data
-    dispatch({ type: SET_CHART_DATA, payload: chartDataFormatter(chartData) });
+    const newChartData = chartDataFormatter(chartData);
+
+    dispatch({ type: SET_CHART_DATA, payload: newChartData });
 
     //Get total asset values
     dispatch({ type: GET_TOTALS });

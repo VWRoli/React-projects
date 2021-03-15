@@ -20,7 +20,7 @@ const Stats = () => {
       const oldPrice = curValue - change;
       return (percentage = [(newPrice - oldPrice) / oldPrice] * 100);
     } else {
-      const oldPrice = curValue + Math.abs(change);
+      const oldPrice = curValue + change;
       return (percentage = [(oldPrice - newPrice) / oldPrice] * 100);
     }
   };
