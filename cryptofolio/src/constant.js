@@ -10,5 +10,6 @@ export const GET_TOTAL_CHANGE = 'GET_TOTAL_CHANGE';
 export const SET_CHART_DATA = 'SET_CHART_DATA';
 export const OPEN_MODAL = 'OPEN_MODAL';
 export const CLOSE_MODAL = 'CLOSE_MODAL';
+export const SET_ACTIVE_COIN = 'SET_ACTIVE_COIN';
 
 export const ADD_ASSET = ' ADD_ASSET';

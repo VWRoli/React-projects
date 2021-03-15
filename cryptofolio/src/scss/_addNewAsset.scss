@@ -1,51 +1,48 @@
 #add-new-asset {
-  @include main-page-setup();
-  width: fit-content;
-
-  #search-section {
+  header {
+    @include list-item();
+    h2 {
+      grid-column: span 3;
+    }
+    margin: 1rem 0;
+    img {
+      width: 30px;
+      height: 30px;
+    }
+    p {
+      font-weight: 400;
+      grid-column: span 2;
+      span {
+        font-weight: 400;
+      }
+    }
+  }
+  h3 {
+    text-align: center;
+    font-weight: 400;
     margin: 2rem 0;
-    #search {
-      border-radius: 15px;
+    span {
+      color: $blue-color;
+      font-weight: 400;
+    }
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    label {
+      text-align: center;
+    }
+
+    input {
+      margin: 1rem;
+      padding: 1rem;
+      border-radius: 20px;
       border: 1px solid #222;
-      padding: 0.5rem;
+      font-size: 1.5rem;
       outline: none;
     }
   }
-}
-#asset-list {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 2rem;
-
-  width: fit-content;
-  .list-item {
-    max-width: 225px;
-  }
-}
-
-@media screen and(max-width: 1650px) {
-  #asset-list {
-    grid-template-columns: repeat(5, 1fr);
-  }
-}
-@media screen and(max-width: 1200px) {
-  #asset-list {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-@media screen and(max-width: 900px) {
-  #asset-list {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media screen and(max-width: 675px) {
-  #asset-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media screen and(max-width: 500px) {
-  #asset-list {
-    grid-template-columns: repeat(1, 1fr);
-    margin: auto;
+  .btn {
+    @include primary-btn($green-gradient, $green-inverse-gradient);
   }
 }

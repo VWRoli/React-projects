@@ -13,6 +13,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <Modal />
         <Switch>
           <Route exact path="/">
             {assets.length === 0 ? <Home /> : <Portfolio />}

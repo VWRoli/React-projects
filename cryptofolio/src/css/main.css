@@ -564,7 +564,7 @@ a {
   }
 }
 
-#add-new-asset {
+#add-asset {
   position: relative;
   z-index: 1;
   width: 90vw;
@@ -576,23 +576,23 @@ a {
   width: fit-content;
 }
 
-#add-new-asset h1 {
+#add-asset h1 {
   font-size: 2.5rem;
   font-weight: 400;
   color: #1489f3;
 }
 
-#add-new-asset h2 {
+#add-asset h2 {
   font-size: 1.25rem;
   color: #1489f3;
   font-weight: 400;
 }
 
-#add-new-asset #search-section {
+#add-asset #search-section {
   margin: 2rem 0;
 }
 
-#add-new-asset #search-section #search {
+#add-asset #search-section #search {
   border-radius: 15px;
   border: 1px solid #222;
   padding: 0.5rem;
@@ -747,5 +747,93 @@ a {
 }
 
 #error-page .btn:hover {
+  background: linear-gradient(to top left, #00b6e3, #00e4ac);
+}
+
+#add-new-asset header {
+  background-color: #eee;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+  height: fit-content;
+  margin: 1rem 0;
+}
+
+#add-new-asset header h2 {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+  grid-column: span 4;
+}
+
+#add-new-asset header h2 span {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+#add-new-asset header h2 {
+  grid-column: span 3;
+}
+
+#add-new-asset header img {
+  width: 30px;
+  height: 30px;
+}
+
+#add-new-asset header p {
+  font-weight: 400;
+  grid-column: span 2;
+}
+
+#add-new-asset header p span {
+  font-weight: 400;
+}
+
+#add-new-asset h3 {
+  text-align: center;
+  font-weight: 400;
+  margin: 2rem 0;
+}
+
+#add-new-asset h3 span {
+  color: #1489f3;
+  font-weight: 400;
+}
+
+#add-new-asset form {
+  display: flex;
+  flex-direction: column;
+}
+
+#add-new-asset form label {
+  text-align: center;
+}
+
+#add-new-asset form input {
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 20px;
+  border: 1px solid #222;
+  font-size: 1.5rem;
+  outline: none;
+}
+
+#add-new-asset .btn {
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 20px;
+  background: linear-gradient(to bottom right, #00b6e3, #00e4ac);
+  font-size: 1.1rem;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 400;
+  outline: none;
+}
+
+#add-new-asset .btn:hover {
   background: linear-gradient(to top left, #00b6e3, #00e4ac);
 }

@@ -13,6 +13,7 @@ import {
   INFO_URL,
   OPEN_MODAL,
   CLOSE_MODAL,
+  SET_ACTIVE_COIN,
 } from './constant';
 
 import { urlFormatter, chartDataFormatter } from './helpers';
@@ -29,6 +30,7 @@ const initialState = {
   totalValue: 0,
   totalValueChange: 0,
   chartData: [],
+  activeCoin: '',
 };
 
 export const AppProvider = ({ children }) => {
@@ -49,6 +51,11 @@ export const AppProvider = ({ children }) => {
 
   const closeModal = () => {
     dispatch({ type: CLOSE_MODAL });
+  };
+
+  //Set active coin
+  const setActiveCoin = (id) => {
+    dispatch({ type: SET_ACTIVE_COIN, payload: id });
   };
 
   //Get Coin Info
@@ -92,7 +99,14 @@ export const AppProvider = ({ children }) => {
 
   return (
     <AppContext.Provider
-      value={{ ...state, clearAssets, removeAsset, openModal, closeModal }}
+      value={{
+        ...state,
+        clearAssets,
+        removeAsset,
+        openModal,
+        closeModal,
+        setActiveCoin,
+      }}
     >
       {children}
     </AppContext.Provider>

@@ -5,7 +5,7 @@ import AddNewAsset from './AddAsset/AddNewAsset';
 import EditAsset from './Portfolio/EditAsset';
 
 const Modal = () => {
-  const { isModalOpen, closeModal } = useGlobalContext();
+  const { isModalOpen, closeModal, activeCoin } = useGlobalContext();
 
   //Close Modal with clicking on overlay
   const handleClick = (e) => {
@@ -34,7 +34,7 @@ const Modal = () => {
         <button type="button" className="close-modal" onClick={closeModal}>
           <FaTimes className="icons" />
         </button>
-        <AddNewAsset />
+        <AddNewAsset id={activeCoin} />
       </div>
     </div>
   );

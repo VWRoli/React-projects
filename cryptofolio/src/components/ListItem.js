@@ -2,7 +2,7 @@ import { FaPlus } from 'react-icons/fa';
 import { useGlobalContext } from '../context';
 
 const ListItem = ({ coin }) => {
-  const { openModal } = useGlobalContext();
+  const { openModal, setActiveCoin, activeCoin } = useGlobalContext();
 
   const { name, symbol, image, id } = coin;
   return (
@@ -14,7 +14,14 @@ const ListItem = ({ coin }) => {
         {name.substring(0, 12)} <br />
         <span>{symbol}</span>
       </h2>
-      <button type="button" className="add-btn" onClick={openModal}>
+      <button
+        type="button"
+        className="add-btn"
+        onClick={() => {
+          setActiveCoin(id);
+          openModal();
+        }}
+      >
         <FaPlus />
       </button>
     </article>

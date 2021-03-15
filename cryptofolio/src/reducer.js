@@ -8,6 +8,7 @@ import {
   REMOVE_ASSET,
   OPEN_MODAL,
   CLOSE_MODAL,
+  SET_ACTIVE_COIN,
 } from './constant';
 
 const reducer = (state, action) => {
@@ -54,6 +55,9 @@ const reducer = (state, action) => {
   }
   if (action.type === CLOSE_MODAL) {
     return { ...state, isModalOpen: false };
+  }
+  if (action.type === SET_ACTIVE_COIN) {
+    return { ...state, activeCoin: action.payload };
   }
   return state;
 };
