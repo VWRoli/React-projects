@@ -50,6 +50,7 @@ const reducer = (state, action) => {
         const [correctCoin] = state.coinInfo.filter(
           (coin) => coin.id === asset.id
         );
+
         return asset.holdings * correctCoin.price_change_24h;
       })
       .reduce((acc, cur) => acc + cur, 0);
