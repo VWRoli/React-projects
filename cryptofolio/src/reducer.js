@@ -29,15 +29,21 @@ const reducer = (state, action) => {
     return { ...state, coinInfo: action.payload };
   }
 
-  /*   if (action.type === GET_TOTALS) {
+  if (action.type === GET_TOTALS) {
     //Get the current value for the whole portfolio
-
+    console.log(state.assets);
+    console.log(state.coinInfo);
     const currentAssetValue = state.assets
-      .map((asset, i) => asset.holdings * state.coinInfo[i].current_price)
+      .map((asset, i) => {
+        const [correctCoin] = state.coinInfo.filter(
+          (coin) => coin.id === asset.id
+        );
+        return asset.holdings * correctCoin.current_price;
+      })
       .reduce((acc, cur) => acc + cur, 0);
 
     return { ...state, totalValue: currentAssetValue };
-  } */
+  }
 
   if (action.type === GET_TOTAL_CHANGE) {
     //Get the 24h price change for the whole portfolio
@@ -61,7 +67,6 @@ const reducer = (state, action) => {
     return { ...state, activeCoin: action.payload };
   }
   if (action.type === ADD_ASSET) {
-    console.log(action.payload);
     return { ...state, assets: [...state.assets, action.payload] };
   }
   return state;

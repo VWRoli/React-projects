@@ -36,7 +36,7 @@ const AddNewAsset = ({ id }) => {
 
     addAsset({ id, holdings: +holdings });
     setHoldings('');
-    console.log(assets);
+
     closeModal();
   };
 
