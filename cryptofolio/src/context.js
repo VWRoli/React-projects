@@ -26,7 +26,7 @@ const AppContext = React.createContext();
 const initialState = {
   isLoading: false,
   isModalOpen: false,
-  assets: tempData,
+  assets: [],
   coinInfo: [],
   totalValue: 0,
   totalValueChange: 0,
@@ -100,7 +100,7 @@ export const AppProvider = ({ children }) => {
   }, [state.assets]);
   useEffect(() => {
     fetchCoinInfo();
-  }, [fetchCoinInfo]);
+  }, [state.assets, fetchCoinInfo]);
 
   return (
     <AppContext.Provider

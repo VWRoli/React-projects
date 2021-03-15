@@ -29,7 +29,7 @@ const reducer = (state, action) => {
     return { ...state, coinInfo: action.payload };
   }
 
-  if (action.type === GET_TOTALS) {
+  /*   if (action.type === GET_TOTALS) {
     //Get the current value for the whole portfolio
 
     const currentAssetValue = state.assets
@@ -37,7 +37,7 @@ const reducer = (state, action) => {
       .reduce((acc, cur) => acc + cur, 0);
 
     return { ...state, totalValue: currentAssetValue };
-  }
+  } */
 
   if (action.type === GET_TOTAL_CHANGE) {
     //Get the 24h price change for the whole portfolio

@@ -141,6 +141,23 @@ a {
   background: linear-gradient(to top left, #00b6e3, #00e4ac);
 }
 
+.btn {
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 20px;
+  background: linear-gradient(to bottom right, #00b6e3, #00e4ac);
+  font-size: 1.1rem;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 400;
+  outline: none;
+}
+
+.btn:hover {
+  background: linear-gradient(to top left, #00b6e3, #00e4ac);
+}
+
 .modal-overlay {
   background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(3px);
@@ -607,6 +624,11 @@ a {
   border: 1px solid #222;
   padding: 0.5rem;
   outline: none;
+}
+
+#add-asset .back-to-portfolio {
+  float: right;
+  margin: 0;
 }
 
 #asset-list {

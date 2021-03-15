@@ -1,9 +1,11 @@
 import { priceChangeFormatter, priceFormatter } from '../../helpers';
-import { FaEdit, FaRegMinusSquare } from 'react-icons/fa';
+import { FaEdit, FaRegMinusSquare, FaRulerCombined } from 'react-icons/fa';
 import { useGlobalContext } from '../../context';
 
-const AssetRow = ({ coin, assets }) => {
-  const { removeAsset } = useGlobalContext();
+const AssetRow = ({ asset }) => {
+  const { removeAsset, coinInfo } = useGlobalContext();
+
+  const [correctCoin] = coinInfo.filter((coin) => coin.id === asset.id);
 
   const {
     name,
@@ -12,10 +14,9 @@ const AssetRow = ({ coin, assets }) => {
     current_price: price,
     price_change_percentage_24h: changePercentage,
     price_change_24h: changeValue,
-    id,
-  } = coin;
+  } = correctCoin;
 
-  if (!assets) return null;
+  if (!asset) return null;
 
   return (
     <tr>
@@ -39,9 +40,9 @@ const AssetRow = ({ coin, assets }) => {
       </td>
       {/**HOLDINGS */}
       <td className="holdings-row">
-        {priceFormatter(price * assets.holdings)} <br />
+        {priceFormatter(price * asset.holdings)} <br />
         <span className="holdings">
-          {assets.holdings.toFixed(4)}
+          {asset.holdings.toFixed(4)}
           <span className="symbol">&nbsp;{symbol}</span>
         </span>
       </td>
@@ -51,7 +52,7 @@ const AssetRow = ({ coin, assets }) => {
           changeValue > 0 ? 'profit-row positive' : 'profit-row negative'
         }
       >
-        {priceFormatter(changeValue * assets.holdings)}
+        {priceFormatter(changeValue * asset.holdings)}
       </td>
       {/**ACTIONS */}
       <td className="actions-row">
@@ -61,7 +62,7 @@ const AssetRow = ({ coin, assets }) => {
         <button
           type="button"
           className="remove-btn"
-          onClick={() => removeAsset(id)}
+          onClick={() => removeAsset(asset.id)}
         >
           <FaRegMinusSquare className="icons" title="Remove transaction" />
         </button>

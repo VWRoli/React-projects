@@ -22,3 +22,6 @@
   @include primary-btn($green-gradient, $green-inverse-gradient);
   margin: auto;
 }
+.btn {
+  @include primary-btn($green-gradient, $green-inverse-gradient);
+}

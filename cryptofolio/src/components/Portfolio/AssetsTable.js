@@ -5,6 +5,9 @@ import AssetRow from './AssetRow';
 const AssetsTable = () => {
   const { isLoading, coinInfo, assets } = useGlobalContext();
 
+  //console.log(coinInfo);
+  //console.log(assets);
+
   return (
     <tbody>
       {isLoading ? (
@@ -14,8 +17,8 @@ const AssetsTable = () => {
           </td>
         </tr>
       ) : (
-        coinInfo.map((coin, i) => {
-          return <AssetRow key={coin.id} coin={coin} assets={assets[i]} />;
+        assets.map((asset) => {
+          return <AssetRow key={asset.id} asset={asset} />;
         })
       )}
     </tbody>

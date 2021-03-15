@@ -10,7 +10,7 @@ const AddNewAsset = ({ id }) => {
     `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${id}`
   );
 
-  const { addAsset, assets, closeModal } = useGlobalContext();
+  const { addAsset, closeModal, assets } = useGlobalContext();
   const [holdings, setHoldings] = useState('');
 
   if (!data[0]) return null;
@@ -28,15 +28,15 @@ const AddNewAsset = ({ id }) => {
 
     //Handle unfilled input field
     if (!holdings) {
-      //console.log(e.target.querySelector('#holdings'));
       e.target.querySelector('#holdings').placeholder =
         'Please fill out the field!';
       e.target.querySelector('#holdings').classList.add('input-error');
       return;
     }
-    console.log(id, holdings);
+
     addAsset({ id, holdings: +holdings });
     setHoldings('');
+    console.log(assets);
     closeModal();
   };
 
@@ -77,6 +77,7 @@ const AddNewAsset = ({ id }) => {
               value={holdings}
               onChange={(e) => setHoldings(e.target.value)}
             />
+
             <button type="submit" className="btn">
               Add Asset
             </button>
