@@ -25,6 +25,15 @@ const AddNewAsset = ({ id }) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
+
+    //Handle unfilled input field
+    if (!holdings) {
+      //console.log(e.target.querySelector('#holdings'));
+      e.target.querySelector('#holdings').placeholder =
+        'Please fill out the field!';
+      e.target.querySelector('#holdings').classList.add('input-error');
+      return;
+    }
     console.log(id, holdings);
     addAsset({ id, holdings: +holdings });
     setHoldings('');

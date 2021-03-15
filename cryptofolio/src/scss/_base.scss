@@ -54,3 +54,12 @@ a {
   color: #fff;
   font-weight: 400;
 }
+
+.input-error {
+  background-color: $error-color;
+  color: #fff;
+  opacity: 0.75;
+  &::placeholder {
+    color: #fff;
+  }
+}

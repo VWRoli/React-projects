@@ -58,6 +58,16 @@ a {
   font-weight: 400;
 }
 
+.input-error {
+  background-color: #d84f4f;
+  color: #fff;
+  opacity: 0.75;
+}
+
+.input-error::placeholder {
+  color: #fff;
+}
+
 .edit-btn {
   border: none;
   background: transparent;
@@ -238,7 +248,7 @@ a {
 
 .error-container {
   grid-column: span 3;
-  color: #b83603;
+  color: #d84f4f;
   text-align: center;
 }
 
@@ -817,7 +827,7 @@ a {
   padding: 1rem;
   border-radius: 20px;
   border: 1px solid #222;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   outline: none;
 }
 
