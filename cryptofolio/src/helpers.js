@@ -36,21 +36,26 @@ export const urlFormatter = (url, array) => {
 };
 
 //Format chart data
-export const chartDataFormatter = (data) => {
+export const chartDataFormatter = (data, assets) => {
   //Get prices from chart data array, because it has market and voluma data too
   const priceData = data.map((item) => {
     return item.prices.slice(0, 169);
   });
 
-  //Get timestamps for chart
+  //Calculate prices of holdings
+  const holdingPrices = priceData.map((array, i) => {
+    const currentHoldings = assets[i].holdings;
+    return array.map((item) => currentHoldings * item[1]);
+  });
 
   if (!priceData[0]) return;
 
+  //Get timestamps for chart
   const timeStamps = priceData[0].map((stamp) => stamp[0]);
 
   //Get and add the total price values
-  const totalPrices = priceData
-    .map((array) => array.map((el) => el[1]))
+  const totalPrices = holdingPrices
+    .map((array) => array.map((el) => el))
     .reduce((acc, curr) => acc.map((el, i) => el + curr[i]));
 
   //Createing a data Object for the chart

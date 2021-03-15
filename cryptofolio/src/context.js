@@ -90,7 +90,10 @@ export const AppProvider = ({ children }) => {
     );
 
     // Set chart data
-    dispatch({ type: SET_CHART_DATA, payload: chartDataFormatter(chartData) });
+    dispatch({
+      type: SET_CHART_DATA,
+      payload: chartDataFormatter(chartData, state.assets),
+    });
 
     //Get total asset values
     dispatch({ type: GET_TOTALS });

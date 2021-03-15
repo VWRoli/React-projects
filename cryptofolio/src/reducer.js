@@ -31,8 +31,6 @@ const reducer = (state, action) => {
 
   if (action.type === GET_TOTALS) {
     //Get the current value for the whole portfolio
-    console.log(state.assets);
-    console.log(state.coinInfo);
     const currentAssetValue = state.assets
       .map((asset, i) => {
         const [correctCoin] = state.coinInfo.filter(
