@@ -1,7 +1,11 @@
 #add-asset {
   @include main-page-setup();
   width: fit-content;
-
+  margin: 1rem;
+  overflow: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
   #search-section {
     margin: 2rem 0;
     #search {
@@ -46,6 +50,15 @@
 @media screen and(max-width: 900px) {
   #asset-list {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and(max-width: 750px) {
+  #add-asset {
+    .header {
+      flex-direction: column;
+      text-align: center;
+    }
   }
 }
 @media screen and(max-width: 675px) {

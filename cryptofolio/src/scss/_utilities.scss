@@ -1,5 +1,5 @@
-$blue-gradient: linear-gradient(#1489f3, #2cadfb);
-$orange-gradient: linear-gradient(#fa5715, #f6d022);
+//$blue-gradient: linear-gradient(#1489f3, #2cadfb);
+//$orange-gradient: linear-gradient(#fa5715, #f6d022);
 
 $green-gradient: linear-gradient(to bottom right, #00b6e3, #00e4ac);
 $green-inverse-gradient: linear-gradient(to top left, #00b6e3, #00e4ac);
@@ -38,7 +38,8 @@ $hover: #fa5715;
   position: relative;
   z-index: 1;
   width: 90vw;
-  margin: auto;
+  max-height: 95vh;
+  margin: 2.5vh auto;
   background-color: #fff;
   border-radius: 25px;
   padding: 1rem;

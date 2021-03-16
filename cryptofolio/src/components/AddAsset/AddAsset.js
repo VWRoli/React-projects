@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+
 import AssetsList from './AssetsList';
 import SearchBar from './SearchBar';
 

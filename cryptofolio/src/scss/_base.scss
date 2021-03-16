@@ -9,10 +9,9 @@ img {
   width: 100%;
 }
 .App {
-  //height: 100vh;
-  margin-top: 7.5rem;
   display: grid;
   place-content: center;
+  height: 100vh;
 
   &::before {
     content: '';
@@ -65,4 +64,10 @@ a {
 }
 .primary-btn {
   @include primary-btn($green-gradient, $green-inverse-gradient);
+}
+
+@media screen and(max-width: 750px) {
+  .App {
+    margin-top: 0;
+  }
 }

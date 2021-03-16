@@ -11,9 +11,9 @@ img {
 }
 
 .App {
-  margin-top: 7.5rem;
   display: grid;
   place-content: center;
+  height: 100vh;
 }
 
 .App::before {
@@ -89,26 +89,10 @@ a {
   background: linear-gradient(to top left, #00b6e3, #00e4ac);
 }
 
-.save-changes-btn {
-  margin: 2rem;
-  border-radius: 20px;
-  background: linear-gradient(to bottom right, #00b6e3, #00e4ac);
-  font-size: 1.1rem;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-weight: 400;
-  outline: none;
-  margin: auto;
-}
-
-.save-changes-btn a {
-  padding: 1rem;
-  display: inline-block;
-}
-
-.save-changes-btn:hover {
-  background: linear-gradient(to top left, #00b6e3, #00e4ac);
+@media screen and (max-width: 750px) {
+  .App {
+    margin-top: 0;
+  }
 }
 
 .modal-overlay {
@@ -117,8 +101,8 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   z-index: 8;
   display: grid;
   place-content: center;
@@ -132,11 +116,13 @@ a {
   position: relative;
   z-index: 1;
   width: 90vw;
-  margin: auto;
+  max-height: 95vh;
+  margin: 2.5vh auto;
   background-color: #fff;
   border-radius: 25px;
   padding: 1rem;
   box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+  height: auto;
   background-color: #fff;
   max-width: 35vw;
   padding: 3rem;
@@ -166,6 +152,40 @@ a {
 .show-modal {
   opacity: 1;
   visibility: visible;
+}
+
+@media screen and (max-width: 1350px) {
+  .modal-container {
+    max-width: 45vw;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .modal-container {
+    max-width: 55vw;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .modal-container {
+    max-width: 65vw;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .modal-container {
+    max-width: 85vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .modal-container {
+    font-size: 0.85rem;
+    padding: 1.5rem;
+  }
+  .modal-container h1 {
+    font-size: 2rem;
+  }
 }
 
 .list-item {
@@ -254,7 +274,6 @@ a {
 
 #home {
   position: relative;
-  margin-top: -7.5rem;
   height: 100vh;
   display: grid;
   place-content: center;
@@ -334,9 +353,15 @@ a {
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 800px) {
   .home-right {
-    grid-template-columns: repeat(2, 1fr);
+    display: none;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #home {
+    margin-top: 0;
   }
 }
 
@@ -348,20 +373,19 @@ a {
     width: 100%;
     margin: 2rem 0;
   }
-  .home-right {
-    grid-template-columns: 1fr;
-  }
 }
 
 #portfolio {
   position: relative;
   z-index: 1;
   width: 90vw;
-  margin: auto;
+  max-height: 95vh;
+  margin: 2.5vh auto;
   background-color: #fff;
   border-radius: 25px;
   padding: 1rem;
   box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+  overflow: scroll;
 }
 
 #portfolio h1 {
@@ -374,6 +398,10 @@ a {
   font-size: 1.25rem;
   color: #1489f3;
   font-weight: 400;
+}
+
+#portfolio::-webkit-scrollbar {
+  display: none;
 }
 
 #portfolio h2 {
@@ -582,6 +610,10 @@ a {
 }
 
 @media screen and (max-width: 750px) {
+  #portfolio .header {
+    flex-direction: column;
+    text-align: center;
+  }
   #portfolio #assets {
     grid-column: span 12;
   }
@@ -607,12 +639,15 @@ a {
   position: relative;
   z-index: 1;
   width: 90vw;
-  margin: auto;
+  max-height: 95vh;
+  margin: 2.5vh auto;
   background-color: #fff;
   border-radius: 25px;
   padding: 1rem;
   box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
   width: fit-content;
+  margin: 1rem;
+  overflow: scroll;
 }
 
 #add-asset h1 {
@@ -625,6 +660,10 @@ a {
   font-size: 1.25rem;
   color: #1489f3;
   font-weight: 400;
+}
+
+#add-asset::-webkit-scrollbar {
+  display: none;
 }
 
 #add-asset #search-section {
@@ -679,6 +718,13 @@ a {
 @media screen and (max-width: 900px) {
   #asset-list {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #add-asset .header {
+    flex-direction: column;
+    text-align: center;
   }
 }
 
@@ -756,7 +802,8 @@ a {
   position: relative;
   z-index: 1;
   width: 90vw;
-  margin: auto;
+  max-height: 95vh;
+  margin: 2.5vh auto;
   background-color: #fff;
   border-radius: 25px;
   padding: 1rem;
@@ -881,4 +928,13 @@ a {
 
 #add-new-asset form .primary-btn {
   padding: 1rem;
+}
+
+@media screen and (max-width: 500px) {
+  #add-new-asset form input {
+    font-size: 1rem;
+  }
+  #add-new-asset form .primary-btn {
+    margin: 0;
+  }
 }
