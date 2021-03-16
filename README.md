@@ -2,6 +2,16 @@
 
 Collection place for my React practice projects.
 
+## Cryptofolio
+
+[Live](https://cryptofolio-app.netlify.app/)
+
+Crypto currency portfolio tracker application. Select or search the currencies you have in your portfolio. Track your assets value.
+
+Build with React. I supply the currency information with the [CoinGecko API](https://www.coingecko.com/en).
+
+For styling I used Sass.
+
 ## Countries
 
 App that lists all the countries and shows some data about them. The list is paginated and searchable. I used the [REST Countries](https://restcountries.eu/) API to get the countries data. The app can display the countries on the map. For this function I used the [Leaflet](https://leafletjs.com/) library, with the help of [React Leaflet](https://react-leaflet.js.org/). Hosted live [Here](https://countries-2b0dc2.netlify.app/).
