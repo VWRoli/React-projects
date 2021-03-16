@@ -15,6 +15,7 @@ const AddNewAsset = ({ id }) => {
     closeModal,
     openSuccess,
     closeSuccess,
+    displaySuccess,
   } = useGlobalContext();
   const [holdings, setHoldings] = useState('');
 
@@ -42,7 +43,14 @@ const AddNewAsset = ({ id }) => {
     addAsset({ id, holdings: +holdings });
     setHoldings('');
 
+    //console.log(displaySuccess);
+    closeWindows();
+  };
+
+  const closeWindows = () => {
     setTimeout(() => {
+      //console.log(displaySuccess);
+
       closeSuccess();
       closeModal();
     }, 5000);
