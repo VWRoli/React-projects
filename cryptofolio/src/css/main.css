@@ -685,11 +685,34 @@ a {
   margin: 2rem 0;
 }
 
+#add-asset #search-section form {
+  display: flex;
+  align-items: center;
+}
+
 #add-asset #search-section #search {
   border-radius: 15px;
   border: 1px solid #222;
   padding: 0.5rem;
   outline: none;
+  margin: 0 0.5rem;
+}
+
+#add-asset #search-section .search-btn {
+  background: linear-gradient(to bottom right, #00b6e3, #00e4ac);
+  border: none;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  color: #eee;
+  cursor: pointer;
+  outline: none;
+}
+
+#add-asset #search-section .search-btn:hover {
+  background: linear-gradient(to top left, #00b6e3, #00e4ac);
 }
 
 #add-asset .header {

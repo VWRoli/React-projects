@@ -17,11 +17,10 @@ import {
   ADD_ASSET,
   OPEN_SUCCESS,
   CLOSE_SUCCESS,
+  SET_QUERY,
 } from './constant';
 
 import { urlFormatter, chartDataFormatter } from './helpers';
-
-//import { tempData } from './tempData';
 
 const AppContext = React.createContext();
 
@@ -35,6 +34,7 @@ const initialState = {
   chartData: [],
   activeCoin: '',
   displaySuccess: false,
+  searchQuery: '',
 };
 
 export const AppProvider = ({ children }) => {
@@ -72,6 +72,11 @@ export const AppProvider = ({ children }) => {
   };
   const closeSuccess = () => {
     dispatch({ type: CLOSE_SUCCESS });
+  };
+
+  //Search Query
+  const setSearchQuery = (query) => {
+    dispatch({ type: SET_QUERY, payload: query });
   };
 
   //Get Coin Info
@@ -128,6 +133,7 @@ export const AppProvider = ({ children }) => {
         addAsset,
         openSuccess,
         closeSuccess,
+        setSearchQuery,
       }}
     >
       {children}

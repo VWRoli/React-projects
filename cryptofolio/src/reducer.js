@@ -12,6 +12,7 @@ import {
   ADD_ASSET,
   OPEN_SUCCESS,
   CLOSE_SUCCESS,
+  SET_QUERY,
 } from './constant';
 
 const reducer = (state, action) => {
@@ -80,6 +81,9 @@ const reducer = (state, action) => {
   }
   if (action.type === CLOSE_SUCCESS) {
     return { ...state, displaySuccess: false };
+  }
+  if (action.type === SET_QUERY) {
+    return { ...state, searchQuery: action.payload };
   }
   return state;
 };
