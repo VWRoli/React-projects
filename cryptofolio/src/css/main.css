@@ -236,6 +236,21 @@ a {
   box-shadow: none;
 }
 
+.owned-coin {
+  cursor: not-allowed;
+  background-color: #ddd;
+}
+
+.owned-coin h2 {
+  grid-column: span 5;
+}
+
+.owned-coin h2 span {
+  color: #d84f4f;
+  font-weight: 400;
+  font-size: 0.65rem;
+}
+
 .error-container {
   grid-column: span 3;
   color: #d84f4f;
@@ -950,6 +965,12 @@ a {
   margin: 2rem auto;
   color: #b0db7d;
   animation: bounce 1s ease-in infinite;
+}
+
+.success-message .back-to-addassets {
+  color: #1489f3;
+  font-weight: 400;
+  cursor: pointer;
 }
 
 @keyframes bounce {

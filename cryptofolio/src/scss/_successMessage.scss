@@ -8,6 +8,11 @@
     color: $success-color;
     animation: bounce 1s ease-in infinite;
   }
+  .back-to-addassets {
+    color: $blue-color;
+    font-weight: 400;
+    cursor: pointer;
+  }
 }
 @keyframes bounce {
   50% {

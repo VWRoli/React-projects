@@ -21,7 +21,16 @@ const AddSuccess = () => {
         <Link to="/portfolio">Go to my Portfolio</Link>
       </button>
       <p>
-        Or add another asset <span>5 seconds</span>
+        Or add another{' '}
+        <span
+          className="back-to-addassets"
+          onClick={() => {
+            closeModal();
+            closeSuccess();
+          }}
+        >
+          Asset
+        </span>
       </p>
     </section>
   );

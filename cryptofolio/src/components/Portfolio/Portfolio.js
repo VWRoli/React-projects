@@ -8,7 +8,7 @@ const Portfolio = () => {
     <section id="portfolio">
       <header className="header">
         <div className="header-text">
-          <h1>My portfolio</h1>
+          <h1>Your portfolio</h1>
           <h3>Keep track of your Crypto Investments</h3>
         </div>
         <button type="button" className="primary-btn">
