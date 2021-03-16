@@ -12,3 +12,5 @@ export const OPEN_MODAL = 'OPEN_MODAL';
 export const CLOSE_MODAL = 'CLOSE_MODAL';
 export const SET_ACTIVE_COIN = 'SET_ACTIVE_COIN';
 export const ADD_ASSET = ' ADD_ASSET';
+export const OPEN_SUCCESS = ' OPEN_SUCCESS';
+export const CLOSE_SUCCESS = ' CLOSE_SUCCESS';

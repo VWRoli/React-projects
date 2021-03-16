@@ -10,6 +10,8 @@ import {
   CLOSE_MODAL,
   SET_ACTIVE_COIN,
   ADD_ASSET,
+  OPEN_SUCCESS,
+  CLOSE_SUCCESS,
 } from './constant';
 
 const reducer = (state, action) => {
@@ -72,6 +74,12 @@ const reducer = (state, action) => {
   }
   if (action.type === ADD_ASSET) {
     return { ...state, assets: [...state.assets, action.payload] };
+  }
+  if (action.type === OPEN_SUCCESS) {
+    return { ...state, displaySuccess: true };
+  }
+  if (action.type === CLOSE_SUCCESS) {
+    return { ...state, displaySuccess: false };
   }
   return state;
 };

@@ -938,3 +938,22 @@ a {
     margin: 0;
   }
 }
+
+.success-message {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.success-message .success-icon {
+  font-size: 3rem;
+  margin: 2rem auto;
+  color: #b0db7d;
+  animation: bounce 1s ease-in infinite;
+}
+
+@keyframes bounce {
+  50% {
+    transform: translateY(-10px);
+  }
+}

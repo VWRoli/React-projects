@@ -15,11 +15,13 @@ import {
   CLOSE_MODAL,
   SET_ACTIVE_COIN,
   ADD_ASSET,
+  OPEN_SUCCESS,
+  CLOSE_SUCCESS,
 } from './constant';
 
 import { urlFormatter, chartDataFormatter } from './helpers';
 
-import { tempData } from './tempData';
+//import { tempData } from './tempData';
 
 const AppContext = React.createContext();
 
@@ -32,6 +34,7 @@ const initialState = {
   totalValueChange: 0,
   chartData: [],
   activeCoin: '',
+  displaySuccess: false,
 };
 
 export const AppProvider = ({ children }) => {
@@ -61,6 +64,14 @@ export const AppProvider = ({ children }) => {
   //Add asset
   const addAsset = (asset) => {
     dispatch({ type: ADD_ASSET, payload: asset });
+  };
+
+  //Set success message after adding asset
+  const openSuccess = () => {
+    dispatch({ type: OPEN_SUCCESS });
+  };
+  const closeSuccess = () => {
+    dispatch({ type: CLOSE_SUCCESS });
   };
 
   //Get Coin Info
@@ -115,6 +126,8 @@ export const AppProvider = ({ children }) => {
         closeModal,
         setActiveCoin,
         addAsset,
+        openSuccess,
+        closeSuccess,
       }}
     >
       {children}

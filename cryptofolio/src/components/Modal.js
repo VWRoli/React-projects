@@ -2,20 +2,31 @@ import { useEffect } from 'react';
 import { FaTimes } from 'react-icons/fa';
 import { useGlobalContext } from '../context';
 import AddNewAsset from './AddAsset/AddNewAsset';
+import AddSuccess from './AddAsset/AddSuccess';
 
 const Modal = () => {
-  const { isModalOpen, closeModal, activeCoin } = useGlobalContext();
+  const {
+    isModalOpen,
+    closeModal,
+    activeCoin,
+    displaySuccess,
+    closeSuccess,
+  } = useGlobalContext();
 
   //Close Modal with clicking on overlay
   const handleClick = (e) => {
     if (e.target.classList.contains('modal-overlay')) {
       closeModal();
+      closeSuccess();
     }
   };
 
   //Close Modal with Esc
   const handleKeyDown = (e) => {
-    if (e.key === 'Escape') closeModal();
+    if (e.key === 'Escape') {
+      closeModal();
+      closeSuccess();
+    }
   };
   useEffect(() => {
     document.addEventListener('keydown', handleKeyDown);
@@ -30,10 +41,17 @@ const Modal = () => {
       onClick={handleClick}
     >
       <div className="modal-container">
-        <button type="button" className="close-modal" onClick={closeModal}>
+        <button
+          type="button"
+          className="close-modal"
+          onClick={() => {
+            closeModal();
+            closeSuccess();
+          }}
+        >
           <FaTimes className="icons" />
         </button>
-        <AddNewAsset id={activeCoin} />
+        {displaySuccess ? <AddSuccess /> : <AddNewAsset id={activeCoin} />}
       </div>
     </div>
   );

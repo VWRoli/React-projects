@@ -10,7 +10,12 @@ const AddNewAsset = ({ id }) => {
     `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${id}`
   );
 
-  const { addAsset, closeModal } = useGlobalContext();
+  const {
+    addAsset,
+    closeModal,
+    openSuccess,
+    closeSuccess,
+  } = useGlobalContext();
   const [holdings, setHoldings] = useState('');
 
   if (!data[0]) return null;
@@ -33,11 +38,14 @@ const AddNewAsset = ({ id }) => {
       e.target.querySelector('#holdings').classList.add('input-error');
       return;
     }
-
+    openSuccess();
     addAsset({ id, holdings: +holdings });
     setHoldings('');
 
-    closeModal();
+    setTimeout(() => {
+      closeSuccess();
+      closeModal();
+    }, 5000);
   };
 
   return (
