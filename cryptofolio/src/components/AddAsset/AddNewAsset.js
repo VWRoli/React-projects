@@ -69,7 +69,7 @@ const AddNewAsset = ({ id }) => {
           <form action="/" onSubmit={onSubmit}>
             <label htmlFor="holdings">Quantity: </label>
             <input
-              type="text"
+              type="number"
               name="holdings"
               id="holdings"
               value={holdings}

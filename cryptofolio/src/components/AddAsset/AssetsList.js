@@ -11,6 +11,7 @@ const AssetsList = () => {
 
   const { data: coins, isError, isLoading } = useFetch(url);
 
+  //Handle no search results
   const noResults = coins[0] === undefined;
 
   //Get coins that are already added to the portfolio

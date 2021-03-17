@@ -1,6 +1,20 @@
 export const projectsData = [
   {
     id: 1,
+    title: 'Crypto Portfolio Tracker',
+    img: '/img/cryptofolio.png',
+    tags: ['React', 'Sass', 'API'],
+    codeUrl: 'https://github.com/VWRoli/React-projects/tree/main/cryptofolio',
+    liveUrl: 'https://cryptofolio-app.netlify.app/',
+    desc: [
+      'Crypto currency portfolio tracker application. Select or search the currencies you want to add to your portfolio.',
+      'Track your assets value. Take a look at the price change chart.',
+      'Build with React. Using useEffect, useReducer, UseCallback, useContext, React Router.',
+      'For getting the currency information I worked with the CoinGecko API, for styling I used Sass.',
+    ],
+  },
+  {
+    id: 2,
     title: 'Guitar Practice Assistant',
     img: '/img/practice-assistant.png',
     tags: ['HTML', 'CSS', 'JavaScript', 'OOP', 'Parcel'],
@@ -14,10 +28,10 @@ export const projectsData = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: 'Countries',
     img: '/img/countries.png',
-    tags: ['CSS', 'React', 'NPM', 'API'],
+    tags: ['CSS', 'React', 'API'],
     codeUrl: 'https://github.com/VWRoli/React-projects/tree/main/countries',
     liveUrl: 'https://countries-2b0dc2.netlify.app/',
     desc: [
@@ -29,7 +43,7 @@ export const projectsData = [
   },
 
   {
-    id: 3,
+    id: 4,
     title: 'Memory Card Game',
     img: '/img/memory-card-game.png',
     tags: ['HTML', 'CSS', 'JavaScript'],
@@ -38,7 +52,7 @@ export const projectsData = [
     desc: [' Memory card game. Created with only Vanilla JS.'],
   },
   {
-    id: 4,
+    id: 5,
     title: 'Crypto Website',
     img: '/img/crypto.png',
     tags: ['HTML', 'CSS', 'JavaScript', 'API', 'SEO'],

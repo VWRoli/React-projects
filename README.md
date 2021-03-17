@@ -2,13 +2,17 @@
 
 Collection place for my React practice projects.
 
-## Cryptofolio
+# Cryptofolio
 
 [Live](https://cryptofolio-app.netlify.app/)
 
-Crypto currency portfolio tracker application. Select or search the currencies you have in your portfolio. Track your assets value.
+Crypto currency portfolio tracker application. Select or search the currencies you want to add to your portfolio.
 
-Build with React. I supply the currency information with the [CoinGecko API](https://www.coingecko.com/en).
+Track your assets value. Take a look at the price change chart.
+
+Build with React. Using useEffect, useReducer, UseCallback, useContext, React Router.
+
+For getting the currency information I worked with the [CoinGecko API](https://www.coingecko.com/en).
 
 For styling I used Sass.
 

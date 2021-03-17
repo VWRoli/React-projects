@@ -2,7 +2,9 @@
 
 [Live](https://cryptofolio-app.netlify.app/)
 
-Crypto currency portfolio tracker application. Select or search the currencies you have in your portfolio. Track your assets value.
+Crypto currency portfolio tracker application. Select or search the currencies you want to add to your portfolio.
+
+Track your assets value. Take a look at the price change chart.
 
 Build with React. Using useEffect, useReducer, UseCallback, useContext, React Router.
 
