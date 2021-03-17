@@ -59,6 +59,22 @@
   display: flex;
   flex-direction: column;
 
+  .assets-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .refresh-btn {
+      cursor: pointer;
+      &:hover {
+        color: $hover;
+      }
+      &:active {
+        animation: push-down 1s ease-in-out;
+      }
+    }
+  }
+
   table {
     border-collapse: collapse;
     width: 100%;
@@ -130,6 +146,12 @@
   width: fit-content;
   margin: auto;
   color: #222;
+}
+
+@keyframes push-down {
+  50% {
+    transform: translateY(15px);
+  }
 }
 
 @media screen and (max-width: 1200px) {

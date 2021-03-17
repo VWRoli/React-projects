@@ -144,6 +144,7 @@ export const AppProvider = ({ children }) => {
         closeSuccess,
         setSearchQuery,
         setIsError,
+        fetchCoinInfo,
       }}
     >
       {children}

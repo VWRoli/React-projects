@@ -478,6 +478,24 @@ a {
   flex-direction: column;
 }
 
+#assets .assets-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#assets .assets-title .refresh-btn {
+  cursor: pointer;
+}
+
+#assets .assets-title .refresh-btn:hover {
+  color: #fa5715;
+}
+
+#assets .assets-title .refresh-btn:active {
+  animation: push-down 1s ease-in-out;
+}
+
 #assets table {
   border-collapse: collapse;
   width: 100%;
@@ -580,6 +598,12 @@ a {
 
 .clear-btn:hover {
   background: linear-gradient(to top left, #dce2e2, #f3f0f0);
+}
+
+@keyframes push-down {
+  50% {
+    transform: translateY(15px);
+  }
 }
 
 @media screen and (max-width: 1200px) {
