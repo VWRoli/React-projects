@@ -15,3 +15,4 @@ export const ADD_ASSET = 'ADD_ASSET';
 export const OPEN_SUCCESS = 'OPEN_SUCCESS';
 export const CLOSE_SUCCESS = 'CLOSE_SUCCESS';
 export const SET_QUERY = 'SET_QUERY';
+export const SET_ERROR = 'SET_ERROR';

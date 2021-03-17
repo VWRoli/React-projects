@@ -124,7 +124,7 @@ a {
   box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
   height: auto;
   background-color: #fff;
-  max-width: 35vw;
+  max-width: 500px;
   padding: 3rem;
 }
 
@@ -152,30 +152,6 @@ a {
 .show-modal {
   opacity: 1;
   visibility: visible;
-}
-
-@media screen and (max-width: 1350px) {
-  .modal-container {
-    max-width: 45vw;
-  }
-}
-
-@media screen and (max-width: 1050px) {
-  .modal-container {
-    max-width: 55vw;
-  }
-}
-
-@media screen and (max-width: 850px) {
-  .modal-container {
-    max-width: 65vw;
-  }
-}
-
-@media screen and (max-width: 750px) {
-  .modal-container {
-    max-width: 85vw;
-  }
 }
 
 @media screen and (max-width: 500px) {

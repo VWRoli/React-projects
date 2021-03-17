@@ -1,12 +1,14 @@
 import { useGlobalContext } from '../../context';
 import { priceFormatter, priceChangeFormatter } from '../../helpers';
 import Loading from '../Loading';
+import Error from '../Error';
 import Chart from './Chart';
 
 const Stats = () => {
   const {
     totalValue,
     isLoading,
+    isError,
     totalValueChange,
     assets,
   } = useGlobalContext();
@@ -24,6 +26,8 @@ const Stats = () => {
       return -Math.abs((percentage = [(oldPrice - newPrice) / oldPrice] * 100));
     }
   };
+
+  if (isError) return <Error />;
 
   return (
     <section id="stats">

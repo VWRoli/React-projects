@@ -18,6 +18,7 @@ import {
   OPEN_SUCCESS,
   CLOSE_SUCCESS,
   SET_QUERY,
+  SET_ERROR,
 } from './constant';
 
 import { urlFormatter, chartDataFormatter } from './helpers';
@@ -26,6 +27,7 @@ const AppContext = React.createContext();
 
 const initialState = {
   isLoading: false,
+  isError: false,
   isModalOpen: false,
   assets: [],
   coinInfo: [],
@@ -79,43 +81,50 @@ export const AppProvider = ({ children }) => {
     dispatch({ type: SET_QUERY, payload: query });
   };
 
+  const setIsError = () => {
+    dispatch({ type: SET_ERROR });
+  };
+
   //Get Coin Info
   const fetchCoinInfo = useCallback(async () => {
-    dispatch({ type: LOADING });
-    const formattedUrl = urlFormatter(INFO_URL, state.assets);
+    try {
+      dispatch({ type: LOADING });
+      const formattedUrl = urlFormatter(INFO_URL, state.assets);
 
-    const response = await fetch(`${formattedUrl}`);
-    const coinInfo = await response.json();
+      const response = await fetch(`${formattedUrl}`);
+      const coinInfo = await response.json();
 
-    dispatch({ type: DISPLAY_INFO, payload: coinInfo });
+      dispatch({ type: DISPLAY_INFO, payload: coinInfo });
 
-    //Get API urls for chart
+      //Get API urls for chart
+      const chartUrls = state.assets.map(
+        (item) =>
+          `https://api.coingecko.com/api/v3/coins/${item.id}/market_chart?vs_currency=usd&days=7`
+      );
+      //Fetch chart data
+      const chartRes = await Promise.all(
+        chartUrls.map((url) => fetch(url).catch((error) => error))
+      );
+      const chartData = await Promise.all(
+        chartRes.map((response) =>
+          response.json ? response.json().catch((error) => error) : response
+        )
+      );
 
-    const chartUrls = state.assets.map(
-      (item) =>
-        `https://api.coingecko.com/api/v3/coins/${item.id}/market_chart?vs_currency=usd&days=7`
-    );
-    //Fetch chart data
-    const chartRes = await Promise.all(
-      chartUrls.map((url) => fetch(url).catch((error) => error))
-    );
-    const chartData = await Promise.all(
-      chartRes.map((response) =>
-        response.json ? response.json().catch((error) => error) : response
-      )
-    );
+      // Set chart data
+      dispatch({
+        type: SET_CHART_DATA,
+        payload: chartDataFormatter(chartData, state.assets),
+      });
 
-    // Set chart data
-    dispatch({
-      type: SET_CHART_DATA,
-      payload: chartDataFormatter(chartData, state.assets),
-    });
+      //Get total asset values
+      dispatch({ type: GET_TOTALS });
 
-    //Get total asset values
-    dispatch({ type: GET_TOTALS });
-
-    //Get total value change
-    dispatch({ type: GET_TOTAL_CHANGE });
+      //Get total value change
+      dispatch({ type: GET_TOTAL_CHANGE });
+    } catch (error) {
+      setIsError();
+    }
   }, [state.assets]);
   useEffect(() => {
     fetchCoinInfo();
@@ -134,6 +143,7 @@ export const AppProvider = ({ children }) => {
         openSuccess,
         closeSuccess,
         setSearchQuery,
+        setIsError,
       }}
     >
       {children}

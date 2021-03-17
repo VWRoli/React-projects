@@ -1,9 +1,22 @@
 import { useGlobalContext } from '../../context';
 import Loading from '../Loading';
+import Error from '../Error';
 import AssetRow from './AssetRow';
 
 const AssetsTable = () => {
-  const { isLoading, assets } = useGlobalContext();
+  const { isLoading, isError, assets } = useGlobalContext();
+
+  if (isError) {
+    return (
+      <tbody>
+        <tr>
+          <td colSpan="6">
+            <Error />
+          </td>
+        </tr>
+      </tbody>
+    );
+  }
 
   return (
     <tbody>

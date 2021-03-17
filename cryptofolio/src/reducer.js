@@ -13,6 +13,7 @@ import {
   OPEN_SUCCESS,
   CLOSE_SUCCESS,
   SET_QUERY,
+  SET_ERROR,
 } from './constant';
 
 const reducer = (state, action) => {
@@ -80,10 +81,13 @@ const reducer = (state, action) => {
     return { ...state, displaySuccess: true };
   }
   if (action.type === CLOSE_SUCCESS) {
-    return { ...state, displaySuccess: false, isModalOpen: false };
+    return { ...state, displaySuccess: false };
   }
   if (action.type === SET_QUERY) {
     return { ...state, searchQuery: action.payload };
+  }
+  if (action.type === SET_ERROR) {
+    return { ...state, isError: true };
   }
   return state;
 };

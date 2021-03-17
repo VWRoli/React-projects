@@ -18,7 +18,7 @@
   @include main-page-setup();
   height: auto;
   background-color: #fff;
-  max-width: 35vw;
+  max-width: 500px;
   padding: 3rem;
 }
 .close-modal {
@@ -32,26 +32,6 @@
   visibility: visible;
 }
 
-@media screen and (max-width: 1350px) {
-  .modal-container {
-    max-width: 45vw;
-  }
-}
-@media screen and (max-width: 1050px) {
-  .modal-container {
-    max-width: 55vw;
-  }
-}
-@media screen and (max-width: 850px) {
-  .modal-container {
-    max-width: 65vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .modal-container {
-    max-width: 85vw;
-  }
-}
 @media screen and (max-width: 500px) {
   .modal-container {
     font-size: 0.85rem;
