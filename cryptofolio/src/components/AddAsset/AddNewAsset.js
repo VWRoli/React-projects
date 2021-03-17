@@ -2,10 +2,11 @@ import { useState } from 'react';
 import { useGlobalContext } from '../../context';
 import { priceChangeFormatter, priceFormatter } from '../../helpers';
 import { useFetch } from '../../useFetch';
+import Error from '../Error';
 import Loading from '../Loading';
 
 const AddNewAsset = ({ id }) => {
-  const { data, isLoading } = useFetch(
+  const { data, isLoading, isError } = useFetch(
     `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${id}`
   );
 
@@ -37,6 +38,15 @@ const AddNewAsset = ({ id }) => {
     addAsset({ id, holdings: +holdings });
     setHoldings('');
   };
+
+  if (isError) {
+    return (
+      <div id="add-new-asset">
+        <h1>Add New Asset</h1>
+        <Error />
+      </div>
+    );
+  }
 
   return (
     <div id="add-new-asset">

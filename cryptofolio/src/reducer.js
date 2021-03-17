@@ -14,6 +14,7 @@ import {
   CLOSE_SUCCESS,
   SET_QUERY,
   SET_ERROR,
+  SET_DAYS,
 } from './constant';
 
 const reducer = (state, action) => {
@@ -88,6 +89,9 @@ const reducer = (state, action) => {
   }
   if (action.type === SET_ERROR) {
     return { ...state, isError: true };
+  }
+  if (action.type === SET_DAYS) {
+    return { ...state, chartDays: action.payload };
   }
   return state;
 };

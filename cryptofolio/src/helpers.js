@@ -1,3 +1,5 @@
+import { SET_DAYS } from './constant';
+
 //Locale
 const locale = navigator.language;
 
@@ -35,11 +37,21 @@ export const urlFormatter = (url, array) => {
   return `${url}${urlPart}`;
 };
 
+//Calculate year to date
+export const calcYtd = () => {
+  const today = new Date();
+  const startYear = new Date(today.getFullYear(), 0);
+  const days = Math.floor((today - startYear) / (1000 * 60 * 60 * 24));
+  return days;
+};
+calcYtd();
+
 //Format chart data
 export const chartDataFormatter = (data, assets) => {
   //Get prices from chart data array, because it has market and voluma data too
+
   const priceData = data.map((item) => {
-    return item.prices.slice(0, 169);
+    return item.prices;
   });
 
   //Calculate prices of holdings

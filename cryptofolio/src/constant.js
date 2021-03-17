@@ -16,3 +16,4 @@ export const OPEN_SUCCESS = 'OPEN_SUCCESS';
 export const CLOSE_SUCCESS = 'CLOSE_SUCCESS';
 export const SET_QUERY = 'SET_QUERY';
 export const SET_ERROR = 'SET_ERROR';
+export const SET_DAYS = 'SET_DAYS';

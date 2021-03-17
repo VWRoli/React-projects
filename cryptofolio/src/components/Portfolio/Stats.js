@@ -1,8 +1,9 @@
 import { useGlobalContext } from '../../context';
-import { priceFormatter, priceChangeFormatter } from '../../helpers';
+import { priceFormatter, priceChangeFormatter, calcYtd } from '../../helpers';
 import Loading from '../Loading';
 import Error from '../Error';
 import Chart from './Chart';
+import ChartButtons from './ChartButtons';
 
 const Stats = () => {
   const {
@@ -12,6 +13,15 @@ const Stats = () => {
     totalValueChange,
     assets,
   } = useGlobalContext();
+
+  //Buttons
+  const buttons = [
+    { label: '1d', days: '1' },
+    { label: '7d', days: '7' },
+    { label: '30d', days: '30' },
+    { label: '90d', days: '90' },
+    { label: 'YTD', days: calcYtd() },
+  ];
 
   //Calculate percentage change
   const calcChangePercentage = (curValue, change) => {
@@ -51,15 +61,7 @@ const Stats = () => {
       )}
 
       <Chart />
-      <div className="graph-btn-container">
-        <h3 style={{ color: '#1489f3', fontWeight: '400' }}>
-          Chart data for the last 7 days
-        </h3>
-        {/* <button type="button">1d</button>
-        <button type="button">7d</button>
-        <button type="button">30d</button>
-        <button type="button">All</button> */}
-      </div>
+      <ChartButtons buttons={buttons} />
     </section>
   );
 };

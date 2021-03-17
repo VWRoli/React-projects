@@ -19,6 +19,7 @@ import {
   CLOSE_SUCCESS,
   SET_QUERY,
   SET_ERROR,
+  SET_DAYS,
 } from './constant';
 
 import { urlFormatter, chartDataFormatter } from './helpers';
@@ -37,6 +38,7 @@ const initialState = {
   activeCoin: '',
   displaySuccess: false,
   searchQuery: '',
+  chartDays: '7',
 };
 
 export const AppProvider = ({ children }) => {
@@ -81,8 +83,14 @@ export const AppProvider = ({ children }) => {
     dispatch({ type: SET_QUERY, payload: query });
   };
 
+  //Error handling
   const setIsError = () => {
     dispatch({ type: SET_ERROR });
+  };
+
+  //Set chart data days
+  const setChartDays = (day) => {
+    dispatch({ type: SET_DAYS, payload: day });
   };
 
   //Get Coin Info
@@ -99,7 +107,7 @@ export const AppProvider = ({ children }) => {
       //Get API urls for chart
       const chartUrls = state.assets.map(
         (item) =>
-          `https://api.coingecko.com/api/v3/coins/${item.id}/market_chart?vs_currency=usd&days=7`
+          `https://api.coingecko.com/api/v3/coins/${item.id}/market_chart?vs_currency=usd&days=${state.chartDays}`
       );
       //Fetch chart data
       const chartRes = await Promise.all(
@@ -125,10 +133,10 @@ export const AppProvider = ({ children }) => {
     } catch (error) {
       setIsError();
     }
-  }, [state.assets]);
+  }, [state.assets, state.chartDays]);
   useEffect(() => {
     fetchCoinInfo();
-  }, [state.assets, fetchCoinInfo]);
+  }, [state.assets, fetchCoinInfo, state.chartDays]);
 
   return (
     <AppContext.Provider
@@ -145,6 +153,7 @@ export const AppProvider = ({ children }) => {
         setSearchQuery,
         setIsError,
         fetchCoinInfo,
+        setChartDays,
       }}
     >
       {children}

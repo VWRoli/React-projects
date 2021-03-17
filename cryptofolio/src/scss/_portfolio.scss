@@ -46,9 +46,22 @@
   .graph-btn-container {
     display: flex;
     justify-content: space-around;
-    button {
-      @include primary-btn($green-gradient, $green-inverse-gradient);
+
+    .chart-btn {
+      @include primary-btn($gray-gradient, $green-inverse-gradient);
+      color: #222;
       margin: 0;
+      padding: 1rem;
+      &:hover {
+        color: #eee;
+      }
+    }
+    .active {
+      background: $green-gradient;
+      color: #eee;
+      &:hover {
+        background: $green-inverse-gradient;
+      }
     }
   }
 }
@@ -198,6 +211,13 @@
     }
     #assets {
       grid-column: span 12;
+    }
+  }
+  #stats {
+    .graph-btn-container {
+      button {
+        padding: 0.75rem;
+      }
     }
   }
   .actions-row {
