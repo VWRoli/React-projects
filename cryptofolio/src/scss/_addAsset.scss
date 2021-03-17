@@ -57,6 +57,11 @@
   .list-item {
     max-width: 225px;
   }
+  .no-results {
+    grid-column: span 2;
+    color: $blue-color;
+    font-weight: 400;
+  }
 }
 
 @media screen and(max-width: 1650px) {

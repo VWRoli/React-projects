@@ -5,18 +5,11 @@ import { useFetch } from '../../useFetch';
 import Loading from '../Loading';
 
 const AddNewAsset = ({ id }) => {
-  //todo loads list without ID, should only load if id is present
   const { data, isLoading } = useFetch(
     `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${id}`
   );
 
-  const {
-    addAsset,
-    closeModal,
-    openSuccess,
-    closeSuccess,
-    displaySuccess,
-  } = useGlobalContext();
+  const { addAsset, openSuccess } = useGlobalContext();
   const [holdings, setHoldings] = useState('');
 
   if (!data[0]) return null;
@@ -40,20 +33,9 @@ const AddNewAsset = ({ id }) => {
       return;
     }
     openSuccess();
+
     addAsset({ id, holdings: +holdings });
     setHoldings('');
-
-    //console.log(displaySuccess);
-    closeWindows();
-  };
-
-  const closeWindows = () => {
-    setTimeout(() => {
-      //console.log(displaySuccess);
-
-      closeSuccess();
-      closeModal();
-    }, 5000);
   };
 
   return (

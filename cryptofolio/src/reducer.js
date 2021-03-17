@@ -77,12 +77,10 @@ const reducer = (state, action) => {
     return { ...state, assets: [...state.assets, action.payload] };
   }
   if (action.type === OPEN_SUCCESS) {
-    console.log(state.displaySuccess);
     return { ...state, displaySuccess: true };
   }
   if (action.type === CLOSE_SUCCESS) {
-    console.log(state.displaySuccess);
-    return { ...state, displaySuccess: false };
+    return { ...state, displaySuccess: false, isModalOpen: false };
   }
   if (action.type === SET_QUERY) {
     return { ...state, searchQuery: action.payload };

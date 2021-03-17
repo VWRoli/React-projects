@@ -741,6 +741,12 @@ a {
   max-width: 225px;
 }
 
+#asset-list .no-results {
+  grid-column: span 2;
+  color: #1489f3;
+  font-weight: 400;
+}
+
 @media screen and (max-width: 1650px) {
   #asset-list {
     grid-template-columns: repeat(5, 1fr);

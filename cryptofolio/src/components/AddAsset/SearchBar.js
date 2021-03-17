@@ -9,7 +9,8 @@ const SearchBar = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSearchQuery(searchTerm);
+    const formatSearchTerm = searchTerm.toLowerCase().trim().replace(' ', '-');
+    setSearchQuery(formatSearchTerm);
   };
 
   return (
@@ -21,7 +22,11 @@ const SearchBar = () => {
           name="search"
           id="search"
           value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
+          onChange={(e) => {
+            if (e.target.value === '') setSearchQuery(e.target.value);
+
+            setSearchTerm(e.target.value);
+          }}
         />
         <button type="submit" className="search-btn">
           <FaSearch />
