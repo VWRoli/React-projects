@@ -448,7 +448,7 @@ a {
   justify-content: space-around;
 }
 
-#stats .graph-btn-container button {
+#stats .graph-btn-container .chart-btn {
   margin: 2rem;
   border-radius: 20px;
   background: linear-gradient(to bottom right, #dce2e2, #f3f0f0);
@@ -463,16 +463,16 @@ a {
   padding: 1rem;
 }
 
-#stats .graph-btn-container button a {
+#stats .graph-btn-container .chart-btn a {
   padding: 1rem;
   display: inline-block;
 }
 
-#stats .graph-btn-container button:hover {
+#stats .graph-btn-container .chart-btn:hover {
   background: linear-gradient(to top left, #00b6e3, #00e4ac);
 }
 
-#stats .graph-btn-container button:hover {
+#stats .graph-btn-container .chart-btn:hover {
   color: #eee;
 }
 
@@ -577,11 +577,6 @@ a {
   border: none;
   background: transparent;
   outline: none;
-  cursor: not-allowed;
-}
-
-.edit-btn svg {
-  cursor: not-allowed;
 }
 
 .remove-btn {
@@ -800,6 +795,12 @@ a {
   #asset-list {
     grid-template-columns: repeat(1, 1fr);
     margin: auto;
+  }
+  #search-section form {
+    flex-direction: column;
+  }
+  #search-section form .search-btn {
+    margin: 0.5rem;
   }
 }
 

@@ -9,7 +9,8 @@ const Assets = () => {
   return (
     <section id="assets">
       <h2 className="assets-title">
-        My Assets <FaSyncAlt className="refresh-btn" onClick={fetchCoinInfo} />
+        Your Assets{' '}
+        <FaSyncAlt className="refresh-btn" onClick={fetchCoinInfo} />
       </h2>
       <table>
         <thead>

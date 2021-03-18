@@ -17,3 +17,6 @@ export const CLOSE_SUCCESS = 'CLOSE_SUCCESS';
 export const SET_QUERY = 'SET_QUERY';
 export const SET_ERROR = 'SET_ERROR';
 export const SET_DAYS = 'SET_DAYS';
+export const OPEN_EDIT_ASSET = 'OPEN_EDIT_ASSET';
+export const CLOSE_EDIT_ASSET = 'CLOSE_EDIT_ASSET';
+export const EDIT_ASSET = 'EDIT_ASSET';

@@ -3,7 +3,13 @@ import { FaEdit, FaRegMinusSquare } from 'react-icons/fa';
 import { useGlobalContext } from '../../context';
 
 const AssetRow = ({ asset }) => {
-  const { removeAsset, coinInfo } = useGlobalContext();
+  const {
+    removeAsset,
+    coinInfo,
+    openModal,
+    openEditAsset,
+    setActiveCoin,
+  } = useGlobalContext();
 
   const [correctCoin] = coinInfo.filter((coin) => coin.id === asset.id);
 
@@ -14,6 +20,7 @@ const AssetRow = ({ asset }) => {
     current_price: price,
     price_change_percentage_24h: changePercentage,
     price_change_24h: changeValue,
+    id,
   } = correctCoin;
 
   if (!asset) return null;
@@ -56,7 +63,15 @@ const AssetRow = ({ asset }) => {
       </td>
       {/**ACTIONS */}
       <td className="actions-row">
-        <button type="button" className="edit-btn">
+        <button
+          type="button"
+          className="edit-btn"
+          onClick={() => {
+            setActiveCoin(id);
+            openModal();
+            openEditAsset();
+          }}
+        >
           <FaEdit className="icons" title="Edit transaction" />
         </button>
         <button

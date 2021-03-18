@@ -20,6 +20,9 @@ import {
   SET_QUERY,
   SET_ERROR,
   SET_DAYS,
+  OPEN_EDIT_ASSET,
+  CLOSE_EDIT_ASSET,
+  EDIT_ASSET,
 } from './constant';
 
 import { urlFormatter, chartDataFormatter } from './helpers';
@@ -39,6 +42,7 @@ const initialState = {
   displaySuccess: false,
   searchQuery: '',
   chartDays: '7',
+  isEditAsset: false,
 };
 
 export const AppProvider = ({ children }) => {
@@ -70,6 +74,11 @@ export const AppProvider = ({ children }) => {
     dispatch({ type: ADD_ASSET, payload: asset });
   };
 
+  //Edit asset
+  const editAsset = () => {
+    dispatch({ type: EDIT_ASSET });
+  };
+
   //Set success message after adding asset
   const openSuccess = () => {
     dispatch({ type: OPEN_SUCCESS });
@@ -91,6 +100,14 @@ export const AppProvider = ({ children }) => {
   //Set chart data days
   const setChartDays = (day) => {
     dispatch({ type: SET_DAYS, payload: day });
+  };
+
+  //Display edit asset
+  const openEditAsset = (id) => {
+    dispatch({ type: OPEN_EDIT_ASSET, payload: id });
+  };
+  const closeEditAsset = () => {
+    dispatch({ type: CLOSE_EDIT_ASSET });
   };
 
   //Get Coin Info
@@ -154,6 +171,9 @@ export const AppProvider = ({ children }) => {
         setIsError,
         fetchCoinInfo,
         setChartDays,
+        openEditAsset,
+        closeEditAsset,
+        editAsset,
       }}
     >
       {children}

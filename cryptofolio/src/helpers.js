@@ -1,5 +1,3 @@
-import { SET_DAYS } from './constant';
-
 //Locale
 const locale = navigator.language;
 

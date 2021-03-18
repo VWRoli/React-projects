@@ -15,6 +15,9 @@ import {
   SET_QUERY,
   SET_ERROR,
   SET_DAYS,
+  OPEN_EDIT_ASSET,
+  CLOSE_EDIT_ASSET,
+  EDIT_ASSET,
 } from './constant';
 
 const reducer = (state, action) => {
@@ -70,7 +73,12 @@ const reducer = (state, action) => {
     return { ...state, isModalOpen: true };
   }
   if (action.type === CLOSE_MODAL) {
-    return { ...state, isModalOpen: false };
+    return {
+      ...state,
+      isModalOpen: false,
+      isEditAsset: false,
+      displaySuccess: false,
+    };
   }
   if (action.type === SET_ACTIVE_COIN) {
     return { ...state, activeCoin: action.payload };
@@ -92,6 +100,15 @@ const reducer = (state, action) => {
   }
   if (action.type === SET_DAYS) {
     return { ...state, chartDays: action.payload };
+  }
+  if (action.type === OPEN_EDIT_ASSET) {
+    return { ...state, isEditAsset: true };
+  }
+  if (action.type === CLOSE_EDIT_ASSET) {
+    return { ...state, isEditAsset: false };
+  }
+  if (action.type === EDIT_ASSET) {
+    return { ...state, assets: [...state.assets] };
   }
   return state;
 };

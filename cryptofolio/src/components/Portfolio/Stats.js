@@ -52,6 +52,7 @@ const Stats = () => {
             <span>0%</span>
           ) : (
             <span className={totalValueChange > 0 ? 'positive' : 'negative'}>
+              <span style={{ fontSize: '1.5rem', color: '#bbb' }}>24h: </span>
               {priceChangeFormatter(
                 calcChangePercentage(totalValue, totalValueChange)
               )}

@@ -145,10 +145,6 @@
 }
 .edit-btn {
   @include reset-btn();
-  cursor: not-allowed;
-  svg {
-    cursor: not-allowed;
-  }
 }
 .remove-btn {
   @include reset-btn();
