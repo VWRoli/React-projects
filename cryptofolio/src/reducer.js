@@ -11,12 +11,10 @@ import {
   SET_ACTIVE_COIN,
   ADD_ASSET,
   OPEN_SUCCESS,
-  CLOSE_SUCCESS,
   SET_QUERY,
   SET_ERROR,
   SET_DAYS,
   OPEN_EDIT_ASSET,
-  CLOSE_EDIT_ASSET,
   EDIT_ASSET,
 } from './constant';
 
@@ -89,9 +87,6 @@ const reducer = (state, action) => {
   if (action.type === OPEN_SUCCESS) {
     return { ...state, displaySuccess: true };
   }
-  if (action.type === CLOSE_SUCCESS) {
-    return { ...state, displaySuccess: false };
-  }
   if (action.type === SET_QUERY) {
     return { ...state, searchQuery: action.payload };
   }
@@ -103,9 +98,6 @@ const reducer = (state, action) => {
   }
   if (action.type === OPEN_EDIT_ASSET) {
     return { ...state, isEditAsset: true };
-  }
-  if (action.type === CLOSE_EDIT_ASSET) {
-    return { ...state, isEditAsset: false };
   }
   if (action.type === EDIT_ASSET) {
     return { ...state, assets: [...state.assets] };

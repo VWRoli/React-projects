@@ -32,3 +32,17 @@
     }
   }
 }
+.your-data {
+  display: flex;
+  justify-content: space-around;
+  h3 {
+    @include list-item();
+    display: flex;
+    flex-direction: column;
+    span {
+      font-size: 1rem;
+      text-transform: uppercase;
+      font-style: italic;
+    }
+  }
+}

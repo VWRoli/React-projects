@@ -220,3 +220,11 @@
     display: none;
   }
 }
+@media screen and (max-width: 450px) {
+  #stats {
+    .main-asset-value {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+}

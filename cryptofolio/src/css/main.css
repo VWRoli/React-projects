@@ -663,6 +663,13 @@ a {
   }
 }
 
+@media screen and (max-width: 450px) {
+  #stats .main-asset-value {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
 #add-asset {
   position: relative;
   z-index: 1;
@@ -859,6 +866,42 @@ a {
   border: 1px solid #222;
   font-size: 1.5rem;
   outline: none;
+}
+
+.your-data {
+  display: flex;
+  justify-content: space-around;
+}
+
+.your-data h3 {
+  background-color: #eee;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.your-data h3 h2 {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+  grid-column: span 4;
+}
+
+.your-data h3 h2 span {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.your-data h3 span {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-style: italic;
 }
 
 #error-page {

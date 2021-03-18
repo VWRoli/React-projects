@@ -82,17 +82,21 @@ const AddNewAsset = ({ id }) => {
           <h3>
             Current Price: <span>{priceFormatter(current_price)}</span>
           </h3>
+          <div className="your-data">
+            <h3>
+              Your Holdings:{' '}
+              <span>
+                {correctCoin.holdings} <span>{symbol}</span>
+              </span>
+            </h3>
+            <h3>
+              Your Asset Value:{' '}
+              <span>
+                {priceFormatter(current_price * correctCoin.holdings)}
+              </span>
+            </h3>
+          </div>
 
-          <h3>
-            Your Portfolio Quantity:{' '}
-            <span>
-              {correctCoin.holdings} <span>{symbol}</span>
-            </span>
-          </h3>
-          <h3>
-            Your Asset Value:{' '}
-            <span>{priceFormatter(current_price * correctCoin.holdings)}</span>
-          </h3>
           <form action="/" onSubmit={onSubmit}>
             <label htmlFor="holdings">Quantity: </label>
             <input

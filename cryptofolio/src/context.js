@@ -16,12 +16,10 @@ import {
   SET_ACTIVE_COIN,
   ADD_ASSET,
   OPEN_SUCCESS,
-  CLOSE_SUCCESS,
   SET_QUERY,
   SET_ERROR,
   SET_DAYS,
   OPEN_EDIT_ASSET,
-  CLOSE_EDIT_ASSET,
   EDIT_ASSET,
 } from './constant';
 
@@ -83,9 +81,6 @@ export const AppProvider = ({ children }) => {
   const openSuccess = () => {
     dispatch({ type: OPEN_SUCCESS });
   };
-  const closeSuccess = () => {
-    dispatch({ type: CLOSE_SUCCESS });
-  };
 
   //Search Query
   const setSearchQuery = (query) => {
@@ -105,9 +100,6 @@ export const AppProvider = ({ children }) => {
   //Display edit asset
   const openEditAsset = (id) => {
     dispatch({ type: OPEN_EDIT_ASSET, payload: id });
-  };
-  const closeEditAsset = () => {
-    dispatch({ type: CLOSE_EDIT_ASSET });
   };
 
   //Get Coin Info
@@ -166,13 +158,11 @@ export const AppProvider = ({ children }) => {
         setActiveCoin,
         addAsset,
         openSuccess,
-        closeSuccess,
         setSearchQuery,
         setIsError,
         fetchCoinInfo,
         setChartDays,
         openEditAsset,
-        closeEditAsset,
         editAsset,
       }}
     >
