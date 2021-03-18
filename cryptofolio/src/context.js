@@ -46,6 +46,13 @@ const initialState = {
 export const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
+  //Get LocalStorage
+  useEffect(() => {
+    const coinData = localStorage.getItem('coinData');
+    const savedCoinData = JSON.parse(coinData);
+    savedCoinData ? (state.assets = savedCoinData) : (state.assets = []);
+  }, []);
+
   const clearAssets = () => {
     dispatch({ type: CLEAR_ASSETS });
   };
@@ -146,6 +153,12 @@ export const AppProvider = ({ children }) => {
   useEffect(() => {
     fetchCoinInfo();
   }, [state.assets, fetchCoinInfo, state.chartDays]);
+
+  //Set LocalStorage
+  useEffect(() => {
+    const coinData = JSON.stringify(state.assets);
+    localStorage.setItem('coinData', coinData);
+  }, [state.assets]);
 
   return (
     <AppContext.Provider
