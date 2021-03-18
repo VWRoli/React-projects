@@ -1,11 +1,14 @@
 import { useGlobalContext } from '../../context';
-import { priceFormatter, priceChangeFormatter, calcYtd } from '../../helpers';
+import { priceFormatter, priceChangeFormatter } from '../../helpers';
 import Loading from '../Loading';
 import Error from '../Error';
 import Chart from './Chart';
-import ChartButtons from './ChartButtons';
+import { useState } from 'react';
+import PieChart from './PieChart';
 
 const Stats = () => {
+  const [isLineChart, setIsLineChart] = useState(true);
+
   const {
     totalValue,
     isLoading,
@@ -13,15 +16,6 @@ const Stats = () => {
     totalValueChange,
     assets,
   } = useGlobalContext();
-
-  //Buttons
-  const buttons = [
-    { label: '1d', days: '1' },
-    { label: '7d', days: '7' },
-    { label: '30d', days: '30' },
-    { label: '90d', days: '90' },
-    { label: 'YTD', days: calcYtd() },
-  ];
 
   //Calculate percentage change
   const calcChangePercentage = (curValue, change) => {
@@ -60,9 +54,16 @@ const Stats = () => {
           )}
         </div>
       )}
+      <div className="chart-btn-container">
+        <button className="chart-btn" onClick={() => setIsLineChart(true)}>
+          Line
+        </button>
+        <button className="chart-btn" onClick={() => setIsLineChart(false)}>
+          Pie
+        </button>
+      </div>
 
-      <Chart />
-      <ChartButtons buttons={buttons} />
+      {isLineChart ? <Chart /> : <PieChart clicked={isLineChart} />}
     </section>
   );
 };

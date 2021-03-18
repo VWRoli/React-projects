@@ -91,3 +91,19 @@ export const chartDataFormatter = (data, assets) => {
   });
   return chartDataObj;
 };
+//Create Pie chart data
+const data = [
+  { name: 'Litecoin', value: 2636 },
+  { name: 'Stellar', value: 4057 },
+  { name: 'Bitcoin', value: 3581 },
+  { name: 'Dogecoin', value: 298 },
+];
+
+export const calcPieChartData = (assets, info) => {
+  return assets.map((asset) => {
+    const [currentCoin] = info.filter((item) => asset.id === item.id);
+
+    const totalValue = currentCoin.current_price * asset.holdings;
+    return { id: asset.id, value: totalValue };
+  });
+};

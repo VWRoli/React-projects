@@ -1,4 +1,4 @@
-import { priceFormatter } from '../../helpers';
+import { priceFormatter, calcYtd } from '../../helpers';
 import {
   XAxis,
   YAxis,
@@ -7,12 +7,22 @@ import {
   Tooltip,
   Area,
 } from 'recharts';
+import ChartButtons from './ChartButtons';
 
 import Loading from '../Loading';
 import { useGlobalContext } from '../../context';
 
 const Chart = () => {
   const { chartData, isLoading } = useGlobalContext();
+
+  //Buttons
+  const buttons = [
+    { label: '1d', days: '1' },
+    { label: '7d', days: '7' },
+    { label: '30d', days: '30' },
+    { label: '90d', days: '90' },
+    { label: 'YTD', days: calcYtd() },
+  ];
 
   //Loading screen
   if (isLoading) {
@@ -42,6 +52,7 @@ const Chart = () => {
           />
         </AreaChart>
       </ResponsiveContainer>
+      <ChartButtons buttons={buttons} />
     </>
   );
 };

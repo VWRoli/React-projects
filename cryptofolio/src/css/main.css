@@ -429,6 +429,30 @@ a {
   margin-right: 0.5rem;
 }
 
+#stats .chart-btn-container {
+  display: flex;
+}
+
+#stats .chart-btn-container .chart-btn {
+  flex: 1;
+  margin: 5px;
+  padding: 0.5rem;
+  border-radius: 5px 5px 0 0;
+  border: 1px solid #eee;
+  border-bottom: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #1489f3;
+  outline: none;
+  background: linear-gradient(to bottom, #eee, #fff);
+}
+
+#stats .chart-btn-container .chart-btn:hover {
+  background: linear-gradient(to bottom, #ddd, #fff);
+  color: #fa5715;
+}
+
 #stats .main-asset-value {
   font-size: 2rem;
   font-weight: 400;
