@@ -1,4 +1,4 @@
-import { priceFormatter, calcYtd } from '../../helpers';
+import { usePriceFormatter, calcYtd } from '../../helpers';
 import {
   XAxis,
   YAxis,
@@ -13,7 +13,20 @@ import Loading from '../Loading';
 import { useGlobalContext } from '../../context';
 
 const Chart = () => {
-  const { chartData, isLoading } = useGlobalContext();
+  const { chartData, isLoading, defaultCurrency } = useGlobalContext();
+
+  //todo Price formatter, couldn't use the one from helpers
+  const priceFormatter = (price) => {
+    //Locale
+    const locale = navigator.language;
+    const formattedPrice = new Intl.NumberFormat(locale, {
+      style: 'currency',
+      currency: `${defaultCurrency}`,
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    }).format(price);
+    return formattedPrice;
+  };
 
   //Buttons
   const buttons = [
@@ -40,7 +53,7 @@ const Chart = () => {
             </linearGradient>
           </defs>
           <XAxis dataKey="day" tick={false} />
-          <YAxis dataKey="price" unit="$" />
+          <YAxis dataKey="price" unit={defaultCurrency} />
 
           <Tooltip formatter={(value) => priceFormatter(value)} />
           <Area

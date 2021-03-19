@@ -41,6 +41,7 @@ const initialState = {
   searchQuery: '',
   chartDays: '7',
   isEditAsset: false,
+  defaultCurrency: 'eur',
 };
 
 export const AppProvider = ({ children }) => {
@@ -113,7 +114,10 @@ export const AppProvider = ({ children }) => {
   const fetchCoinInfo = useCallback(async () => {
     try {
       dispatch({ type: LOADING });
-      const formattedUrl = urlFormatter(INFO_URL, state.assets);
+      const formattedUrl = urlFormatter(
+        `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${state.defaultCurrency}&ids=`,
+        state.assets
+      );
 
       const response = await fetch(`${formattedUrl}`);
       const coinInfo = await response.json();
@@ -123,7 +127,7 @@ export const AppProvider = ({ children }) => {
       //Get API urls for chart
       const chartUrls = state.assets.map(
         (item) =>
-          `https://api.coingecko.com/api/v3/coins/${item.id}/market_chart?vs_currency=usd&days=${state.chartDays}`
+          `https://api.coingecko.com/api/v3/coins/${item.id}/market_chart?vs_currency=${state.defaultCurrency}&days=${state.chartDays}`
       );
       //Fetch chart data
       const chartRes = await Promise.all(

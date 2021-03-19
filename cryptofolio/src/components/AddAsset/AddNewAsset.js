@@ -1,16 +1,17 @@
 import { useState } from 'react';
 import { useGlobalContext } from '../../context';
-import { priceChangeFormatter, priceFormatter } from '../../helpers';
+import { priceChangeFormatter, usePriceFormatter } from '../../helpers';
 import { useFetch } from '../../useFetch';
 import Error from '../Error';
 import Loading from '../Loading';
 
 const AddNewAsset = ({ id }) => {
+  const { addAsset, openSuccess, defaultCurrency } = useGlobalContext();
+
   const { data, isLoading, isError } = useFetch(
-    `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${id}`
+    `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${defaultCurrency}&ids=${id}`
   );
 
-  const { addAsset, openSuccess } = useGlobalContext();
   const [holdings, setHoldings] = useState('');
 
   if (!data[0]) return null;
@@ -22,6 +23,19 @@ const AddNewAsset = ({ id }) => {
     price_change_percentage_24h,
     current_price,
   } = data[0];
+
+  //todo Price formatter, couldn't use the one from helpers
+  const priceFormatter = (price) => {
+    //Locale
+    const locale = navigator.language;
+    const formattedPrice = new Intl.NumberFormat(locale, {
+      style: 'currency',
+      currency: `${defaultCurrency}`,
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    }).format(price);
+    return formattedPrice;
+  };
 
   const onSubmit = (e) => {
     e.preventDefault();

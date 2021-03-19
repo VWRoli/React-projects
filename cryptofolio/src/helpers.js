@@ -1,3 +1,5 @@
+import { useGlobalContext } from './context';
+
 //Locale
 const locale = navigator.language;
 
@@ -14,10 +16,12 @@ export const priceChangeFormatter = (priceChange) => {
 };
 
 //Format price
-export const priceFormatter = (price) => {
+export const usePriceFormatter = (price) => {
+  const { defaultCurrency } = useGlobalContext();
+
   const formattedPrice = new Intl.NumberFormat(locale, {
     style: 'currency',
-    currency: 'USD',
+    currency: `${defaultCurrency}`,
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
   }).format(price);

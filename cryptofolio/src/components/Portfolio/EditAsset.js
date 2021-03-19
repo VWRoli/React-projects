@@ -1,20 +1,38 @@
 import { useState } from 'react';
 import { useGlobalContext } from '../../context';
-import { priceChangeFormatter, priceFormatter } from '../../helpers';
+import { priceChangeFormatter } from '../../helpers';
 import { useFetch } from '../../useFetch';
 import Error from '../Error';
 import Loading from '../Loading';
 
 const AddNewAsset = ({ id }) => {
-  const { data, isLoading, isError } = useFetch(
-    `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${id}`
-  );
+  const {
+    editAsset,
+    openSuccess,
+    assets,
+    defaultCurrency,
+  } = useGlobalContext();
 
-  const { editAsset, openSuccess, assets } = useGlobalContext();
+  const { data, isLoading, isError } = useFetch(
+    `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${defaultCurrency}&ids=${id}`
+  );
 
   const [correctCoin] = assets.filter((asset) => asset.id === id);
 
   const [holdings, setHoldings] = useState(correctCoin.holdings);
+
+  //todo Price formatter, couldn't use the one from helpers
+  const priceFormatter = (price) => {
+    //Locale
+    const locale = navigator.language;
+    const formattedPrice = new Intl.NumberFormat(locale, {
+      style: 'currency',
+      currency: `${defaultCurrency}`,
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    }).format(price);
+    return formattedPrice;
+  };
 
   if (!data[0]) return null;
 

@@ -1,5 +1,5 @@
 import { useGlobalContext } from '../../context';
-import { priceFormatter, priceChangeFormatter } from '../../helpers';
+import { usePriceFormatter, priceChangeFormatter } from '../../helpers';
 import Loading from '../Loading';
 import Error from '../Error';
 import Chart from './Chart';
@@ -17,6 +17,8 @@ const Stats = () => {
     totalValueChange,
     assets,
   } = useGlobalContext();
+
+  const formattedTotalValue = usePriceFormatter(totalValue);
 
   //Calculate percentage change
   const calcChangePercentage = (curValue, change) => {
@@ -42,7 +44,7 @@ const Stats = () => {
         <Loading />
       ) : (
         <div className="main-asset-value">
-          {priceFormatter(totalValue)}
+          {formattedTotalValue}
           {assets.length === 0 ? (
             <span>0%</span>
           ) : (
