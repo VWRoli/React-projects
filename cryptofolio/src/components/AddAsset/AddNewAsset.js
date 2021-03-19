@@ -6,7 +6,12 @@ import Error from '../Error';
 import Loading from '../Loading';
 
 const AddNewAsset = ({ id }) => {
-  const { addAsset, openSuccess, defaultCurrency } = useGlobalContext();
+  const {
+    addAsset,
+    openSuccess,
+    defaultCurrency,
+    priceFormatter,
+  } = useGlobalContext();
 
   const { data, isLoading, isError } = useFetch(
     `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${defaultCurrency}&ids=${id}`
@@ -23,19 +28,6 @@ const AddNewAsset = ({ id }) => {
     price_change_percentage_24h,
     current_price,
   } = data[0];
-
-  //todo Price formatter, couldn't use the one from helpers
-  const priceFormatter = (price) => {
-    //Locale
-    const locale = navigator.language;
-    const formattedPrice = new Intl.NumberFormat(locale, {
-      style: 'currency',
-      currency: `${defaultCurrency}`,
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2,
-    }).format(price);
-    return formattedPrice;
-  };
 
   const onSubmit = (e) => {
     e.preventDefault();

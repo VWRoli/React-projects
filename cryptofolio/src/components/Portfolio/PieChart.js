@@ -7,21 +7,7 @@ import {
 import { useEffect, useState } from 'react';
 import { calcPieChartData } from '../../helpers';
 import { useGlobalContext } from '../../context';
-
-const COLORS = [
-  '#00b6e3',
-  '#FFBB28',
-  '#00e4ac',
-  '#0088FE',
-  '#00C49F',
-  '#FF8042',
-  '#dce2e2',
-  '#5ec576',
-  '#ffcb03',
-  '#ff585f',
-  '#5ec576',
-  '#ff5860',
-];
+import { COLORS, RADIAN } from '../../constant';
 
 const PieChart = ({ clicked }) => {
   const { assets, coinInfo } = useGlobalContext();
@@ -31,7 +17,6 @@ const PieChart = ({ clicked }) => {
     setData(calcPieChartData(assets, coinInfo));
   }, [clicked, assets, coinInfo]);
 
-  const RADIAN = Math.PI / 180;
   const renderCustomizedLabel = ({
     cx,
     cy,

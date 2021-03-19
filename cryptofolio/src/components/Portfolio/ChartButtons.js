@@ -4,8 +4,6 @@ import { useState } from 'react';
 const ChartButtons = ({ buttons }) => {
   const [active, setActive] = useState(1);
 
-  console.log(active);
-
   const { setChartDays } = useGlobalContext();
   return (
     <div className="graph-btn-container">

@@ -115,6 +115,19 @@ export const AppProvider = ({ children }) => {
     dispatch({ type: SET_CURRENCY, payload: currency });
   };
 
+  //Price formatter
+  const priceFormatter = (price) => {
+    //Locale
+    const locale = navigator.language;
+    const formattedPrice = new Intl.NumberFormat(locale, {
+      style: 'currency',
+      currency: `${state.defaultCurrency}`,
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    }).format(price);
+    return formattedPrice;
+  };
+
   //Get Coin Info
   const fetchCoinInfo = useCallback(async () => {
     try {
@@ -187,6 +200,7 @@ export const AppProvider = ({ children }) => {
         openEditAsset,
         editAsset,
         setCurrency,
+        priceFormatter,
       }}
     >
       {children}

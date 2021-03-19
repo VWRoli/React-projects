@@ -1,4 +1,4 @@
-import { priceChangeFormatter, usePriceFormatter } from '../../helpers';
+import { priceChangeFormatter } from '../../helpers';
 import { FaEdit, FaRegMinusSquare } from 'react-icons/fa';
 import { useGlobalContext } from '../../context';
 
@@ -9,6 +9,7 @@ const AssetRow = ({ asset }) => {
     openModal,
     openEditAsset,
     setActiveCoin,
+    priceFormatter,
   } = useGlobalContext();
 
   const [correctCoin] = coinInfo.filter((coin) => coin.id === asset.id);
@@ -23,10 +24,6 @@ const AssetRow = ({ asset }) => {
     id,
   } = correctCoin;
 
-  const formattedPrice = usePriceFormatter(price);
-  const formattedHoldings = usePriceFormatter(price * asset.holdings);
-  const formattedProfit = usePriceFormatter(changeValue * asset.holdings);
-
   if (!asset) return null;
 
   return (
@@ -38,7 +35,7 @@ const AssetRow = ({ asset }) => {
         </p>
       </td>
       {/**PRICE */}
-      <td>{formattedPrice}</td>
+      <td>{priceFormatter(price)}</td>
       {/**PRICE CHANGE % */}
       <td
         className={
@@ -51,7 +48,7 @@ const AssetRow = ({ asset }) => {
       </td>
       {/**HOLDINGS */}
       <td className="holdings-row">
-        {formattedHoldings} <br />
+        {priceFormatter(price * asset.holdings)} <br />
         <span className="holdings">
           {asset.holdings.toFixed(4)}
           <span className="symbol">&nbsp;{symbol}</span>
@@ -63,7 +60,7 @@ const AssetRow = ({ asset }) => {
           changeValue > 0 ? 'profit-row positive' : 'profit-row negative'
         }
       >
-        {formattedProfit}
+        {priceFormatter(changeValue * asset.holdings)}
       </td>
       {/**ACTIONS */}
       <td className="actions-row">

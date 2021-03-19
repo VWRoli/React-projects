@@ -1,11 +1,13 @@
 import { useGlobalContext } from '../../context';
-import { usePriceFormatter, priceChangeFormatter } from '../../helpers';
+import { priceChangeFormatter, calcChangePercentage } from '../../helpers';
 import Loading from '../Loading';
 import Error from '../Error';
 import Chart from './Chart';
 import { useState } from 'react';
 import PieChart from './PieChart';
 import { FaChartLine, FaChartPie } from 'react-icons/fa';
+import ChartButtons from './ChartButtons';
+import { BUTTONS } from '../../constant';
 
 const Stats = () => {
   const [isLineChart, setIsLineChart] = useState(true);
@@ -16,23 +18,8 @@ const Stats = () => {
     isError,
     totalValueChange,
     assets,
+    priceFormatter,
   } = useGlobalContext();
-
-  const formattedTotalValue = usePriceFormatter(totalValue);
-
-  //Calculate percentage change
-  const calcChangePercentage = (curValue, change) => {
-    let percentage;
-    const newPrice = curValue;
-
-    if (change > 0) {
-      const oldPrice = curValue - change;
-      return (percentage = [(newPrice - oldPrice) / oldPrice] * 100);
-    } else {
-      const oldPrice = curValue + Math.abs(change);
-      return -Math.abs((percentage = [(oldPrice - newPrice) / oldPrice] * 100));
-    }
-  };
 
   if (isError) return <Error />;
 
@@ -44,7 +31,7 @@ const Stats = () => {
         <Loading />
       ) : (
         <div className="main-asset-value">
-          {formattedTotalValue}
+          {priceFormatter(totalValue)}
           {assets.length === 0 ? (
             <span>0%</span>
           ) : (
@@ -67,6 +54,7 @@ const Stats = () => {
       </div>
 
       {isLineChart ? <Chart /> : <PieChart clicked={isLineChart} />}
+      {isLineChart ? <ChartButtons buttons={BUTTONS} /> : ''}
     </section>
   );
 };

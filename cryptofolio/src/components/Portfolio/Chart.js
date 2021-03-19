@@ -1,4 +1,3 @@
-import { calcYtd } from '../../helpers';
 import {
   XAxis,
   YAxis,
@@ -7,35 +6,17 @@ import {
   Tooltip,
   Area,
 } from 'recharts';
-import ChartButtons from './ChartButtons';
 
 import Loading from '../Loading';
 import { useGlobalContext } from '../../context';
 
 const Chart = () => {
-  const { chartData, isLoading, defaultCurrency } = useGlobalContext();
-
-  //todo Price formatter, couldn't use the one from helpers
-  const priceFormatter = (price) => {
-    //Locale
-    const locale = navigator.language;
-    const formattedPrice = new Intl.NumberFormat(locale, {
-      style: 'currency',
-      currency: `${defaultCurrency}`,
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2,
-    }).format(price);
-    return formattedPrice;
-  };
-
-  //Buttons
-  const buttons = [
-    { label: '1d', days: '1' },
-    { label: '7d', days: '7' },
-    { label: '30d', days: '30' },
-    { label: '90d', days: '90' },
-    { label: 'YTD', days: calcYtd() },
-  ];
+  const {
+    chartData,
+    isLoading,
+    defaultCurrency,
+    priceFormatter,
+  } = useGlobalContext();
 
   //Loading screen
   if (isLoading) {
@@ -54,7 +35,9 @@ const Chart = () => {
           </defs>
           <XAxis dataKey="day" tick={false} />
           <YAxis
-            dataKey="price" /*//todo unit={defaultCurrency.toUpperCase()} */
+            width={80}
+            dataKey="price"
+            unit={defaultCurrency.toUpperCase()}
           />
 
           <Tooltip formatter={(value) => priceFormatter(value)} />
@@ -67,7 +50,6 @@ const Chart = () => {
           />
         </AreaChart>
       </ResponsiveContainer>
-      <ChartButtons buttons={buttons} />
     </>
   );
 };

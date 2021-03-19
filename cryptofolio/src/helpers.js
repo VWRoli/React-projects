@@ -1,5 +1,3 @@
-import { useGlobalContext } from './context';
-
 //Locale
 const locale = navigator.language;
 
@@ -13,19 +11,6 @@ export const priceChangeFormatter = (priceChange) => {
   }).format(priceChange / 100);
 
   return formattedPriceChange;
-};
-
-//Format price
-export const usePriceFormatter = (price) => {
-  const { defaultCurrency } = useGlobalContext();
-
-  const formattedPrice = new Intl.NumberFormat(locale, {
-    style: 'currency',
-    currency: `${defaultCurrency}`,
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  }).format(price);
-  return formattedPrice;
 };
 
 //URL formatter
@@ -103,4 +88,18 @@ export const calcPieChartData = (assets, info) => {
     const totalValue = currentCoin.current_price * asset.holdings;
     return { id: asset.id, value: totalValue };
   });
+};
+
+//Calculate percentage change
+export const calcChangePercentage = (curValue, change) => {
+  let percentage;
+  const newPrice = curValue;
+
+  if (change > 0) {
+    const oldPrice = curValue - change;
+    return (percentage = [(newPrice - oldPrice) / oldPrice] * 100);
+  } else {
+    const oldPrice = curValue + Math.abs(change);
+    return -Math.abs((percentage = [(oldPrice - newPrice) / oldPrice] * 100));
+  }
 };
