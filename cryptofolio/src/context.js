@@ -10,7 +10,6 @@ import {
   GET_TOTALS,
   GET_TOTAL_CHANGE,
   SET_CHART_DATA,
-  INFO_URL,
   OPEN_MODAL,
   CLOSE_MODAL,
   SET_ACTIVE_COIN,
@@ -21,6 +20,7 @@ import {
   SET_DAYS,
   OPEN_EDIT_ASSET,
   EDIT_ASSET,
+  SET_CURRENCY,
 } from './constant';
 
 import { urlFormatter, chartDataFormatter } from './helpers';
@@ -41,7 +41,7 @@ const initialState = {
   searchQuery: '',
   chartDays: '7',
   isEditAsset: false,
-  defaultCurrency: 'eur',
+  defaultCurrency: 'usd',
 };
 
 export const AppProvider = ({ children }) => {
@@ -110,6 +110,11 @@ export const AppProvider = ({ children }) => {
     dispatch({ type: OPEN_EDIT_ASSET, payload: id });
   };
 
+  //Set default currency
+  const setCurrency = (currency) => {
+    dispatch({ type: SET_CURRENCY, payload: currency });
+  };
+
   //Get Coin Info
   const fetchCoinInfo = useCallback(async () => {
     try {
@@ -153,10 +158,10 @@ export const AppProvider = ({ children }) => {
     } catch (error) {
       setIsError();
     }
-  }, [state.assets, state.chartDays]);
+  }, [state.assets, state.chartDays, state.defaultCurrency]);
   useEffect(() => {
     fetchCoinInfo();
-  }, [state.assets, fetchCoinInfo, state.chartDays]);
+  }, [state.assets, fetchCoinInfo, state.chartDays, state.defaultCurrency]);
 
   //Set LocalStorage
   useEffect(() => {
@@ -181,6 +186,7 @@ export const AppProvider = ({ children }) => {
         setChartDays,
         openEditAsset,
         editAsset,
+        setCurrency,
       }}
     >
       {children}

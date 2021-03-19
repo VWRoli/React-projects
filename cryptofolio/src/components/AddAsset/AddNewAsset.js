@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useGlobalContext } from '../../context';
-import { priceChangeFormatter, usePriceFormatter } from '../../helpers';
+import { priceChangeFormatter } from '../../helpers';
 import { useFetch } from '../../useFetch';
 import Error from '../Error';
 import Loading from '../Loading';

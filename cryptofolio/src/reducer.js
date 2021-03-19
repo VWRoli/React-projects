@@ -16,6 +16,7 @@ import {
   SET_DAYS,
   OPEN_EDIT_ASSET,
   EDIT_ASSET,
+  SET_CURRENCY,
 } from './constant';
 
 const reducer = (state, action) => {
@@ -101,6 +102,9 @@ const reducer = (state, action) => {
   }
   if (action.type === EDIT_ASSET) {
     return { ...state, assets: [...state.assets] };
+  }
+  if (action.type === SET_CURRENCY) {
+    return { ...state, defaultCurrency: action.payload };
   }
   return state;
 };

@@ -1,4 +1,4 @@
-import { usePriceFormatter, calcYtd } from '../../helpers';
+import { calcYtd } from '../../helpers';
 import {
   XAxis,
   YAxis,
@@ -53,7 +53,9 @@ const Chart = () => {
             </linearGradient>
           </defs>
           <XAxis dataKey="day" tick={false} />
-          <YAxis dataKey="price" unit={defaultCurrency} />
+          <YAxis
+            dataKey="price" /*//todo unit={defaultCurrency.toUpperCase()} */
+          />
 
           <Tooltip formatter={(value) => priceFormatter(value)} />
           <Area

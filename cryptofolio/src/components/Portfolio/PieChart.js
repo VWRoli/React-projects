@@ -10,10 +10,10 @@ import { useGlobalContext } from '../../context';
 
 const COLORS = [
   '#00b6e3',
+  '#FFBB28',
   '#00e4ac',
   '#0088FE',
   '#00C49F',
-  '#FFBB28',
   '#FF8042',
   '#dce2e2',
   '#5ec576',

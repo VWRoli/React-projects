@@ -13,14 +13,6 @@ const AddNewAsset = ({ id }) => {
     defaultCurrency,
   } = useGlobalContext();
 
-  const { data, isLoading, isError } = useFetch(
-    `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${defaultCurrency}&ids=${id}`
-  );
-
-  const [correctCoin] = assets.filter((asset) => asset.id === id);
-
-  const [holdings, setHoldings] = useState(correctCoin.holdings);
-
   //todo Price formatter, couldn't use the one from helpers
   const priceFormatter = (price) => {
     //Locale
@@ -33,6 +25,14 @@ const AddNewAsset = ({ id }) => {
     }).format(price);
     return formattedPrice;
   };
+
+  const { data, isLoading, isError } = useFetch(
+    `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${defaultCurrency}&ids=${id}`
+  );
+
+  const [correctCoin] = assets.filter((asset) => asset.id === id);
+
+  const [holdings, setHoldings] = useState(correctCoin.holdings);
 
   if (!data[0]) return null;
 
