@@ -8,14 +8,20 @@ import { useEffect, useState } from 'react';
 import { calcPieChartData } from '../../helpers';
 import { useGlobalContext } from '../../context';
 
-/* const data = [
-  { name: 'Litecoin', value: 2636 },
-  { name: 'Stellar', value: 4057 },
-  { name: 'Bitcoin', value: 3581 },
-  { name: 'Dogecoin', value: 298 },
-]; */
-
-const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
+const COLORS = [
+  '#00b6e3',
+  '#00e4ac',
+  '#0088FE',
+  '#00C49F',
+  '#FFBB28',
+  '#FF8042',
+  '#dce2e2',
+  '#5ec576',
+  '#ffcb03',
+  '#ff585f',
+  '#5ec576',
+  '#ff5860',
+];
 
 const PieChart = ({ clicked }) => {
   const { assets, coinInfo } = useGlobalContext();
@@ -23,7 +29,7 @@ const PieChart = ({ clicked }) => {
 
   useEffect(() => {
     setData(calcPieChartData(assets, coinInfo));
-  }, [clicked]);
+  }, [clicked, assets, coinInfo]);
 
   const RADIAN = Math.PI / 180;
   const renderCustomizedLabel = ({
@@ -35,7 +41,7 @@ const PieChart = ({ clicked }) => {
     percent,
     index,
   }) => {
-    const radius = innerRadius + (outerRadius - innerRadius) * 0.75;
+    const radius = innerRadius + (outerRadius - innerRadius) * 1.25;
     const x = cx + radius * Math.cos(-midAngle * RADIAN);
     const y = cy + radius * Math.sin(-midAngle * RADIAN);
 

@@ -5,6 +5,7 @@ import Error from '../Error';
 import Chart from './Chart';
 import { useState } from 'react';
 import PieChart from './PieChart';
+import { FaChartLine, FaChartPie } from 'react-icons/fa';
 
 const Stats = () => {
   const [isLineChart, setIsLineChart] = useState(true);
@@ -56,10 +57,10 @@ const Stats = () => {
       )}
       <div className="chart-btn-container">
         <button className="chart-btn" onClick={() => setIsLineChart(true)}>
-          Line
+          <FaChartLine className="stat-btn-icon" /> Line Chart
         </button>
         <button className="chart-btn" onClick={() => setIsLineChart(false)}>
-          Pie
+          <FaChartPie className="stat-btn-icon" /> Pie Chart
         </button>
       </div>
 

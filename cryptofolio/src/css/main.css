@@ -446,6 +446,13 @@ a {
   color: #1489f3;
   outline: none;
   background: linear-gradient(to bottom, #eee, #fff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#stats .chart-btn-container .chart-btn .stat-btn-icon {
+  margin-right: 5px;
 }
 
 #stats .chart-btn-container .chart-btn:hover {
