@@ -1,6 +1,20 @@
 export const projectsData = [
   {
     id: 1,
+    title: 'Guitar Store',
+    img: '/img/guitar-store.png',
+    tags: ['React', 'Sass', 'API'],
+    codeUrl: 'https://github.com/VWRoli/guitar-store',
+    liveUrl: 'https://guitar-store-site.netlify.app/',
+    desc: [
+      'Complete frontend for a Guitar E-Commerce website with a compare and cart section.',
+      'Products are paginated and can be filtered, sorted, searched.',
+      'Used JSON Server for creating the Rest API for storing product data',
+      'Build with React, Sass, React Router, Context API and different React Hooks',
+    ],
+  },
+  {
+    id: 2,
     title: 'Crypto Portfolio Tracker',
     img: '/img/cryptofolio.png',
     tags: ['React', 'Sass', 'API'],
@@ -14,7 +28,7 @@ export const projectsData = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: 'Guitar Practice Assistant',
     img: '/img/practice-assistant.png',
     tags: ['HTML', 'CSS', 'JavaScript', 'OOP', 'Parcel'],
@@ -25,20 +39,6 @@ export const projectsData = [
       'You can add new excercises on the left side, which will be saved for your next visit.',
       'For creating the metronome I used the Tone JS library which is built on top of the Web Audio API.',
       'The fretboard memorizer is a simple guessing game built with Vanilla JS.',
-    ],
-  },
-  {
-    id: 3,
-    title: 'Countries',
-    img: '/img/countries.png',
-    tags: ['CSS', 'React', 'API'],
-    codeUrl: 'https://github.com/VWRoli/React-projects/tree/main/countries',
-    liveUrl: 'https://countries-2b0dc2.netlify.app/',
-    desc: [
-      'App that lists all the countries and shows some data about them.',
-      'The list is paginated and searchable, and can be filtered by regions.',
-      'I used the REST Countries API to get the countries data.',
-      'For displaying the countries on the map I used the Leaflet library, with the help of React Leaflet.',
     ],
   },
 
