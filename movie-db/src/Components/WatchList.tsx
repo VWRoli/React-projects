@@ -1,0 +1,14 @@
+const WatchList = () => {
+  return (
+    <div>
+      <h1>Watchlist</h1>
+      <h1>Watchlist</h1>
+      <h1>Watchlist</h1>
+      <h1>Watchlist</h1>
+      <h1>Watchlist</h1>
+      <h1>Watchlist</h1>
+    </div>
+  );
+};
+
+export default WatchList;
