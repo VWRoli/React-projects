@@ -1,0 +1,35 @@
+/**VARIABLES*/
+:root {
+  --clr-primary: #49a6e9;
+  --clr-white: #fff;
+  --clr-red-dark: #bb2525;
+  --clr-green-dark: #25bb32;
+  --clr-black: #222;
+  --transition: all 0.3s linear;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+/**SETUP*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 1.75rem;
+}
+h4 {
+  font-size: 1rem;
+}
