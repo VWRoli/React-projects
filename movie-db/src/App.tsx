@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./Components/Home/Home";
 import WatchList from "./Components/WatchList";
 import About from "./Components/About";
+import ErrorPage from "./Components/ErrorPage";
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
           </Route>
           <Route path="/about">
             <About />
+          </Route>
+          <Route path="*">
+            <ErrorPage />
           </Route>
         </Switch>
       </div>
