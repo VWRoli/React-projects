@@ -1,11 +1,6 @@
-const WatchList = () => {
+const WatchList: React.FC = () => {
   return (
     <div>
-      <h1>Watchlist</h1>
-      <h1>Watchlist</h1>
-      <h1>Watchlist</h1>
-      <h1>Watchlist</h1>
-      <h1>Watchlist</h1>
       <h1>Watchlist</h1>
     </div>
   );
