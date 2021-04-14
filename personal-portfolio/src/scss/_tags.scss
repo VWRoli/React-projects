@@ -52,3 +52,7 @@
   @include tag-color(#fff, #bf4080);
   border: 1px solid #fff;
 }
+.redux-tag {
+  @include tag-color(#774bbc, #fff);
+  border: 1px solid #774bbc;
+}
