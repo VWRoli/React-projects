@@ -56,3 +56,22 @@
   @include tag-color(#774bbc, #fff);
   border: 1px solid #774bbc;
 }
+.mongo-tag {
+  @include tag-color(#44aa52, #fff);
+  border: 1px solid #44aa52;
+}
+.node-tag {
+  @include tag-color(#fff, #488c46);
+}
+.express-tag {
+  @include tag-color(#4f9dff, #fff);
+  border: 1px solid #4f9dff;
+}
+.jira-tag {
+  @include tag-color(#3253cc, #fff);
+  border: 1px solid #3253cc;
+}
+.postman-tag {
+  @include tag-color(#ee6a38, #fff);
+  border: 1px solid #ee6a38;
+}

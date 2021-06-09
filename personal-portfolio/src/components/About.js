@@ -7,32 +7,37 @@ import {
 
 const About = () => {
   return (
-    <section id='about'>
-      <article className='left-container'>
-        <div className='skills'>
+    <section id="about">
+      <article className="left-container">
+        <div className="skills">
           <h2>Skills:</h2>
           <h3>Front-end:</h3>
-          <span className='html-tag tag'>HTML</span>
-          <span className='css-tag tag'>CSS</span>
-          <span className='sass-tag tag'>Sass</span>
-          <span className='javascript-tag tag'>JavaScript</span>
+          <span className="html-tag tag">HTML</span>
+          <span className="css-tag tag">CSS</span>
+          <span className="sass-tag tag">Sass</span>
+          <span className="javascript-tag tag">JavaScript</span>
+          <h3>Back-end:</h3>
+          <span className="mongo-tag tag">MongoDB</span>
+          <span className="node-tag tag">NodeJS</span>
+          <span className="express-tag tag">ExpressJS</span>
           <h3>Libraries, Frameworks:</h3>
-          <span className='bootstrap-tag tag'>Bootstrap</span>
-          <span className='react-tag tag'>React</span>
-          <span className='redux-tag tag'>Redux</span>
+          <span className="bootstrap-tag tag">Bootstrap</span>
+          <span className="react-tag tag">React</span>
+          <span className="redux-tag tag">Redux</span>
           <h3>Other:</h3>
-          <span className='git-tag tag'>Git (Github)</span>
-          <span className='npm-tag tag'>npm</span>
-          <span className='parcel-tag tag'>Parcel</span>
-          <span className='api-tag tag'>API</span>
+          <span className="git-tag tag">Git (Github)</span>
+          <span className="npm-tag tag">npm</span>
+          <span className="jira-tag tag">Jira</span>
+          <span className="api-tag tag">API</span>
+          <span className="postman-tag tag">Postman</span>
         </div>
-        <div className='about-text'>
+        <div className="about-text">
           <h2>More About Me</h2>
           <p>
-            I'm an ex Online poker player turned self taught Front-end
-            Developer. Currently my main focus is JavaScript and React. I enjoy
-            the problem solving aspect of programming, that a developer has to
-            face day after day.
+            I'm an ex Online poker player turned self taught Web-developer.
+            Currently my main focus is JavaScript and MERN stack. I enjoy the
+            problem solving aspect of programming, that a developer has to face
+            day after day.
           </p>
           <p>
             My native language is <b>Hungarian</b>, I also speak fluent&nbsp;
@@ -41,31 +46,30 @@ const About = () => {
           </p>
         </div>
       </article>
-      <article className='right-container'>
+      <article className="right-container">
         <h3>View my codes:</h3>
-        <div className='code-group'>
-          <a href='https://github.com/VWRoli' target='_blank' rel='noreferrer'>
-            <FaGithub className='icons' />
+        <div className="code-group">
+          <a href="https://github.com/VWRoli" target="_blank" rel="noreferrer">
+            <FaGithub className="icons" />
           </a>
-          <a href='https://codepen.io/VWRoli' target='_blank' rel='noreferrer'>
-            <FaCodepen className='icons' />
+          <a href="https://codepen.io/VWRoli" target="_blank" rel="noreferrer">
+            <FaCodepen className="icons" />
           </a>
         </div>
 
         <h3>More info on LinkedIn:</h3>
         <a
-          href='https://www.linkedin.com/in/roland-fuest/'
-          target='_blank'
-          rel='noreferrer'
-        >
-          <FaLinkedin className='icons' />
+          href="https://www.linkedin.com/in/roland-fuest/"
+          target="_blank"
+          rel="noreferrer">
+          <FaLinkedin className="icons" />
         </a>
         <h3>Send me an Email:</h3>
 
-        <a href='mailto:fustroli@gmail.com'>fustroli@gmail.com</a>
+        <a href="mailto:fustroli@gmail.com">fustroli@gmail.com</a>
         <h3>Download my resume:</h3>
-        <a href='cv_roland_füst.pdf'>
-          <FaFileDownload className='icons' />
+        <a href="cv_roland_füst.pdf">
+          <FaFileDownload className="icons" />
         </a>
       </article>
     </section>

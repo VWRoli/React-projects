@@ -3,14 +3,14 @@ export const projectsData = [
     id: 1,
     title: 'Guitar Store',
     img: '/img/guitar-store.png',
-    tags: ['React', 'Sass', 'API'],
+    tags: ['React', 'Redux', 'Sass', 'API'],
     codeUrl: 'https://github.com/VWRoli/guitar-store',
     liveUrl: 'https://guitar-store-site.netlify.app/',
     desc: [
       'Complete frontend for a Guitar E-Commerce website with a compare and cart section.',
       'Products are paginated and can be filtered, sorted, searched.',
       'Used JSON Server for creating the Rest API for storing product data',
-      'Build with React, Sass, React Router, Context API and different React Hooks',
+      'Build with React, Sass, React Router, Redux and different React Hooks',
     ],
   },
   {
