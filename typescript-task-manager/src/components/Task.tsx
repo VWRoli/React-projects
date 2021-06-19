@@ -1,12 +1,20 @@
 import { FaTimes } from 'react-icons/fa';
 
-const Task = () => {
+interface IProps {
+  task: {
+    task: string;
+    date: string;
+    reminder: boolean;
+  };
+}
+
+const Task: React.FC<IProps> = ({ task }) => {
   return (
-    <div className="task">
+    <div className={`task ${task.reminder ? 'reminder' : ''}`}>
       <h3>
-        Task <FaTimes />
+        {task.task} <FaTimes />
       </h3>
-      <p>Task day</p>
+      <p>{task.date}</p>
     </div>
   );
 };
