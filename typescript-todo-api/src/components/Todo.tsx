@@ -1,7 +1,6 @@
 import { FaTimes } from 'react-icons/fa';
 
 type Props = {
-  deleteTodo: (id: number) => Promise<void>;
   todo: {
     userId: number;
     id: number;
@@ -10,11 +9,11 @@ type Props = {
   };
 };
 
-const Todo: React.FC<Props> = ({ todo, deleteTodo }) => {
+const Todo: React.FC<Props> = ({ todo }) => {
   return (
-    <div className="task">
+    <div className={`task ${todo.completed ? 'reminder' : ''}`}>
       <h3>
-        {todo.title} <FaTimes onClick={() => deleteTodo(todo.id)} />
+        {todo.title} <FaTimes />
       </h3>
     </div>
   );

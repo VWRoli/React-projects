@@ -1,16 +1,27 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { createTodo } from '../actions/todos';
 
 interface IProps {
   showAddTodo: boolean;
 }
 
 const AddNewTodo: React.FC<IProps> = ({ showAddTodo }) => {
-  const [formData, setFormData] = useState({});
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {};
+  const [todoText, setTodoText] = useState('');
+  const [completed, setCompleted] = useState(false);
+  const dispatch = useDispatch();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
+    const newTodo = {
+      title: todoText,
+      completed,
+      id: Date.now(),
+      userId: 1,
+    };
+    console.log(newTodo);
+
+    dispatch(createTodo(newTodo));
   };
 
   return (
@@ -19,12 +30,23 @@ const AddNewTodo: React.FC<IProps> = ({ showAddTodo }) => {
         <form className="add-form" onSubmit={handleSubmit}>
           <div className="form-control">
             <label htmlFor="todo">Todo</label>
-            <input type="text" name="title" placeholder="Add todo" />
+            <input
+              type="text"
+              name="title"
+              placeholder="Add todo"
+              value={todoText}
+              onChange={(e) => setTodoText(e.target.value)}
+            />
           </div>
 
           <div className="form-control form-control-check">
             <label htmlFor="completed">Set completed</label>
-            <input type="checkbox" name="completed" />
+            <input
+              type="checkbox"
+              name="completed"
+              checked={completed}
+              onChange={() => setCompleted(!completed)}
+            />
           </div>
           <button value="Save Todo" className="btn btn-block">
             Add Todo
