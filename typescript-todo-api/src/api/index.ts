@@ -15,3 +15,12 @@ export const deleteTodo = (id: number): Promise<Response> =>
   fetch(`${url}/${id}`, {
     method: 'DELETE',
   });
+
+export const updateTodo = (id: number, updatedTodo: Todo): Promise<Response> =>
+  fetch(`${url}/${id}`, {
+    method: 'PATCH',
+    headers: {
+      'Content-type': 'application/json',
+    },
+    body: JSON.stringify(updatedTodo),
+  });

@@ -4,7 +4,7 @@
       "userId": 1,
       "id": 1,
       "title": "delectus aut autem",
-      "completed": false
+      "completed": true
     },
     {
       "userId": 1,
@@ -34,12 +34,6 @@
       "title": "F Chord",
       "completed": false,
       "id": 1624260522528,
-      "userId": 1
-    },
-    {
-      "title": "gdgd",
-      "completed": true,
-      "id": 1624260704468,
       "userId": 1
     }
   ]

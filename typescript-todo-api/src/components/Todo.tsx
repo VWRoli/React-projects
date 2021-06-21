@@ -1,6 +1,6 @@
 import { FaTimes } from 'react-icons/fa';
 import { useDispatch } from 'react-redux';
-import { deleteTodo } from '../actions/todos';
+import { deleteTodo, updateTodo } from '../actions/todos';
 
 type Props = {
   todo: {
@@ -14,8 +14,15 @@ type Props = {
 const Todo: React.FC<Props> = ({ todo }) => {
   const dispatch = useDispatch();
 
+  const handleDoubleClick = (): void => {
+    const updatedTodo = { ...todo, completed: !todo.completed };
+    dispatch(updateTodo(todo.id, updatedTodo));
+  };
+
   return (
-    <div className={`task ${todo.completed ? 'reminder' : ''}`}>
+    <div
+      className={`task ${todo.completed ? 'reminder' : ''}`}
+      onDoubleClick={handleDoubleClick}>
       <h3>
         {todo.title} <FaTimes onClick={() => dispatch(deleteTodo(todo.id))} />
       </h3>

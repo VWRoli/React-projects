@@ -39,3 +39,15 @@ export const deleteTodo =
       console.log(error);
     }
   };
+
+export const updateTodo =
+  (id: number, updatedTodo: Todo) => async (dispatch: Dispatch<Action>) => {
+    try {
+      const response = await api.updateTodo(id, updatedTodo);
+      await response.json();
+
+      dispatch({ type: ActionType.UPDATE_TODO, payload: id });
+    } catch (error) {
+      console.log(error);
+    }
+  };

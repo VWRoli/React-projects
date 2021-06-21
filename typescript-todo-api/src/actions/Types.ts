@@ -27,5 +27,9 @@ interface DeleteAction {
   type: ActionType.DELETE_TODO;
   payload: number;
 }
+interface UpdateAction {
+  type: ActionType.UPDATE_TODO;
+  payload: number;
+}
 
-export type Action = FetchAction | CreateAction | DeleteAction;
+export type Action = FetchAction | CreateAction | DeleteAction | UpdateAction;

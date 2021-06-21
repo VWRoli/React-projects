@@ -1,5 +1,6 @@
 import { ActionType } from '../constants/actionTypes';
 import { Action } from '../actions/Types';
+import Todo from '../components/Todo';
 
 type Todos = {
   userId: number;
@@ -18,6 +19,12 @@ const reducer = (state: Todos = initialState, action: Action) => {
       return [...state, action.payload];
     case ActionType.DELETE_TODO:
       return state.filter((todo) => todo.id !== action.payload);
+    case ActionType.UPDATE_TODO:
+      return state.map((todo) =>
+        todo.id === action.payload
+          ? { ...todo, completed: !todo.completed }
+          : todo
+      );
 
     default:
       return state;
