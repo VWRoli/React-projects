@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getTodos } from '../actions/todos';
+import { Todos } from '../actions/Types';
 import { State } from '../reducers';
 import Todo from './Todo';
 
-const Todos = () => {
+const TodosList = () => {
   const dispatch = useDispatch();
-  const todos = useSelector((state: State) => state.todos);
+  const todos: Todos = useSelector((state: State) => state.todos);
 
   useEffect(() => {
     dispatch(getTodos());
@@ -21,4 +22,4 @@ const Todos = () => {
   );
 };
 
-export default Todos;
+export default TodosList;

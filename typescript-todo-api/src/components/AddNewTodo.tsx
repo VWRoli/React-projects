@@ -19,9 +19,10 @@ const AddNewTodo: React.FC<IProps> = ({ showAddTodo }) => {
       id: Date.now(),
       userId: 1,
     };
-    console.log(newTodo);
 
     dispatch(createTodo(newTodo));
+    setTodoText('');
+    setCompleted(false);
   };
 
   return (

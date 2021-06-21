@@ -23,4 +23,9 @@ interface CreateAction {
   payload: Todo;
 }
 
-export type Action = FetchAction | CreateAction;
+interface DeleteAction {
+  type: ActionType.DELETE_TODO;
+  payload: number;
+}
+
+export type Action = FetchAction | CreateAction | DeleteAction;

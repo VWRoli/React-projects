@@ -15,8 +15,9 @@ const reducer = (state: Todos = initialState, action: Action) => {
     case ActionType.FETCH_TODOS:
       return [...action.payload];
     case ActionType.CREATE_TODO:
-      console.log(action.payload);
       return [...state, action.payload];
+    case ActionType.DELETE_TODO:
+      return state.filter((todo) => todo.id !== action.payload);
 
     default:
       return state;
