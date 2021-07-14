@@ -46,8 +46,7 @@ const Navbar = () => {
                 smooth={true}
                 offset={-60}
                 duration={500}
-                onClick={() => setcloseMobileMenu(true)}
-              >
+                onClick={() => setcloseMobileMenu(true)}>
                 {text}
               </Link>
             </li>

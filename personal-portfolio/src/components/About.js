@@ -16,10 +16,11 @@ const About = () => {
           <span className="css-tag tag">CSS</span>
           <span className="sass-tag tag">Sass</span>
           <span className="javascript-tag tag">JavaScript</span>
+          <span className="typescript-tag tag">Typescript</span>
           <h3>Back-end:</h3>
-          <span className="mongo-tag tag">MongoDB</span>
-          <span className="node-tag tag">NodeJS</span>
-          <span className="express-tag tag">ExpressJS</span>
+          <span className="mongodb-tag tag">MongoDB</span>
+          <span className="nodejs-tag tag">NodeJS</span>
+          <span className="expressjs-tag tag">ExpressJS</span>
           <h3>Libraries, Frameworks:</h3>
           <span className="bootstrap-tag tag">Bootstrap</span>
           <span className="react-tag tag">React</span>
@@ -35,9 +36,9 @@ const About = () => {
           <h2>More About Me</h2>
           <p>
             I'm an ex Online poker player turned self taught Web-developer.
-            Currently my main focus is JavaScript and MERN stack. I enjoy the
-            problem solving aspect of programming, that a developer has to face
-            day after day.
+            Currently my main focus is JavaScript and the MERN stack. I enjoy
+            the problem solving aspect of programming, that a developer has to
+            face day after day.
           </p>
           <p>
             My native language is <b>Hungarian</b>, I also speak fluent&nbsp;

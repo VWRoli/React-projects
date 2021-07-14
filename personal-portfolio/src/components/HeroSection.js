@@ -6,7 +6,7 @@ const HeroSection = () => {
       <div className="intro">
         <h1>Hello, I'm Roland Füst</h1>
         <p>
-          I'm a self taught Web-developer. <br />
+          I'm a Web-developer. <br />
           My main strengths are
           <span className="html-tag tag">HTML</span>,
           <span className="css-tag tag">CSS</span>,
@@ -14,9 +14,10 @@ const HeroSection = () => {
           <span className="react-tag tag">React</span>
           <span className="redux-tag tag">Redux</span>.
           <br /> I also have additional experience with
-          <span className="mongo-tag tag">MongoDB</span>,
-          <span className="node-tag tag">NodeJS</span> and
-          <span className="express-tag tag">ExpressJS</span>.
+          <span className="typescript-tag tag">Typescript</span>,
+          <span className="mongodb-tag tag">MongoDB</span>,
+          <span className="nodejs-tag tag">NodeJS</span> and
+          <span className="expressjs-tag tag">ExpressJS</span>.
         </p>
         <div className="links">
           <a href="https://github.com/VWRoli" target="_blank" rel="noreferrer">

@@ -1,6 +1,20 @@
 export const projectsData = [
   {
     id: 1,
+    title: 'Guitar Practice Assistant',
+    img: '/img/practice-assistant.png',
+    tags: ['Typescript', 'React', 'Sass', 'Redux', 'MongoDB', 'NodeJs', 'ExpressJS', 'API'],
+    codeUrl: 'https://github.com/VWRoli/guitar-practice-assistant',
+    liveUrl: 'https://guitar-pa.netlify.app',
+    desc: [
+      'Guitar practice assistant app, with a built in metronome.',
+      'The app is build in Typescript with MERN stack, and using RESTful API design.',
+      'I used Redux for state management, Node & Express for API, MongoDB as database.',
+      '***Credentials: (username: demoUser1 password: 123456Aa!)',
+    ],
+  },
+  {
+    id: 2,
     title: 'Guitar Store',
     img: '/img/guitar-store.png',
     tags: ['React', 'Redux', 'Sass', 'API'],
@@ -14,7 +28,7 @@ export const projectsData = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: 'Crypto Portfolio Tracker',
     img: '/img/cryptofolio.png',
     tags: ['React', 'Redux', 'Sass', 'API'],
@@ -25,20 +39,6 @@ export const projectsData = [
       'Track your assets value. Take a look at the price change chart.',
       'Build with React, state management with Redux. For styling I used Sass.',
       'For getting the currency information I worked with the CoinGecko API.',
-    ],
-  },
-  {
-    id: 3,
-    title: 'Guitar Practice Assistant',
-    img: '/img/practice-assistant.png',
-    tags: ['HTML', 'CSS', 'JavaScript', 'OOP', 'Parcel'],
-    codeUrl: 'https://github.com/VWRoli/guitar-practice-assistant',
-    liveUrl: 'https://guitar-practice-assistant.netlify.app',
-    desc: [
-      'Guitar practice assistant app, with a built in metronome, and fretboard memorizer.',
-      'You can add new excercises on the left side, which will be saved for your next visit.',
-      'For creating the metronome I used the Tone JS library which is built on top of the Web Audio API.',
-      'The fretboard memorizer is a simple guessing game built with Vanilla JS.',
     ],
   },
 

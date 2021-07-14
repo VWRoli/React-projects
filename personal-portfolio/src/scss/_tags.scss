@@ -56,14 +56,14 @@
   @include tag-color(#774bbc, #fff);
   border: 1px solid #774bbc;
 }
-.mongo-tag {
+.mongodb-tag {
   @include tag-color(#44aa52, #fff);
   border: 1px solid #44aa52;
 }
-.node-tag {
+.nodejs-tag {
   @include tag-color(#fff, #488c46);
 }
-.express-tag {
+.expressjs-tag {
   @include tag-color(#4f9dff, #fff);
   border: 1px solid #4f9dff;
 }
@@ -74,4 +74,8 @@
 .postman-tag {
   @include tag-color(#ee6a38, #fff);
   border: 1px solid #ee6a38;
+}
+.typescript-tag {
+  @include tag-color(#3178c6, #fff);
+  border: 1px solid #3178c6;
 }
