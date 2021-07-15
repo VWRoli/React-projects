@@ -4,6 +4,7 @@ import {
   FaCodepen,
   FaGithub,
 } from 'react-icons/fa';
+import Tag from './Tag';
 
 const About = () => {
   return (
@@ -12,25 +13,28 @@ const About = () => {
         <div className="skills">
           <h2>Skills:</h2>
           <h3>Front-end:</h3>
-          <span className="html-tag tag">HTML</span>
-          <span className="css-tag tag">CSS</span>
-          <span className="sass-tag tag">Sass</span>
-          <span className="javascript-tag tag">JavaScript</span>
-          <span className="typescript-tag tag">Typescript</span>
+          <Tag type="HTML" />
+          <Tag type="CSS" />
+          <Tag type="Sass" />
+          <Tag type="JavaScript" />
+          <Tag type="TypeScript" />
+
           <h3>Back-end:</h3>
-          <span className="mongodb-tag tag">MongoDB</span>
-          <span className="nodejs-tag tag">NodeJS</span>
-          <span className="expressjs-tag tag">ExpressJS</span>
+          <Tag type="MongoDB" />
+          <Tag type="NodeJS" />
+          <Tag type="ExpressJS" />
+
           <h3>Libraries, Frameworks:</h3>
-          <span className="bootstrap-tag tag">Bootstrap</span>
-          <span className="react-tag tag">React</span>
-          <span className="redux-tag tag">Redux</span>
+          <Tag type="Bootstrap" />
+          <Tag type="React" />
+          <Tag type="Redux" />
+
           <h3>Other:</h3>
-          <span className="git-tag tag">Git (Github)</span>
-          <span className="npm-tag tag">npm</span>
-          <span className="jira-tag tag">Jira</span>
-          <span className="api-tag tag">API</span>
-          <span className="postman-tag tag">Postman</span>
+          <Tag type="Github" />
+          <Tag type="npm" />
+          <Tag type="Jira" />
+          <Tag type="API" />
+          <Tag type="Postman" />
         </div>
         <div className="about-text">
           <h2>More About Me</h2>

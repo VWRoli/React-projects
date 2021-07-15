@@ -1,4 +1,5 @@
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import Tag from './Tag';
 
 const HeroSection = () => {
   return (
@@ -8,16 +9,11 @@ const HeroSection = () => {
         <p>
           I'm a Web-developer. <br />
           My main strengths are
-          <span className="html-tag tag">HTML</span>,
-          <span className="css-tag tag">CSS</span>,
-          <span className="javascript-tag tag">JavaScript</span>, and
-          <span className="react-tag tag">React</span>
-          <span className="redux-tag tag">Redux</span>.
+          <Tag type="HTML" />, <Tag type="CSS" />, <Tag type="JavaScript" /> and{' '}
+          <Tag type="React" />, <Tag type="Redux" />.
           <br /> I also have additional experience with
-          <span className="typescript-tag tag">Typescript</span>,
-          <span className="mongodb-tag tag">MongoDB</span>,
-          <span className="nodejs-tag tag">NodeJS</span> and
-          <span className="expressjs-tag tag">ExpressJS</span>.
+          <Tag type="TypeScript" />, <Tag type="MongoDB" />,{' '}
+          <Tag type="NodeJS" /> and <Tag type="ExpressJS" />
         </p>
         <div className="links">
           <a href="https://github.com/VWRoli" target="_blank" rel="noreferrer">
