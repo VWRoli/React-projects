@@ -58,10 +58,10 @@ export const hungarian = {
       codeUrl: 'https://github.com/VWRoli/guitar-store',
       liveUrl: 'https://guitar-store-site.netlify.app/',
       desc: [
-        'Komplett kezelőfelület egy gitár webshop-hoz összehasonlítás és kosár részleggel.',
+        'Komplett kezelőfelület egy gitár webshop-hoz, összehasonlítás és kosár részleggel.',
         'A termékek lapozhatók, szűrhetők, válogathatók és kereshetők.',
         'JSON szervert használtam a REST API létrehozásához és a termékadatok tárolásához.',
-        'A weboldal React-el épített, valamint Sass, React Router, Redux és különböző React Hook-okkal',
+        'A weboldalt React-el építettem, valamint Sass, React Router, Redux-al és különböző React Hook-okkal',
       ],
     },
     {
@@ -86,7 +86,7 @@ export const hungarian = {
       tags: ['HTML', 'CSS', 'JavaScript'],
       codeUrl: 'https://codepen.io/VWRoli/pen/MWjqVpg',
       liveUrl: 'https://codepen.io/VWRoli/pen/MWjqVpg',
-      desc: ['Szimpla Javascript-elkészült memóriakártya játék.'],
+      desc: ['Szimpla Javascript-el készült memóriakártya játék.'],
     },
     {
       id: 5,
@@ -99,7 +99,7 @@ export const hungarian = {
         'Kriptovaluta oktatói weboldal.',
         'Valós idejű kriptovaluta-nyomkövető a Coingecko API használatával.',
         'Teljesen mobil-barát honlap.',
-        'Éjszakai mód beállítás, amelyek LocalStorage segítségével menthetőek.',
+        'Éjszakai mód beállítás, amely LocalStorage segítségével menthetőek.',
       ],
     },
   ],

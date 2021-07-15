@@ -11,6 +11,7 @@ import LangButton from './LangButton';
 
 const Navbar = ({ displayLanguage, setDisplayLanguage }) => {
   const [showResume, setShowResume] = useState(false);
+  const [isActive, setIsActive] = useState(true);
   const [closeMobileMenu, setcloseMobileMenu] = useState(true);
 
   const showButton = () => {
@@ -30,9 +31,11 @@ const Navbar = ({ displayLanguage, setDisplayLanguage }) => {
 
   const handleClick = (language) => {
     if (language === 'english') {
+      setIsActive(false);
       setDisplayLanguage(english);
     } else {
       setDisplayLanguage(hungarian);
+      setIsActive(true);
     }
   };
 
@@ -67,21 +70,24 @@ const Navbar = ({ displayLanguage, setDisplayLanguage }) => {
           );
         })}
       </ul>
-
-      <div className="nav-resume">
-        <a href="cv_roland_füst.pdf" target="_blank" className="resume-btn">
-          {displayLanguage.resumeBtn}
-        </a>
-      </div>
-      <div className="lang-selector">
-        <LangButton
-          flag={hungaryFlag}
-          handleClick={() => handleClick('hungarian')}
-        />
-        <LangButton
-          flag={englishFlag}
-          handleClick={() => handleClick('english')}
-        />
+      <div className="nav-controls">
+        <div className="nav-resume">
+          <a href="cv_roland_füst.pdf" target="_blank" className="resume-btn">
+            {displayLanguage.resumeBtn}
+          </a>
+        </div>
+        <div className="lang-selector">
+          <LangButton
+            flag={hungaryFlag}
+            isActive={isActive}
+            handleClick={() => handleClick('hungarian')}
+          />
+          <LangButton
+            flag={englishFlag}
+            isActive={!isActive}
+            handleClick={() => handleClick('english')}
+          />
+        </div>
       </div>
     </nav>
   );

@@ -13,8 +13,10 @@ nav {
   align-items: center;
 
   .nav-header {
+    flex: 1;
     display: flex;
     align-items: center;
+    justify-content: center;
     .nav-toggle {
       display: none;
     }
@@ -27,8 +29,10 @@ nav {
   }
 
   .links {
+    flex: 1;
     transition: all 0.3s linear;
     display: flex;
+    justify-content: center;
     list-style-type: none;
     .link-items {
       display: block;
@@ -43,15 +47,29 @@ nav {
   .active {
     text-decoration: underline;
   }
-  .lang-selector {
-    position: absolute;
-    right: 1.5rem;
+  .nav-controls {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+  .nav-resume {
+    margin-right: 5rem;
+  }
+
   .lang-btn {
     background-color: transparent;
     border: none;
     margin: 0 0.5rem;
     cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  nav {
+    .nav-resume {
+      margin-right: 3rem;
+    }
   }
 }
 
@@ -68,13 +86,15 @@ nav {
 
     .links {
       height: 0;
+      max-height: 0;
       overflow: hidden;
       flex-direction: column;
       text-align: center;
     }
 
     .show-container {
-      height: 7rem;
+      height: auto;
+      max-height: 7rem;
     }
 
     .nav-resume {
