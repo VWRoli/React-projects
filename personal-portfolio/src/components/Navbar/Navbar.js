@@ -10,8 +10,9 @@ import { english } from '../../languages/english';
 import LangButton from './LangButton';
 
 const Navbar = ({ displayLanguage, setDisplayLanguage }) => {
+  const isHungarian = displayLanguage.codeBtn === 'Kód';
   const [showResume, setShowResume] = useState(false);
-  const [isActive, setIsActive] = useState(true);
+  const [isActive, setIsActive] = useState(isHungarian ? true : false);
   const [closeMobileMenu, setcloseMobileMenu] = useState(true);
 
   const showButton = () => {

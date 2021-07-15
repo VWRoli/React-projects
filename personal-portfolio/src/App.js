@@ -1,6 +1,7 @@
 import { useState } from 'react';
 //Languages
 import { hungarian } from './languages/hungarian';
+import { english } from './languages/english';
 //Components
 import About from './components/About';
 import HeroSection from './components/HeroSection';
@@ -8,7 +9,8 @@ import Navbar from './components/Navbar/Navbar';
 import Projects from './components/Projects';
 
 function App() {
-  const [displayLanguage, setDisplayLanguage] = useState(hungarian);
+  const defaultLanguage = navigator.language === 'hu-HU' ? hungarian : english;
+  const [displayLanguage, setDisplayLanguage] = useState(defaultLanguage);
 
   return (
     <main>
