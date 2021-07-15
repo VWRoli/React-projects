@@ -8,6 +8,7 @@ import { hungarian } from '../../languages/hungarian';
 import { english } from '../../languages/english';
 //Components
 import LangButton from './LangButton';
+import Button from '../utils/Button';
 
 const Navbar = ({ displayLanguage, setDisplayLanguage }) => {
   const isHungarian = displayLanguage.codeBtn === 'Kód';
@@ -73,9 +74,11 @@ const Navbar = ({ displayLanguage, setDisplayLanguage }) => {
       </ul>
       <div className="nav-controls">
         <div className="nav-resume">
-          <a href="cv_roland_füst.pdf" target="_blank" className="resume-btn">
-            {displayLanguage.resumeBtn}
-          </a>
+          <Button
+            link="cv_roland_füst.pdf"
+            labelText={displayLanguage.resumeBtn}
+            type="resume"
+          />
         </div>
         <div className="lang-selector">
           <LangButton

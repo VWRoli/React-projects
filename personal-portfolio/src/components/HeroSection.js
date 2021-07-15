@@ -1,5 +1,7 @@
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import Tag from './Tag';
+//Components
+import Button from './utils/Button';
+import Tag from './utils/Tag';
 
 const HeroSection = ({ displayLanguage }) => {
   return (
@@ -20,15 +22,17 @@ const HeroSection = ({ displayLanguage }) => {
           <Tag type="ExpressJS" />
         </p>
         <div className="links">
-          <a href="https://github.com/VWRoli" target="_blank" rel="noreferrer">
-            <FaGithub className="icons" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/roland-fuest/"
-            target="_blank"
-            rel="noreferrer">
-            <FaLinkedin className="icons" />
-          </a>
+          <Button
+            link="https://github.com/VWRoli"
+            labelText={<FaGithub />}
+            type="icon"
+          />
+
+          <Button
+            link="https://www.linkedin.com/in/roland-fuest/"
+            labelText={<FaLinkedin />}
+            type="icon"
+          />
         </div>
         <a href="mailto:fustroli@gmail.com">fustroli@gmail.com</a>
       </div>

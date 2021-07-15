@@ -14,9 +14,7 @@ nav {
 
   .nav-header {
     flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center(row);
     .nav-toggle {
       display: none;
     }
@@ -31,8 +29,7 @@ nav {
   .links {
     flex: 1;
     transition: all 0.3s linear;
-    display: flex;
-    justify-content: center;
+    @include flex-center(row);
     list-style-type: none;
     .link-items {
       display: block;
@@ -49,9 +46,7 @@ nav {
   }
   .nav-controls {
     flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center(row);
   }
   .nav-resume {
     margin-right: 5rem;

@@ -37,10 +37,7 @@
   @include tag-color(#fff, #317bb4);
   border: 1px solid #fff;
 }
-.oop-tag {
-  @include tag-color(#222, #f7ed5b);
-  border: 1px solid #222;
-}
+
 .npm-tag {
   @include tag-color(#fff, #c12127);
   border: 1px solid #fff;

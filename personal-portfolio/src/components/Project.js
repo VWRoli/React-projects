@@ -1,4 +1,5 @@
-import Tag from './Tag';
+import Button from './utils/Button';
+import Tag from './utils/Tag';
 
 const Project = ({ project, displayLanguage }) => {
   const { title, img, tags, codeUrl, liveUrl, desc } = project;
@@ -8,12 +9,16 @@ const Project = ({ project, displayLanguage }) => {
       <div className="img-wrapper">
         <h3>{title}</h3>
         <img src={img} alt={title} />
-        <a href={liveUrl} target="_blank" className="live-btn" rel="noreferrer">
-          {displayLanguage.liveBtn}
-        </a>
-        <a href={codeUrl} target="_blank" className="code-btn" rel="noreferrer">
-          {displayLanguage.codeBtn}
-        </a>
+        <Button
+          link={liveUrl}
+          labelText={displayLanguage.liveBtn}
+          type="live"
+        />
+        <Button
+          link={codeUrl}
+          labelText={displayLanguage.codeBtn}
+          type="code"
+        />
       </div>
       <div className="tags">
         <h3>{displayLanguage.technologies}</h3>

@@ -110,9 +110,8 @@ export const english = {
   librariesTitle: 'Libraries, Frameworks:',
   otherTitle: 'Other',
   moreAboutTitle: 'More About Me',
-  aboutText: `I'm an ex Online poker player turned self taught Web-developer. Currently my main focus is JavaScript and the MERN stack. I enjoy the problem solving aspect of programming, that a developer has to face day after day.
-
-  My native language is <b>Hungarian</b>, I also speak fluent <b>English</b>, and I have a basic conversational level <b>German</b> knowledge.`,
+  aboutTextPar1: `I'm an ex Online poker player turned self taught Web-developer. Currently my main focus is JavaScript and the MERN stack. I enjoy the problem solving aspect of programming, that a developer has to face day after day.`,
+  aboutTextPar2: `My native language is <b>Hungarian</b>, I also speak fluent <b>English</b>, and I have a basic conversational level <b>German</b> knowledge.`,
   viewCodesTitle: 'View my codes:',
   linkedInTitle: 'More info on LinkedIn:',
   emailTitle: 'Send me an Email:',

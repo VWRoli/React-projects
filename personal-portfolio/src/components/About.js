@@ -4,7 +4,9 @@ import {
   FaCodepen,
   FaGithub,
 } from 'react-icons/fa';
-import Tag from './Tag';
+//Components
+import Button from './utils/Button';
+import Tag from './utils/Tag';
 
 const About = ({ displayLanguage }) => {
   return (
@@ -48,28 +50,34 @@ const About = ({ displayLanguage }) => {
       <article className="right-container">
         <h3>{displayLanguage.viewCodesTitle}</h3>
         <div className="code-group">
-          <a href="https://github.com/VWRoli" target="_blank" rel="noreferrer">
-            <FaGithub className="icons" />
-          </a>
-          <a href="https://codepen.io/VWRoli" target="_blank" rel="noreferrer">
-            <FaCodepen className="icons" />
-          </a>
+          <Button
+            link="https://github.com/VWRoli"
+            labelText={<FaGithub />}
+            type="icon"
+          />
+          <Button
+            link="https://codepen.io/VWRoli"
+            labelText={<FaCodepen />}
+            type="icon"
+          />
         </div>
 
         <h3>{displayLanguage.linkedInTitle}</h3>
-        <a
-          href="https://www.linkedin.com/in/roland-fuest/"
-          target="_blank"
-          rel="noreferrer">
-          <FaLinkedin className="icons" />
-        </a>
+        <Button
+          link="https://www.linkedin.com/in/roland-fuest/"
+          labelText={<FaLinkedin />}
+          type="icon"
+        />
+
         <h3>{displayLanguage.emailTitle}</h3>
 
         <a href="mailto:fustroli@gmail.com">fustroli@gmail.com</a>
         <h3>{displayLanguage.resumeTitle}</h3>
-        <a href="cv_roland_füst.pdf">
-          <FaFileDownload className="icons" />
-        </a>
+        <Button
+          link="cv_roland_füst.pdf"
+          labelText={<FaFileDownload />}
+          type="icon"
+        />
       </article>
     </section>
   );
