@@ -43,6 +43,16 @@ nav {
   .active {
     text-decoration: underline;
   }
+  .lang-selector {
+    position: absolute;
+    right: 1.5rem;
+  }
+  .lang-btn {
+    background-color: transparent;
+    border: none;
+    margin: 0 0.5rem;
+    cursor: pointer;
+  }
 }
 
 @media screen and (max-width: 800px) {

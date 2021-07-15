@@ -1,4 +1,5 @@
 export const english = {
+  logo: 'Roland Füst',
   links: [
     {
       id: 1,

@@ -1,4 +1,5 @@
 export const hungarian = {
+  logo: 'Füst Roland',
   links: [
     {
       id: 1,
@@ -17,7 +18,7 @@ export const hungarian = {
     },
   ],
   resumeBtn: 'Önéletrajz',
-  mainTitle: `Szia! Roland Füst vagyok.`,
+  mainTitle: `Helló! Füst Roland vagyok.`,
   jobTitle: `Webfejlesztő`,
   mainStrengths: `A fő erősségeim`,
   additionalExp: `Ugyanakkor van további tapasztalatom`,

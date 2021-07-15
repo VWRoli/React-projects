@@ -1,8 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import { FaBars, FaCode, FaTimes } from 'react-icons/fa';
+import hungaryFlag from '../../assets/hungary.png';
+import englishFlag from '../../assets/united-kingdom.png';
+//Languages
+import { hungarian } from '../../languages/hungarian';
+import { english } from '../../languages/english';
+//Components
+import LangButton from './LangButton';
 
-const Navbar = ({ displayLanguage }) => {
+const Navbar = ({ displayLanguage, setDisplayLanguage }) => {
   const [showResume, setShowResume] = useState(false);
   const [closeMobileMenu, setcloseMobileMenu] = useState(true);
 
@@ -21,11 +28,19 @@ const Navbar = ({ displayLanguage }) => {
     };
   }, [showResume]);
 
+  const handleClick = (language) => {
+    if (language === 'english') {
+      setDisplayLanguage(english);
+    } else {
+      setDisplayLanguage(hungarian);
+    }
+  };
+
   return (
     <nav>
       <div className="nav-header">
         <FaCode className="logo-icon" />
-        Roland Füst
+        {displayLanguage.logo}
         <button
           className="nav-toggle"
           onClick={() => setcloseMobileMenu(!closeMobileMenu)}>
@@ -57,6 +72,16 @@ const Navbar = ({ displayLanguage }) => {
         <a href="cv_roland_füst.pdf" target="_blank" className="resume-btn">
           {displayLanguage.resumeBtn}
         </a>
+      </div>
+      <div className="lang-selector">
+        <LangButton
+          flag={hungaryFlag}
+          handleClick={() => handleClick('hungarian')}
+        />
+        <LangButton
+          flag={englishFlag}
+          handleClick={() => handleClick('english')}
+        />
       </div>
     </nav>
   );
