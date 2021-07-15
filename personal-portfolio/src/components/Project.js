@@ -1,4 +1,6 @@
-const Project = ({ project }) => {
+import Tag from './Tag';
+
+const Project = ({ project, displayLanguage }) => {
   const { title, img, tags, codeUrl, liveUrl, desc } = project;
 
   return (
@@ -7,24 +9,20 @@ const Project = ({ project }) => {
         <h3>{title}</h3>
         <img src={img} alt={title} />
         <a href={liveUrl} target="_blank" className="live-btn" rel="noreferrer">
-          Live Demo
+          {displayLanguage.liveBtn}
         </a>
         <a href={codeUrl} target="_blank" className="code-btn" rel="noreferrer">
-          View Code
+          {displayLanguage.codeBtn}
         </a>
       </div>
       <div className="tags">
-        <h3>Technologies:</h3>
+        <h3>{displayLanguage.technologies}</h3>
         {tags.map((tag, i) => {
-          return (
-            <span key={i} className={`${tag.toLowerCase()}-tag tag`}>
-              {tag}
-            </span>
-          );
+          return <Tag type={tag} key={i} />;
         })}
       </div>
       <div className="description">
-        <h3>Description:</h3>
+        <h3>{displayLanguage.descriptionTitle}</h3>
         <ul>
           {desc.map((li, i) => {
             return <li key={i}>{li}</li>;

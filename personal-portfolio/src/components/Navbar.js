@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
-import { links } from './navbarData';
-import { FaCode } from 'react-icons/fa';
-import { MobileToggleBtn, ResumeBtn } from './Buttons';
+import { FaBars, FaCode, FaTimes } from 'react-icons/fa';
 
-const Navbar = () => {
+const Navbar = ({ displayLanguage }) => {
   const [showResume, setShowResume] = useState(false);
   const [closeMobileMenu, setcloseMobileMenu] = useState(true);
 
@@ -28,13 +26,14 @@ const Navbar = () => {
       <div className="nav-header">
         <FaCode className="logo-icon" />
         Roland Füst
-        <MobileToggleBtn
-          closeMobileMenu={closeMobileMenu}
-          setcloseMobileMenu={setcloseMobileMenu}
-        />
+        <button
+          className="nav-toggle"
+          onClick={() => setcloseMobileMenu(!closeMobileMenu)}>
+          {closeMobileMenu ? <FaBars /> : <FaTimes />}
+        </button>
       </div>
       <ul className={closeMobileMenu ? `links` : `links show-container`}>
-        {links.map((link) => {
+        {displayLanguage.links.map((link) => {
           const { id, url, text } = link;
           return (
             <li key={id}>
@@ -55,7 +54,9 @@ const Navbar = () => {
       </ul>
 
       <div className="nav-resume">
-        <ResumeBtn />
+        <a href="cv_roland_füst.pdf" target="_blank" className="resume-btn">
+          {displayLanguage.resumeBtn}
+        </a>
       </div>
     </nav>
   );

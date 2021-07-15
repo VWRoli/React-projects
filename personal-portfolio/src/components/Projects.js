@@ -1,13 +1,18 @@
-import { projectsData } from '../projectsData';
 import Project from './Project';
 
-const Projects = () => {
+const Projects = ({ displayLanguage }) => {
   return (
     <section id="projects">
-      <h2 className="title">My Projects</h2>
+      <h2 className="title">{displayLanguage.projectTitle}</h2>
       <div className="container">
-        {projectsData.map((project) => {
-          return <Project key={project.id} project={project} />;
+        {displayLanguage.projectsData.map((project) => {
+          return (
+            <Project
+              key={project.id}
+              project={project}
+              displayLanguage={displayLanguage}
+            />
+          );
         })}
       </div>
     </section>
