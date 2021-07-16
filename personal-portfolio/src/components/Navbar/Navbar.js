@@ -48,6 +48,7 @@ const Navbar = ({ displayLanguage, setDisplayLanguage }) => {
         {displayLanguage.logo}
         <button
           className="nav-toggle"
+          aria-label="Toggle mobile menu"
           onClick={() => setcloseMobileMenu(!closeMobileMenu)}>
           {closeMobileMenu ? <FaBars /> : <FaTimes />}
         </button>
