@@ -63,7 +63,7 @@ const Navbar = ({ displayLanguage, setDisplayLanguage }) => {
                 activeClass="active"
                 spy={true}
                 smooth={true}
-                offset={-60}
+                offset={-76}
                 duration={500}
                 onClick={() => setcloseMobileMenu(true)}>
                 {text}
