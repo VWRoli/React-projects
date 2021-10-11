@@ -76,3 +76,6 @@
   @include tag-color(#3178c6, #fff);
   border: 1px solid #3178c6;
 }
+.material-ui-tag {
+  @include tag-color(#fff, #0074e9);
+}
