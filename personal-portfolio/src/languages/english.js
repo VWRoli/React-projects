@@ -28,7 +28,7 @@ export const english = {
   mainStrengths: `My main strengths are`,
   additionalExp: `I also have additional experience with`,
   technologies: 'Technologies:',
-  projectTitle: 'My Projects',
+  projectTitle: 'My Personal Projects',
   descriptionTitle: 'Description:',
   projectsData: [
     {
@@ -116,7 +116,7 @@ export const english = {
   otherTitle: 'Other',
   moreAboutTitle: 'More About Me',
   aboutTextPar1: `I'm an ex Online poker player turned self taught Web-developer. Currently my main focus is JavaScript and the MERN stack. I enjoy the problem solving aspect of programming, that a developer has to face day after day.`,
-  aboutTextPar2: `My native language is <b>Hungarian</b>, I also speak fluent <b>English</b>, and I have a basic conversational level <b>German</b> knowledge.`,
+  aboutTextPar2: `My native language is <b>Hungarian</b> and I also speak fluent <b>English</b>.`,
   viewCodesTitle: 'View my codes:',
   linkedInTitle: 'More info on LinkedIn:',
   emailTitle: 'Send me an Email:',

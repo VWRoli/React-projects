@@ -17,9 +17,8 @@ const HeroSection = ({ displayLanguage }) => {
           <Tag type="Redux" />
           <br /> {displayLanguage.additionalExp}
           <Tag type="TypeScript" />
-          <Tag type="MongoDB" />
           <Tag type="NodeJS" />
-          <Tag type="ExpressJS" />
+          <Tag type="Material-UI" />
         </p>
         <div className="links">
           <Button

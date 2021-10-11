@@ -117,7 +117,7 @@ export const hungarian = {
   otherTitle: 'Egyebek:',
   moreAboutTitle: 'Bővebben rólam:',
   aboutTextPar1: `Volt online pókerjátékos vagyok, aki autodidakta módon vált webfejlesztővé. Jelenleg a JavaScript-re és a MERN stack-re fókuszálok. Élvezem a programozás problémamegoldási aspektusát, amellyel a fejlesztőnek nap mint nap szembe kell néznie.`,
-  aboutTextPar2: `Anyanyelvem a <b>magyar</b>, emellett folyékonyan beszélek <b>angolul</b>, és alap beszélgetési szintű <b>német</b> tudással rendelkezem.`,
+  aboutTextPar2: `Anyanyelvem a <b>magyar</b> és emellett folyékonyan beszélek <b>angolul</b> is.`,
   viewCodesTitle: 'Kódjaim megtekinthetőek:',
   linkedInTitle: 'További információ LinkedIn-en:',
   emailTitle: 'Email küldés:',

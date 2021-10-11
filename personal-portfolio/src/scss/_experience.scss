@@ -11,7 +11,7 @@
   a {
     color: lighten($dark-primary-color, 20%);
     &:hover {
-      color: lighten($dark-primary-color, 35%);
+      color: $hover-color;
     }
   }
 

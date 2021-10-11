@@ -30,6 +30,7 @@ const About = ({ displayLanguage }) => {
           <Tag type="Bootstrap" />
           <Tag type="React" />
           <Tag type="Redux" />
+          <Tag type="Material-UI" />
 
           <h3>{displayLanguage.otherTitle}</h3>
           <Tag type="Github" />
@@ -44,7 +45,8 @@ const About = ({ displayLanguage }) => {
           <p
             dangerouslySetInnerHTML={{
               __html: displayLanguage.aboutTextPar2,
-            }}></p>
+            }}
+          ></p>
         </div>
       </article>
       <article className="right-container">
