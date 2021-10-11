@@ -13,6 +13,11 @@ export const english = {
     },
     {
       id: 3,
+      url: 'experience',
+      text: 'Experience',
+    },
+    {
+      id: 4,
       url: 'about',
       text: 'About',
     },

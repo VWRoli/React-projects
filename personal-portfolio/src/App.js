@@ -7,6 +7,7 @@ import About from './components/About';
 import HeroSection from './components/HeroSection';
 import Navbar from './components/Navbar/Navbar';
 import Projects from './components/Projects';
+import Experience from './components/Experience';
 
 function App() {
   const defaultLanguage = navigator.language === 'hu-HU' ? hungarian : english;
@@ -20,6 +21,7 @@ function App() {
       />
       <HeroSection displayLanguage={displayLanguage} />
       <Projects displayLanguage={displayLanguage} />
+      <Experience displayLanguage={displayLanguage} />
       <About displayLanguage={displayLanguage} />
     </main>
   );

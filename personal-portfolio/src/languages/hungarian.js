@@ -13,6 +13,11 @@ export const hungarian = {
     },
     {
       id: 3,
+      url: 'experience',
+      text: 'Tapasztalat',
+    },
+    {
+      id: 4,
       url: 'about',
       text: 'Rólam',
     },

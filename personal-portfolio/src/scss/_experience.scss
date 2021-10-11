@@ -1,0 +1,6 @@
+#experience {
+  background: $bg-gradient;
+  min-height: 100vh;
+  min-width: 100vw;
+  @include flex-center(row);
+}
