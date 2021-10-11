@@ -121,4 +121,11 @@ export const english = {
   linkedInTitle: 'More info on LinkedIn:',
   emailTitle: 'Send me an Email:',
   resumeTitle: 'Download my resume:',
+  experienceTitle: 'Work experience',
+  jobTitle: 'Volunteer React developer',
+  jobDate: 'Aug 2021 - Present',
+  jobDescription1: 'Main contributor for the',
+  jobDescription2:
+    'Creating reusable and scalable frontend components for the app, using ',
+  jobDescription3: 'Helped setting up the project infrastructure.',
 };

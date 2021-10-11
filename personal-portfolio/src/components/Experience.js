@@ -1,10 +1,10 @@
 import Tag from './utils/Tag';
 
-const Experience = () => {
+const Experience = ({ displayLanguage }) => {
   return (
     <section id="experience">
       <div>
-        <h1>Work experience</h1>
+        <h1>{displayLanguage.experienceTitle}</h1>
         <div className="experience-content-wrapper">
           <div className="company-title">
             <h2>
@@ -18,11 +18,11 @@ const Experience = () => {
             </h2>
           </div>
           <div>
-            <h2>Volunteer React developer</h2>
-            <p className="tag">Aug 2021 - Present</p>
+            <h2>{displayLanguage.jobTitle}</h2>
+            <p className="tag">{displayLanguage.jobDate}</p>
             <ul>
               <li>
-                Main contributor for the{' '}
+                {displayLanguage.jobDescription1}{' '}
                 <a
                   href="https://github.com/Greenstand/treetracker-wallet-web"
                   target="_blank"
@@ -33,10 +33,10 @@ const Experience = () => {
                 .
               </li>
               <li>
-                Creating reusable and scalable frontend components for the app,
-                using <Tag type="React" /> and <Tag type="Material-UI" />.
+                {displayLanguage.jobDescription2} <Tag type="React" />
+                <Tag type="Material-UI" />.
               </li>
-              <li>Helped setting up the project infrastructure.</li>
+              <li>{displayLanguage.jobDescription3}</li>
             </ul>
           </div>
         </div>

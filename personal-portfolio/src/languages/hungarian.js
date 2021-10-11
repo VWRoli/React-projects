@@ -122,4 +122,11 @@ export const hungarian = {
   linkedInTitle: 'További információ LinkedIn-en:',
   emailTitle: 'Email küldés:',
   resumeTitle: 'Önéletrajz letöltése:',
+  experienceTitle: 'Tapasztalat',
+  jobTitle: 'Önkéntes React fejlesztő',
+  jobDate: '2021 Augusztus - ',
+  jobDescription1: 'Fő közreműködő a következő projektben: ',
+  jobDescription2:
+    'Újrafelhasználható és skálázható komponensek létrehozása a következő technológiák segítségével: ',
+  jobDescription3: 'Segítettem felállítani a projekt infrastruktúrát.',
 };
