@@ -38,6 +38,7 @@ const About = ({ displayLanguage }) => {
           <Tag type="Jira" />
           <Tag type="API" />
           <Tag type="Postman" />
+          <Tag type="Figma" />
         </div>
         <div className="about-text">
           <h2>{displayLanguage.moreAboutTitle}</h2>

@@ -79,3 +79,7 @@
 .material-ui-tag {
   @include tag-color(#fff, #0074e9);
 }
+.figma-tag {
+  @include tag-color(#2c2c2c, #c7b9ff);
+  border: 1px solid #2c2c2c;
+}

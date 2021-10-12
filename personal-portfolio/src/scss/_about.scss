@@ -42,5 +42,9 @@
 @media screen and (max-width: 960px) {
   #about {
     @include flex-center(column);
+    .left-container {
+      margin: 1rem;
+      padding: 1rem;
+    }
   }
 }

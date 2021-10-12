@@ -1,6 +1,6 @@
 #projects {
   background-color: #eee;
-  padding: 1rem;
+  padding: 1rem 0;
   .title {
     font-size: 2rem;
     font-weight: 400;
@@ -126,6 +126,7 @@
 @media screen and (max-width: 950px) {
   #projects {
     .project {
+      margin: 5rem 1rem;
       .project-image {
         grid-column: 1 / -1;
         opacity: 0.75;
@@ -133,8 +134,13 @@
       .project-content {
         grid-column: 1 / -1;
         @include glass();
+        padding: 0.5rem;
+        text-align: center;
         z-index: 2;
         background-color: rgba(255, 255, 255, 0.4);
+        h2 {
+          justify-content: center;
+        }
       }
     }
     .project.reverse {
@@ -143,6 +149,10 @@
       }
       .project-content {
         grid-column: 1 / -1;
+        text-align: center;
+        h2 {
+          justify-content: center;
+        }
       }
     }
   }

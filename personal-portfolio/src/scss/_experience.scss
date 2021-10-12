@@ -3,6 +3,9 @@
   color: $dark-primary-color;
   @include flex-center(row);
 
+  div {
+    margin: 1rem;
+  }
   .experience-content-wrapper {
     display: flex;
     max-width: 780px;
@@ -51,6 +54,34 @@
     li:before {
       content: '+';
       padding-right: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  #experience {
+    .experience-content-wrapper {
+      flex-direction: column;
+      .company-title {
+        margin: 0;
+      }
+      div {
+        margin: 0;
+      }
+    }
+    h2 {
+      &::after {
+        width: 200px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  #experience {
+    h2 {
+      &::after {
+        width: 150px;
+      }
     }
   }
 }
