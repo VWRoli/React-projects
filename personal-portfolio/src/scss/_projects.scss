@@ -30,6 +30,10 @@
       position: relative;
       z-index: 1;
       grid-area: 1 / 6 / -1 / -1;
+      padding: 0 1rem;
+      background-color: #eee;
+      display: flex;
+      align-items: center;
     }
     .project-card {
       @include glass();
@@ -52,6 +56,7 @@
   .project.reverse {
     .project-content {
       grid-area: 1 / 6 / -1 / -1;
+      text-align: right;
       h2 {
         font-weight: 500;
         display: flex;
@@ -70,8 +75,75 @@
     .project-image {
       grid-area: 1 / 1 / -1 / 7;
     }
-    .project-content {
-      text-align: right;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  #projects {
+    .project {
+      .project-image {
+        grid-area: 1 / 5 / -1 / -1;
+      }
+    }
+    .project.reverse {
+      .project-image {
+        grid-area: 1 / 1 / -1 / 8;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  #projects {
+    .project {
+      .project-image {
+        grid-area: 1 / 4 / -1 / -1;
+        padding: 0;
+        background-color: transparent;
+      }
+      .project-content {
+        h2 {
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+    .project.reverse {
+      .project-image {
+        grid-area: 1 / 1 / -1 / 9;
+      }
+      .project-content {
+        h2 {
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 950px) {
+  #projects {
+    .project {
+      .project-image {
+        grid-column: 1 / -1;
+        opacity: 0.75;
+      }
+      .project-content {
+        grid-column: 1 / -1;
+        @include glass();
+        z-index: 2;
+        background-color: rgba(255, 255, 255, 0.4);
+      }
+    }
+    .project.reverse {
+      .project-image {
+        grid-column: 1 / -1;
+      }
+      .project-content {
+        grid-column: 1 / -1;
+      }
     }
   }
 }

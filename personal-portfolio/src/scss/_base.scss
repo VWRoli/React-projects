@@ -40,3 +40,13 @@ img {
     font-size: 2rem;
   }
 }
+@media screen and (max-width: 1500px) {
+  .container {
+    width: 90vw;
+  }
+}
+@media screen and (max-width: 1350px) {
+  .container {
+    width: 95vw;
+  }
+}
