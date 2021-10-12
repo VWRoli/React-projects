@@ -123,7 +123,7 @@ export const hungarian = {
   emailTitle: 'Email küldés:',
   resumeTitle: 'Önéletrajz letöltése:',
   experienceTitle: 'Tapasztalat',
-  jobTitle: 'Önkéntes React fejlesztő',
+  currentJobTitle: 'Önkéntes React fejlesztő',
   jobDate: '2021 Augusztus - ',
   jobDescription1: 'Fő közreműködő a következő projektben: ',
   jobDescription2:

@@ -124,7 +124,7 @@ export const english = {
   emailTitle: 'Send me an Email:',
   resumeTitle: 'Download my resume:',
   experienceTitle: 'Work experience',
-  jobTitle: 'Volunteer React developer',
+  currentJobTitle: 'Volunteer React developer',
   jobDate: 'Aug 2021 - Present',
   jobDescription1: 'Main contributor for the',
   jobDescription2:

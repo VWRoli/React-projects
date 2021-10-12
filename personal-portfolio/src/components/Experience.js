@@ -18,7 +18,7 @@ const Experience = ({ displayLanguage }) => {
             </h3>
           </div>
           <div>
-            <h3>{displayLanguage.jobTitle}</h3>
+            <h3>{displayLanguage.currentJobTitle}</h3>
             <p className="tag">{displayLanguage.jobDate}</p>
             <ul>
               <li>
