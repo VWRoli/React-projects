@@ -1,4 +1,3 @@
-import NewProject from './NewProject';
 import Project from './Project';
 
 const Projects = ({ displayLanguage }) => {
@@ -6,17 +5,8 @@ const Projects = ({ displayLanguage }) => {
     <section id="projects">
       <h2 className="title">{displayLanguage.projectTitle}</h2>
       <div className="container">
-        {/* {displayLanguage.projectsData.map((project) => {
-          return (
-            <Project
-              key={project.id}
-              project={project}
-              displayLanguage={displayLanguage}
-            />
-          );
-        })} */}
         {displayLanguage.projectsData.map((project) => {
-          return <NewProject key={project.id} project={project} />;
+          return <Project key={project.id} project={project} />;
         })}
       </div>
     </section>

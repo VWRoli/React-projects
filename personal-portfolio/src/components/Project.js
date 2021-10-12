@@ -1,41 +1,38 @@
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import Button from './common/Button';
 import Tag from './common/Tag';
 
-const Project = ({ project, displayLanguage }) => {
-  const { title, img, tags, codeUrl, liveUrl, desc } = project;
+const NewProject = ({ project }) => {
+  const { title, img, tags, codeUrl, liveUrl, desc, reverse } = project;
 
   return (
-    <div className="project">
-      <div className="img-wrapper">
-        <h3>{title}</h3>
-        <img src={img} alt={title} />
-        <Button
-          link={liveUrl}
-          labelText={displayLanguage.liveBtn}
-          type="live"
-        />
-        <Button
-          link={codeUrl}
-          labelText={displayLanguage.codeBtn}
-          type="code"
-        />
-      </div>
-      <div className="tags">
-        <h3>{displayLanguage.technologies}</h3>
-        {tags.map((tag, i) => {
-          return <Tag type={tag} key={i} />;
-        })}
-      </div>
-      <div className="description">
-        <h3>{displayLanguage.descriptionTitle}</h3>
-        <ul>
-          {desc.map((li, i) => {
-            return <li key={i}>{li}</li>;
+    <div className={reverse ? 'project reverse' : 'project'}>
+      <div className="project-content">
+        <h2>{title}</h2>
+        <div className="project-card">
+          <p>{desc}</p>
+        </div>
+        <div className="tag-wrapper">
+          {tags.map((tag, i) => {
+            return <Tag type={tag} key={i} />;
           })}
-        </ul>
+        </div>
+        <div className="button-wrapper">
+          <Button link={codeUrl} labelText={<FaGithub />} type="icon" />
+          <Button
+            link={liveUrl}
+            labelText={<FaExternalLinkAlt />}
+            type="icon"
+          />
+        </div>
+      </div>
+      <div className="project-image">
+        <a href={liveUrl} target="_blank" rel="noreferrer">
+          <img src={img} alt={title} />
+        </a>
       </div>
     </div>
   );
 };
 
-export default Project;
+export default NewProject;

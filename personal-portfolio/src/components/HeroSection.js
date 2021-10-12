@@ -9,7 +9,7 @@ const HeroSection = ({ displayLanguage }) => {
       <div className="intro">
         <h1>{displayLanguage.mainTitle}</h1>
         <p>
-          {displayLanguage.jobTitle}. {displayLanguage.mainStrengths}
+          {displayLanguage.jobTitle} {displayLanguage.mainStrengths}
           <Tag type="HTML" />
           <Tag type="CSS" />
           <Tag type="JavaScript" />

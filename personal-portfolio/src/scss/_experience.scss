@@ -28,6 +28,12 @@
   }
   .company-title {
     margin-right: 1rem;
+    h3 {
+      a {
+        font-size: 1.1rem;
+        font-weight: 500;
+      }
+    }
   }
   p {
     @include tag-color(#fff, $dark-primary-color);
