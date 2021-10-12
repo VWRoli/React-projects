@@ -1,4 +1,5 @@
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+//Components
 import Button from './common/Button';
 import Tag from './common/Tag';
 

@@ -1,3 +1,4 @@
+//Components
 import Project from './Project';
 
 const Projects = ({ displayLanguage }) => {
