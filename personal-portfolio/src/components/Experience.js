@@ -1,13 +1,13 @@
-import Tag from './utils/Tag';
+import Tag from './common/Tag';
 
 const Experience = ({ displayLanguage }) => {
   return (
     <section id="experience">
       <div>
-        <h1>{displayLanguage.experienceTitle}</h1>
+        <h2>{displayLanguage.experienceTitle}</h2>
         <div className="experience-content-wrapper">
           <div className="company-title">
-            <h2>
+            <h3>
               <a
                 href="https://greenstand.org/"
                 target="_blank"
@@ -15,10 +15,10 @@ const Experience = ({ displayLanguage }) => {
               >
                 Greenstand
               </a>
-            </h2>
+            </h3>
           </div>
           <div>
-            <h2>{displayLanguage.jobTitle}</h2>
+            <h3>{displayLanguage.jobTitle}</h3>
             <p className="tag">{displayLanguage.jobDate}</p>
             <ul>
               <li>

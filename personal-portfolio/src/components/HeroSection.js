@@ -1,7 +1,7 @@
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 //Components
-import Button from './utils/Button';
-import Tag from './utils/Tag';
+import Button from './common/Button';
+import Tag from './common/Tag';
 
 const HeroSection = ({ displayLanguage }) => {
   return (

@@ -1,5 +1,5 @@
-import Button from './utils/Button';
-import Tag from './utils/Tag';
+import Button from './common/Button';
+import Tag from './common/Tag';
 
 const Project = ({ project, displayLanguage }) => {
   const { title, img, tags, codeUrl, liveUrl, desc } = project;

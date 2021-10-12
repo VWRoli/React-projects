@@ -57,6 +57,7 @@ export const english = {
     {
       id: 2,
       title: 'Guitar Store',
+      reverse: true,
       img: '/img/guitar-store.png',
       tags: ['JavaScript', 'React', 'Redux', 'Sass', 'API'],
       codeUrl: 'https://github.com/VWRoli/guitar-store',
@@ -86,6 +87,7 @@ export const english = {
     {
       id: 4,
       title: 'Memory Card Game',
+      reverse: true,
       img: '/img/memory-card-game.png',
       tags: ['HTML', 'CSS', 'JavaScript'],
       codeUrl: 'https://codepen.io/VWRoli/pen/MWjqVpg',

@@ -8,7 +8,7 @@ import { hungarian } from '../../languages/hungarian';
 import { english } from '../../languages/english';
 //Components
 import LangButton from './LangButton';
-import Button from '../utils/Button';
+import Button from '../common/Button';
 
 const Navbar = ({ displayLanguage, setDisplayLanguage }) => {
   const isHungarian = displayLanguage.codeBtn === 'Kód';
@@ -49,7 +49,8 @@ const Navbar = ({ displayLanguage, setDisplayLanguage }) => {
         <button
           className="nav-toggle"
           aria-label="Toggle mobile menu"
-          onClick={() => setcloseMobileMenu(!closeMobileMenu)}>
+          onClick={() => setcloseMobileMenu(!closeMobileMenu)}
+        >
           {closeMobileMenu ? <FaBars /> : <FaTimes />}
         </button>
       </div>
@@ -66,7 +67,8 @@ const Navbar = ({ displayLanguage, setDisplayLanguage }) => {
                 smooth={true}
                 offset={-76}
                 duration={500}
-                onClick={() => setcloseMobileMenu(true)}>
+                onClick={() => setcloseMobileMenu(true)}
+              >
                 {text}
               </Link>
             </li>

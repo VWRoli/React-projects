@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
+  font-weight: 400;
 }
 
 #hero,
@@ -19,6 +20,17 @@
 
 a {
   text-decoration: none;
+}
+
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+h3 {
+  font-size: 1.17rem;
 }
 img {
   width: 100%;
