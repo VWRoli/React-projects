@@ -22,12 +22,7 @@
         display: flex;
         align-items: center;
         &::after {
-          content: '';
-          display: block;
-          width: 300px;
-          height: 1px;
-          background-color: $dark-primary-color;
-          margin-left: 1rem;
+          @include drawline(margin-left);
         }
       }
     }
@@ -58,13 +53,9 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
+
         &::before {
-          content: '';
-          display: block;
-          width: 300px;
-          height: 1px;
-          background-color: $dark-primary-color;
-          margin-right: 1rem;
+          @include drawline(margin-right);
         }
         &::after {
           content: '';

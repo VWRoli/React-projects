@@ -19,12 +19,7 @@
     display: flex;
     align-items: center;
     &::after {
-      content: '';
-      display: block;
-      width: 300px;
-      height: 1px;
-      background-color: $dark-primary-color;
-      margin-left: 1rem;
+      @include drawline(margin-left);
     }
   }
   h3 {
