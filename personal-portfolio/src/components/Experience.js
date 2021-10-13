@@ -1,7 +1,10 @@
+import { useLanguageContext } from '../context/languageContext';
 //Components
 import Tag from './common/Tag';
 
-const Experience = ({ displayLanguage }) => {
+const Experience = () => {
+  const { displayLanguage } = useLanguageContext();
+
   return (
     <section id="experience">
       <div>

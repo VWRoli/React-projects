@@ -1,9 +1,11 @@
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { useLanguageContext } from '../context/languageContext';
 //Components
 import Button from './common/Button';
 import Tag from './common/Tag';
 
-const HeroSection = ({ displayLanguage }) => {
+const HeroSection = () => {
+  const { displayLanguage } = useLanguageContext();
   return (
     <section id="hero">
       <div className="intro">

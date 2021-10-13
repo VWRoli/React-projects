@@ -3,6 +3,7 @@ import { Link } from 'react-scroll';
 import { FaBars, FaCode, FaTimes } from 'react-icons/fa';
 import hungaryFlag from '../../assets/hungary.png';
 import englishFlag from '../../assets/united-kingdom.png';
+import { useLanguageContext } from '../../context/languageContext';
 //Languages
 import { hungarian } from '../../languages/hungarian';
 import { english } from '../../languages/english';
@@ -10,7 +11,8 @@ import { english } from '../../languages/english';
 import LangButton from './LangButton';
 import Button from '../common/Button';
 
-const Navbar = ({ displayLanguage, setDisplayLanguage }) => {
+const Navbar = () => {
+  const { displayLanguage, setDisplayLanguage } = useLanguageContext();
   const isHungarian = displayLanguage.codeBtn === 'Kód';
   const [showResume, setShowResume] = useState(false);
   const [isActive, setIsActive] = useState(isHungarian ? true : false);

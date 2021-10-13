@@ -1,7 +1,10 @@
+import { useLanguageContext } from '../context/languageContext';
 //Components
 import Project from './Project';
 
-const Projects = ({ displayLanguage }) => {
+const Projects = () => {
+  const { displayLanguage } = useLanguageContext();
+
   return (
     <section id="projects">
       <h2 className="title">{displayLanguage.projectTitle}</h2>
