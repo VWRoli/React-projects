@@ -8,9 +8,11 @@ const NewProject = ({ project }) => {
 
   return (
     <div className={reverse ? 'project reverse' : 'project'}>
+      <div className="blur"></div>
       <div className="project-content">
         <h2>{title}</h2>
         <div className="project-card">
+          <div className="blur"></div>
           <p>{desc}</p>
         </div>
         <div className="tag-wrapper">

@@ -15,6 +15,7 @@ const About = () => {
   return (
     <section id="about">
       <article className="left-container">
+        <div className="blur"></div>
         <div className="skills">
           <h2>{displayLanguage.skillsTitle}</h2>
           <h3>{displayLanguage.frontendTitle}</h3>
@@ -54,6 +55,7 @@ const About = () => {
         </div>
       </article>
       <article className="right-container">
+        <div className="blur"></div>
         <h3>{displayLanguage.viewCodesTitle}</h3>
         <div className="code-group">
           <Button

@@ -57,7 +57,7 @@ export const hungarian = {
     },
     {
       id: 2,
-      title: 'Guitar Bolt',
+      title: 'Gitár Bolt',
       img: '/img/guitar-store.png',
       tags: ['JavaScript', 'React', 'Redux', 'Sass', 'API'],
       codeUrl: 'https://github.com/VWRoli/guitar-store',
@@ -116,7 +116,7 @@ export const hungarian = {
   librariesTitle: 'Könyvtárak, keretrendszerek:',
   otherTitle: 'Egyebek:',
   moreAboutTitle: 'Bővebben rólam:',
-  aboutTextPar1: `Volt online pókerjátékos vagyok, aki autodidakta módon vált webfejlesztővé. Jelenleg a JavaScript-re és a MERN stack-re fókuszálok. Élvezem a programozás problémamegoldási aspektusát, amellyel a fejlesztőnek nap mint nap szembe kell néznie.`,
+  aboutTextPar1: `Volt online pókerjátékos vagyok, aki autodidakta módon vált webfejlesztővé. Jelenleg a JavaScript-re és a MERN stack-re fókuszálok. Élvezem a programozás problémamegoldási aspektusát, amellyel egy fejlesztőnek nap mint nap szembe kell néznie.`,
   aboutTextPar2: `Anyanyelvem a <b>magyar</b> és emellett folyékonyan beszélek <b>angolul</b> is.`,
   viewCodesTitle: 'Kódjaim megtekinthetőek:',
   linkedInTitle: 'További információ LinkedIn-en:',

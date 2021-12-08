@@ -9,6 +9,7 @@ const HeroSection = () => {
   return (
     <section id="hero">
       <div className="intro">
+        <div className="blur"></div>
         <h1>{displayLanguage.mainTitle}</h1>
         <p>
           {displayLanguage.jobTitle} {displayLanguage.mainStrengths}

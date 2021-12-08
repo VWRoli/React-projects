@@ -20,15 +20,16 @@
 
   .left-container,
   .right-container {
-    @include glass();
     flex: 1;
-
+    position: relative;
+    padding: 2rem;
     @include flex-center(column);
     text-align: center;
     max-width: 25rem;
     margin: 2rem;
     & > * {
       margin: 0.5rem;
+      z-index: 2;
     }
   }
   .code-group a {
