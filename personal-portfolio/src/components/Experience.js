@@ -32,15 +32,23 @@ const Experience = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  treetracker web wallet
+                  Treetracker Web Wallet
+                </a>{' '}
+                {displayLanguage.jobDescription1part2}{' '}
+                <a
+                  href="https://github.com/Greenstand/treetracker-web-map-client"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Web Map Client
                 </a>
-                .
               </li>
               <li>
                 {displayLanguage.jobDescription2} <Tag type="React" />
                 <Tag type="Material-UI" />.
               </li>
               <li>{displayLanguage.jobDescription3}</li>
+              <li>{displayLanguage.jobDescription4}</li>
             </ul>
           </div>
         </div>

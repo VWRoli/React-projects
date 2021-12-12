@@ -126,7 +126,9 @@ export const hungarian = {
   currentJobTitle: 'Önkéntes React fejlesztő',
   jobDate: '2021 Augusztus - ',
   jobDescription1: 'Fő közreműködő a következő projektben: ',
+  jobDescription1part2: 'és',
   jobDescription2:
     'Újrafelhasználható és skálázható komponensek létrehozása a következő technológiák segítségével: ',
   jobDescription3: 'Segítettem felállítani a projekt infrastruktúrát.',
+  jobDescription4: 'Tagja a "Code review" csapatnak',
 };

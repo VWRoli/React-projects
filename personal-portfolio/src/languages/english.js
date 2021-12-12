@@ -127,7 +127,9 @@ export const english = {
   currentJobTitle: 'Volunteer React developer',
   jobDate: 'Aug 2021 - Present',
   jobDescription1: 'Main contributor for the',
+  jobDescription1part2: 'and',
   jobDescription2:
     'Creating reusable and scalable frontend components for the app, using ',
   jobDescription3: 'Helped setting up the project infrastructure.',
+  jobDescription4: 'Member of the Code reviewer team.',
 };
