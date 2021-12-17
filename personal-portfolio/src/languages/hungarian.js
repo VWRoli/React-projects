@@ -66,7 +66,7 @@ export const hungarian = {
         'Komplett kezelőfelület egy gitár webshop-hoz, összehasonlítás és kosár részleggel. ',
         'A termékek lapozhatók, szűrhetők, válogathatók és kereshetők. ',
         'JSON szervert használtam a REST API létrehozásához és a termékadatok tárolásához. ',
-        'A weboldalt React-el építettem, valamint Sass, React Router, Redux-al és különböző React Hook-okkal',
+        'A weboldalt React-el építettem, valamint Sass, React Router, Redux-al és különböző React Hook-okkal.',
       ],
     },
     {
@@ -102,7 +102,7 @@ export const hungarian = {
       liveUrl: 'https://kriptosuli-eu.netlify.app/',
       desc: [
         'Kriptovaluta oktatói weboldal. ',
-        'Valós idejű kriptovaluta-nyomkövető a Coingecko API használatával. ',
+        'Valós idejű kriptovaluta nyomkövető a Coingecko API használatával. ',
         'Teljesen mobil-barát honlap. ',
         'Éjszakai mód beállítás, amely LocalStorage segítségével menthetőek.',
       ],
@@ -116,7 +116,7 @@ export const hungarian = {
   librariesTitle: 'Könyvtárak, keretrendszerek:',
   otherTitle: 'Egyebek:',
   moreAboutTitle: 'Bővebben rólam:',
-  aboutTextPar1: `Volt online pókerjátékos vagyok, aki autodidakta módon vált webfejlesztővé. Jelenleg a JavaScript-re és a MERN stack-re fókuszálok. Élvezem a programozás problémamegoldási aspektusát, amellyel egy fejlesztőnek nap mint nap szembe kell néznie.`,
+  aboutTextPar1: `Volt online pókerjátékos vagyok, aki autodidakta módon vált webfejlesztővé. Jelenleg a JavaScript-re és a MERN stack-re fókuszálok. Élvezem a programozás probléma megoldási aspektusát, amellyel egy fejlesztőnek nap mint nap szembe kell néznie.`,
   aboutTextPar2: `Anyanyelvem a <b>magyar</b> és emellett folyékonyan beszélek <b>angolul</b> is.`,
   viewCodesTitle: 'Kódjaim megtekinthetőek:',
   linkedInTitle: 'További információ LinkedIn-en:',
