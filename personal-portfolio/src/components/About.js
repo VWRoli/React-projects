@@ -24,6 +24,7 @@ const About = () => {
           <Tag type="Sass" />
           <Tag type="JavaScript" />
           <Tag type="TypeScript" />
+          <Tag type="TailwindCSS" />
 
           <h3>{displayLanguage.banckendTitle}</h3>
           <Tag type="MongoDB" />
@@ -35,6 +36,8 @@ const About = () => {
           <Tag type="React" />
           <Tag type="Redux" />
           <Tag type="Material-UI" />
+          <Tag type="NextJS" />
+          <Tag type="React-Native" />
 
           <h3>{displayLanguage.otherTitle}</h3>
           <Tag type="Github" />

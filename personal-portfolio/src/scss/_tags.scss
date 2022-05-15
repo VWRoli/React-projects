@@ -1,6 +1,6 @@
 .tag {
   padding: 2px 6px;
-  margin: 0 5px;
+  margin: 5px 5px;
   border-radius: 5px;
   display: inline-block;
   font-size: 0.8rem;
@@ -82,4 +82,16 @@
 .figma-tag {
   @include tag-color(#2c2c2c, #c7b9ff);
   border: 1px solid #2c2c2c;
+}
+.nextjs-tag {
+  @include tag-color(#000, #fff);
+  border: 1px solid #000;
+}
+.tailwindcss-tag {
+  @include tag-color(#0f172a, #f8fafc);
+  border: 1px solid #0f172a;
+}
+.react-native-tag {
+  @include tag-color(#61dafb, #282c34);
+  border: 1px solid #61dafb;
 }

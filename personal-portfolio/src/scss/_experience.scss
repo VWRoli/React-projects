@@ -8,6 +8,7 @@
   }
   .experience-content-wrapper {
     display: flex;
+    flex-direction: column;
     max-width: 780px;
   }
 
@@ -61,12 +62,12 @@
 @media screen and (max-width: 580px) {
   #experience {
     .experience-content-wrapper {
-      flex-direction: column;
       .company-title {
         margin: 0;
       }
       div {
         margin: 0;
+        margin-bottom: 2rem;
       }
     }
     h2 {

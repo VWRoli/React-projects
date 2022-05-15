@@ -123,12 +123,21 @@ export const hungarian = {
   emailTitle: 'Email küldés:',
   resumeTitle: 'Önéletrajz letöltése:',
   experienceTitle: 'Tapasztalat',
-  currentJobTitle: 'Önkéntes React fejlesztő',
-  jobDate: '2021 Augusztus - ',
-  jobDescription1: 'Fő közreműködő a következő projektben: ',
-  jobDescription1part2: 'és',
-  jobDescription2:
-    'Újrafelhasználható és skálázható komponensek létrehozása a következő technológiák segítségével: ',
-  jobDescription3: 'Segítettem felállítani a projekt infrastruktúrát.',
-  jobDescription4: 'Tagja a "Code review" csapatnak',
+  greenstand: {
+    jobTitle: 'Önkéntes React fejlesztő',
+    jobDate: '2021 Augusztus - 2022 Április',
+    jobDescription1: 'Fő közreműködő a következő projektben: ',
+    jobDescription1part2: 'és',
+    jobDescription2:
+      'Újrafelhasználható és skálázható komponensek létrehozása a következő technológiák segítségével: ',
+    jobDescription3: 'Segítettem felállítani a projekt infrastruktúrát.',
+
+    jobDescription4: 'Tagja a "Code review" csapatnak',
+  },
+  cubicfox: {
+    jobTitle: 'Frontend fejlesztő',
+    jobDate: '2022 Április - ',
+    jobDescription1:
+      'Újrafelhasználható és nagymértékben skálázható web applikációk létrehozása a következő technológiák segítségével:',
+  },
 };

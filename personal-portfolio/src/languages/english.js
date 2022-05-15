@@ -124,12 +124,20 @@ export const english = {
   emailTitle: 'Send me an Email:',
   resumeTitle: 'Download my resume:',
   experienceTitle: 'Work experience',
-  currentJobTitle: 'Volunteer React developer',
-  jobDate: 'Aug 2021 - Present',
-  jobDescription1: 'One of the main contributors',
-  jobDescription1part2: 'and',
-  jobDescription2:
-    'Creating reusable and scalable frontend components for the app, using ',
-  jobDescription3: 'Helped set up the project infrastructure.',
-  jobDescription4: 'Member of the Code reviewer team.',
+  greenstand: {
+    jobTitle: 'Volunteer React developer',
+    jobDate: 'Aug 2021 - April 2022',
+    jobDescription1: 'One of the main contributors',
+    jobDescription1part2: 'and',
+    jobDescription2:
+      'Creating reusable and scalable frontend components for the app, using ',
+    jobDescription3: 'Helped set up the project infrastructure.',
+
+    jobDescription4: 'Member of the Code reviewer team.',
+  },
+  cubicfox: {
+    jobTitle: 'Frontend developer',
+    jobDate: 'April 2022 - Present',
+    jobDescription1: 'Building robust and scalable web applications, using',
+  },
 };

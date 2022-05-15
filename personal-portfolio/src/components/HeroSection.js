@@ -13,14 +13,16 @@ const HeroSection = () => {
         <h1>{displayLanguage.mainTitle}</h1>
         <p>
           {displayLanguage.jobTitle} {displayLanguage.mainStrengths}
-          <Tag type="HTML" />
-          <Tag type="CSS" />
+          {/* <Tag type="HTML" />
+          <Tag type="CSS" /> */}
           <Tag type="JavaScript" />
-          <Tag type="React" />
-          <Tag type="Redux" />
-          <br /> {displayLanguage.additionalExp}
           <Tag type="TypeScript" />
+          <Tag type="React" />
+          <Tag type="Sass" />
+          <br /> {displayLanguage.additionalExp}
+          <Tag type="Redux" />
           <Tag type="NodeJS" />
+          <Tag type="React-Native" />
           <Tag type="Material-UI" />
         </p>
         <div className="links">
