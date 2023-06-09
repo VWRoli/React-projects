@@ -117,23 +117,26 @@ export const english = {
   librariesTitle: 'Libraries, Frameworks:',
   otherTitle: 'Other',
   moreAboutTitle: 'More About Me',
-  aboutTextPar1: `I'm an ex Online poker player turned self-taught Web-developer. Currently, my main focus is JavaScript and the MERN stack. I enjoy the problem-solving aspect of programming, that a developer has to face day after day.`,
-  aboutTextPar2: `My native language is <b>Hungarian</b> and I also speak fluent <b>English</b>.`,
+  aboutTextPart1: `
+  Experienced self-taught developer with a background in online poker. Front-end specialist skilled in JavaScript, TypeScript, React, and React Native. Proficient in NextJS, MaterialUI, TailwindCSS, VueJS, NuxtJS, and Bootstrap. Backend experience with NodeJS, Express, NestJS, PostgreSQL, and MongoDB.`,
+  aboutTextPart2: `Passionate about staying current with web technologies and design trends. Fluent in English and Hungarian. Committed to delivering high-quality, visually appealing, and responsive web pages and applications.`,
   viewCodesTitle: 'View my codes:',
   linkedInTitle: 'More info on LinkedIn:',
   emailTitle: 'Send me an Email:',
   resumeTitle: 'Download my resume:',
   experienceTitle: 'Work experience',
   greenstand: {
-    jobTitle: 'Volunteer React developer',
+    jobTitle: 'Open source React developer',
     jobDate: 'Aug 2021 - April 2022',
-    jobDescription1: 'One of the main contributors',
+    jobDescription1: 'Participated in the development of',
     jobDescription1part2: 'and',
     jobDescription2:
-      'Creating reusable and scalable frontend components for the app, using ',
-    jobDescription3: 'Helped set up the project infrastructure.',
+      'Created reusable and scalable frontend components for the applications using React and Material-UI, resulting in a streamlined and consistent user interface. ',
+    jobDescription3:
+      'Helped set up the project infrastructure and played a key role in defining development processes and best practices.',
 
-    jobDescription4: 'Member of the Code reviewer team.',
+    jobDescription4:
+      'Reviewed code and provided constructive feedback to team members, ensuring adherence to best practices and high code quality.',
   },
   cubicfox: {
     jobTitle: 'Frontend developer',

@@ -22,11 +22,14 @@ const NewProject = ({ project }) => {
         </div>
         <div className="button-wrapper">
           <Button link={codeUrl} labelText={<FaGithub />} type="icon" />
-          <Button
-            link={liveUrl}
-            labelText={<FaExternalLinkAlt />}
-            type="icon"
-          />
+
+          {liveUrl && (
+            <Button
+              link={liveUrl}
+              labelText={<FaExternalLinkAlt />}
+              type="icon"
+            />
+          )}
         </div>
       </div>
       <div className="project-image">

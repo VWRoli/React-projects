@@ -1,21 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import { FaBars, FaCode, FaTimes } from 'react-icons/fa';
-import hungaryFlag from '../../assets/hungary.png';
-import englishFlag from '../../assets/united-kingdom.png';
-import { useLanguageContext } from '../../context/languageContext';
-//Languages
-import { hungarian } from '../../languages/hungarian';
-import { english } from '../../languages/english';
+import { links } from '../../constants/menuLinks';
 //Components
-import LangButton from './LangButton';
 import Button from '../common/Button';
 
 const Navbar = () => {
-  const { displayLanguage, setDisplayLanguage } = useLanguageContext();
-  const isHungarian = displayLanguage.codeBtn === 'Kód';
   const [showResume, setShowResume] = useState(false);
-  const [isActive, setIsActive] = useState(isHungarian ? true : false);
   const [closeMobileMenu, setcloseMobileMenu] = useState(true);
 
   const showButton = () => {
@@ -33,21 +24,11 @@ const Navbar = () => {
     };
   }, [showResume]);
 
-  const handleClick = (language) => {
-    if (language === 'english') {
-      setIsActive(false);
-      setDisplayLanguage(english);
-    } else {
-      setDisplayLanguage(hungarian);
-      setIsActive(true);
-    }
-  };
-
   return (
     <nav>
       <div className="nav-header">
         <FaCode className="logo-icon" />
-        {displayLanguage.logo}
+        ROLAND FÜST
         <button
           className="nav-toggle"
           aria-label="Toggle mobile menu"
@@ -57,7 +38,7 @@ const Navbar = () => {
         </button>
       </div>
       <ul className={closeMobileMenu ? `links` : `links show-container`}>
-        {displayLanguage.links.map((link) => {
+        {links.map((link) => {
           const { id, url, text } = link;
           return (
             <li key={id}>
@@ -79,24 +60,8 @@ const Navbar = () => {
       </ul>
       <div className="nav-controls">
         <div className="nav-resume">
-          <Button
-            link="cv_roland_füst.pdf"
-            labelText={displayLanguage.resumeBtn}
-            type="resume"
-          />
+          <Button link="cv_roland_füst.pdf" labelText="Resume" type="resume" />
         </div>
-        {/* <div className="lang-selector">
-          <LangButton
-            flag={hungaryFlag}
-            isActive={isActive}
-            handleClick={() => handleClick('hungarian')}
-          />
-          <LangButton
-            flag={englishFlag}
-            isActive={!isActive}
-            handleClick={() => handleClick('english')}
-          />
-        </div> */}
       </div>
     </nav>
   );

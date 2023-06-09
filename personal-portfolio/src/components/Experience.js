@@ -1,14 +1,11 @@
-import { useLanguageContext } from '../context/languageContext';
 //Components
 import Tag from './common/Tag';
 
 const Experience = () => {
-  const { displayLanguage } = useLanguageContext();
-
   return (
     <section id="experience">
       <div>
-        <h2>{displayLanguage.experienceTitle}</h2>
+        <h2>Work experience</h2>
         <div className="experience-content-wrapper">
           {/* Cubicfox */}
           <div className="job-wrapper">
@@ -24,13 +21,36 @@ const Experience = () => {
               </h3>
             </div>
             <div>
-              <h3>{displayLanguage.cubicfox.jobTitle}</h3>
-              <p className="tag">{displayLanguage.cubicfox.jobDate}</p>
+              <h3>Full Stack Software Developer</h3>
+              <p className="tag">April 2022 - Present</p>
               <ul>
                 <li>
-                  {displayLanguage.cubicfox.jobDescription1}{' '}
-                  <Tag type="React" /> <Tag type="TailwindCSS" />{' '}
-                  <Tag type="NextJS" />
+                  Developed and maintained web and mobile applications using{' '}
+                  <Tag type="React" />, <Tag type="React-Native" />, and
+                  <Tag type="TailwindCSS" />, resulting in responsive and
+                  visually appealing user interfaces.
+                </li>
+                <li>
+                  Utilized TypeScript and JavaScript to write clean and
+                  efficient code, ensuring seamless functionality and optimal
+                  performance.
+                </li>
+                <li>
+                  Built server-side rendered web applications with{' '}
+                  <Tag type="NextJS" /> and <Tag type="Nuxt" /> leading to
+                  improved load times and enhanced search engine optimization
+                  (SEO).
+                </li>
+                <li>
+                  Collaborated with cross-functional teams, conducting code
+                  reviews and providing constructive feedback to ensure high
+                  code quality and adherence to best practices.
+                </li>
+                <li>
+                  Additionally, worked with international team members,
+                  utilizing <Tag type="Vue" />, <Tag type="Nuxt" />,{' '}
+                  <Tag type="NestJS" />, and PostgreSQL, fostering a diverse and
+                  enriching collaborative environment.
                 </li>
               </ul>
             </div>
@@ -49,11 +69,11 @@ const Experience = () => {
               </h3>
             </div>
             <div>
-              <h3>{displayLanguage.greenstand.jobTitle}</h3>
-              <p className="tag">{displayLanguage.greenstand.jobDate}</p>
+              <h3>Open source React developer</h3>
+              <p className="tag">Aug 2021 - April 2022</p>
               <ul>
                 <li>
-                  {displayLanguage.greenstand.jobDescription1}{' '}
+                  Participated in the development of{' '}
                   <a
                     href="https://github.com/Greenstand/treetracker-wallet-web"
                     target="_blank"
@@ -61,7 +81,7 @@ const Experience = () => {
                   >
                     Treetracker Web Wallet
                   </a>{' '}
-                  {displayLanguage.greenstand.jobDescription1part2}{' '}
+                  and{' '}
                   <a
                     href="https://github.com/Greenstand/treetracker-web-map-client"
                     target="_blank"
@@ -69,14 +89,23 @@ const Experience = () => {
                   >
                     Web Map Client
                   </a>
+                  , serving as the main contributor for both projects.
                 </li>
                 <li>
-                  {displayLanguage.greenstand.jobDescription2}{' '}
-                  <Tag type="React" />
-                  <Tag type="Material-UI" />.
+                  Created reusable and scalable frontend components for the
+                  applications using <Tag type="React" /> and{' '}
+                  <Tag type="Material-UI" />, resulting in a streamlined and
+                  consistent user interface.
                 </li>
-                <li>{displayLanguage.greenstand.jobDescription3}</li>
-                <li>{displayLanguage.greenstand.jobDescription4}</li>
+                <li>
+                  Helped set up the project infrastructure and played a key role
+                  in defining development processes and best practices.
+                </li>
+                <li>
+                  Reviewed code and provided constructive feedback to team
+                  members, ensuring adherence to best practices and high code
+                  quality.
+                </li>
               </ul>
             </div>
           </div>

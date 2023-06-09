@@ -1,29 +1,26 @@
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import { useLanguageContext } from '../context/languageContext';
 //Components
 import Button from './common/Button';
 import Tag from './common/Tag';
 
 const HeroSection = () => {
-  const { displayLanguage } = useLanguageContext();
   return (
     <section id="hero">
       <div className="intro">
         <div className="blur"></div>
-        <h1>{displayLanguage.mainTitle}</h1>
+        <h1>Hello, I'm Roland Füst</h1>
         <p>
-          {displayLanguage.jobTitle} {displayLanguage.mainStrengths}
-          {/* <Tag type="HTML" />
-          <Tag type="CSS" /> */}
+          I am a full-stack software developer with expertise in
           <Tag type="JavaScript" />
-          <Tag type="TypeScript" />
+          <Tag type="TypeScript" /> for both front-end and
+          <br /> back-end development. On the front-end, I specialize in
           <Tag type="React" />
-          <Tag type="Sass" />
-          <br /> {displayLanguage.additionalExp}
-          <Tag type="Redux" />
-          <Tag type="NodeJS" />
           <Tag type="React-Native" />
-          <Tag type="Material-UI" />
+          In addition to my front-end skills, <br />I have experience in
+          back-end development using
+          <Tag type="NodeJS" />
+          <Tag type="ExpressJS" />
+          <Tag type="NestJS" />
         </p>
         <div className="links">
           <Button

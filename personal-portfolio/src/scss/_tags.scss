@@ -29,7 +29,7 @@
 .bootstrap-tag {
   @include tag-color(#fff, #7952b3);
 }
-.github-tag {
+.git-tag {
   @include tag-color(#fff, #24292e);
   border: 1px solid #fff;
 }
@@ -101,7 +101,6 @@
 }
 .docker-tag{
   @include tag-color(#FEFFFE, #003E8D);
-  border: 1px solid #FEFFFE;
 }
 
 .vue-tag{
@@ -112,4 +111,8 @@
 .nuxt-tag{
   @include tag-color(#0D0D0D, #FEFFFE);
   border: 1px solid #0D0D0D;
+}
+.typeorm-tag{
+  @include tag-color(#EA4C3E, #FEFFFE);
+  border: 1px solid #EA4C3E;
 }
