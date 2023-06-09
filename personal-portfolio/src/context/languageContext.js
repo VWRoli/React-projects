@@ -3,7 +3,8 @@ import React, { useContext, useState } from 'react';
 import { hungarian } from '../languages/hungarian';
 import { english } from '../languages/english';
 
-const defaultLanguage = navigator.language === 'hu-HU' ? hungarian : english;
+//const defaultLanguage = navigator.language === 'hu-HU' ? hungarian : english;
+const defaultLanguage = english;
 const LanguageContext = React.createContext(defaultLanguage);
 
 export const LanguageProvider = ({ children }) => {

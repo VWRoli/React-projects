@@ -95,3 +95,21 @@
   @include tag-color(#61dafb, #282c34);
   border: 1px solid #61dafb;
 }
+.nestjs-tag{
+  @include tag-color(#E0234E, #0B0A0B);
+  border: 1px solid #E0234E;
+}
+.docker-tag{
+  @include tag-color(#FEFFFE, #003E8D);
+  border: 1px solid #FEFFFE;
+}
+
+.vue-tag{
+  @include tag-color(#FEFFFE, #42B982);
+  border: 1px solid #FEFFFE;
+}
+
+.nuxt-tag{
+  @include tag-color(#0D0D0D, #FEFFFE);
+  border: 1px solid #0D0D0D;
+}

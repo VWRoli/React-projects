@@ -85,7 +85,7 @@ const Navbar = () => {
             type="resume"
           />
         </div>
-        <div className="lang-selector">
+        {/* <div className="lang-selector">
           <LangButton
             flag={hungaryFlag}
             isActive={isActive}
@@ -96,7 +96,7 @@ const Navbar = () => {
             isActive={!isActive}
             handleClick={() => handleClick('english')}
           />
-        </div>
+        </div> */}
       </div>
     </nav>
   );

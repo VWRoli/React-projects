@@ -29,6 +29,7 @@ const About = () => {
           <Tag type="MongoDB" />
           <Tag type="NodeJS" />
           <Tag type="ExpressJS" />
+          <Tag type="NestJS" />
 
           <h3>{displayLanguage.librariesTitle}</h3>
           <Tag type="Bootstrap" />
@@ -38,10 +39,13 @@ const About = () => {
           <Tag type="NextJS" />
           <Tag type="React-Native" />
           <Tag type="TailwindCSS" />
+          <Tag type="Vue" />
+          <Tag type="Nuxt" />
 
           <h3>{displayLanguage.otherTitle}</h3>
           <Tag type="Github" />
           <Tag type="npm" />
+          <Tag type="Docker" />
           <Tag type="Jira" />
           <Tag type="API" />
           <Tag type="Postman" />
