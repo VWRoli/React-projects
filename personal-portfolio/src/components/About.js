@@ -41,6 +41,7 @@ const About = () => {
           <Tag type="npm" />
           <Tag type="Docker" />
           <Tag type="Jira" />
+          <Tag type="Jest" />
           <Tag type="API" />
           <Tag type="Postman" />
           <Tag type="TypeORM" />

@@ -18,13 +18,22 @@ export const projects = [
     id: 1,
     title: 'Budgetly',
     img: '/img/budgetly.png',
-    tags: ['Typescript', 'NestJS', 'API', 'Postman', 'TypeORM', 'NodeJs'],
+    tags: [
+      'Typescript',
+      'NestJS',
+      'API',
+      'Postman',
+      'TypeORM',
+      'NodeJs',
+      'Jest',
+    ],
     codeUrl: 'https://github.com/VWRoli/budgetly-backend',
 
     desc: [
       'REST API for a budgeting application using NestJS, TypeORM, and MySQL. ',
       'Secure and scalable solution: Ensured robust security measures and scalability for handling increasing user demands. ',
       'Customizable architecture: Modular structure allows for easy customization and future enhancements. ',
+      'Added unit and e2e tests with Jest',
     ],
   },
   {

@@ -116,3 +116,6 @@
   @include tag-color(#EA4C3E, #FEFFFE);
   border: 1px solid #EA4C3E;
 }
+.jest-tag{
+  @include tag-color(#FEFFFE, #803755)
+}
