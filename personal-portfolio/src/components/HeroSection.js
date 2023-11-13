@@ -9,15 +9,15 @@ const HeroSection = () => {
       <div className="intro">
         <div className="blur"></div>
         <h1>Hello, I'm Roland Füst</h1>
-        <p>
-          I am a full-stack software developer with expertise in
-          <Tag type="JavaScript" />
-          <Tag type="TypeScript" /> for both front-end and
-          <br /> back-end development. On the front-end, I specialize in
+        <p style={{ maxWidth: '760px' }}>
+          I am a self-taught software developer with a unique background in
+          online poker. I'm experienced in
+          <Tag type="JavaScript" /> and
+          <Tag type="TypeScript" />. On the front-end, my expertise ranges from
           <Tag type="React" />
           <Tag type="React-Native" />
-          In addition to my front-end skills, <br />I have experience in
-          back-end development using
+          to <Tag type="Vue" />. In addition to my front-end skills, I have
+          experience in back-end development using
           <Tag type="NodeJS" />
           <Tag type="ExpressJS" />
           <Tag type="NestJS" />

@@ -8,10 +8,10 @@ export const projects = [
     codeUrl: 'https://github.com/VWRoli/guitar-store',
     liveUrl: 'https://guitar-store-site.netlify.app/',
     desc: [
-      'Complete frontend for a Guitar E-Commerce website with a compare and cart section. ',
-      'Products are paginated and can be filtered, sorted, searched. ',
+      'Designed and implemented the entire frontend of a Guitar E-Commerce website, featuring a comprehensive compare and cart section. ',
+      'Developed a paginated product display with robust filtering, sorting, and search functionalities.  ',
       'Used JSON Server for creating the Rest API for storing product data. ',
-      'Build with React, Sass, React Router, Redux, and different React Hooks.',
+      'Build with React, Sass, React Router, Redux, and various React Hooks.',
     ],
   },
   {
@@ -30,10 +30,10 @@ export const projects = [
     codeUrl: 'https://github.com/VWRoli/budgetly-backend',
 
     desc: [
-      'REST API for a budgeting application using NestJS, TypeORM, and MySQL. ',
+      'Developed a REST API to power a budgeting application using NestJS, TypeORM, and MySQL. ',
       'Secure and scalable solution: Ensured robust security measures and scalability for handling increasing user demands. ',
       'Customizable architecture: Modular structure allows for easy customization and future enhancements. ',
-      'Added unit and e2e tests with Jest',
+      'Ensured reliability through the addition of unit and end-to-end tests using Jest.',
     ],
   },
   {
@@ -53,7 +53,7 @@ export const projects = [
     codeUrl: 'https://github.com/VWRoli/guitar-practice-assistant',
     liveUrl: 'https://guitar-pa.netlify.app',
     desc: [
-      'Guitar practice assistant app, with a built-in metronome. ',
+      'Designed and developed a Guitar Practice Assistant app with a built-in metronome. ',
       'The app is built with Typescript with MERN stack and using RESTful API design. ',
       'I used Redux for state management, Node & Express for API, MongoDB as a database. ',
       '***Credentials: (username: demoUser1 password: 123456Aa!)',
@@ -68,7 +68,7 @@ export const projects = [
     codeUrl: 'https://github.com/VWRoli/Redux-cryptofolio',
     liveUrl: 'https://cryptofolio-app.netlify.app/',
     desc: [
-      'Cryptocurrency portfolio tracker application. Select or search the currencies you want to add to your portfolio. ',
+      'Designed and developed a Cryptocurrency portfolio tracker application. Select or search the currencies you want to add to your portfolio. ',
       'Track the value of your assets. Take a look at the price change chart. ',
       'Build with React, state management with Redux. For styling I used Sass. ',
       'For getting the currency information I worked with the CoinGecko API.',

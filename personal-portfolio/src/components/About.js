@@ -50,11 +50,11 @@ const About = () => {
         <div className="about-text">
           <h2>More About Me</h2>
           <p>
-            Experienced self-taught developer with a background in online poker.
-            Front-end specialist skilled in JavaScript, TypeScript, React, and
-            React Native. Proficient in NextJS, MaterialUI, TailwindCSS, VueJS,
-            NuxtJS, and Bootstrap. Backend experience with NodeJS, Express,
-            NestJS, PostgreSQL, and MongoDB.
+            I'm an experienced self-taught developer with a background in online
+            poker. I specialize in the Front-end. I'm skilled in JavaScript,
+            TypeScript, React, and React Native. Proficient in NextJS,
+            MaterialUI, TailwindCSS, VueJS, NuxtJS, and Bootstrap. Backend
+            experience with NodeJS, Express, NestJS, PostgreSQL, and MongoDB.
           </p>
           <p>
             Passionate about staying current with web technologies and design

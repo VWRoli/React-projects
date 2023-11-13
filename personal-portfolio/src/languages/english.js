@@ -24,7 +24,7 @@ export const english = {
   ],
   resumeBtn: 'Resume',
   mainTitle: `Hello, I'm Roland Füst`,
-  jobTitle: `I'm a Web-developer.`,
+  jobTitle: `I am a self-taught developer with a unique background in online poker.`,
   mainStrengths: `My main strengths are`,
   additionalExp: `I also have additional experience with`,
   technologies: 'Technologies:',

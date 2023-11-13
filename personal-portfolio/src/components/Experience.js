@@ -25,32 +25,39 @@ const Experience = () => {
               <p className="tag">April 2022 - Present</p>
               <ul>
                 <li>
-                  Developed and maintained web and mobile applications using{' '}
-                  <Tag type="React" />, <Tag type="React-Native" />, and
-                  <Tag type="TailwindCSS" />, resulting in responsive and
-                  visually appealing user interfaces.
+                  As a Frontend Developer for an innovative NFT card game,
+                  worked on the frontend using <Tag type="React" />,
+                  <Tag type="NextJS" />, and <Tag type="TailwindCSS" />.
+                  Leveraging my expertise in frontend technologies, I worked on
+                  building the game's interface, ensuring a dynamic and engaging
+                  platform for users.
                 </li>
                 <li>
-                  Utilized TypeScript and JavaScript to write clean and
-                  efficient code, ensuring seamless functionality and optimal
-                  performance.
+                  Mobile App Developer for a City Exploration Platform. Using
+                  <Tag type="React-Native" />, <Tag type="TypeScript" /> and
+                  React Query, I contributed to the development of the mobile
+                  application, allowing users to discover special events, gather
+                  information about the city, and book tickets for top tours and
+                  experiences. Additionally, integrated Google Maps
+                  functionality to provide seamless navigation within the app.
                 </li>
                 <li>
-                  Built server-side rendered web applications with{' '}
-                  <Tag type="NextJS" /> and <Tag type="Nuxt" /> leading to
-                  improved load times and enhanced search engine optimization
-                  (SEO).
+                  Contributed to the development of a Kickstarter-like web
+                  application as a Frontend Developer, employing
+                  <Tag type="React" />,
+                  <Tag type="NextJS" />, and <Tag type="TailwindCSS" />.
+                  Responsible for building an integrated chat platform using
+                  PubNub. Utilized <Tag type="TypeScript" /> to write clean and
+                  efficient code.
                 </li>
                 <li>
-                  Collaborated with cross-functional teams, conducting code
-                  reviews and providing constructive feedback to ensure high
-                  code quality and adherence to best practices.
-                </li>
-                <li>
-                  Additionally, worked with international team members,
-                  utilizing <Tag type="Vue" />, <Tag type="Nuxt" />,{' '}
-                  <Tag type="NestJS" />, and PostgreSQL, fostering a diverse and
-                  enriching collaborative environment.
+                  Worked as a Full Stack Developer in an international team,
+                  playing a key role in the development of a vehicle evaluation
+                  website. Used <Tag type="NestJS" /> and <Tag type="TypeORM" />
+                  for backend implementation, utilizing a PostgreSQL database
+                  for efficient data management. On the frontend, utilized
+                  <Tag type="Vue" /> and <Tag type="Nuxt" /> to create a
+                  responsive and engaging user interface.
                 </li>
               </ul>
             </div>
