@@ -51,6 +51,9 @@
       span {
         text-indent: 0;
       }
+      .strong {
+        font-weight: 600 !important;
+      }
     }
     li:before {
       content: '+';

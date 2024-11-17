@@ -95,27 +95,36 @@
   @include tag-color(#61dafb, #282c34);
   border: 1px solid #61dafb;
 }
-.nestjs-tag{
-  @include tag-color(#E0234E, #0B0A0B);
-  border: 1px solid #E0234E;
+.nestjs-tag {
+  @include tag-color(#e0234e, #0b0a0b);
+  border: 1px solid #e0234e;
 }
-.docker-tag{
-  @include tag-color(#FEFFFE, #003E8D);
-}
-
-.vue-tag{
-  @include tag-color(#FEFFFE, #42B982);
-  border: 1px solid #FEFFFE;
+.docker-tag {
+  @include tag-color(#fefffe, #003e8d);
 }
 
-.nuxt-tag{
-  @include tag-color(#0D0D0D, #FEFFFE);
-  border: 1px solid #0D0D0D;
+.vue-tag {
+  @include tag-color(#fefffe, #42b982);
+  border: 1px solid #fefffe;
 }
-.typeorm-tag{
-  @include tag-color(#EA4C3E, #FEFFFE);
-  border: 1px solid #EA4C3E;
+
+.nuxt-tag {
+  @include tag-color(#0d0d0d, #fefffe);
+  border: 1px solid #0d0d0d;
 }
-.jest-tag{
-  @include tag-color(#FEFFFE, #803755)
+.typeorm-tag {
+  @include tag-color(#ea4c3e, #fefffe);
+  border: 1px solid #ea4c3e;
+}
+.jest-tag {
+  @include tag-color(#fefffe, #803755);
+}
+
+.postgresql-tag {
+  @include tag-color(#30628c, #fefffe);
+  border: 1px solid #0d0d0d;
+}
+.mysql-tag {
+  @include tag-color(#f29320, #fefffe);
+  border: 1px solid #3f6f93;
 }

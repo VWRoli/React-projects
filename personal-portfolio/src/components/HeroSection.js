@@ -11,16 +11,13 @@ const HeroSection = () => {
         <h1>Hello, I'm Roland Füst</h1>
         <p style={{ maxWidth: '760px' }}>
           I am a self-taught software developer with a unique background in
-          online poker. I'm experienced in
-          <Tag type="JavaScript" /> and
-          <Tag type="TypeScript" />. On the front-end, my expertise ranges from
-          <Tag type="React" />
-          <Tag type="React-Native" />
-          to <Tag type="Vue" />. In addition to my front-end skills, I have
-          experience in back-end development using
-          <Tag type="NodeJS" />
-          <Tag type="ExpressJS" />
-          <Tag type="NestJS" />
+          online poker, which has helped me develop strong problem-solving and
+          analytical skills. I specialize in <Tag type="JavaScript" /> and{' '}
+          <Tag type="TypeScript" />, with a focus on front-end development using{' '}
+          <Tag type="React" /> and <Tag type="NextJS" />. Additionally, I have
+          experience in back-end development using <Tag type="NestJS" />,{' '}
+          <Tag type="TypeORM" /> enabling me to build full-stack applications
+          efficiently.
         </p>
         <div className="links">
           <Button

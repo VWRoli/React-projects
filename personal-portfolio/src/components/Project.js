@@ -4,7 +4,17 @@ import Button from './common/Button';
 import Tag from './common/Tag';
 
 const NewProject = ({ project }) => {
-  const { title, img, tags, codeUrl, liveUrl, desc, reverse } = project;
+  const {
+    title,
+    img,
+    tags,
+    codeUrl,
+    liveUrl,
+    desc,
+    reverse,
+    backendUrl,
+    frontendUrl,
+  } = project;
 
   return (
     <div className={reverse ? 'project reverse' : 'project'}>
@@ -21,8 +31,16 @@ const NewProject = ({ project }) => {
           })}
         </div>
         <div className="button-wrapper">
-          <Button link={codeUrl} labelText={<FaGithub />} type="icon" />
+          {codeUrl && (
+            <Button link={codeUrl} labelText={<FaGithub />} type="icon" />
+          )}
 
+          {frontendUrl && (
+            <Button link={frontendUrl} labelText={<FaGithub />} type="icon" />
+          )}
+          {backendUrl && (
+            <Button link={backendUrl} labelText={<FaGithub />} type="icon" />
+          )}
           {liveUrl && (
             <Button
               link={liveUrl}

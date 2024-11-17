@@ -16,57 +16,64 @@ const About = () => {
         <div className="skills">
           <h2>Skills</h2>
           <h3>Front-end:</h3>
+          <Tag type="React" />
+          <Tag type="NextJS" />
+          <Tag type="TypeScript" />
+          <Tag type="JavaScript" />
+          <Tag type="TailwindCSS" />
+          <Tag type="Material-UI" />
           <Tag type="HTML" />
           <Tag type="CSS" />
           <Tag type="Sass" />
-          <Tag type="JavaScript" />
-          <Tag type="TypeScript" />
-          <h3>Back-end:</h3>
-          <Tag type="MongoDB" />
-          <Tag type="NodeJS" />
-          <Tag type="ExpressJS" />
-          <Tag type="NestJS" />
-          <h3>Libraries, Frameworks:</h3>
-          <Tag type="Bootstrap" />
-          <Tag type="React" />
-          <Tag type="Redux" />
-          <Tag type="Material-UI" />
-          <Tag type="NextJS" />
-          <Tag type="React-Native" />
-          <Tag type="TailwindCSS" />
           <Tag type="Vue" />
           <Tag type="Nuxt" />
+          <Tag type="Redux" />
+          <Tag type="Bootstrap" />
+          <h3>Back-end:</h3>
+          <Tag type="NestJS" />
+          <Tag type="NodeJS" />
+          <Tag type="ExpressJS" />
+          <Tag type="TypeORM" />
+          <Tag type="MySQL" />
+          <Tag type="PostgreSQL" />
+          <Tag type="MongoDB" />
+          <Tag type="API" />
+          <h3>Mobile:</h3>
+          <Tag type="React-Native" />
           <h3>Other</h3>
           <Tag type="Git" />
           <Tag type="npm" />
           <Tag type="Docker" />
           <Tag type="Jira" />
           <Tag type="Jest" />
-          <Tag type="API" />
           <Tag type="Postman" />
-          <Tag type="TypeORM" />
           <Tag type="Figma" />
         </div>
         <div className="about-text">
           <h2>More About Me</h2>
           <p>
-            I'm an experienced self-taught developer with a background in online
-            poker. I specialize in the Front-end. I'm skilled in JavaScript,
-            TypeScript, React, and React Native. Proficient in NextJS,
-            MaterialUI, TailwindCSS, VueJS, NuxtJS, and Bootstrap. Backend
-            experience with NodeJS, Express, NestJS, PostgreSQL, and MongoDB.
+            I'm a self-taught software developer with a unique background in
+            online poker, which has helped me develop strong problem-solving and
+            analytical skills. I specialize in front-end development, skilled in
+            JavaScript, TypeScript, React, and Next.js. I'm also good with React
+            Native, Material-UI, TailwindCSS, helping me to build modern,
+            responsive web applications.
           </p>
           <p>
-            Passionate about staying current with web technologies and design
-            trends. Fluent in English and Hungarian. Committed to delivering
-            high-quality, visually appealing, and responsive web pages and
-            applications.
+            My back-end experience includes NestJS, TypeORM and MySQL allowing
+            me to work as a full stack developer.
           </p>
+          <p>
+            I'm passionate about creating clean, organized, and maintainable
+            code. I take pride in writing code that's not just functional but
+            also easy for fellow developers to read and build upon.
+          </p>
+          <p>I'm fluent both in Hungarian and in English.</p>
         </div>
       </article>
       <article className="right-container">
         <div className="blur"></div>
-        <h3>View my codes:</h3>
+        <h3>Explore My Projects: </h3>
         <div className="code-group">
           <Button
             link="https://github.com/VWRoli"
